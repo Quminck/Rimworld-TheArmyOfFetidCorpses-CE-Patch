@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>The Army Of Fetid Corpses (Continued)</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+
+
+
+				<!-- ================== Hardened Flesh ================== -->
+
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/HediffDef[defName="HardenedFlesh"]/stages/li/statOffsets/ArmorRating_Blunt</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/HediffDef[defName="HardenedFlesh"]/stages/li/statOffsets/ArmorRating_Sharp</xpath>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/HediffDef[defName="HardenedFlesh"]/stages/li</xpath>
+					<value>
+						<statFactors>
+							<ArmorRating_Sharp>1.25</ArmorRating_Sharp> 
+							<ArmorRating_Blunt>1.50</ArmorRating_Blunt> 
+						</statFactors>
+					</value>
+				</li>
+
+				<!-- ================== Corpse Gladiator ================== -->
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/HediffDef[defName="CorpseGladiator"]/stages/li/statFactors/MeleeDPS</xpath>
+					<value>
+						<MeleeDPS>1.25</MeleeDPS>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/HediffDef[defName="CorpseGladiator"]/stages/li/statFactors/MeleeDamageFactor</xpath>
+					<value>
+						<MeleeDamageFactor>1.25</MeleeDamageFactor>
+					</value>
+				</li>
+				
+				
+
+				<!-- ================== Flame Proof Changes ================== -->
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/HediffDef[defName="FlameProof"]/stages/li/statOffsets/ArmorRating_Heat</xpath>
+					<value>
+						<ArmorRating_Heat>0.50</ArmorRating_Heat>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/HediffDef[defName="FlameProof"]/stages/li/statOffsets</xpath>
+					<value>
+						<Flammability>-2.0</Flammability>
+					</value>
+				</li>
+
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

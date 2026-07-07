@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+		<!-- =========================== Ammo category =========================== -->
+	<ThingCategoryDef>
+		<defName>AmmoCategoryANBrocket</defName> <!-- category MUST BE same  -->
+		<label>Anti-necronoid rocket</label>
+		<parent>AmmoRockets</parent>
+		<iconPath>UI/Icons/ThingCategories/CaliberRocket</iconPath>
+	</ThingCategoryDef>
+
+		<!-- =========================== AMMUNITION SET ============================= -->
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSetANBrocket</defName>   <!-- GUN MAGAZINE -->
+		<label>Anti-necronoid rocket</label>
+		<ammoTypes>
+			<AmmoANBrocket>BulletANBrocket</AmmoANBrocket>        <!-- <CARTRIDGE> MAIN BULLET <CARTRIDGE> -->
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+
+		<!-- ============================ AMMUNITION ============================== -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="AmmoANBrocket_Base" ParentName="MediumAmmoBase" Abstract="True">
+		<description>A specialized HEAT rocket designed to annihilate heavily mutated necronoids.</description>
+		<tradeTags>
+			<li>CE_AutoEnableTrade</li>
+			<li>CE_AutoEnableCrafting_TableMachining</li>
+		</tradeTags>
+		<thingCategories>
+			<li>AmmoCategoryANBrocket</li>     <!-- category MUST BE same -->
+		</thingCategories>
+	</ThingDef>
+
+			<!-- Ammunition stats -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="AmmoANBrocket_Base">
+		<defName>AmmoANBrocket</defName>                                   <!-- CARTRIDGE -->
+		<label>Anti-necronoid rocket</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rocket/90mmHEAT</texPath>
+			<graphicClass>Verse.Graphic_StackCount</graphicClass>
+		</graphicData>
+		<stackLimit>5</stackLimit>
+		<statBases>
+			<MarketValue>130</MarketValue>
+			<Mass>2.5</Mass>
+			<Bulk>3.2</Bulk>
+		</statBases>
+		<ammoClass>RocketHEAT</ammoClass>
+		<cookOffProjectile>BulletANBrocket</cookOffProjectile>                <!-- MAIN BULLET -->
+	</ThingDef>
+
+
+
+					<!-- =================== Projectiles ===================-->
+
+	<ThingDef Name="BulletANBrocket_Base" ParentName="BaseExplosiveBullet" Abstract="True">
+		<graphicData>
+			<texPath>Things/Projectile/Rocket/S8/HE</texPath>
+			<graphicClass>Verse.Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Bullet</damageDef>
+			<speed>120</speed>
+			<dropsCasings>true</dropsCasings>
+		</projectile>
+	</ThingDef>
+
+				<!-- Bullet stats -->
+
+	<ThingDef ParentName="BulletANBrocket_Base">
+		<defName>BulletANBrocket</defName>                               <!-- MAIN BULLET -->
+		<label>Anti-necronoid rocket</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>CleansingBlast</damageDef>
+			<damageAmountBase>90</damageAmountBase>
+			<armorPenetrationSharp>150</armorPenetrationSharp>
+			<armorPenetrationBlunt>40</armorPenetrationBlunt>
+		</projectile>
+		<comps>
+			<li Class="CombatExtended.CompProperties_ExplosiveCE">
+				<damageAmountBase>60</damageAmountBase>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<explosiveRadius>1</explosiveRadius>
+				<explosionSound>MortarBomb_Explode</explosionSound>
+				<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+			</li>
+			<li Class="CombatExtended.CompProperties_Fragments">
+				<fragments>
+					<Fragment_Large>2</Fragment_Large>
+					<Fragment_Small>17</Fragment_Small>
+				</fragments>
+			</li>
+		</comps>
+
+  </ThingDef>
+
+
+
+				<!-- =================== Recipes ===================-->
+
+	<RecipeDef ParentName="AdvancedLauncherAmmoRecipeBase">
+		<defName>MakeAmmoANBrocket</defName>
+		<label>Make Anti-necronoid rockets x5</label>
+		<description>Craft 5 Anti-necronoid rockets.</description>
+		<jobString>Making Anti-necronoid rocket.</jobString>
+		<researchPrerequisite>CleansingWeaponsEmpire</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Neutroamine</li>
+					</thingDefs>
+				</filter>
+				<count>25</count>
+		  </li>
+		   <li>
+				<filter>
+					<thingDefs>
+						<li>FSX</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>40</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Plasteel</li>
+				<li>FSX</li>
+				<li>Neutroamine</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<AmmoANBrocket>5</AmmoANBrocket>
+		</products>
+		<workAmount>28800</workAmount>
+	</RecipeDef>
+
+</Defs>

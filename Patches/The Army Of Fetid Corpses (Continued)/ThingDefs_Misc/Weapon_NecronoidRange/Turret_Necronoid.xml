@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+		<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>The Army Of Fetid Corpses (Continued)</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+		<operations>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Turret_NecroTurret"]/thingClass</xpath>
+				<value>
+					<thingClass>CombatExtended.Building_TurretGunCE</thingClass>
+				</value>
+			</li>
+			
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Turret_NecroTurret"]/statBases</xpath>
+					<value>
+						<AimingAccuracy>0.5</AimingAccuracy>
+						<SightsEfficiency>1</SightsEfficiency>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Turret_NecroTurret"]/statBases/ShootingAccuracyTurret</xpath>
+					<value>
+						<ShootingAccuracyTurret>0.5</ShootingAccuracyTurret>
+					</value>
+				</li>
+
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Turret_NecroTurret"]/fillPercent</xpath>
+				<value>
+					<fillPercent>0.85</fillPercent> 
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Turret_NecroTurret"]/building/turretBurstCooldownTime</xpath>
+				<value>
+					<turretBurstCooldownTime>2.5</turretBurstCooldownTime>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Gun_NecroTurret"]/statBases</xpath>
+				<value>
+					<SwayFactor>0.95</SwayFactor>
+					<Recoil>0.7</Recoil>
+					<ShotSpread>0.1</ShotSpread>   
+				</value>
+			</li>
+
+						<!--SHOOTING-->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Gun_NecroTurret"]/verbs</xpath>
+				<value>
+					<verbs>
+			
+						<li Class="CombatExtended.VerbPropertiesCE">
+							<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+							<hasStandardCommand>True</hasStandardCommand>
+							
+							<warmupTime>0.8</warmupTime>
+							
+							<range>50</range>
+							
+							<burstShotCount>5</burstShotCount>
+							<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+							<muzzleFlashScale>5</muzzleFlashScale>
+							
+							<defaultProjectile>Bullet_Bone_Turret</defaultProjectile>
+							
+							<soundCast>Shot_Necronoid_Pistol</soundCast>
+							<soundCastTail>GunTail_Light</soundCastTail>
+
+						</li>
+			  
+					</verbs>
+				</value>
+			</li>
+			
+			
+			</operations>
+		</match>
+	</Operation>
+</Patch>
+

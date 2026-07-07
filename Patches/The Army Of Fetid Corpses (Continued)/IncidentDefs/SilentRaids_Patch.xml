@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>The Army Of Fetid Corpses (Continued)</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+			
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/IncidentDef[defName="Chupacabras_SilentRaid"]</xpath>
+					<value>					
+						<minThreatPoints>950</minThreatPoints>
+					</value>
+				</li>			
+							
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/IncidentDef[defName="HowlingSpiders_SilentRaid"]</xpath>
+					<value>
+						<minThreatPoints>1050</minThreatPoints>
+					</value>
+				</li>
+								
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/IncidentDef[defName="Wendigo_SilentRaid"]</xpath>
+					<value>
+						<minThreatPoints>2500</minThreatPoints>
+					</value>
+				</li>				
+
+			</operations>
+		</match>
+	</Operation>
+						
+</Patch>			

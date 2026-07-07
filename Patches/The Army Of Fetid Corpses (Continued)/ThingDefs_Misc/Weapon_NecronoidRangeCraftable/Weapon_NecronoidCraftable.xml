@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod" MayRequire="Ludeon.Rimworld.Biotech">
+		<mods>
+			<li>The Army Of Fetid Corpses (Continued)</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+      
+				<li Class="PatchOperationReplace" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/ThingDef[@Name="NecroWeaponsBase"]/tools
+					</xpath>
+					<value>
+						<tools>
+							<li Class="CombatExtended.ToolCE">
+								<label>stock</label>
+								<capacities>
+									<li>Blunt</li>
+								</capacities>
+								<power>8</power>
+								<cooldownTime>2.2</cooldownTime>
+								<armorPenetrationBlunt>2.65</armorPenetrationBlunt>
+								<linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+							</li>
+							<li Class="CombatExtended.ToolCE">
+								<label>barrel</label>
+								<capacities>
+									<li>Blunt</li>
+								</capacities>
+								<power>5</power>
+								<cooldownTime>1.6</cooldownTime>
+								<armorPenetrationBlunt>1.5</armorPenetrationBlunt>
+								<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+							</li>
+							<li Class="CombatExtended.ToolCE">
+								<label>muzzle</label>
+								<capacities>
+									<li>Stab</li>
+								</capacities>
+								<power>6</power>
+								<extraMeleeDamages>
+									<li>
+										<def>NecronoidCutDamage</def>
+										<amount>2</amount>
+										<chance>0.05</chance>
+									</li>
+								</extraMeleeDamages>
+								<cooldownTime>1.6</cooldownTime>
+								<armorPenetrationBlunt>1.8</armorPenetrationBlunt>
+								<armorPenetrationSharp>1.4</armorPenetrationSharp>
+								<linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+							</li>
+						</tools>
+					</value>
+				</li>
+				
+				
+				
+				
+				
+					<!-- ====================== Boneshard rifle craftable ====================== -->
+				
+									 <!-- ======= Gun ======= -->
+
+				<li Class="CombatExtended.PatchOperationMakeGunCECompatible" MayRequire="Ludeon.Rimworld.Biotech">
+				<defName>Gun_Craftable_BoneshardRifle</defName>
+				
+						<!--STATS-->
+					<statBases>
+						<Mass>3.7</Mass>
+						<Bulk>11.6</Bulk>
+						
+						<SightsEfficiency>1</SightsEfficiency>
+						<NightVisionEfficiency_Weapon>0</NightVisionEfficiency_Weapon> 
+						
+						<SwayFactor>1.33</SwayFactor>
+						<ShotSpread>0.08</ShotSpread>
+						<Recoil>1.41</Recoil>
+						
+						<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+					</statBases>
+			  
+						<!--SHOTS-->
+					<Properties>
+						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+						<hasStandardCommand>True</hasStandardCommand>
+						<ai_AvoidFriendlyFireRadius>2</ai_AvoidFriendlyFireRadius>
+						
+						<warmupTime>1</warmupTime>
+						<range>50</range>
+						
+						<burstShotCount>6</burstShotCount>
+						<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+						<muzzleFlashScale>2</muzzleFlashScale>
+						<recoilAmount>0.44</recoilAmount>
+						
+						<defaultProjectile>Bullet_Rifle_Bone_Craftable</defaultProjectile>
+						<soundCast>Shot_Necronoid_Pistol</soundCast>
+						<soundCastTail>GunTail_Heavy</soundCastTail>
+					</Properties>
+					
+					<AmmoUser>
+						<magazineSize>30</magazineSize>
+						<reloadTime>4</reloadTime>
+						<ammoSet>AmmoSet_Rifle_Bone_Craftable</ammoSet> 
+					</AmmoUser>
+					
+					<FireModes>
+						<aimedBurstShotCount>3</aimedBurstShotCount>
+						<aiAimMode>AimedShot</aiAimMode> 
+					</FireModes>
+					
+						<!--TAGS-->
+					<weaponTags>
+						<li>CE_AI_AR</li>
+					</weaponTags>
+			  
+				</li>
+				
+				
+				
+				
+				
+		<!-- ====================== Advanced boneshard rifle craftable ====================== -->
+				
+									 <!-- ======= Gun ======= -->
+
+				<li Class="CombatExtended.PatchOperationMakeGunCECompatible" MayRequire="Ludeon.Rimworld.Biotech">
+				<defName>Gun_Craftable_AdvancedBoneshardRifle</defName>
+				
+						<!--STATS-->
+					<statBases>
+						<Mass>3.95</Mass>
+						<Bulk>12.1</Bulk>
+						
+						<SightsEfficiency>1</SightsEfficiency>
+						<NightVisionEfficiency_Weapon>0.0</NightVisionEfficiency_Weapon> 
+						
+						<SwayFactor>1.26</SwayFactor>
+						<ShotSpread>0.06</ShotSpread>
+						<Recoil>1.28</Recoil>
+						
+						<RangedWeapon_Cooldown>0.85</RangedWeapon_Cooldown>
+					</statBases>
+			  
+						<!--SHOTS-->
+					<Properties>
+						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+						<hasStandardCommand>True</hasStandardCommand>
+						<ai_AvoidFriendlyFireRadius>2</ai_AvoidFriendlyFireRadius>
+						
+						<warmupTime>1.2</warmupTime>
+						<range>54</range>
+						
+						<burstShotCount>8</burstShotCount>
+						<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+						<muzzleFlashScale>2</muzzleFlashScale>
+						<recoilAmount>0.3</recoilAmount>
+						
+						<defaultProjectile>Bullet_Rifle_Bone_Craftable</defaultProjectile>
+						<soundCast>Shot_Necronoid_Pistol</soundCast>
+						<soundCastTail>GunTail_Heavy</soundCastTail>
+					</Properties>
+					
+					<AmmoUser>
+						<magazineSize>40</magazineSize>
+						<reloadTime>4.2</reloadTime>
+						<ammoSet>AmmoSet_Rifle_Bone_Craftable</ammoSet>              
+					</AmmoUser>
+					
+					<FireModes>
+						<aimedBurstShotCount>4</aimedBurstShotCount>
+						<aiAimMode>AimedShot</aiAimMode> 
+					</FireModes>
+					
+						<!--TAGS-->
+					<weaponTags>
+						<li>CE_AI_AR</li>
+					</weaponTags>
+			  
+				</li>
+				
+				
+				
+				
+				
+				<!-- ====================== boneshard shotgun craftable ====================== -->
+				
+									 <!-- ======= Gun ======= -->
+
+				<li Class="CombatExtended.PatchOperationMakeGunCECompatible" MayRequire="Ludeon.Rimworld.Biotech">
+				<defName>Gun_Craftable_BoneshardShotgun</defName>
+				
+						<!--STATS-->
+					<statBases>
+						<Mass>4.1</Mass>
+						<Bulk>11.6</Bulk>
+						
+						<SightsEfficiency>1</SightsEfficiency>
+						<NightVisionEfficiency_Weapon>0.0</NightVisionEfficiency_Weapon> 
+						
+						<SwayFactor>1.43</SwayFactor>
+						<ShotSpread>0.13</ShotSpread>
+						<Recoil>2.59</Recoil>
+						
+						<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+					</statBases>
+			  
+						<!--SHOTS-->
+					<Properties>
+						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+						<hasStandardCommand>True</hasStandardCommand>
+						<ai_AvoidFriendlyFireRadius>2</ai_AvoidFriendlyFireRadius>
+						
+						<warmupTime>1.15</warmupTime>
+						<range>18</range>
+						
+						<burstShotCount>1</burstShotCount>
+						<!--ticksBetweenBurstShots></ticksBetweenBurstShots-->
+						<muzzleFlashScale>2</muzzleFlashScale>
+						<!--recoilAmount></recoilAmount-->
+						
+						<defaultProjectile>Bullet_Shotgun_Bone_Craftable</defaultProjectile>
+						<soundCast>Shot_Necronoid_Shotgun</soundCast>
+						<soundCastTail>GunTail_Heavy</soundCastTail>
+					</Properties>
+					
+					<AmmoUser>
+						<magazineSize>7</magazineSize>
+						<reloadTime>0.75</reloadTime>
+						<reloadOneAtATime>True</reloadOneAtATime>
+						<ammoSet>AmmoSet_Shotgun_Bone_Craftable</ammoSet>               <!-- GUN MAGAZINE -->
+					</AmmoUser>
+					
+					<FireModes>
+						<aiAimMode>Snapshot</aiAimMode> 
+					</FireModes>
+					
+						<!--TAGS-->
+					<weaponTags>
+						<li>CE_AI_BROOM</li>
+					</weaponTags>
+			  
+				</li>
+				
+				
+				
+				
+				
+			<!-- ====================== boneshard sniper craftable ====================== -->
+				
+									 <!-- ======= Gun ======= -->
+
+				<li Class="CombatExtended.PatchOperationMakeGunCECompatible" MayRequire="Ludeon.Rimworld.Biotech">
+				<defName>Gun_Craftable_BoneshardSniperRifle</defName>
+				
+						<!--STATS-->
+					<statBases>
+						<Mass>5.2</Mass>
+						<Bulk>12.5</Bulk>
+						
+						<SightsEfficiency>2.5</SightsEfficiency>
+						<NightVisionEfficiency_Weapon>0.0</NightVisionEfficiency_Weapon> 
+						
+						<SwayFactor>0.71</SwayFactor>
+						<ShotSpread>0.04</ShotSpread>
+						<Recoil>1.09</Recoil>
+						
+						<RangedWeapon_Cooldown>1.15</RangedWeapon_Cooldown>
+					</statBases>
+			  
+						<!--SHOTS-->
+					<Properties>
+						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+						<hasStandardCommand>True</hasStandardCommand>
+						<ai_AvoidFriendlyFireRadius>2</ai_AvoidFriendlyFireRadius>
+						
+						<warmupTime>1.7</warmupTime>
+						<range>72</range>
+						
+						<burstShotCount>1</burstShotCount>
+						<!--ticksBetweenBurstShots></ticksBetweenBurstShots-->
+						<muzzleFlashScale>2</muzzleFlashScale>
+						<!--recoilAmount></recoilAmount-->
+						
+						<defaultProjectile>Bullet_Sniper_Bone_Craftable</defaultProjectile>
+						<soundCast>Shot_Necronoid_Pistol</soundCast>
+						<soundCastTail>GunTail_Heavy</soundCastTail>
+					</Properties>
+					
+					<AmmoUser>
+						<magazineSize>10</magazineSize>
+						<reloadTime>4</reloadTime>
+						<ammoSet>AmmoSet_Sniper_Bone_Craftable</ammoSet>               <!-- GUN MAGAZINE -->
+					</AmmoUser>
+					
+					<FireModes>
+						<aiAimMode>AimedShot</aiAimMode> 
+					</FireModes>
+					
+						<!--TAGS-->
+					<weaponTags>
+						<li>CE_AI_SR</li>
+					</weaponTags>
+			  
+				</li>
+				
+				
+				
+				
+				
+							<!-- ====================== boneshard minigun craftable ====================== -->
+				
+									 <!-- ======= Gun ======= -->
+
+				<li Class="CombatExtended.PatchOperationMakeGunCECompatible" MayRequire="Ludeon.Rimworld.Biotech"> 
+				<defName>Gun_Craftable_BoneshardRapidBlaster</defName>
+				
+						<!--STATS-->
+					<statBases>
+						<Mass>23</Mass>
+						<Bulk>10</Bulk>
+						
+						<SightsEfficiency>1</SightsEfficiency>
+						<NightVisionEfficiency_Weapon>0.0</NightVisionEfficiency_Weapon> 
+						
+						<SwayFactor>3.17</SwayFactor>
+						<ShotSpread>0.06</ShotSpread>
+						<Recoil>0.93</Recoil>
+						
+						<RangedWeapon_Cooldown>0.45</RangedWeapon_Cooldown>
+					</statBases>
+			  
+						<!--SHOTS-->
+					<Properties>
+						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+						<hasStandardCommand>True</hasStandardCommand>
+						<ai_AvoidFriendlyFireRadius>2</ai_AvoidFriendlyFireRadius>
+						
+						<warmupTime>2.45</warmupTime>
+						<range>46</range>
+						
+						<burstShotCount>58</burstShotCount>
+						<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+						<muzzleFlashScale>2</muzzleFlashScale>
+						<recoilAmount>0.5</recoilAmount>
+						
+						<defaultProjectile>Bullet_Rifle_Bone_Craftable</defaultProjectile>
+						<soundCast>Shot_Necronoid_Pistol</soundCast>
+						<soundCastTail>GunTail_Heavy</soundCastTail>
+					</Properties>
+					
+					<AmmoUser>
+						<magazineSize>300</magazineSize>
+						<reloadTime>9.0</reloadTime>
+						<ammoSet>AmmoSet_Rifle_Bone_Craftable</ammoSet>               <!-- GUN MAGAZINE -->
+					</AmmoUser>
+					
+					<FireModes>
+						<aimedBurstShotCount>15</aimedBurstShotCount>
+						<aiAimMode>SuppressFire</aiAimMode> 
+						<aiUseBurstMode>FALSE</aiUseBurstMode> 
+					</FireModes>
+					
+						<!--TAGS-->
+					<weaponTags>
+						<li>CE_AI_Minigun</li>
+					</weaponTags>
+			  
+				</li>
+				
+				
+				
+				
+				
+				
+				
+				
+      
+		</operations>
+		</match>
+	</Operation>
+</Patch>

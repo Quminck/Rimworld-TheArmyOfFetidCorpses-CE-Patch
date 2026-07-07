@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>The Army Of Fetid Corpses (Continued)</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+			
+			
+									
+						<!-- ====================== MELEE ====================== -->
+						
+				<li Class="PatchOperationReplace" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer"]/tools</xpath>
+					<value>
+						<tools>
+			
+							<li Class="CombatExtended.ToolCE">
+								<label>Blunt</label>
+								<capacities>
+									<li>Blunt</li>
+								</capacities>
+								<armorPenetrationBlunt>3.455</armorPenetrationBlunt>
+								<power>10</power>
+								<cooldownTime>2</cooldownTime>
+								<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+							</li>
+			  		  
+						</tools>
+					</value>
+				</li>			
+			
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Gun_CleansingRocketLauncher"]/tools</xpath>
+					<value>
+						<tools>
+			
+							<li Class="CombatExtended.ToolCE">
+								<label>Blunt</label>
+								<capacities>
+									<li>Blunt</li>
+								</capacities>
+								<armorPenetrationBlunt>3.455</armorPenetrationBlunt>
+								<power>10</power>
+								<cooldownTime>2</cooldownTime>
+								<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+							</li>
+			  		  
+						</tools>
+					</value>
+				</li>
+			
+
+						
+
+						<!-- =============== Heavy Flamer =============== -->
+						
+						 <!-- =============== Description =============== -->
+
+				<li Class="PatchOperationReplace" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer"]/description</xpath>
+					<value>
+						<description>A long-ranged heavy flamethrower capable of spreading fire over a massive area, plunging entire enemy squads and positions into a sea of inferno. It serves as an exceptionally effective tool for purging necronoid structures and managing swarms from a safe distance.</description>
+					</value>
+				</li>
+				
+						<!-- =============== Craft =============== -->
+			
+				<li Class="PatchOperationReplace" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer"]/costList</xpath>
+					<value>
+						<costList>
+							<Steel>60</Steel>
+							<Plasteel>40</Plasteel>
+							<ComponentIndustrial>6</ComponentIndustrial>
+						</costList>
+					</value>
+				</li>
+				
+					    <!-- =============== Gun =============== -->
+						
+							<!-- ====== statBases ====== -->
+				<li Class="PatchOperationReplace" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer"]/statBases</xpath>
+					<value>
+						<statBases Inherit="False">
+							<MaxHitPoints>100</MaxHitPoints>
+							<Flammability>0</Flammability>			
+							<DeteriorationRate>2</DeteriorationRate>
+							<Beauty>0</Beauty>
+							
+							<Mass>20</Mass>
+							<Bulk>10</Bulk>
+							
+							<SellPriceFactor>0.2</SellPriceFactor>
+						  
+							<MarketValue>875</MarketValue>
+							<WorkToMake>34000</WorkToMake>
+						  
+							<SightsEfficiency>0.9</SightsEfficiency>
+							<NightVisionEfficiency_Weapon>0</NightVisionEfficiency_Weapon>
+							
+							<SwayFactor>5</SwayFactor>
+							<Recoil>0.8</Recoil>
+							<ShotSpread>5</ShotSpread>
+							
+							<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+						</statBases>
+					</value>
+				</li>
+
+							<!-- ====== verbs ====== -->
+				<li Class="PatchOperationReplace" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer"]/verbs</xpath>
+					<value>
+						<verbs>
+							<li Class="CombatExtended.VerbPropertiesCE">
+								<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+								<hasStandardCommand>True</hasStandardCommand>
+								
+								<warmupTime>2.5</warmupTime>
+								
+								<range>30</range>
+								<minRange>8</minRange>
+								
+								<burstShotCount>20</burstShotCount>
+								<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+								<muzzleFlashScale>12</muzzleFlashScale>
+								
+								<recoilPattern>Regular</recoilPattern>
+								
+								<defaultProjectile>BulletHVFuel</defaultProjectile>
+								<soundCast>Shot_MiniFlameblaster</soundCast>
+								
+								<targetParams>
+									<canTargetLocations>True</canTargetLocations>
+								</targetParams>
+							</li>
+						</verbs>
+					</value>
+				</li>
+		
+				<li Class="PatchOperationRemove" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer"]/comps/li[@Class="Necro.CompProperties_ReloadableWeapon"]</xpath> 
+				</li>
+
+						<!-- ====== comps ====== -->
+				<li Class="PatchOperationAdd" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer"]/comps</xpath>
+					<value>
+							<!-- ====== Ammo ====== -->
+						<li Class="CombatExtended.CompProperties_AmmoUser">
+							<magazineSize>60</magazineSize>
+							<reloadTime>6</reloadTime>
+							<ammoSet>AmmoSetHVFuel</ammoSet>
+						</li>
+								<!-- ====== Fire mods ====== -->
+						<li Class="CombatExtended.CompProperties_FireModes">
+							<noSingleShot>true</noSingleShot>       
+							<noSnapshot>true</noSnapshot>            
+						</li>
+				
+				</value>
+				</li>
+
+						<!-- ====== weaponTags ====== -->
+				<li Class="PatchOperationConditional" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer"]/weaponTags</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer"]</xpath>
+						<value>
+							<weaponTags/>
+						</value>
+					</nomatch>
+				</li>
+				
+				<li Class="PatchOperationReplace" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer"]/weaponTags</xpath>
+					<value>
+						<weaponTags Inherit="False">
+							<li>GunHeavy</li>
+							<li>CE_AI_AOE</li>
+						</weaponTags>
+					</value>
+				</li>
+			
+			
+			
+			
+			
+		 <!-- =============== (Cleansing) Imperial rocket launcher  =============== -->
+						
+					 <!-- =============== Description =============== -->
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Gun_CleansingRocketLauncher"]/label	</xpath>
+					<value>
+						<label>Imperial Rocketlauncher</label>
+					</value>
+				</li>
+						
+				<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Gun_CleansingRocketLauncher"]/description</xpath>
+					<value>
+						<description>A heavy single-shot rocket system specifically designed to shot anti-necronoid rockets.</description>
+					</value>
+				</li>
+				
+						<!-- =============== Craft =============== -->
+			
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Gun_CleansingRocketLauncher"]/costList</xpath>
+					<value>
+						<costList>
+							<Steel>60</Steel>
+							<Plasteel>90</Plasteel>
+							<ComponentSpacer>4</ComponentSpacer>
+						</costList>
+					</value>
+				</li>	
+				
+					    <!-- =============== Gun =============== -->
+						
+							<!-- ====== statBases ====== -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Gun_CleansingRocketLauncher"]/statBases</xpath>
+					<value>
+						<statBases Inherit="False">				
+							<MaxHitPoints>100</MaxHitPoints>
+							<Flammability>0</Flammability>			
+							<DeteriorationRate>2</DeteriorationRate>
+							<Beauty>0</Beauty>
+							
+							<Mass>20</Mass>
+							<Bulk>15</Bulk>
+							
+							<SellPriceFactor>0.2</SellPriceFactor>
+					  
+							<MarketValue>2100</MarketValue>
+							<WorkToMake>57000</WorkToMake>
+					  
+							<SightsEfficiency>1.8</SightsEfficiency>
+							<NightVisionEfficiency_Weapon>0.9</NightVisionEfficiency_Weapon>
+							
+							<SwayFactor>0.65</SwayFactor>
+							<ShotSpread>0.01</ShotSpread>
+							<Recoil>0.2</Recoil>
+							<RangedWeapon_Cooldown>2.65</RangedWeapon_Cooldown>
+						</statBases>
+					</value>
+				</li>
+
+							<!-- ====== verbs ====== -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Gun_CleansingRocketLauncher"]/verbs</xpath>
+					<value>
+						<verbs>
+							<li Class="CombatExtended.VerbPropertiesCE">
+								<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+								
+								<hasStandardCommand>True</hasStandardCommand>
+								<warmupTime>2.5</warmupTime>
+								
+								<range>62</range>
+								<minRange>2</minRange>
+								
+								<burstShotCount>1</burstShotCount>
+								<muzzleFlashScale>20</muzzleFlashScale>
+								<recoilPattern>Regular</recoilPattern>
+								
+								<defaultProjectile>BulletANBrocket</defaultProjectile>
+								<soundCast>InfernoCannon_Fire</soundCast>
+								<soundCastTail>GunTail_Heavy</soundCastTail>
+								
+								<targetParams>
+								  <canTargetLocations>True</canTargetLocations>
+								</targetParams>
+							</li>
+						</verbs>
+					</value>
+				</li>
+		
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="Gun_CleansingRocketLauncher"]/comps/li[@Class="Necro.CompProperties_ReloadableWeapon"]</xpath> 
+				</li>
+
+					<!-- ====== comps ====== -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Gun_CleansingRocketLauncher"]/comps</xpath>
+					<value>
+							<!-- ====== Ammo ====== -->
+						<li Class="CombatExtended.CompProperties_AmmoUser">
+							<magazineSize>1</magazineSize>
+							<reloadTime>4.4</reloadTime>
+							<ammoSet>AmmoSetANBrocket</ammoSet>
+						</li>
+							<!-- ====== Fire mods ====== -->
+						<li Class="CombatExtended.CompProperties_FireModes">    
+							<aiAimMode>AimedShot</aiAimMode>							
+						</li>
+					</value>
+				</li>
+
+					<!-- ====== weaponTags ====== -->
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="Gun_CleansingRocketLauncher"]/weaponTags</xpath>
+						<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="Gun_CleansingRocketLauncher"]</xpath>
+							<value>
+								<weaponTags />
+							</value>
+					</nomatch>
+				</li>
+			
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Gun_CleansingRocketLauncher"]/weaponTags</xpath>
+					<value>
+						<weaponTags Inherit="False">
+							<li>GunHeavy</li>
+							<li>CE_AI_AOE</li>
+						</weaponTags>
+					</value>
+				</li>
+
+
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,972 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+			
+
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>The Army Of Fetid Corpses (Continued)</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+			
+			
+
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="Gun_ImperialCleansingBolter"]/weaponTags/li[text()="SpacerGun"]</xpath>
+				</li>
+					
+						
+							<!-- ====================== MELEE ====================== -->
+						
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[
+					defName="Gun_IncendiaryAssaultRifle"
+					or defName="Gun_IncendiaryMachineGun"
+					or defName="Gun_IncendiaryAntiMaterial"
+					
+					or defName="Gun_CleansingShotgun"
+					or defName="Gun_CleansingBolter"
+					or defName="Gun_ImperialCleansingBolter"
+					or defName="Gun_ImperialCleansingBolterMG"
+					or defName="Gun_ImperialCleansingAutocannon"
+					
+					or defName="Gun_SuperSMG"
+					or defName="Gun_SuperShotGun"
+					or defName="Gun_SurvivalistSniperRifle"
+					]/tools</xpath>
+					
+					<value>
+						<tools>
+							<li Class="CombatExtended.ToolCE">
+								<label>stock</label>
+								<capacities>
+									<li>Blunt</li>
+								</capacities>
+								<power>8</power>
+								<cooldownTime>1.55</cooldownTime>
+								<chanceFactor>0.5</chanceFactor>
+								<armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+								<linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+							</li>
+							<li Class="CombatExtended.ToolCE">
+								<label>barrel</label>
+								<capacities>
+									<li>Blunt</li>
+								</capacities>
+								<power>5</power>
+								<cooldownTime>2.02</cooldownTime>
+								<armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+								<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+							</li>
+							<li Class="CombatExtended.ToolCE">
+								<label>muzzle</label>
+								<capacities>
+									<li>Poke</li>
+								</capacities>
+								<power>8</power>
+								<cooldownTime>1.55</cooldownTime>
+								<armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+								<linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+							</li>
+						</tools>
+					</value>
+					
+				</li>
+				
+				
+				
+				
+				
+				
+				<!-- ====================== INCENDIARY ====================== -->
+				
+				<!-- ====================== StG-44 ====================== -->
+				
+							 <!-- ======= Description ======= -->
+				
+				<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Gun_IncendiaryAssaultRifle"]/description</xpath>
+					<value>
+						<description>A modernized version of the standard sturmgewehr 44, which uses new experemental cartridge.</description>
+					</value>
+				</li>
+				
+								 <!-- ======= Gun ======= -->
+				
+				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>Gun_IncendiaryAssaultRifle</defName>
+				
+						<!--STATS-->
+					<statBases>
+						<Mass>5.2</Mass>
+						<Bulk>9.2</Bulk>
+						
+						<SightsEfficiency>1</SightsEfficiency>
+						<NightVisionEfficiency_Weapon>0</NightVisionEfficiency_Weapon> 
+						
+						<SwayFactor>1.2</SwayFactor>
+						<ShotSpread>0.04</ShotSpread>
+						<Recoil>1.45</Recoil>
+						
+						<RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
+						
+						<MarketValue>875</MarketValue>
+						<WorkToMake>30000</WorkToMake>
+					</statBases>
+					
+						<!--CRAFT-->
+					<costList>
+						<Steel>70</Steel>
+						<ComponentIndustrial>7</ComponentIndustrial>
+						<Plasteel>25</Plasteel>
+						<Chemfuel>10</Chemfuel>
+					</costList>
+			  
+						<!--SHOTS-->
+					<Properties>
+						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+						<hasStandardCommand>True</hasStandardCommand>
+						
+						<warmupTime>1</warmupTime>
+						<range>48</range>
+						
+						<burstShotCount>10</burstShotCount>
+						<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+						<muzzleFlashScale>6</muzzleFlashScale>
+						<recoilAmount>0.4</recoilAmount>
+						
+						<defaultProjectile>Bullet_792x33mmKurz_FMJ</defaultProjectile>         <!-- MAIN BULLET -->
+						<soundCast>Shot_Sturmgewehr_44</soundCast>
+						<soundCastTail>GunTail_Medium</soundCastTail>
+					</Properties>
+					
+						<!--AMMO-->
+					<AmmoUser>
+						<magazineSize>30</magazineSize>
+						<reloadTime>3.5</reloadTime>
+						<ammoSet>AmmoSet_792x33mmKurz</ammoSet>               <!-- GUN MAGAZINE -->
+					</AmmoUser>
+			  
+						<!--FIRE MODS-->
+					<FireModes>
+						<aimedBurstShotCount>5</aimedBurstShotCount>
+					</FireModes>
+			   
+						<!--TAGS-->
+					<weaponTags>
+						<li>CE_AI_AR</li>
+					</weaponTags>
+			  
+				</li>
+			
+			
+			
+			
+			
+			  <!-- ====================== MG-42 ====================== -->
+			  
+						  <!-- ======= Description ======= -->
+			  
+				<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Gun_IncendiaryMachineGun"]/description</xpath>
+					<value>
+						<description>A modernized variant of the legendary MG 42 machine gun modernized to shoot an experemental cartridges.</description>
+					</value>
+				</li>
+			
+							 <!-- ======= Gun ======= -->
+			  
+				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>Gun_IncendiaryMachineGun</defName>
+			
+						<!--STATS-->
+					<statBases>
+						<Mass>11.5</Mass>
+						<Bulk>12.2</Bulk>
+
+						<SightsEfficiency>1</SightsEfficiency>
+						<NightVisionEfficiency_Weapon>0</NightVisionEfficiency_Weapon> 
+						
+						<SwayFactor>1.5</SwayFactor>
+						<ShotSpread>0.05</ShotSpread>
+						<Recoil>1.9</Recoil>
+					
+						<RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+											
+						<MarketValue>1050</MarketValue>
+						<WorkToMake>34800</WorkToMake>
+					</statBases>
+				
+						<!--CRAFT-->
+					<costList>
+						<Steel>100</Steel>
+						<ComponentIndustrial>8</ComponentIndustrial>
+						<Plasteel>40</Plasteel>
+						<Chemfuel>10</Chemfuel>
+					</costList>
+
+					<!--SHOTS-->
+					<Properties>
+						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+						<hasStandardCommand>True</hasStandardCommand>
+						
+						<warmupTime>1.5</warmupTime>
+						<range>54</range>
+						
+						<burstShotCount>30</burstShotCount>
+						<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+						<muzzleFlashScale>1</muzzleFlashScale>
+						<recoilAmount>0.6</recoilAmount>
+						
+						<defaultProjectile>Bullet_792x57mmMauser_FMJ</defaultProjectile>   <!-- MAIN BULLET -->
+						<soundCast>Shot_MG42</soundCast>
+						<soundCastTail>GunTail_Medium</soundCastTail>
+					</Properties>
+				
+						<!--AMMO-->
+					<AmmoUser>
+						<magazineSize>150</magazineSize>
+						<reloadTime>5.4</reloadTime>
+						<ammoSet>AmmoSet_792x57mmMauser</ammoSet>    <!-- GUN MAGAZINE -->
+					</AmmoUser>
+			  
+						<!--FIRE MODS-->
+					<FireModes>
+						<aimedBurstShotCount>10</aimedBurstShotCount>
+					</FireModes>
+			   
+						<!--TAGS-->
+					<weaponTags>
+						<li>Bipod_LMG</li>
+						<li>CE_AI_AssaultWeapon</li>
+					</weaponTags>
+		  
+				</li>
+ 
+			  
+			  
+			  
+			  
+			<!-- ====================== Lahti L-39 ====================== -->
+			
+						   <!-- ======= Description ======= -->
+					
+				<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Gun_IncendiaryAntiMaterial"]/description</xpath>
+					<value>
+						<description>Modernized version of a Finnish anti-tank rifle, which uses experemental devastating 20mm rounds.</description>
+					</value>
+				</li>
+			
+							  <!-- ======= Gun ======= -->
+					
+				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>Gun_IncendiaryAntiMaterial</defName>
+			
+						<!--STATS-->
+					<statBases>
+						<Mass>35</Mass>
+						<Bulk>22.4</Bulk>
+						
+						<SightsEfficiency>2</SightsEfficiency>
+						<NightVisionEfficiency_Weapon>0</NightVisionEfficiency_Weapon> 
+						
+						<SwayFactor>2.8</SwayFactor>
+						<ShotSpread>0.02</ShotSpread>
+						<Recoil>4</Recoil>
+						
+						<RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+						
+						<MarketValue>1300</MarketValue>
+						<WorkToMake>37800</WorkToMake>						
+					</statBases>
+					
+						<!--CRAFT-->
+					<costList>
+						<Steel>110</Steel>
+						<ComponentIndustrial>10</ComponentIndustrial>
+						<Plasteel>50</Plasteel>
+						<Chemfuel>10</Chemfuel>
+					</costList>
+
+						<!--SHOTS-->
+					<Properties>
+						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+						<hasStandardCommand>True</hasStandardCommand>
+						
+						<warmupTime>4.1</warmupTime>
+						<range>60</range>
+						
+						<burstShotCount>1</burstShotCount>
+						<muzzleFlashScale>20</muzzleFlashScale>
+						
+						<defaultProjectile>Bullet_20x138mmB_AP</defaultProjectile>   <!-- MAIN BULLET -->
+						<soundCast>Shot_Lahti</soundCast>
+						<soundCastTail>GunTail_Heavy</soundCastTail>
+					</Properties>
+					
+						<!--AMMO-->
+					<AmmoUser>
+						<magazineSize>10</magazineSize>
+						<reloadTime>5</reloadTime>
+						<ammoSet>AmmoSet_20x138mmB</ammoSet>    <!-- GUN MAGAZINE -->
+					</AmmoUser>
+		  
+					<!--FIRE MODS-->
+					<FireModes>
+					</FireModes>
+		   
+					<!--TAGS-->
+					<weaponTags>
+						<li>Bipod_AMR</li>
+						<li>CE_AntiMaterielRifle</li>
+					</weaponTags>
+		  
+				</li>
+				
+				
+				
+
+
+
+
+				
+		
+		
+		
+						<!-- ====================== CLEANSING ====================== -->
+						
+						 <!-- ====================== Bolter ====================== -->
+						 
+									  <!-- ======= Description ======= -->
+						 
+				<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Gun_CleansingBolter"]/label</xpath>
+					<value>
+						<label>Makeshift Bolt carabine</label>
+					</value>
+				</li>
+						
+				<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Gun_CleansingBolter"]/description</xpath>
+					<value>
+						<description>A crude makeshift replica of an advanced Bolter design, heavily modified to fire 5mm cleansing bolts.</description>
+					</value>
+				</li>
+				
+										  <!-- ======= Gun ======= -->
+										  
+				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>Gun_CleansingBolter</defName>
+			
+						<!--STATS-->
+					<statBases>
+						<Mass>7</Mass>
+						<Bulk>9</Bulk>
+						
+						<SightsEfficiency>1</SightsEfficiency>
+						<NightVisionEfficiency_Weapon>0</NightVisionEfficiency_Weapon> 
+						
+						<SwayFactor>2.04</SwayFactor>
+						<ShotSpread>0.11</ShotSpread>
+						<Recoil>1.68</Recoil>
+						
+						<RangedWeapon_Cooldown>1.09</RangedWeapon_Cooldown>
+						
+						<MarketValue>1350</MarketValue>
+						<WorkToMake>31200</WorkToMake>
+					</statBases>
+					
+						<!--CRAFT-->
+					<costList>
+						<Steel>70</Steel>
+						<ComponentSpacer>2</ComponentSpacer>
+						<ComponentIndustrial>4</ComponentIndustrial>
+						<Plasteel>35</Plasteel>
+					</costList>
+			  
+						<!--SHOTS-->
+					<Properties>
+						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+						<hasStandardCommand>True</hasStandardCommand>
+						
+						<warmupTime>1.2</warmupTime>
+						<range>36</range>
+						
+						<burstShotCount>5</burstShotCount>
+						<ticksBetweenBurstShots>23</ticksBetweenBurstShots>
+						<muzzleFlashScale>11</muzzleFlashScale>
+						<recoilAmount>1.12</recoilAmount>
+						
+						<defaultProjectile>BulletANBbolt</defaultProjectile>         <!-- MAIN BULLET -->
+						<soundCast>Shot_Bolterz</soundCast>
+						<soundCastTail>GunTail_Heavy</soundCastTail>
+					</Properties>
+					
+						<!--AMMO-->
+					<AmmoUser>
+						<magazineSize>15</magazineSize>
+						<reloadTime>3.5</reloadTime>
+						<ammoSet>AmmoSetANBbolt</ammoSet>               <!-- GUN MAGAZINE -->
+					</AmmoUser>
+			  
+						<!--FIRE MODS-->
+					<FireModes>
+						<aimedBurstShotCount>3</aimedBurstShotCount>
+					</FireModes>
+			   
+						<!--TAGS-->
+					<weaponTags>
+						<li>CE_AI_SMG</li>
+					</weaponTags>
+				</li>
+					
+					
+					
+					
+					
+					 <!-- ====================== Imperial Bolter ====================== -->
+						 
+									  <!-- ======= Description ======= -->
+						 
+				<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Gun_ImperialCleansingBolter"]/label</xpath>
+					<value>
+						<label>Imperial Bolt carabine</label>
+					</value>
+				</li>
+					
+				<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Gun_ImperialCleansingBolter"]/description</xpath>
+					<value>
+						<description>Deadly Imperial carbine manufactured according to strict blueprints designed for high-velocity 5mm cleansing bolt.</description>
+					</value>
+				</li>
+				
+										  <!-- ======= Gun ======= -->
+					
+				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>Gun_ImperialCleansingBolter</defName>
+				
+						<!--STATS-->
+					<statBases>
+						<Mass>9</Mass>
+						<Bulk>11.5</Bulk>
+						
+						<SightsEfficiency>1</SightsEfficiency>
+						<NightVisionEfficiency_Weapon>0.45</NightVisionEfficiency_Weapon>
+						
+						<SwayFactor>1.6</SwayFactor>
+						<ShotSpread>0.04</ShotSpread>
+						<Recoil>1.35</Recoil>
+						
+						<RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
+						
+						<MarketValue>1550</MarketValue>
+						<WorkToMake>37500</WorkToMake>	
+					</statBases>
+					
+						<!--CRAFT-->
+					<costList>
+						<Steel>40</Steel>
+						<ComponentSpacer>3</ComponentSpacer>
+						<Plasteel>60</Plasteel>
+					</costList>
+			  
+						<!--SHOTS-->
+					<Properties>
+						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+						<hasStandardCommand>True</hasStandardCommand>
+						
+						<warmupTime>1.4</warmupTime>
+						<range>46</range>
+						
+						<burstShotCount>7</burstShotCount>
+						<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+						<muzzleFlashScale>5</muzzleFlashScale>
+						<recoilAmount>0.5</recoilAmount>
+						
+						<defaultProjectile>BulletANBbolt</defaultProjectile>         <!-- MAIN BULLET -->
+						<soundCast>Shot_Bolterz</soundCast>
+						<soundCastTail>GunTail_Heavy</soundCastTail>
+					</Properties>
+					
+						<!--AMMO-->
+					<AmmoUser>
+						<magazineSize>35</magazineSize>
+						<reloadTime>4.5</reloadTime>
+						<ammoSet>AmmoSetANBbolt</ammoSet>               <!-- GUN MAGAZINE -->
+					</AmmoUser>
+			  
+						<!--FIRE MODS-->
+					<FireModes>
+						<aimedBurstShotCount>3</aimedBurstShotCount>
+					</FireModes>
+			   
+						<!--TAGS-->
+					<weaponTags>
+						<li>CE_AI_AR</li>
+					</weaponTags>
+			  
+				</li>
+				
+				
+				
+				
+				
+					<!-- ====================== Imperial Bolter Machinegun ====================== -->
+						 
+										  <!-- ======= Description ======= -->
+						 
+				<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Gun_ImperialCleansingBolterMG"]/label</xpath>
+					<value>
+						<label>Imperial Bolt machinegun</label>
+					</value>
+				</li>
+						
+				<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Gun_ImperialCleansingBolterMG"]/description</xpath>
+					<value>
+						<description>A heavy automatic variant of the Imperial carbine, built to sustain suppressive fire using 5mm cleansing bolts</description>
+					</value>
+				</li>
+				
+										     <!-- ======= Gun ======= -->
+				
+				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>Gun_ImperialCleansingBolterMG</defName>
+				
+						<!--STATS-->
+					<statBases>
+						<Mass>11.5</Mass>
+						<Bulk>13</Bulk>
+						
+						<SightsEfficiency>1.2</SightsEfficiency>
+						<NightVisionEfficiency_Weapon>0.45</NightVisionEfficiency_Weapon>
+						
+						<SwayFactor>1.9</SwayFactor>
+						<ShotSpread>0.3</ShotSpread>
+						<Recoil>1.35</Recoil>
+						
+						<RangedWeapon_Cooldown>0.2</RangedWeapon_Cooldown>
+						
+						<MarketValue>1750</MarketValue>
+						<WorkToMake>42000</WorkToMake>
+					</statBases>
+					
+						<!--CRAFT-->
+					<costList>
+						<Steel>40</Steel>
+						<ComponentSpacer>4</ComponentSpacer>
+						<Plasteel>80</Plasteel>
+					</costList>
+			  
+						<!--SHOTS-->
+					<Properties>
+						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+						<hasStandardCommand>True</hasStandardCommand>
+						
+						<warmupTime>1.5</warmupTime>
+						<range>45</range>
+						
+						<burstShotCount>15</burstShotCount>
+						<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+						<muzzleFlashScale>1</muzzleFlashScale>
+						<recoilAmount>0.6</recoilAmount>
+						
+						<defaultProjectile>BulletANBbolt</defaultProjectile>         <!-- MAIN BULLET -->
+						<soundCast>Shot_Bolterz</soundCast>
+						<soundCastTail>GunTail_Heavy</soundCastTail>
+					</Properties>
+					
+						<!--AMMO-->
+					<AmmoUser>
+						<magazineSize>60</magazineSize>
+						<reloadTime>5.2</reloadTime>
+						<ammoSet>AmmoSetANBbolt</ammoSet>               <!-- GUN MAGAZINE -->
+					</AmmoUser>
+			  
+						<!--FIRE MODS-->
+					<FireModes>
+						<aimedBurstShotCount>5</aimedBurstShotCount>
+					</FireModes>
+			  
+				</li>
+				
+					
+					
+					
+				
+					<!-- ====================== Imperial Auto Cannon ====================== -->
+						 
+										  <!-- ======= Description ======= -->
+					
+				<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Gun_ImperialCleansingAutocannon"]/label</xpath>
+					<value>
+						<label>Imperial AutoCannon</label>
+					</value>
+				</li>
+						
+				<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Gun_ImperialCleansingAutocannon"]/description</xpath>
+					<value>
+						<description>Heavy Imperial Antimaterie AutoCannon designed for 20mm cleansing rounds.</description>
+					</value>
+				</li>
+
+										     <!-- ======= Gun ======= -->
+					
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>Gun_ImperialCleansingAutocannon</defName>
+				
+						<!--STATS-->
+					<statBases>
+						<Mass>32</Mass>
+						<Bulk>25</Bulk>
+						
+						<SightsEfficiency>2.5</SightsEfficiency>
+						<NightVisionEfficiency_Weapon>0.65</NightVisionEfficiency_Weapon>
+						
+						<SwayFactor>1.9</SwayFactor>
+						<ShotSpread>0.01</ShotSpread>
+						<Recoil>3.8</Recoil>
+						
+						<RangedWeapon_Cooldown>0.55</RangedWeapon_Cooldown>
+						
+						<MarketValue>2100</MarketValue>
+						<WorkToMake>48000</WorkToMake>
+					</statBases>
+					
+							<!--CRAFT-->
+					<costList>
+						<Steel>40</Steel>
+						<ComponentSpacer>6</ComponentSpacer>
+						<Plasteel>90</Plasteel>
+					</costList>
+
+						<!--SHOTS-->
+					<Properties>
+						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+						<hasStandardCommand>True</hasStandardCommand>
+						
+						<warmupTime>2.8</warmupTime>
+						<range>70</range>
+						
+						<burstShotCount>1</burstShotCount>
+						<!--ticksBetweenBurstShots>45</ticksBetweenBurstShots-->
+						<muzzleFlashScale>10</muzzleFlashScale>
+						<recoilAmount>1</recoilAmount>
+						
+						<defaultProjectile>Bullet_20x105mmCharged</defaultProjectile>   <!-- MAIN BULLET -->
+						<soundCast>Shot_Autocannon</soundCast>
+						<soundCastTail>GunTail_Heavy</soundCastTail>
+					</Properties>
+					
+						<!--AMMO-->
+					<AmmoUser>
+						<magazineSize>15</magazineSize>
+						<reloadTime>4.6</reloadTime>
+						<ammoSet>AmmoSet_20x105mmCharged</ammoSet>    <!-- GUN MAGAZINE -->
+					</AmmoUser>
+			  
+						<!--FIRE MODS-->
+					<FireModes>
+					</FireModes>
+			   
+						<!--TAGS-->
+					<weaponTags>
+						<li>Bipod_AMR</li>
+					</weaponTags>
+			  
+				</li>
+		
+		
+		
+		
+		
+							<!-- ====================== KS-23 ====================== -->
+						 
+										<!-- ======= Description ======= -->
+					
+				<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Gun_CleansingShotgun"]/label</xpath>
+					<value>
+						<label>Heavy shotgun</label>
+					</value>
+				</li>
+						
+				<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Gun_CleansingShotgun"]/description</xpath>
+					<value>
+						<description>A heavy pump-action shotgun developed in Soviet Union for the needs of the Ministry of Internal Affairs. Modernized to shoot experemental cleansing buckshot</description>
+					</value>
+				</li>
+
+										     <!-- ======= Gun ======= -->
+											 
+				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>Gun_CleansingShotgun</defName>
+				
+						<!--STATS-->
+					<statBases>
+						<Mass>4</Mass>
+						<Bulk>12</Bulk>
+						
+						<SightsEfficiency>1</SightsEfficiency>
+						<NightVisionEfficiency_Weapon>0</NightVisionEfficiency_Weapon> 
+						
+						<SwayFactor>1.5</SwayFactor>
+						<ShotSpread>0.22</ShotSpread>
+						<Recoil>3.25</Recoil>
+						
+						<RangedWeapon_Cooldown>0.8</RangedWeapon_Cooldown>
+						
+						<MarketValue>850</MarketValue>
+						<WorkToMake>35400</WorkToMake>
+					</statBases>
+					
+						<!--CRAFT-->
+					<costList>
+						<Steel>60</Steel>
+						<ComponentSpacer>1</ComponentSpacer>
+						<ComponentIndustrial>2</ComponentIndustrial>
+						<Plasteel>20</Plasteel>
+					</costList>
+			  
+						<!--SHOTS-->
+					<Properties>
+						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+						<hasStandardCommand>True</hasStandardCommand>
+						
+						<warmupTime>1.4</warmupTime>
+						<range>26</range>
+						
+						<burstShotCount>1</burstShotCount>
+						<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+						<muzzleFlashScale>1</muzzleFlashScale>
+						<recoilAmount>0.4</recoilAmount>
+						
+						<defaultProjectile>Bullet_23x75mmR_Buck</defaultProjectile>         <!-- MAIN BULLET -->
+						<soundCast>Shot_Remington870</soundCast>
+						<soundCastTail>GunTail_Heavy</soundCastTail>
+					</Properties>
+					
+						<!--AMMO-->
+					<AmmoUser>
+						<magazineSize>12</magazineSize>
+						<reloadTime>0.4</reloadTime>
+						<reloadOneAtATime>True</reloadOneAtATime>
+						<ammoSet>AmmoSet_23x75mmR</ammoSet>               <!-- GUN MAGAZINE -->
+					</AmmoUser>
+			  
+						<!--FIRE MODS-->
+					<FireModes>
+					</FireModes>
+			   
+						<!--TAGS-->
+					<weaponTags>
+						<li>CE_AI_BROOM</li>
+					</weaponTags>
+			  
+				</li>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+						<!-- ====================== SCENARIO WEAPONS ====================== -->
+						
+						    <!-- ====================== Ppsh-41 ====================== -->
+										
+				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>Gun_SuperSMG</defName>
+				
+						<!--STATS-->
+					<statBases>
+						<Mass>3</Mass>
+						<Bulk>9</Bulk>
+
+						<SightsEfficiency>0.9</SightsEfficiency>
+						<NightVisionEfficiency_Weapon>0</NightVisionEfficiency_Weapon>
+						
+						<SwayFactor>1.55</SwayFactor>
+						<ShotSpread>0.18</ShotSpread>
+						<Recoil>1.1</Recoil>
+						
+						<RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+						
+						<MarketValue>350</MarketValue>			
+						<!--<WorkToMake></WorkToMake>-->						
+					</statBases>
+
+						<!--SHOTS-->
+					<Properties>
+						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+						<hasStandardCommand>True</hasStandardCommand>
+						
+						<warmupTime>0.6</warmupTime>
+						<range>32</range>
+						
+						<burstShotCount>20</burstShotCount>
+						<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+						<muzzleFlashScale>4</muzzleFlashScale>
+						<recoilAmount>0.4</recoilAmount>
+						
+						<defaultProjectile>Bullet_762x25mmTokarev_FMJ</defaultProjectile>   <!-- MAIN BULLET -->
+						<soundCast>Shot_SovietSubmachineGun</soundCast>
+						<soundCastTail>GunTail_Heavy</soundCastTail>
+					</Properties>
+					
+						<!--AMMO-->
+					<AmmoUser>
+						<magazineSize>71</magazineSize>
+						<reloadTime>2.6</reloadTime>
+						<ammoSet>AmmoSet_762x25mmTokarev</ammoSet>    <!-- GUN MAGAZINE -->
+					</AmmoUser>
+			  
+						<!--FIRE MODS-->
+					<FireModes>
+						<aimedBurstShotCount>5</aimedBurstShotCount>
+					</FireModes>
+			   
+						<!--TAGS-->
+					<weaponTags>
+						<li>CE_SMG</li>
+						<li>CE_AI_BROOM</li>
+					</weaponTags>
+			  
+				</li>
+				
+						    <!-- ====================== Remington-870 ====================== -->			
+
+				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>Gun_SuperShotGun</defName>
+				
+						<!--STATS-->
+					<statBases>
+						<Mass>5</Mass>
+						<Bulk>12</Bulk>
+						
+						<SightsEfficiency>1.5</SightsEfficiency>
+						<NightVisionEfficiency_Weapon>0</NightVisionEfficiency_Weapon>
+						
+						<SwayFactor>1.8</SwayFactor>
+						<ShotSpread>0.18</ShotSpread>
+						<Recoil>1.2</Recoil>
+						
+						<RangedWeapon_Cooldown>0.22</RangedWeapon_Cooldown>
+						
+						<MarketValue>550</MarketValue>
+					</statBases>
+
+						<!--SHOTS-->
+					<Properties>
+						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+						<hasStandardCommand>True</hasStandardCommand>
+						
+						<warmupTime>1.1</warmupTime>
+						<range>26</range>
+						
+						<burstShotCount>1</burstShotCount>
+						<!--<ticksBetweenBurstShots>3</ticksBetweenBurstShots>-->
+						<muzzleFlashScale>5</muzzleFlashScale>
+						<recoilAmount>0.1</recoilAmount>
+						
+						<defaultProjectile>Bullet_12Gauge_Buck</defaultProjectile>   <!-- MAIN BULLET -->
+					<soundCast>Shot_Remington870</soundCast>
+					<soundCastTail>GunTail_Heavy</soundCastTail>
+					</Properties>
+					
+						<!--AMMO-->
+					<AmmoUser>
+						<magazineSize>12</magazineSize>
+						<reloadTime>0.4</reloadTime>
+						<reloadOneAtATime>true</reloadOneAtATime>
+						<ammoSet>AmmoSet_12Gauge</ammoSet>    <!-- GUN MAGAZINE -->
+					</AmmoUser>
+			  
+						<!--FIRE MODS-->
+					<FireModes>
+						<noSnapshot>true</noSnapshot>   
+					</FireModes>
+			   
+						<!--TAGS-->
+					<weaponTags>
+						<li>CE_AI_BROOM</li>				
+					</weaponTags>
+			  
+			</li>
+			
+						    <!-- ====================== Hunting rifle ====================== -->
+							
+				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>Gun_SurvivalistSniperRifle</defName>
+				
+						<!--STATS-->
+					<statBases>
+						<Mass>5</Mass>
+						<Bulk>12.4</Bulk>
+					
+						<SightsEfficiency>1</SightsEfficiency>
+						<NightVisionEfficiency_Weapon>0</NightVisionEfficiency_Weapon>
+						
+						<SwayFactor>0.65</SwayFactor>
+						<ShotSpread>0.03</ShotSpread>
+						<Recoil>0.95</Recoil>
+						
+						<RangedWeapon_Cooldown>1.45</RangedWeapon_Cooldown>
+						
+						<MarketValue>450</MarketValue>
+					</statBases>
+
+						<!--SHOTS-->
+					<Properties>
+						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+						<hasStandardCommand>True</hasStandardCommand>
+						
+						<warmupTime>1.5</warmupTime>
+						<range>56</range>
+						
+						<burstShotCount>1</burstShotCount>
+						<muzzleFlashScale>5</muzzleFlashScale>
+						<recoilAmount>0.5</recoilAmount>
+						
+						<defaultProjectile>Bullet_3006Springfield_FMJ</defaultProjectile>   <!-- MAIN BULLET -->
+				<soundCast>Shot_SniperRifle</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+					</Properties>
+					
+						<!--AMMO-->
+					<AmmoUser>
+						<magazineSize>10</magazineSize>
+						<reloadTime>4</reloadTime>
+						<ammoSet>AmmoSet_3006Springfield</ammoSet>    <!-- GUN MAGAZINE -->
+					</AmmoUser>
+			  
+						<!--FIRE MODS-->
+					<FireModes>
+					</FireModes>
+			   
+						<!--TAGS-->
+					<weaponTags>
+						<li>CE_AI_SR</li>
+						<li>Bipod_DMR</li>
+					</weaponTags>
+			  
+				</li>							
+		
+		
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

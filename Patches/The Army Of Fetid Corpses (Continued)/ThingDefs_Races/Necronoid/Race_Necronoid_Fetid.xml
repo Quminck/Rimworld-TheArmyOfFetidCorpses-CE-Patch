@@ -1,0 +1,1768 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>The Army Of Fetid Corpses (Continued)</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+			
+
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[@Name="BaseNecronoid"]/statBases/Flammability</xpath>
+					<value>
+						<Flammability>2</Flammability>
+						<SmokeSensitivity>-1.0</SmokeSensitivity>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@Name="BaseNecronoid"]/race</xpath>
+					<value>
+						<hediffGiverSets Inherit="false"/>
+					</value>
+				</li>
+				
+				
+				
+				
+				
+				<!-- ======================== Humanoid 1st tier necronoid base ======================== -->
+				
+				
+
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[
+					defName="Necronoid_FetidGhoul"
+					or defName="Necronoid_FetidSoldier"
+					or defName="Necronoid_FetidBrute"
+					or defName="Necronoid_FetidHulk"
+					or defName="Necronoid_FetidMarine"
+					or defName="Necronoid_BladedGhoul"]
+					</xpath>
+					<value>
+						<li Class="CombatExtended.RacePropertiesExtensionCE">
+							<bodyShape>Humanoid</bodyShape>
+						</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[
+					defName="Necronoid_FetidGhoul"
+					or defName="Necronoid_FetidSoldier"
+					or defName="Necronoid_FetidBrute"
+					or defName="Necronoid_FetidHulk"]
+					/statBases</xpath>
+					<value>
+						<MeleeDodgeChance>0.05</MeleeDodgeChance>
+						<MeleeCritChance>0.02</MeleeCritChance>
+						<MeleeParryChance>0.01</MeleeParryChance>
+						<PainShockThreshold>0.90</PainShockThreshold>
+					</value>
+				</li>		
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[
+					defName="Necronoid_FetidGhoul"
+					or defName="Necronoid_FetidSoldier"
+					or defName="Necronoid_FetidBrute"
+					or defName="Necronoid_FetidHulk"]
+					/statBases</xpath>
+					<value>
+						<MeleeHitChance>1.75</MeleeHitChance>
+					</value>
+				</li>						
+			
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[
+					defName="Necronoid_FetidGhoul"
+					or defName="Necronoid_FetidSoldier"
+					or defName="Necronoid_FetidBrute"
+					or defName="Necronoid_FetidHulk"]
+					/tools</xpath>
+					<value>
+						<tools>
+							
+							<li Class="CombatExtended.ToolCE">
+								<label>teeth</label>
+								<capacities>
+									<li>Bite</li>
+								</capacities>
+								<power>6</power>
+								<extraMeleeDamages>
+									<li>
+										<def>NecronoidBiteDamage</def>
+										<amount>4</amount>
+										<chance>0.25</chance>
+									</li>
+								</extraMeleeDamages>
+								<cooldownTime>1.3</cooldownTime>
+								<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+								<armorPenetrationSharp>1.3</armorPenetrationSharp>
+								<armorPenetrationBlunt>3.1</armorPenetrationBlunt>
+							</li>
+							
+							<li Class="CombatExtended.ToolCE">
+								<label>nails</label>
+								<capacities>
+									<li>Cut</li>
+								</capacities>
+								<power>7</power>
+								<extraMeleeDamages>
+									<li>
+										<def>NecronoidCutDamage</def>
+										<amount>3</amount>
+										<chance>0.005</chance>
+									</li>
+								</extraMeleeDamages>
+								<cooldownTime>1.35</cooldownTime>
+								<linkedBodyPartsGroup>RightArm</linkedBodyPartsGroup>
+								<armorPenetrationSharp>2.5</armorPenetrationSharp>
+								<armorPenetrationBlunt>0.9</armorPenetrationBlunt>
+							</li>
+							
+							<li Class="CombatExtended.ToolCE">
+								<label>nails</label>
+								<capacities>
+									<li>Cut</li>
+								</capacities>
+								<power>7</power>
+								<extraMeleeDamages>
+									<li>
+										<def>NecronoidCutDamage</def>
+										<amount>3</amount>
+										<chance>0.005</chance>
+									</li>
+								</extraMeleeDamages>
+								<cooldownTime>1.35</cooldownTime>
+								<linkedBodyPartsGroup>LeftArm</linkedBodyPartsGroup>
+								<armorPenetrationSharp>2.5</armorPenetrationSharp>
+								<armorPenetrationBlunt>0.9</armorPenetrationBlunt>
+							</li>
+						
+						</tools>
+					</value>
+				</li>
+				
+				
+				
+				
+				
+				<!-- ======================== Fetid ghoul ======================== -->
+
+				<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Necronoid_FetidGhoul"]/race/baseBodySize</xpath>
+				<value>
+					<baseBodySize>1.2</baseBodySize>
+				</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Necronoid_FetidGhoul"]/race/baseHealthScale</xpath>
+				<value>
+					<baseHealthScale>1.75</baseHealthScale>
+				</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidGhoul"]/statBases</xpath>
+					<value>
+						<ArmorRating_Sharp>4.5</ArmorRating_Sharp>
+						<ArmorRating_Blunt>3.0</ArmorRating_Blunt>
+											
+						<MoveSpeed>2.8</MoveSpeed>
+						
+						<MeatAmount>0</MeatAmount>
+						<LeatherAmount>0</LeatherAmount>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidGhoul"]/comps</xpath>
+					<value>
+						<li Class="CombatExtended.CompProperties_ArmorDurability">
+							<Durability>450</Durability>
+							<Regenerates>true</Regenerates>
+							<RegenInterval>90</RegenInterval>
+							<RegenValue>10</RegenValue>
+							<MinArmorPct>0.70</MinArmorPct>
+						</li>
+					</value>
+				</li>
+
+				
+				
+				
+				
+				<!-- ======================== Fetid soldier ======================== -->			
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidSoldier"]/race/baseBodySize</xpath>
+					<value>
+						<baseBodySize>1.4</baseBodySize>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidSoldier"]/race/baseHealthScale</xpath>
+					<value>
+						<baseHealthScale>1.9</baseHealthScale>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidSoldier"]/statBases</xpath>
+					<value>
+						<ArmorRating_Sharp>6.5</ArmorRating_Sharp>
+						<ArmorRating_Blunt>3.0</ArmorRating_Blunt>
+						
+						<AimingAccuracy>1.85</AimingAccuracy>
+						<ShootingAccuracyPawn>2.85</ShootingAccuracyPawn>
+						<NightVisionEfficiency>0.40</NightVisionEfficiency>
+
+						
+						<MeatAmount>0</MeatAmount>
+						<LeatherAmount>0</LeatherAmount>
+	
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidSoldier"]/comps</xpath>
+					<value>
+						<li Class="CombatExtended.CompProperties_ArmorDurability">
+							<Durability>490</Durability>
+							<Regenerates>true</Regenerates>
+							<RegenInterval>100</RegenInterval>
+							<RegenValue>7</RegenValue>
+							<MinArmorPct>0.60</MinArmorPct>
+						</li>
+					</value>
+				</li>			
+
+				
+				
+			
+			
+				<!-- ======================== Fetid brute ======================== -->				
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidBrute"]/race/baseBodySize</xpath>
+					<value>
+						<baseBodySize>1.5</baseBodySize>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidBrute"]/race/baseHealthScale</xpath>
+					<value>
+						<baseHealthScale>4.0</baseHealthScale>
+					</value>
+				</li>				
+			
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidBrute"]/statBases</xpath>
+					<value>
+						<ArmorRating_Sharp>8.5</ArmorRating_Sharp>
+						<ArmorRating_Blunt>4.0</ArmorRating_Blunt>
+						
+						<AimingAccuracy>1.8</AimingAccuracy>
+						<ShootingAccuracyPawn>2.7</ShootingAccuracyPawn>
+						<NightVisionEfficiency>0.20</NightVisionEfficiency>
+						
+						<MeatAmount>0</MeatAmount>
+						<LeatherAmount>0</LeatherAmount>
+					</value>
+				</li>			
+			
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidBrute"]/comps</xpath>
+					<value>
+						<li Class="CombatExtended.CompProperties_ArmorDurability">
+							<Durability>600</Durability>
+							<Regenerates>true</Regenerates>
+							<RegenInterval>25</RegenInterval>
+							<RegenValue>3</RegenValue>
+							<MinArmorPct>0.70</MinArmorPct>
+						</li>
+					</value>
+				</li>				
+			
+			
+			
+			
+			
+				<!-- ======================== Fetid hulk ======================== -->			
+			
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidHulk"]/race/baseBodySize</xpath>
+					<value>
+						<baseBodySize>1.4</baseBodySize>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidHulk"]/race/baseHealthScale</xpath>
+					<value>
+						<baseHealthScale>2.3</baseHealthScale>
+					</value>
+				</li>
+			
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidHulk"]/statBases</xpath>
+					<value>
+						<ArmorRating_Sharp>9.0</ArmorRating_Sharp>
+						<ArmorRating_Blunt>5.0</ArmorRating_Blunt>
+						
+						<AimingAccuracy>2.15</AimingAccuracy>
+						<ShootingAccuracyPawn>3.25</ShootingAccuracyPawn>
+						<NightVisionEfficiency>0.20</NightVisionEfficiency>				
+						
+						<MeatAmount>0</MeatAmount>
+						<LeatherAmount>0</LeatherAmount>
+					</value>
+				</li>			
+			
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidHulk"]/comps</xpath>
+					<value>
+						<li Class="CombatExtended.CompProperties_ArmorDurability">
+							<Durability>1050</Durability>
+							<Regenerates>true</Regenerates>
+							<RegenInterval>100</RegenInterval>
+							<RegenValue>10</RegenValue>
+							<MinArmorPct>0.75</MinArmorPct>
+						</li>
+					</value>
+				</li>							
+			
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidHulk"]</xpath>
+					<value>
+						<li Class="CombatExtended.PartialArmorExt">
+							<stats>
+								<li>
+									<ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+									<parts>
+										<li>Torso</li>
+									</parts>
+								</li>
+								<li>
+									<ArmorRating_Blunt>1.25</ArmorRating_Blunt>
+									<parts>
+										<li>Torso</li>
+									</parts>
+								</li>
+							</stats>
+						</li>
+					</value>
+				</li>				
+			
+			
+			
+				<!-- ======================== Fetid marine ======================== -->			
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidMarine"]/race/baseBodySize</xpath>
+					<value>
+						<baseBodySize>1.3</baseBodySize>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidMarine"]/race/baseHealthScale</xpath>
+					<value>
+						<baseHealthScale>3.5</baseHealthScale>
+					</value>
+				</li>			
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidMarine"]/tools</xpath>
+					<value>
+						<tools>
+							
+							<li Class="CombatExtended.ToolCE">
+								<label>fists</label>
+								<capacities>
+									<li>Blunt</li>
+								</capacities>
+								<power>8</power>
+								<cooldownTime>1.2</cooldownTime>
+								<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+								<armorPenetrationBlunt>2.5</armorPenetrationBlunt>
+							</li>
+							
+							<li Class="CombatExtended.ToolCE">
+								<label>fists</label>
+								<capacities>
+									<li>Blunt</li>
+								</capacities>
+								<power>8</power>
+								<cooldownTime>1.2</cooldownTime>
+								<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+								<armorPenetrationBlunt>2.5</armorPenetrationBlunt>
+							</li>							
+							
+							<li Class="CombatExtended.ToolCE">
+								<label>elbow blades</label>
+								<capacities>
+									<li>Cut</li>
+								</capacities>
+								<power>20</power>
+								<extraMeleeDamages>
+									<li>
+										<def>NecronoidCutDamage</def>
+										<amount>6</amount>
+										<chance>0.25</chance>
+									</li>
+								</extraMeleeDamages>
+								<cooldownTime>1.4</cooldownTime>
+								<linkedBodyPartsGroup>Arms</linkedBodyPartsGroup> 
+								<armorPenetrationSharp>15.0</armorPenetrationSharp> 
+								<armorPenetrationBlunt>6.5</armorPenetrationBlunt>
+							</li>
+						
+						</tools>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidMarine"]/statBases</xpath>
+					<value>
+						<MeleeDodgeChance>0.15</MeleeDodgeChance>
+						<MeleeCritChance>0.09</MeleeCritChance>
+						<MeleeParryChance>0.20</MeleeParryChance>
+						<PainShockThreshold>1.0</PainShockThreshold>
+					</value>
+				</li>					
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidMarine"]/statBases</xpath>
+					<value>
+						<ArmorRating_Sharp>20.0</ArmorRating_Sharp>
+						<ArmorRating_Blunt>42.0</ArmorRating_Blunt>
+						
+						<AimingAccuracy>1.95</AimingAccuracy>
+						<ShootingAccuracyPawn>2.95</ShootingAccuracyPawn>
+						<NightVisionEfficiency>0.80</NightVisionEfficiency>
+						<MeleeHitChance>5.0</MeleeHitChance>	
+						
+						<MeatAmount>0</MeatAmount>
+						<LeatherAmount>0</LeatherAmount>
+	
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidMarine"]/comps</xpath>
+					<value>
+						<li Class="CombatExtended.CompProperties_ArmorDurability">
+							<Durability>1500</Durability>
+							<Regenerates>true</Regenerates>
+							<RegenInterval>100</RegenInterval>
+							<RegenValue>10</RegenValue>
+							<MinArmorPct>0.80</MinArmorPct>
+						</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidMarine"]</xpath>
+					<value>
+						<li Class="CombatExtended.PartialArmorExt">
+							<stats>
+								<li>
+									<ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+									<parts>
+										<li>Torso</li>
+									</parts>
+								</li>
+								<li>
+									<ArmorRating_Blunt>1.2</ArmorRating_Blunt>
+									<parts>
+										<li>Torso</li>
+									</parts>
+								</li>
+							</stats>
+						</li>
+					</value>
+				</li>	
+
+
+
+				<!-- ======================== Bladed ghoul ======================== -->
+
+				<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Necronoid_BladedGhoul"]/race/baseBodySize</xpath>
+				<value>
+					<baseBodySize>1.3</baseBodySize>
+				</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Necronoid_BladedGhoul"]/race/baseHealthScale</xpath>
+				<value>
+					<baseHealthScale>1.95</baseHealthScale>
+				</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_BladedGhoul"]/statBases</xpath>
+					<value>
+						<MeleeDodgeChance>0.08</MeleeDodgeChance>
+						<MeleeCritChance>0.30</MeleeCritChance>
+						<MeleeParryChance>0.02</MeleeParryChance>
+						<PainShockThreshold>0.9</PainShockThreshold>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_BladedGhoul"]/tools</xpath>
+					<value>
+						<tools>
+							
+							<li Class="CombatExtended.ToolCE">
+								<label>claws</label>
+								<capacities>
+									<li>Cut</li>
+								</capacities>
+								<power>20</power>
+								<extraMeleeDamages>
+									<li>
+										<def>NecronoidCutDamage</def>
+										<amount>5</amount>
+										<chance>0.15</chance>
+									</li>
+								</extraMeleeDamages>
+								<cooldownTime>1.1</cooldownTime>
+								<linkedBodyPartsGroup>RightArm</linkedBodyPartsGroup>
+								<armorPenetrationSharp>14.5</armorPenetrationSharp>
+								<armorPenetrationBlunt>8</armorPenetrationBlunt>
+							</li>
+							
+							<li Class="CombatExtended.ToolCE">
+								<label>claws</label>
+								<capacities>
+									<li>Cut</li>
+								</capacities>
+								<power>20</power>
+								<extraMeleeDamages>
+									<li>
+										<def>NecronoidCutDamage</def>
+										<amount>5</amount>
+										<chance>0.15</chance>
+									</li>
+								</extraMeleeDamages>
+								<cooldownTime>1.1</cooldownTime>
+								<linkedBodyPartsGroup>LeftArm</linkedBodyPartsGroup>
+								<armorPenetrationSharp>14.5</armorPenetrationSharp>
+								<armorPenetrationBlunt>8</armorPenetrationBlunt>
+							</li>
+
+
+						</tools>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_BladedGhoul"]/statBases</xpath>
+					<value>
+						<ArmorRating_Sharp>10</ArmorRating_Sharp>
+						<ArmorRating_Blunt>6</ArmorRating_Blunt>
+						
+						<MeleeHitChance>2.20</MeleeHitChance>						
+						<MoveSpeed>5.2</MoveSpeed>						
+						
+						<MeatAmount>0</MeatAmount>
+						<LeatherAmount>0</LeatherAmount>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_BladedGhoul"]/comps</xpath>
+					<value>
+						<li Class="CombatExtended.CompProperties_ArmorDurability">
+							<Durability>900</Durability>
+							<Regenerates>true</Regenerates>
+							<RegenInterval>60</RegenInterval>
+							<RegenValue>2</RegenValue>
+							<MinArmorPct>0.75</MinArmorPct>
+						</li>
+					</value>
+				</li>
+
+
+
+
+
+
+
+
+
+
+				<!-- ======================== Humanoid boss tier necronoid base ======================== -->
+
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[
+					defName="Necronoid_BloatedOgre"
+					or defName="Necronoid_BloodLetterGhoul"
+					or defName="Necronoid_ExecutionerGhoul"
+					or defName="Necronoid_FleshTyrant"
+					or defName="Necronoid_CrazedButcher"]
+					</xpath>
+					<value>
+						<li Class="CombatExtended.RacePropertiesExtensionCE">
+							<bodyShape>Humanoid</bodyShape>
+						</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[
+					defName="Necronoid_BloatedOgre"
+					or defName="Necronoid_BloodLetterGhoul"
+					or defName="Necronoid_ExecutionerGhoul"
+					or defName="Necronoid_FleshTyrant"
+					or defName="Necronoid_CrazedButcher"]
+					/statBases</xpath>
+					<value>
+						<MeleeDodgeChance>0.02</MeleeDodgeChance>
+						<MeleeCritChance>0.45</MeleeCritChance>
+						<MeleeParryChance>0.04</MeleeParryChance>
+						<PainShockThreshold>1.0</PainShockThreshold>
+					</value>
+				</li>					
+			
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[
+					defName="Necronoid_BloatedOgre"
+					or defName="Necronoid_BloodLetterGhoul"
+					or defName="Necronoid_ExecutionerGhoul"
+					or defName="Necronoid_FleshTyrant"
+					or defName="Necronoid_CrazedButcher"]
+					/tools</xpath>
+					<value>
+						<tools>
+							
+							<li Class="CombatExtended.ToolCE">
+								<label>teeth</label>
+								<capacities>
+									<li>Bite</li>
+								</capacities>
+								<power>12</power>
+								<extraMeleeDamages>
+									<li>
+										<def>NecronoidBiteDamage</def>
+										<amount>6</amount>
+										<chance>0.25</chance>
+									</li>
+								</extraMeleeDamages>
+								<cooldownTime>1.6</cooldownTime>
+								<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+								<armorPenetrationSharp>2.5</armorPenetrationSharp>
+								<armorPenetrationBlunt>8.0</armorPenetrationBlunt>
+							</li>
+							
+							<li Class="CombatExtended.ToolCE">
+								<label>nails</label>
+								<capacities>
+									<li>Cut</li>
+								</capacities>
+								<power>18</power>
+								<extraMeleeDamages>
+									<li>
+										<def>NecronoidCutDamage</def>
+										<amount>5</amount>
+										<chance>0.05</chance>
+									</li>
+								</extraMeleeDamages>
+								<cooldownTime>1.2</cooldownTime>
+								<linkedBodyPartsGroup>RightArm</linkedBodyPartsGroup>
+								<armorPenetrationSharp>6.5</armorPenetrationSharp>
+								<armorPenetrationBlunt>4.2</armorPenetrationBlunt>
+							</li>
+							
+							<li Class="CombatExtended.ToolCE">
+								<label>nails</label>
+								<capacities>
+									<li>Cut</li>
+								</capacities>
+								<power>18</power>
+								<extraMeleeDamages>
+									<li>
+										<def>NecronoidCutDamage</def>
+										<amount>5</amount>
+										<chance>0.05</chance>
+									</li>
+								</extraMeleeDamages>
+								<cooldownTime>1.35</cooldownTime>
+								<linkedBodyPartsGroup>LeftArm</linkedBodyPartsGroup>
+								<armorPenetrationSharp>6.5</armorPenetrationSharp>
+								<armorPenetrationBlunt>4.2</armorPenetrationBlunt>
+							</li>
+						
+						</tools>
+					</value>
+				</li>				
+
+
+
+				<!-- ======================== Bloated ogre ======================== -->
+
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_BloatedOgre"]/race/baseBodySize</xpath>
+					<value>
+						<baseBodySize>4.2</baseBodySize>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_BloatedOgre"]/race/baseHealthScale</xpath>
+					<value>
+						<baseHealthScale>10</baseHealthScale>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_BloatedOgre"]/statBases</xpath>
+					<value>
+						<ArmorRating_Sharp>9</ArmorRating_Sharp>
+						<ArmorRating_Blunt>160</ArmorRating_Blunt>
+						
+						<AimingAccuracy>1.8</AimingAccuracy>
+						<ShootingAccuracyPawn>3.25</ShootingAccuracyPawn>
+						<NightVisionEfficiency>0.45</NightVisionEfficiency>	
+						<MeleeHitChance>10.0</MeleeHitChance>						
+						
+						<MeatAmount>0</MeatAmount>
+						<LeatherAmount>0</LeatherAmount>
+	
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_BloatedOgre"]/comps</xpath>
+					<value>
+						<li Class="CombatExtended.CompProperties_ArmorDurability">
+							<Durability>3300</Durability>
+							<Regenerates>true</Regenerates>
+							<RegenInterval>30</RegenInterval>
+							<RegenValue>5</RegenValue>
+							<MinArmorPct>0.35</MinArmorPct>
+						</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="Necronoid_BloatedOgre"]</xpath>
+					<value>
+						<li Class="CombatExtended.PartialArmorExt">
+							<stats>
+								<li>
+									<ArmorRating_Sharp>1.15</ArmorRating_Sharp>
+									<parts>
+										<li>Torso</li>  
+									</parts>
+								</li>
+								<li>
+									<ArmorRating_Blunt>1.75</ArmorRating_Blunt>
+									<parts>
+										<li>Torso</li>  
+									</parts>
+								</li>
+							</stats>
+						</li>
+					</value>
+				</li>				
+
+
+
+				<!-- ======================== Blood letter ghoul ======================== -->
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_BloodLetterGhoul"]/race/baseBodySize</xpath>
+					<value>
+						<baseBodySize>4.1</baseBodySize>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_BloodLetterGhoul"]/race/baseHealthScale</xpath>
+					<value>
+						<baseHealthScale>8.0</baseHealthScale>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_BloodLetterGhoul"]/statBases</xpath>
+					<value>
+						<ArmorRating_Sharp>20</ArmorRating_Sharp>
+						<ArmorRating_Blunt>10</ArmorRating_Blunt>
+						
+						<MeleeHitChance>10.0</MeleeHitChance>
+						<MoveSpeed>4.2</MoveSpeed>
+						
+						<MeatAmount>0</MeatAmount>
+						<LeatherAmount>0</LeatherAmount>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_BloodLetterGhoul"]/comps</xpath>
+					<value>
+						<li Class="CombatExtended.CompProperties_ArmorDurability">
+							<Durability>1500</Durability>
+							<Regenerates>false</Regenerates>
+							<MinArmorPct>0.05</MinArmorPct>
+						</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="Necronoid_BloodLetterGhoul"]</xpath>
+					<value>
+						<li Class="CombatExtended.PartialArmorExt">
+							<stats>
+								<li>
+									<ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+									<parts>
+										<li>Head</li>  
+										<li>Torso</li>  
+									</parts>
+								</li>
+							</stats>
+						</li>
+					</value>
+				</li>				
+				
+				
+				
+				<!-- ======================== Executioner ghoul ======================== -->				
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_ExecutionerGhoul"]/race/baseBodySize</xpath>
+					<value>
+						<baseBodySize>4.0</baseBodySize>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_ExecutionerGhoul"]/race/baseHealthScale</xpath>
+					<value>
+						<baseHealthScale>8.0</baseHealthScale>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_ExecutionerGhoul"]/statBases</xpath>
+					<value>
+						<ArmorRating_Sharp>16</ArmorRating_Sharp>
+						<ArmorRating_Blunt>10</ArmorRating_Blunt>
+						
+						<MeleeHitChance>10.0</MeleeHitChance>
+						<MoveSpeed>6.5</MoveSpeed>						
+						
+						<MeatAmount>0</MeatAmount>
+						<LeatherAmount>0</LeatherAmount>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_ExecutionerGhoul"]/comps</xpath>
+					<value>
+						<li Class="CombatExtended.CompProperties_ArmorDurability">
+							<Durability>1800</Durability>
+							<Regenerates>false</Regenerates>
+							<MinArmorPct>0.25</MinArmorPct>
+						</li>
+					</value>
+				</li>
+
+
+
+				<!-- ======================== Flesh tyrant ======================== -->	
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_FleshTyrant"]/race/baseBodySize</xpath>
+					<value>
+						<baseBodySize>4.0</baseBodySize>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_FleshTyrant"]/race/baseHealthScale</xpath>
+					<value>
+						<baseHealthScale>10.0</baseHealthScale>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_FleshTyrant"]/statBases</xpath>
+					<value>
+						<ArmorRating_Sharp>20</ArmorRating_Sharp>
+						<ArmorRating_Blunt>10</ArmorRating_Blunt>
+						
+						<MeleeHitChance>10.0</MeleeHitChance>
+						<MoveSpeed>2.5</MoveSpeed>							
+						
+						<MeatAmount>0</MeatAmount>
+						<LeatherAmount>0</LeatherAmount>
+					</value>
+				</li>
+
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_FleshTyrant"]/comps</xpath>
+					<value>
+						<li Class="CombatExtended.CompProperties_ArmorDurability">
+							<Durability>7000</Durability>
+							<Regenerates>false</Regenerates>
+							<MinArmorPct>0.3</MinArmorPct>
+						</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="Necronoid_FleshTyrant"]</xpath>
+					<value>
+						<li Class="CombatExtended.PartialArmorExt">
+							<stats>
+								<li>
+									<ArmorRating_Sharp>2.5</ArmorRating_Sharp>
+									<parts>
+										<li>Head</li>  
+										<li>Neck</li>  
+									</parts>
+								</li>
+								<li>
+									<ArmorRating_Blunt>10</ArmorRating_Blunt>
+									<parts>
+										<li>Head</li>  
+										<li>Neck</li>  
+									</parts>
+								</li>
+							</stats>
+						</li>
+					</value>
+				</li>
+				
+				
+				
+				<!-- ======================== Crazed butcher ======================== -->					
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_CrazedButcher"]/race/baseBodySize</xpath>
+					<value>
+						<baseBodySize>4.4</baseBodySize>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_CrazedButcher"]/race/baseHealthScale</xpath>
+					<value>
+						<baseHealthScale>11.0</baseHealthScale>
+					</value>
+				</li>				
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_CrazedButcher"]/statBases</xpath>
+					<value>
+						<ArmorRating_Sharp>5</ArmorRating_Sharp>
+						<ArmorRating_Blunt>240</ArmorRating_Blunt>
+						
+						<MeleeHitChance>10.0</MeleeHitChance>
+						<MoveSpeed>4.5</MoveSpeed>							
+						
+						<MeatAmount>0</MeatAmount>
+						<LeatherAmount>0</LeatherAmount>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_CrazedButcher"]/comps</xpath>
+					<value>
+						<li Class="CombatExtended.CompProperties_ArmorDurability">
+							<Durability>1000</Durability>
+							<Regenerates>true</Regenerates>
+							<RegenInterval>60</RegenInterval>
+							<RegenValue>5</RegenValue>
+							<MinArmorPct>0.3</MinArmorPct>
+						</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="Necronoid_CrazedButcher"]</xpath>
+					<value>
+						<li Class="CombatExtended.PartialArmorExt">
+							<stats>
+								<li>
+									<ArmorRating_Blunt>1.8</ArmorRating_Blunt>
+									<parts>
+										<li>Torso</li>   
+									</parts>
+								</li>
+							</stats>
+						</li>
+					</value>
+				</li>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<!-- ======================== Animal necronoid base ======================== -->
+				
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[
+					defName="Necronoid_FetidWolf"
+					or defName="Necronoid_Chupacabra"
+					or defName="Necronoid_HagSpider"
+					or defName="Necronoid_HowlingSpider" 
+					]</xpath>
+					<value>
+						<li Class="CombatExtended.RacePropertiesExtensionCE">
+							<bodyShape>Quadruped</bodyShape>
+						</li>
+					</value>
+				</li>							
+				
+
+
+				
+
+				<!-- ======================== Animal 1st tier necronoids ======================== -->
+
+				<!-- ======================== Fetid wolf ======================== -->
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidWolf"]/tools</xpath>
+					<value>
+						<tools>
+							
+							<li Class="CombatExtended.ToolCE">
+								<label>razorfangs</label>
+								<capacities>
+									<li>Bite</li>
+								</capacities>
+								<power>24</power>
+								<extraMeleeDamages>
+									<li>
+										<def>NecronoidBiteDamage</def>
+										<amount>6</amount>
+										<chance>0.45</chance>
+									</li>
+								</extraMeleeDamages>
+								<cooldownTime>1.15</cooldownTime>
+								<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+								<armorPenetrationSharp>13.0</armorPenetrationSharp>
+								<armorPenetrationBlunt>10.0</armorPenetrationBlunt>
+							</li>
+							
+							<li Class="CombatExtended.ToolCE">
+								<label>right claw</label>
+								<capacities>
+									<li>Cut</li>
+								</capacities>
+								<power>20</power>
+								<extraMeleeDamages>
+									<li>
+										<def>NecronoidCutDamage</def>
+										<amount>8</amount>
+										<chance>0.025</chance>
+									</li>
+								</extraMeleeDamages>
+								<cooldownTime>1.05</cooldownTime>
+								<linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+								<armorPenetrationSharp>9.0</armorPenetrationSharp>
+								<armorPenetrationBlunt>5.0</armorPenetrationBlunt>
+							</li>
+							
+							<li Class="CombatExtended.ToolCE">
+								<label>left claw</label>
+								<capacities>
+									<li>Cut</li>
+								</capacities>
+								<power>20</power>
+								<extraMeleeDamages>
+									<li>
+										<def>NecronoidCutDamage</def>
+										<amount>8</amount>
+										<chance>0.025</chance>
+									</li>
+								</extraMeleeDamages>
+								<cooldownTime>1.05</cooldownTime>
+								<linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+								<armorPenetrationSharp>9.0</armorPenetrationSharp>
+								<armorPenetrationBlunt>5.0</armorPenetrationBlunt>
+							</li>
+						
+						</tools>
+					</value>
+				</li>
+
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidWolf"]/race</xpath>
+					<value>
+						<baseBodySize>2.0</baseBodySize>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidWolf"]/race/baseHealthScale</xpath>
+					<value>
+						<baseHealthScale>3.5</baseHealthScale>
+					</value>
+				</li>
+				
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidWolf"]/statBases</xpath>
+					<value>
+						<MeleeDodgeChance>0.75</MeleeDodgeChance>
+						<MeleeCritChance>0.55</MeleeCritChance>
+						<MeleeParryChance>0.1</MeleeParryChance>
+						<PainShockThreshold>0.95</PainShockThreshold>
+					</value>
+				</li>			
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidWolf"]/statBases</xpath>
+					<value>
+						<ArmorRating_Sharp>6.0</ArmorRating_Sharp>
+						<ArmorRating_Blunt>80</ArmorRating_Blunt>
+						
+						<MeleeHitChance>1.8</MeleeHitChance>
+						<MoveSpeed>7.0</MoveSpeed>													
+						
+						<MeatAmount>0</MeatAmount>
+						<LeatherAmount>0</LeatherAmount>
+	
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidWolf"]/comps</xpath>
+					<value>
+						<li Class="CombatExtended.CompProperties_ArmorDurability">
+							<Durability>800</Durability>
+							<Regenerates>true</Regenerates>
+							<RegenInterval>30</RegenInterval>
+							<RegenValue>2</RegenValue>
+							<MinArmorPct>0.50</MinArmorPct>
+						</li>
+					</value>
+				</li>
+				
+				
+				
+				<!-- ======================== Chupacabra ======================== -->
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_Chupacabra"]/tools</xpath>
+					<value>
+						<tools>
+							
+							<li Class="CombatExtended.ToolCE">
+								<label>razorfangs</label>
+								<capacities>
+									<li>Bite</li>
+								</capacities>
+								<power>14</power>
+								<extraMeleeDamages>
+									<li>
+										<def>NecronoidBiteDamage</def>
+										<amount>2</amount>
+										<chance>0.45</chance>
+									</li>
+								</extraMeleeDamages>
+								<cooldownTime>0.85</cooldownTime>
+								<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+								<armorPenetrationSharp>7.5</armorPenetrationSharp>
+								<armorPenetrationBlunt>7.0</armorPenetrationBlunt>
+							</li>
+							
+							<li Class="CombatExtended.ToolCE">
+								<label>right claw</label>
+								<capacities>
+									<li>Cut</li>
+								</capacities>
+								<power>8</power>
+								<extraMeleeDamages>
+									<li>
+										<def>NecronoidCutDamage</def>
+										<amount>4</amount>
+										<chance>0.05</chance>
+									</li>
+								</extraMeleeDamages>
+								<cooldownTime>1.25</cooldownTime>
+								<linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+								<armorPenetrationSharp>4.5</armorPenetrationSharp>
+								<armorPenetrationBlunt>3.0</armorPenetrationBlunt>
+							</li>
+							
+							<li Class="CombatExtended.ToolCE">
+								<label>left claw</label>
+								<capacities>
+									<li>Cut</li>
+								</capacities>
+								<power>8</power>
+								<extraMeleeDamages>
+									<li>
+										<def>NecronoidCutDamage</def>
+										<amount>4</amount>
+										<chance>0.05</chance>
+									</li>
+								</extraMeleeDamages>
+								<cooldownTime>1.25</cooldownTime>
+								<linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+								<armorPenetrationSharp>4.5</armorPenetrationSharp>
+								<armorPenetrationBlunt>3.0</armorPenetrationBlunt>
+							</li>
+						
+						</tools>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_Chupacabra"]/race</xpath>
+					<value>
+						<baseBodySize>1.5</baseBodySize>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_Chupacabra"]/race/baseHealthScale</xpath>
+					<value>
+						<baseHealthScale>1.5</baseHealthScale>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_Chupacabra"]/statBases</xpath>
+					<value>
+						<MeleeDodgeChance>0.20</MeleeDodgeChance>
+						<MeleeCritChance>0.30</MeleeCritChance>
+						<MeleeParryChance>0.20</MeleeParryChance>
+						<PainShockThreshold>0.90</PainShockThreshold>
+					</value>
+				</li>					
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_Chupacabra"]/statBases</xpath>
+					<value>
+						<ArmorRating_Sharp>3.0</ArmorRating_Sharp>
+						<ArmorRating_Blunt>55</ArmorRating_Blunt>
+						
+						<MeleeHitChance>1.2</MeleeHitChance>
+						<MoveSpeed>7.5</MoveSpeed>								
+						
+						<MeatAmount>0</MeatAmount>
+						<LeatherAmount>0</LeatherAmount>
+	
+					</value>
+				</li>	
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_Chupacabra"]/comps</xpath>
+					<value>
+						<li Class="CombatExtended.CompProperties_ArmorDurability">
+							<Durability>700</Durability>
+							<Regenerates>false</Regenerates>
+							<MinArmorPct>0.20</MinArmorPct>
+						</li>
+					</value>
+				</li>
+				
+				
+				
+				
+
+				<!-- ======================== Animal 2st tier necronoids ======================== -->
+
+				<!-- ======================== Hag spider ======================== -->
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_HagSpider"]/race/baseBodySize</xpath>
+					<value>
+						<baseBodySize>3.5</baseBodySize>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_HagSpider"]/race/baseHealthScale</xpath>
+					<value>
+						<baseHealthScale>6.0</baseHealthScale>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_HagSpider"]/statBases</xpath>
+					<value>
+						<MeleeDodgeChance>0.30</MeleeDodgeChance>
+						<MeleeCritChance>0.25</MeleeCritChance>
+						<MeleeParryChance>0.35</MeleeParryChance>
+						<PainShockThreshold>0.95</PainShockThreshold>
+					</value>
+				</li>					
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_HagSpider"]/tools</xpath>
+					<value>
+						<tools>
+						
+							<li Class="CombatExtended.ToolCE">
+								<label>Head</label>
+								<capacities>
+									<li>Stab</li>
+								</capacities>
+								<power>10</power>
+								<chanceFactor>0.05</chanceFactor>
+								<cooldownTime>1.5</cooldownTime>
+								<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+								<armorPenetrationSharp>0.9</armorPenetrationSharp>
+								<armorPenetrationBlunt>4</armorPenetrationBlunt>
+							</li>						
+							
+							<li Class="CombatExtended.ToolCE">
+								<label>right scyth blades</label>
+								<capacities>
+									<li>Cut</li>
+								</capacities>
+								<power>31</power>
+								<extraMeleeDamages>
+									<li>
+										<def>NecronoidMajorCutDamage</def>
+										<amount>10</amount>
+										<chance>0.08</chance>
+									</li>
+								</extraMeleeDamages>
+								<cooldownTime>1.05</cooldownTime>
+								<linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
+								<armorPenetrationSharp>24.0</armorPenetrationSharp>
+								<armorPenetrationBlunt>14.0</armorPenetrationBlunt>
+							</li>
+							
+							<li Class="CombatExtended.ToolCE">
+								<label>left scyth blades</label>
+								<capacities>
+									<li>Cut</li>
+								</capacities>
+								<power>31</power>
+								<extraMeleeDamages>
+									<li>
+										<def>NecronoidMajorCutDamage</def>
+										<amount>10</amount>
+										<chance>0.08</chance>
+									</li>
+								</extraMeleeDamages>
+								<cooldownTime>1.05</cooldownTime>
+								<linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
+								<armorPenetrationSharp>24.0</armorPenetrationSharp>
+								<armorPenetrationBlunt>14.0</armorPenetrationBlunt>
+							</li>
+										
+						</tools>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_HagSpider"]/statBases</xpath>
+					<value>
+						<ArmorRating_Sharp>10</ArmorRating_Sharp>
+						<ArmorRating_Blunt>45</ArmorRating_Blunt>
+						
+						<MeleeHitChance>2.25</MeleeHitChance>
+						<MoveSpeed>6.0</MoveSpeed>							
+						
+						<MeatAmount>0</MeatAmount>
+						<LeatherAmount>0</LeatherAmount>
+	
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_HagSpider"]/comps</xpath>
+					<value>
+						<li Class="CombatExtended.CompProperties_ArmorDurability">
+							<Durability>1350</Durability>
+							<Regenerates>false</Regenerates>
+							<MinArmorPct>0.50</MinArmorPct>
+						</li>
+					</value>
+				</li>			
+				
+				
+				
+				<!-- ======================== Howling spider ======================== -->				
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_HowlingSpider"]/race/baseBodySize</xpath>
+					<value>
+						<baseBodySize>3.5</baseBodySize>
+					</value>
+				</li>				
+				
+				<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Necronoid_HowlingSpider"]/race/baseHealthScale</xpath>
+				<value>
+					<baseHealthScale>6.0</baseHealthScale>
+				</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_HowlingSpider"]/statBases</xpath>
+					<value>
+						<MeleeDodgeChance>0.45</MeleeDodgeChance>
+						<MeleeCritChance>0.65</MeleeCritChance>
+						<MeleeParryChance>0.35</MeleeParryChance>
+					</value>
+				</li>	
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_HowlingSpider"]/tools</xpath>
+					<value>
+						<tools>
+						
+							<li Class="CombatExtended.ToolCE">
+								<label>Head</label>
+								<capacities>
+									<li>Stab</li>
+								</capacities>
+								<power>10</power>
+								<chanceFactor>0.05</chanceFactor>
+								<cooldownTime>1.5</cooldownTime>
+								<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+								<armorPenetrationSharp>0.9</armorPenetrationSharp>
+								<armorPenetrationBlunt>4</armorPenetrationBlunt>
+							</li>						
+							
+							<li Class="CombatExtended.ToolCE">
+								<label>right scyth blades</label>
+								<capacities>
+									<li>Cut</li>
+								</capacities>
+								<power>35</power>
+								<extraMeleeDamages>
+									<li>
+										<def>NecronoidMajorCutDamage</def>
+										<amount>8</amount>
+										<chance>0.10</chance>
+									</li>
+								</extraMeleeDamages>
+								<cooldownTime>1.25</cooldownTime>
+								<linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
+								<armorPenetrationSharp>29</armorPenetrationSharp>
+								<armorPenetrationBlunt>15</armorPenetrationBlunt>
+							</li>
+							
+							<li Class="CombatExtended.ToolCE">
+								<label>left scyth blades</label>
+								<capacities>
+									<li>Cut</li>
+								</capacities>
+								<power>35</power>
+								<extraMeleeDamages>
+									<li>
+										<def>NecronoidMajorCutDamage</def>
+										<amount>8</amount>
+										<chance>0.10</chance>
+									</li>
+								</extraMeleeDamages>
+								<cooldownTime>1.25</cooldownTime>
+								<linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
+								<armorPenetrationSharp>29</armorPenetrationSharp>
+								<armorPenetrationBlunt>15</armorPenetrationBlunt>
+							</li>
+						
+						</tools>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_HowlingSpider"]/statBases</xpath>
+					<value>
+						<ArmorRating_Sharp>13</ArmorRating_Sharp>
+						<ArmorRating_Blunt>35</ArmorRating_Blunt>
+						
+						<MeleeHitChance>1.4</MeleeHitChance>
+						<MoveSpeed>6.5</MoveSpeed>							
+						
+						<MeatAmount>0</MeatAmount>
+						<LeatherAmount>0</LeatherAmount>
+	
+					</value>
+				</li>
+				
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_HowlingSpider"]/comps</xpath>
+					<value>
+						<li Class="CombatExtended.CompProperties_ArmorDurability">
+							<Durability>1250</Durability>
+							<Regenerates>false</Regenerates>
+							<MinArmorPct>0.75</MinArmorPct>
+						</li>
+					</value>
+				</li>
+				
+				
+								
+				<!-- ======================== Parasite ======================== -->				
+				
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidParasite"]</xpath>
+					<value>
+						<li Class="CombatExtended.RacePropertiesExtensionCE">
+							<bodyShape>QuadrupedLow</bodyShape>
+						</li>
+					</value>
+				</li>					
+				
+				<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Necronoid_FetidParasite"]/race</xpath>
+				<value>
+					<baseBodySize>0.1</baseBodySize>
+				</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Necronoid_FetidParasite"]/race/baseHealthScale</xpath>
+				<value>
+					<baseHealthScale>0.5</baseHealthScale>
+				</value>
+				</li>				
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidParasite"]/statBases</xpath>
+					<value>
+						<MeleeDodgeChance>0.35</MeleeDodgeChance>
+						<MeleeCritChance>0.00</MeleeCritChance>
+						<MeleeParryChance>0.00</MeleeParryChance>
+						<PainShockThreshold>0.99</PainShockThreshold>
+					</value>
+				</li>				
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidParasite"]/tools</xpath>
+					<value>
+						<tools>
+							<li Class="CombatExtended.ToolCE">
+								<label>mandibles</label>
+								<capacities>
+									<li>Bite</li>
+								</capacities>
+								<power>3</power>
+								<surpriseAttack>
+									<extraMeleeDamages>
+										<li>
+											<def>NecronoidBiteDamage</def>
+											<chance>0.15</chance>
+											<amount>1</amount>
+										</li>
+									</extraMeleeDamages>
+								</surpriseAttack>
+								<cooldownTime>1.5</cooldownTime>
+								<linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+								<armorPenetrationSharp>0.24</armorPenetrationSharp>
+								<armorPenetrationBlunt>0.5</armorPenetrationBlunt>
+							</li>
+							<li Class="CombatExtended.ToolCE">
+								<label>head</label>
+								<capacities>
+									<li>Blunt</li>
+								</capacities>
+								<power>2</power>
+								<cooldownTime>1.6</cooldownTime>
+								<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+								<chanceFactor>0.2</chanceFactor>
+								<armorPenetrationBlunt>0.250</armorPenetrationBlunt>
+							</li>						
+						</tools>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidParasite"]/statBases</xpath>
+					<value>
+						<ArmorRating_Sharp>0.0</ArmorRating_Sharp>
+						<ArmorRating_Blunt>0.0</ArmorRating_Blunt>
+						
+						<MeleeHitChance>1.0</MeleeHitChance>
+						<MoveSpeed>3.75</MoveSpeed>							
+						
+						<MeatAmount>0</MeatAmount>
+						<LeatherAmount>0</LeatherAmount>						
+					</value>
+				</li>	
+
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="Necronoid_FetidParasite"]</xpath>
+					<value>
+						<li Class="CombatExtended.PartialArmorExt">
+							<stats>
+								<li>
+									<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+									<parts>
+										<li>InsectLeg</li>
+									</parts>
+								</li>
+								<li>
+									<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+									<parts>
+										<li>InsectLeg</li>
+									</parts>
+								</li>
+							</stats>
+						</li>
+					</value>
+				</li>				
+				
+				
+				
+				
+				
+				<!-- ======================== Animal boss necronoid base ======================== -->				
+				
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="Necronoid_Wendigo"]</xpath>
+					<value>
+						<li Class="CombatExtended.RacePropertiesExtensionCE">
+							<bodyShape>Humanoid</bodyShape>
+						</li>
+					</value>
+				</li>				
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_Wendigo"]/race/baseBodySize</xpath>
+					<value>
+						<baseBodySize>5.7</baseBodySize>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_Wendigo"]/race/baseHealthScale</xpath>
+					<value>
+						<baseHealthScale>15.0</baseHealthScale>
+					</value>
+				</li>				
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_Wendigo"]/statBases</xpath>
+					<value>
+						<MeleeDodgeChance>0.45</MeleeDodgeChance>
+						<MeleeCritChance>0.75</MeleeCritChance>
+						<MeleeParryChance>0.35</MeleeParryChance>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_Wendigo"]/tools</xpath>
+					<value>
+						<tools>
+							
+							<li Class="CombatExtended.ToolCE">
+								<label>teeth</label>
+								<capacities>
+									<li>Bite</li>
+								</capacities>
+								<power>40</power>
+								<extraMeleeDamages>
+									<li>
+										<def>NecronoidBiteDamage</def>
+										<amount>10</amount>
+										<chance>1.0</chance>
+									</li>
+								</extraMeleeDamages>
+								<cooldownTime>1.8</cooldownTime>
+								<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+								<armorPenetrationSharp>20.0</armorPenetrationSharp>
+								<armorPenetrationBlunt>80.0</armorPenetrationBlunt>
+							</li>
+							
+							<li Class="CombatExtended.ToolCE">
+								<label>claws</label>
+								<capacities>
+									<li>Cut</li>
+								</capacities>
+								<power>51</power>
+								<extraMeleeDamages>
+									<li>
+										<def>NecronoidMajorCutDamage</def>
+										<amount>15</amount>
+										<chance>0.55</chance>
+									</li>
+								</extraMeleeDamages>
+								<cooldownTime>0.95</cooldownTime>
+								<linkedBodyPartsGroup>RightArm</linkedBodyPartsGroup>
+								<armorPenetrationSharp>26.5</armorPenetrationSharp>
+								<armorPenetrationBlunt>60.0</armorPenetrationBlunt>
+							</li>
+							
+							<li Class="CombatExtended.ToolCE">
+								<label>claws</label>
+								<capacities>
+									<li>Cut</li>
+								</capacities>
+								<power>51</power>
+								<extraMeleeDamages>
+									<li>
+										<def>NecronoidMajorCutDamage</def>
+										<amount>15</amount>
+										<chance>0.55</chance>
+									</li>
+								</extraMeleeDamages>
+								<cooldownTime>0.95</cooldownTime>
+								<linkedBodyPartsGroup>LeftArm</linkedBodyPartsGroup>
+								<armorPenetrationSharp>26.5</armorPenetrationSharp>
+								<armorPenetrationBlunt>60.0</armorPenetrationBlunt>
+							</li>
+
+
+						</tools>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_Wendigo"]/statBases</xpath>
+					<value>
+						<ArmorRating_Sharp>24</ArmorRating_Sharp>
+						<ArmorRating_Blunt>350</ArmorRating_Blunt>
+						
+						<MeleeHitChance>15.0</MeleeHitChance>	
+						<MoveSpeed>6.25</MoveSpeed>							
+						
+						<MeatAmount>0</MeatAmount>
+						<LeatherAmount>0</LeatherAmount>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_Wendigo"]/comps</xpath>
+					<value>
+						<li Class="CombatExtended.CompProperties_ArmorDurability">
+							<Durability>6000</Durability>
+							<Regenerates>true</Regenerates>
+							<RegenInterval>180</RegenInterval>
+							<RegenValue>20</RegenValue>
+							<MinArmorPct>0.50</MinArmorPct>
+						</li>
+					</value>
+				</li>				
+				
+				
+			</operations>
+		</match>
+	</Operation>
+						
+</Patch>

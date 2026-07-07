@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>The Army Of Fetid Corpses (Continued)</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>		
+					
+			
+					<!-- ================= StG-44 AMMO ================= -->
+							
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_792x33mmKurz"]/ammoTypes</xpath>
+					<value>
+						<Ammo_792x33Kurz_UN>Bullet_792x33Kurz_UN</Ammo_792x33Kurz_UN>
+					</value>
+				</li>
+				
+					<!-- ================= MG-42 AMMO ================= -->
+							
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_792x57mmMauser"]/ammoTypes</xpath>
+					<value>
+						<Ammo_792x57Mauser_UN>Bullet_792x57Mauser_UN</Ammo_792x57Mauser_UN>
+					</value>
+				</li>
+		
+				
+				
+				  <!-- ================= Lahti L-39 AMMO ================= -->
+							
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_20x138mmB"]/ammoTypes</xpath>
+					<value>
+						<Ammo_20x138mmB_UN>Bullet_20x138mmB_UN</Ammo_20x138mmB_UN>
+					</value>
+				</li>
+				
+				
+				
+				    <!-- ================= KS-23 AMMO ================= -->
+							
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_23x75mmR"]/ammoTypes</xpath>
+					<value>
+						<Ammo_23x75_UN_Buck>Bullet_23x75_UN_Buck</Ammo_23x75_UN_Buck>
+						<Ammo_23x75_UN_Slug>Bullet_23x75_UN_Slug</Ammo_23x75_UN_Slug>
+					</value>
+				</li>
+				
+				
+				
+					<!-- ================= Imperial auto cannon AMMO ================= -->
+							
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_20x105mmCharged"]/ammoTypes</xpath>
+					<value>
+						<Ammo_20x105_Cl>Bullet_20x105_Cl</Ammo_20x105_Cl>
+					</value>
+				</li>
+
+
+
+
+
+
+
+
+				
+
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod" MayRequire="Ludeon.Rimworld.Biotech">
+		<mods>
+			<li>The Army Of Fetid Corpses (Continued)</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+			
+			
+			
+						<!-- =================== Melee =================== -->
+			
+				<li Class="PatchOperationReplace" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/ThingDef[
+					defName="Gun_MilitorScopedRifle" 
+					or defName="Gun_UnderTaker" 
+					or defName="Gun_RevolvingAutoCannon"
+					]/tools</xpath>
+					<value>
+						<tools>
+							<li Class="CombatExtended.ToolCE">
+								<label>stock</label>
+								<capacities>
+									<li>Blunt</li>
+								</capacities>
+								<power>5</power>
+								<cooldownTime>1.76</cooldownTime>
+								<armorPenetrationBlunt>1.48</armorPenetrationBlunt>
+								<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+							</li>
+						</tools>
+					</value>
+				</li>			
+			
+			
+			
+			
+			
+				<!-- =================== Militor scoped rifle =================== -->	   
+				
+				<li Class="CombatExtended.PatchOperationMakeGunCECompatible" MayRequire="Ludeon.Rimworld.Biotech">
+				<defName>Gun_MilitorScopedRifle</defName>
+				
+						<!--STATS-->
+					<statBases>
+						<Mass>4.25</Mass>
+						<Bulk>10.4</Bulk>
+						
+						<SightsEfficiency>1.85</SightsEfficiency>
+						<NightVisionEfficiency_Weapon>0.40</NightVisionEfficiency_Weapon> 
+						
+						<SwayFactor>1.51</SwayFactor>
+						<ShotSpread>0.06</ShotSpread>
+						<Recoil>1.23</Recoil>
+						
+						<RangedWeapon_Cooldown>0.65</RangedWeapon_Cooldown>
+					</statBases>
+			  
+						<!--SHOTS-->
+					<Properties>
+						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+						<hasStandardCommand>True</hasStandardCommand>
+						<ai_AvoidFriendlyFireRadius>2</ai_AvoidFriendlyFireRadius>
+						
+						<warmupTime>1.45</warmupTime>
+						<range>52</range>
+						
+						<burstShotCount>8</burstShotCount>
+						<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+						<muzzleFlashScale>10</muzzleFlashScale>
+						<recoilAmount>0.37</recoilAmount>
+						
+						<defaultProjectile>Bullet_6x22mmCharged</defaultProjectile>
+						<soundCast>Shot_Sturmgewehr_44</soundCast>
+						<soundCastTail>GunTail_Heavy</soundCastTail>
+					</Properties>
+					
+					<AmmoUser>
+						<magazineSize>32</magazineSize>
+						<reloadTime>5.6</reloadTime>
+						<ammoSet>AmmoSet_6x22mmCharged</ammoSet>               <!-- GUN MAGAZINE -->
+					</AmmoUser>					
+					
+					<FireModes>
+						<aimedBurstShotCount>4</aimedBurstShotCount>
+						<aiAimMode>AimedShot</aiAimMode> 
+					</FireModes>
+					
+						<!--TAGS-->
+					<weaponTags>
+						<li>CE_AI_AR</li>
+					</weaponTags>
+			  
+				</li>
+				
+				
+
+				<!-- =================== Under taker =================== -->	   
+				
+				<li Class="CombatExtended.PatchOperationMakeGunCECompatible" MayRequire="Ludeon.Rimworld.Biotech">
+				<defName>Gun_UnderTaker</defName>
+				
+						<!--STATS-->
+					<statBases>
+						<Mass>1.4</Mass>
+						<Bulk>4.1</Bulk>
+						
+						<SightsEfficiency>1.5</SightsEfficiency>
+						<NightVisionEfficiency_Weapon>0.4</NightVisionEfficiency_Weapon> 
+						
+						<SwayFactor>1.71</SwayFactor>
+						<ShotSpread>0.10</ShotSpread>
+						<Recoil>1.11</Recoil>
+						
+						<RangedWeapon_Cooldown>0.45</RangedWeapon_Cooldown>
+					</statBases>
+			  
+						<!--SHOTS-->
+					<Properties>
+						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+						<hasStandardCommand>True</hasStandardCommand>
+						<ai_AvoidFriendlyFireRadius>2</ai_AvoidFriendlyFireRadius>
+						
+						<warmupTime>0.9</warmupTime>
+						<range>14</range>
+						
+						<burstShotCount>3</burstShotCount>
+						<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+						<muzzleFlashScale>9</muzzleFlashScale>
+						<recoilAmount>2.54</recoilAmount>
+						
+						<defaultProjectile>Bullet_6x18mmCharged</defaultProjectile>
+						<soundCast>Shot_UnderTaker</soundCast>
+						<soundCastTail>GunTail_Heavy</soundCastTail>
+					</Properties>
+
+					<AmmoUser>
+						<magazineSize>15</magazineSize>
+						<reloadTime>3.2</reloadTime>
+						<ammoSet>AmmoSet_6x18mmCharged</ammoSet>               <!-- GUN MAGAZINE -->
+					</AmmoUser>
+
+					<FireModes>
+						<aiAimMode>AimedShot</aiAimMode> 
+					</FireModes>
+					
+						<!--TAGS
+					<weaponTags>
+						<li>CE_AI_SMG</li>
+					</weaponTags-->
+			  
+				</li>
+
+
+
+				<!-- =================== Revolving auto cannon =================== -->	   
+
+				<li Class="CombatExtended.PatchOperationMakeGunCECompatible" MayRequire="Ludeon.Rimworld.Biotech">
+				<defName>Gun_RevolvingAutoCannon</defName>
+				
+						<!--STATS-->
+					<statBases>
+						<Mass>16.5</Mass>
+						<Bulk>18.1</Bulk>
+						
+						<SightsEfficiency>2.4</SightsEfficiency>
+						<NightVisionEfficiency_Weapon>0.5</NightVisionEfficiency_Weapon> 
+						
+						<SwayFactor>2.13</SwayFactor>
+						<ShotSpread>0.05</ShotSpread>
+						<Recoil>2.67</Recoil>
+						
+						<RangedWeapon_Cooldown>0.85</RangedWeapon_Cooldown>
+					</statBases>
+			  
+						<!--SHOTS-->
+					<Properties>
+						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+						<hasStandardCommand>True</hasStandardCommand>
+						<ai_AvoidFriendlyFireRadius>2</ai_AvoidFriendlyFireRadius>
+						
+						<warmupTime>1.15</warmupTime>
+						<range>61</range>
+						
+						<burstShotCount>1</burstShotCount>
+						<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+						<muzzleFlashScale>2</muzzleFlashScale>
+						<recoilAmount>0.44</recoilAmount>
+						
+						<defaultProjectile>Bullet_12x64mmCharged</defaultProjectile>
+						<soundCast>Shot_Autocannon</soundCast>
+						<soundCastTail>GunTail_Heavy</soundCastTail>
+					</Properties>
+					
+					<AmmoUser>
+						<magazineSize>12</magazineSize>
+						<reloadTime>7.1</reloadTime>
+						<ammoSet>AmmoSet_12x64mmCharged</ammoSet>               <!-- GUN MAGAZINE -->
+					</AmmoUser>					
+					
+					<FireModes>
+						<aiAimMode>AimedShot</aiAimMode> 
+					</FireModes>
+					
+						<!--TAGS
+					<weaponTags>
+						<li>CE_AI_Heavy</li>
+					</weaponTags-->
+			  
+				</li>
+
+
+
+				<!-- =================== Sentry centipede sheriff turret =================== -->	 
+				
+				<li Class="CombatExtended.PatchOperationMakeGunCECompatible" MayRequire="Ludeon.Rimworld.Biotech">
+					<defName>Gun_SentryTurret</defName>
+					
+					<statBases>
+						<SightsEfficiency>1</SightsEfficiency>
+						<Recoil>3.23</Recoil>
+						<ShotSpread>0.35</ShotSpread>
+						<SwayFactor>2.65</SwayFactor>
+						<Bulk>6.00</Bulk>
+					</statBases>
+					
+					<Properties>
+						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+						<hasStandardCommand>true</hasStandardCommand>
+						
+						<defaultProjectile>Bullet_500SWMagnum_FMJ</defaultProjectile>
+						
+						<range>24</range>
+						<burstShotCount>20</burstShotCount>
+						<muzzleFlashScale>9</muzzleFlashScale>
+						
+						<defaultCooldownTime>2.5</defaultCooldownTime>
+						<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+						
+						<soundCast>Shot_SovietSubmachineGun</soundCast>
+						<soundCastTail>GunTail_Heavy</soundCastTail>
+						
+
+						<linkedBodyPartsGroup>BulbTurret</linkedBodyPartsGroup>
+						<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+						
+					</Properties>
+					
+				</li>
+									
+				
+			</operations>
+		</match>
+	</Operation>
+</Patch>

@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+		<CombatExtended.AmmoCategoryDef>
+			<defName>IncendiarySpecial</defName>
+			<label>armor-piercing incendiary special</label>
+			<labelShort>AP-IS</labelShort>
+			<description>Modified AP-I hastily designed at the beginning of the Necronid infection outbreak.</description>
+			<advanced>true</advanced>
+		</CombatExtended.AmmoCategoryDef>
+
+
+		<CombatExtended.AmmoCategoryDef>
+			<defName>CleansingRound</defName>
+			<label>Cleansing</label>
+			<labelShort>CLN</labelShort>
+			<description>An experemental round specifically designed against Necronoid threats.</description>
+			<advanced>true</advanced>			
+		</CombatExtended.AmmoCategoryDef>
+
+
+			<!-- =================== 7.92x33mm   StG-44 ===================-->
+
+				<!-- =================== Ammunition ===================-->
+  
+		<ThingDef Class="CombatExtended.AmmoDef" ParentName="792x33mmKurzBase">
+			<defName>Ammo_792x33Kurz_UN</defName>
+			<label>7.92x33mm Kurz (Special)</label>
+			<graphicData>
+				<texPath>Things/Ammo/Rifle/Incendiary</texPath>
+				<graphicClass>Graphic_StackCount</graphicClass>
+			</graphicData>
+			<statBases>
+				<Mass>0.028</Mass>
+				<Bulk>0.03</Bulk>
+			</statBases>
+			<ammoClass>IncendiarySpecial</ammoClass>
+			<cookOffProjectile>Bullet_792x33Kurz_UN</cookOffProjectile>
+		</ThingDef>
+  
+				<!-- =================== Projectiles ===================-->
+  
+	<ThingDef ParentName="Base792x33mmKurzBullet">
+		<defName>Bullet_792x33Kurz_UN</defName>
+		<label>7.92x33mm Kurz bullet (Special)</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>15</damageAmountBase>
+			<armorPenetrationSharp>16</armorPenetrationSharp>
+			<armorPenetrationBlunt>40</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>10</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+  
+				<!-- =================== Recipes ===================-->
+				
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_792x33Kurz_UN</defName>
+		<label>Make 7.92x33mm Kurz (Special) cartridge  x500</label>
+		<description>Craft 500 7.92x33mm Kurz (Special) cartridges.</description>
+		<jobString>Making 7.92x33mm Kurz (Special) cartridges.</jobString>
+		<researchPrerequisite>IncendiaryWeapons</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Prometheum</li>
+					</thingDefs>
+				</filter>
+				<count>7</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>30</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Prometheum</li>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_792x33Kurz_UN>500</Ammo_792x33Kurz_UN>
+		</products>
+		<workAmount>3120</workAmount>
+	</RecipeDef>
+	
+	
+	
+	
+	
+			 <!-- =================== 7.92x57mm   MG-42 ===================-->
+
+				<!-- =================== Ammunition ===================-->
+  
+		<ThingDef Class="CombatExtended.AmmoDef" ParentName="792x57mmMauserBase">
+			<defName>Ammo_792x57Mauser_UN</defName>
+			<label>7.92x57mm Mauser (Special)</label>
+			<graphicData>
+				<texPath>Things/Ammo/Rifle/Clip/Incendiary</texPath>
+				<graphicClass>Graphic_StackCount</graphicClass>
+			</graphicData>
+			<statBases>
+				<Mass>0.028</Mass>
+				<Bulk>0.03</Bulk>
+			</statBases>
+			<ammoClass>IncendiarySpecial</ammoClass>
+			<cookOffProjectile>Bullet_792x57Mauser_UN</cookOffProjectile>
+		</ThingDef>
+  
+				<!-- =================== Projectile ===================-->
+  
+	<ThingDef ParentName="Base792x57mmMauserBullet">
+		<defName>Bullet_792x57Mauser_UN</defName>
+		<label>7.92x57mm Mauser bullet (Special)</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>21</damageAmountBase>
+			<armorPenetrationSharp>24</armorPenetrationSharp>
+			<armorPenetrationBlunt>80</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>14</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+  
+				<!-- =================== Recipe ===================-->
+				
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_792x57Mauser_UN</defName>
+		<label>Make 7.92x57mm Mauser (Special) cartridge x500</label>
+		<description>Craft 500 7.92x57mm Mauser (Special) cartridges.</description>
+		<jobString>Making 7.92x57mm Mauser (Special) cartridges.</jobString>
+		<researchPrerequisite>IncendiaryWeapons</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Prometheum</li>
+					</thingDefs>
+				</filter>
+				<count>9</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>35</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Prometheum</li>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_792x57Mauser_UN>500</Ammo_792x57Mauser_UN>
+		</products>
+		<workAmount>4500</workAmount>
+	</RecipeDef>
+	
+	
+	
+	
+  
+			<!-- ===================  20x138mm  Lahti L-39 ===================-->
+  
+				<!-- =================== Ammunition ===================-->
+  
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo20x138mmBBase">
+		<defName>Ammo_20x138mmB_UN</defName>
+		<label>20x138mmB Special</label>
+		<graphicData>
+			<texPath>Things/Ammo/HighCaliber/Incendiary</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>0.047</Mass>
+			<Bulk>0.05</Bulk>
+		</statBases>
+		<ammoClass>IncendiarySpecial</ammoClass>
+		<cookOffProjectile>Bullet_20x138mmB_UN</cookOffProjectile>
+	</ThingDef>
+  
+					<!-- =================== Projectile ===================-->
+  
+	<ThingDef ParentName="Base20x138mmBBullet">
+		<defName>Bullet_20x138mmB_UN</defName>
+		<label>20x138mmB Special</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>50</damageAmountBase>
+			<armorPenetrationBlunt>1000</armorPenetrationBlunt>
+			<armorPenetrationSharp>55</armorPenetrationSharp>
+			<secondaryDamage>
+				<li>
+					<def>Flame</def>
+					<amount>75</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+	
+				<!-- =================== Recipe ===================-->
+				
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_20x138mmB_UN</defName>
+		<label>Make 20x138mmB (Special) catrige x200</label>
+		<description>Craft 200 20x138mmB (Special) catriges.</description>
+		<jobString>Making 20x138mmB (Special) catriges.</jobString>
+		<researchPrerequisite>IncendiaryWeapons</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Prometheum</li>
+					</thingDefs>
+				</filter>
+				<count>15</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>60</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Prometheum</li>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_20x138mmB_UN>200</Ammo_20x138mmB_UN>
+		</products>
+		<workAmount>18000</workAmount>
+	</RecipeDef>
+	
+	
+	
+	
+  
+			   <!-- ===================  23x75mm KS-23 ===================-->
+	
+				<!-- =================== Ammunition ===================-->
+  
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="23x75mmRBase">
+		<defName>Ammo_23x75_UN_Buck</defName>                                   
+		<label>23x75mm R (Cleansing)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Shotgun/Shot</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.5</MarketValue>
+			<Mass>0.035</Mass>
+			<Bulk>0.03</Bulk>
+		</statBases>
+		<ammoClass>CleansingRound</ammoClass>
+		<cookOffProjectile>Bullet_23x75_UN_Buck</cookOffProjectile> 
+	</ThingDef>
+	
+				<!-- =================== Projectile ===================-->
+  
+	<ThingDef ParentName="Base23x75mmRBullet">
+		<defName>Bullet_23x75_UN_Buck</defName>                  
+		<label>23x75mm R (Cleansing)</label>
+		<graphicData>
+			<texPath>Things/Projectile/Shotgun_Pellet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Cleansing</damageDef>
+			<damageAmountBase>8</damageAmountBase>
+			<pelletCount>13</pelletCount>
+			<armorPenetrationSharp>8</armorPenetrationSharp>
+			<armorPenetrationBlunt>11</armorPenetrationBlunt>
+			<spreadMult>10</spreadMult>
+			<shieldDamageMultiplier>0.33</shieldDamageMultiplier>
+		</projectile>
+	</ThingDef>  
+  
+				<!-- =================== Recipe ===================-->
+  
+	<RecipeDef ParentName="ChargeAmmoRecipeBase">
+		<defName>MakeAmmo_23x75_UN_Buck</defName>
+		<label>Make 23x75mm R (Cleansing) Buckshot x200</label>
+		<description>Craft 200 23x75mm R (Cleansing) Buckshot.</description>
+		<jobString>Making 23x75mm R (Cleansing) Buckshot.</jobString>
+		<researchPrerequisite>CleansingWeapons</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Neutroamine</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+		<thingDefs>
+			<li>Plasteel</li>
+			<li>Neutroamine</li>
+		</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_23x75_UN_Buck>100</Ammo_23x75_UN_Buck>
+		</products>
+		<workAmount>4200</workAmount>
+	</RecipeDef>
+	
+	
+	
+	
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="23x75mmRBase">
+		<defName>Ammo_23x75_UN_Slug</defName>                                   
+		<label>23x75mm R (Cleansing)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Shotgun/Slug</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.5</MarketValue>
+			<Mass>0.035</Mass>
+			<Bulk>0.03</Bulk>
+		</statBases>
+		<ammoClass>CleansingRound</ammoClass>
+		<cookOffProjectile>Bullet_23x75_UN_Slug</cookOffProjectile> 
+	</ThingDef>
+	
+				<!-- =================== Projectile ===================-->
+  
+	<ThingDef ParentName="Base23x75mmRBullet">
+		<defName>Bullet_23x75_UN_Slug</defName>                  
+		<label>23x75mm R (Cleansing)</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Cleansing</damageDef>
+			<damageAmountBase>40</damageAmountBase>
+			<armorPenetrationSharp>14</armorPenetrationSharp>
+			<armorPenetrationBlunt>170</armorPenetrationBlunt>
+			<effectiveRangeMultiplier>1.5</effectiveRangeMultiplier>
+			<recoilMultiplier>1.4</recoilMultiplier>
+		</projectile>
+	</ThingDef>  
+  
+				<!-- =================== Recipe ===================-->
+  
+	<RecipeDef ParentName="ChargeAmmoRecipeBase">
+		<defName>MakeAmmo_23x75_UN_Slug</defName>
+		<label>Make 23x75mm R (Cleansing) catrige x200</label>
+		<description>Craft 200 23x75mm R (Cleansing) catriges.</description>
+		<jobString>Making 23x75mm R (Cleansing) catriges.</jobString>
+		<researchPrerequisite>CleansingWeapons</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Neutroamine</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+		<thingDefs>
+			<li>Plasteel</li>
+			<li>Neutroamine</li>
+		</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_23x75_UN_Slug>100</Ammo_23x75_UN_Slug>
+		</products>
+		<workAmount>4380</workAmount>
+	</RecipeDef>	
+	
+	
+	
+	<!-- ===================  20x105mm Special Imperial auto cannon ===================-->
+	
+				<!-- =================== Ammunition ===================-->
+  
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="20x105mmChargedBase">
+		<defName>Ammo_20x105_Cl</defName>                                   
+		<label>20x105mm (Cleansing)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Charged/LargeRegular</texPath>
+			<graphicClass>Verse.Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>8.5</MarketValue>
+			<Mass>0.10</Mass>
+			<Bulk>0.12</Bulk>
+		</statBases>
+		<ammoClass>CleansingRound</ammoClass>
+		<cookOffProjectile>Bullet_20x105_Cl</cookOffProjectile>               
+	</ThingDef>
+  
+	
+				<!-- =================== Projectile ===================-->
+  
+	<ThingDef ParentName="Base20x105mmChargedBullet">
+		<defName>Bullet_20x105_Cl</defName>                               
+		<label>20x105mm Cleansing bullet</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>CleansingGreater</damageDef> 
+			<damageAmountBase>58</damageAmountBase>
+			<armorPenetrationSharp>72</armorPenetrationSharp>
+			<armorPenetrationBlunt>1250</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef> 
+  
+				<!-- =================== Recipe ===================-->
+  
+	<RecipeDef ParentName="ChargeAmmoRecipeBase">
+		<defName>MakeAmmo_20x105_Cl</defName>
+		<label>Make 20x105mm (Cleansing) cartridge x100</label>
+		<description>Craft 100 20x105mm (Cleansing) cartridges.</description>
+		<jobString>Making 20x105mm (Cleansing) cartridges.</jobString>
+		<researchPrerequisite>CleansingWeaponsEmpire</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>25</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Neutroamine</li>
+					</thingDefs>
+				</filter>
+				<count>15</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+		<thingDefs>
+			<li>Plasteel</li>
+			<li>Uranium</li>
+			<li>Neutroamine</li>
+		</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_20x105_Cl>100</Ammo_20x105_Cl>
+		</products>
+		<workAmount>27000</workAmount>
+	</RecipeDef>
+	
+</Defs>
+	

@@ -1,0 +1,238 @@
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>The Army Of Fetid Corpses (Continued)</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+
+
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/FactionDef[defName="Necronoid"]/canSiege</xpath>
+					<value>
+						<canSiege>false</canSiege>
+					</value>
+				</li>
+				
+				
+				
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/FactionDef[defName="Necronoid"]/maxPawnCostPerTotalPointsCurve</xpath>
+					<value>
+						<maxPawnCostPerTotalPointsCurve>
+							<points>
+								<li>(400, 250)</li>
+								<li>(2500, 2500)</li> 
+								<li>(100000, 10000)</li>
+							</points>
+						</maxPawnCostPerTotalPointsCurve>
+					</value>
+				</li>			
+
+
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/FactionDef[defName="Necronoid"]/pawnGroupMakers</xpath>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/FactionDef[defName="Necronoid"]</xpath>
+					<value>
+						<pawnGroupMakers>
+
+								<!-- =============== Common =============== -->
+
+
+								<!-- =============== Melee =============== -->
+							<li>
+								<kindDef>Combat</kindDef>
+								<commonality>50</commonality>
+								<options>
+									<LowTier_FleshSlave>1</LowTier_FleshSlave>
+									<Necronoid_FetidGhoul>10</Necronoid_FetidGhoul>
+								</options>
+							</li>
+							
+								<!-- =============== Melee advanced ===============-->							
+							<li>
+								<kindDef>Combat</kindDef>
+								<commonality>40</commonality>
+								<options>								
+									<Necronoid_BladedGhoul>5</Necronoid_BladedGhoul>
+									<Necronoid_FetidGhoul>2</Necronoid_FetidGhoul>
+									<Necronoid_FetidParasite>1</Necronoid_FetidParasite>	
+								</options>
+							</li>							
+							
+							
+							
+								<!-- =============== Ranged =============== -->	
+							<li>
+
+								<kindDef>Combat</kindDef>
+								<commonality>50</commonality>
+								<options>
+									<MidTier_FleshSlave>1</MidTier_FleshSlave>
+									<Necronoid_FetidBrute>4</Necronoid_FetidBrute>
+									<Necronoid_FetidSoldier>10</Necronoid_FetidSoldier>
+									<Necronoid_FetidParasite>2</Necronoid_FetidParasite>	
+								</options>
+							</li>
+							
+								<!-- =============== Ranged advanced =============== -->								
+							<li>
+								<kindDef>Combat</kindDef>
+								<commonality>40</commonality>
+								<options>
+									<FleshBoss>1</FleshBoss>
+									<Necronoid_FetidMarine>10</Necronoid_FetidMarine>
+									<Necronoid_FetidHulk>4</Necronoid_FetidHulk>
+									<Necronoid_FetidParasite>2</Necronoid_FetidParasite>	
+								</options>
+							</li>							
+							
+							
+							
+								<!-- =============== Infected animals =============== -->							
+
+								<!-- =============== Wolves =============== -->
+							<li>
+								<kindDef>Combat</kindDef>
+								<commonality>35</commonality>
+								<options>
+									<Necronoid_FetidWolf>1</Necronoid_FetidWolf>
+								</options>
+							</li>
+
+								<!-- =============== Chupacabras =============== -->
+							<li>
+								<kindDef>Combat</kindDef>
+								<commonality>30</commonality>
+								<options>
+									<Necronoid_Chupacabra>1</Necronoid_Chupacabra>
+								</options>
+							</li>
+							
+								<!-- =============== Howling Spiders =============== -->							
+							<li>
+								<kindDef>Combat</kindDef>
+								<commonality>25</commonality>
+								<options>
+									<Necronoid_HowlingSpider>1</Necronoid_HowlingSpider>
+								</options>
+							</li>
+							
+							
+							
+							
+							
+								<!-- =============== Bosses =============== -->
+			
+								<!-- =============== Giant Monstrosities =============== -->			
+							<li>
+								<kindDef>Combat</kindDef>
+								<commonality>20</commonality>
+								<options>
+									<FleshBoss>1</FleshBoss>
+									<Necronoid_HagSpider>10</Necronoid_HagSpider>
+									<Necronoid_BloatedOgre>5</Necronoid_BloatedOgre>
+									<Necronoid_FetidParasite>2</Necronoid_FetidParasite>									
+								</options>
+							</li>	
+							
+								<!-- =============== Boss 1 =============== -->		
+							<li>					
+								<kindDef>Combat</kindDef>
+								<commonality>15</commonality>
+								<options>
+									<Necronoid_FleshTyrant>8</Necronoid_FleshTyrant>
+									<Necronoid_BladedGhoul>4</Necronoid_BladedGhoul>
+									<Necronoid_FetidParasite>1</Necronoid_FetidParasite> 									
+								</options>
+							</li>
+							
+								<!-- =============== Boss 2 =============== -->
+							<li>
+								<kindDef>Combat</kindDef>
+								<commonality>15</commonality>
+								<options>
+									<Necronoid_ExecutionerGhoul>8</Necronoid_ExecutionerGhoul>
+									<Necronoid_BladedGhoul>4</Necronoid_BladedGhoul>
+									<Necronoid_FetidParasite>1</Necronoid_FetidParasite> 														
+								</options>
+							</li>
+							
+								<!-- =============== Boss 3 =============== -->
+							<li>
+								<kindDef>Combat</kindDef>
+								<commonality>15</commonality>
+								<options>
+									<Necronoid_BloodLetterGhoul>8</Necronoid_BloodLetterGhoul>
+									<Necronoid_BladedGhoul>4</Necronoid_BladedGhoul>
+									<Necronoid_FetidParasite>1</Necronoid_FetidParasite> 									
+								</options>
+							</li>
+							
+								<!-- =============== Boss 4 =============== -->
+							<li>
+								<kindDef>Combat</kindDef>
+								<commonality>15</commonality>
+								<options>
+									<Necronoid_CrazedButcher>8</Necronoid_CrazedButcher>
+									<Necronoid_BladedGhoul>4</Necronoid_BladedGhoul>
+									<Necronoid_FetidParasite>1</Necronoid_FetidParasite> 									
+								</options>
+							</li>
+							
+							
+							
+							
+
+								<!-- =============== All Types =============== -->
+							<li>
+								<kindDef>Combat</kindDef>
+								<commonality>5</commonality>
+								<options>
+									<LowTier_FleshSlave>2</LowTier_FleshSlave>
+									<MidTier_FleshSlave>2</MidTier_FleshSlave>
+									<FleshBoss>1</FleshBoss>
+									<Necronoid_FetidGhoul>3</Necronoid_FetidGhoul>
+									<Necronoid_BladedGhoul>3</Necronoid_BladedGhoul>
+									<Necronoid_FetidBrute>3</Necronoid_FetidBrute>
+									<Necronoid_FetidSoldier>3</Necronoid_FetidSoldier>
+									<Necronoid_FetidWolf>3</Necronoid_FetidWolf>
+									<Necronoid_HagSpider>2</Necronoid_HagSpider>
+									<Necronoid_BloatedOgre>2</Necronoid_BloatedOgre>
+									<Necronoid_FetidParasite>2</Necronoid_FetidParasite>
+								</options>
+							</li>
+							
+								<!-- =============== Settlement =============== -->							
+							<li>
+								<kindDef>Settlement</kindDef>
+								<options>
+									<FleshBoss>1</FleshBoss>
+									<LowTier_FleshSlave>2</LowTier_FleshSlave>
+									<MidTier_FleshSlave>2</MidTier_FleshSlave>
+									<Necronoid_FetidGhoul>3</Necronoid_FetidGhoul>
+									<Necronoid_BladedGhoul>3</Necronoid_BladedGhoul>
+									<Necronoid_FetidBrute>3</Necronoid_FetidBrute>
+									<Necronoid_FetidSoldier>3</Necronoid_FetidSoldier>
+									<Necronoid_FetidWolf>3</Necronoid_FetidWolf>
+									<Necronoid_HagSpider>2</Necronoid_HagSpider>
+									<Necronoid_BloatedOgre>2</Necronoid_BloatedOgre>
+									<Necronoid_FetidParasite>20</Necronoid_FetidParasite>
+								</options>
+							</li>
+							
+						</pawnGroupMakers>
+					</value>
+				</li>
+
+
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

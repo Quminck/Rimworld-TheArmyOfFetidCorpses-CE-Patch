@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+	<CombatExtended.AmmoCategoryDef MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>SurgBoneAmmo</defName>
+		<label>Surrogate Bone Ammo</label>
+		<labelShort>SBA</labelShort>
+		<description>Toxic surrogate round made from Necronoid flesh with a neutralized infection. It is the result of numerous attempts to copy necronoid technologies</description>
+	</CombatExtended.AmmoCategoryDef>
+	
+  
+			<!-- =================== Ammo set =================== -->
+  
+	<CombatExtended.AmmoSetDef MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>AmmoSet_Rifle_Bone_Craftable</defName> 
+		<label>Rifle toxic round</label>
+		<ammoTypes>
+			<Ammo_Rifle_Bone_Craftable>Bullet_Rifle_Bone_Craftable</Ammo_Rifle_Bone_Craftable>	
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+	
+	<CombatExtended.AmmoSetDef MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>AmmoSet_Sniper_Bone_Craftable</defName>   
+		<label>High-caliber toxic round</label>
+		<ammoTypes>
+			<Ammo_Sniper_Bone_Craftable>Bullet_Sniper_Bone_Craftable</Ammo_Sniper_Bone_Craftable>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+	
+	<CombatExtended.AmmoSetDef MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>AmmoSet_Shotgun_Bone_Craftable</defName> 
+		<label>Toxic buckshot</label>
+		<ammoTypes>
+			<Ammo_Shotgun_Bone_Craftable>Bullet_Shotgun_Bone_Craftable</Ammo_Shotgun_Bone_Craftable>	
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+  
+  
+  
+  
+				<!-- =================== Rifle Bone =================== -->
+					
+				<!-- =================== Ammunition ===================-->
+  
+	<ThingDef Class="CombatExtended.AmmoDef" Name="Ammo_Rifle_Bone_Craftable_Base" ParentName="AmmoBase" Abstract="True" MayRequire="Ludeon.Rimworld.Biotech">
+		<description>A makeshift rifle round. It fires a chemically neutralized bone shard. While safe from the virus it remains extremely toxic for any lifeforms</description>
+		<tradeTags>
+			<li>CE_AutoEnableTrade</li>
+			<li>CE_AutoEnableCrafting_FabricationBench</li>
+		</tradeTags>
+		<thingCategories>
+			<li>AmmoRifles</li>    
+		</thingCategories>
+	</ThingDef>
+  
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo_Rifle_Bone_Craftable_Base" MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>Ammo_Rifle_Bone_Craftable</defName>                                
+		<label>Rifle toxic round</label>
+		<graphicData>
+			<texPath>Things/Ammo/Neolithic/Kunai</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>0.035</Mass>
+			<Bulk>0.03</Bulk>
+		</statBases>
+		<ammoClass>SurgBoneAmmo</ammoClass>
+		<cookOffProjectile>Bullet_Rifle_Bone_Craftable</cookOffProjectile>           
+	</ThingDef>
+	
+
+
+			<!-- =================== Projectiles ===================-->
+  
+	<ThingDef Name="Bullet_Rifle_Bone_Craftable_Base" ParentName="BaseBulletCE" Abstract="True" MayRequire="Ludeon.Rimworld.Biotech">
+		<graphicData>
+			<texPath>Things/Misc/Bullets/Projectile_Infected</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.0, 1.0)</drawSize> 			
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE" MayRequire="Ludeon.Rimworld.Biotech">
+			<damageDef>BulletToxic</damageDef>
+			<dropsCasings>false</dropsCasings>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef ParentName="Bullet_Rifle_Bone_Craftable_Base" MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>Bullet_Rifle_Bone_Craftable</defName>                              
+		<label>Shard bone</label>
+		
+		<projectile Class="CombatExtended.ProjectilePropertiesCE" MayRequire="Ludeon.Rimworld.Biotech">
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationSharp>10.0</armorPenetrationSharp>
+			<armorPenetrationBlunt>3.0</armorPenetrationBlunt>
+			<speed>135</speed>
+		</projectile>
+	</ThingDef>
+	
+	
+	
+		<!-- =================== Recipes ===================-->
+				
+	<RecipeDef ParentName="ChargeAmmoRecipeBase" MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>MakeAmmo_Rifle_Bone_Craftable</defName>
+		<label>Make bones x250</label>
+		<description>Craft 250 Bones.</description>
+		<jobString>Making bones.</jobString>
+		<researchPrerequisite>NecroWeapons</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Necro_Meat</li>
+					</thingDefs>
+				</filter>
+				<count>35</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>12</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Neutroamine</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>Necro_Meat</li>
+				<li>Neutroamine</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_Rifle_Bone_Craftable>250</Ammo_Rifle_Bone_Craftable>
+		</products>
+		<workAmount>2000</workAmount>
+	</RecipeDef>
+	
+	
+	
+	
+	  
+				<!-- =================== Sniper Bone =================== -->
+					
+				<!-- =================== Ammunition ===================-->
+	
+	<ThingDef Class="CombatExtended.AmmoDef" Name="Ammo_Sniper_Bone_Craftable_Base" ParentName="AmmoBase" Abstract="True" MayRequire="Ludeon.Rimworld.Biotech">
+		<description>A makeshift High-caliber round. It fires a chemically neutralized bone spikes extremely toxic for any lifeforms</description>
+		<tradeTags>
+			<li>CE_AutoEnableTrade</li>
+			<li>CE_AutoEnableCrafting_FabricationBench</li>
+		</tradeTags>
+		<thingCategories>
+			<li>AmmoRifles</li>    
+		</thingCategories>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo_Sniper_Bone_Craftable_Base" MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>Ammo_Sniper_Bone_Craftable</defName>                                
+		<label>High-caliber toxic round</label>
+		<graphicData>
+			<texPath>Things/Ammo/Neolithic/Kunai</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>0.02</Mass>
+			<Bulk>0.03</Bulk>
+		</statBases>
+		<ammoClass>SurgBoneAmmo</ammoClass>
+		<cookOffProjectile>Bullet_Rifle_Bone_Craftable</cookOffProjectile>           
+	</ThingDef>
+	
+	
+
+			<!-- =================== Projectiles ===================-->
+
+	<ThingDef Name="Bullet_Sniper_Bone_Craftable_Base" ParentName="BaseBulletCE" Abstract="True" MayRequire="Ludeon.Rimworld.Biotech">
+		<graphicData>
+			<texPath>Things/Misc/Bullets/Projectile_Infected</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.50, 0.85)</drawSize> 
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>BulletToxic</damageDef>
+			<dropsCasings>false</dropsCasings>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef ParentName="Bullet_Sniper_Bone_Craftable_Base" MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>Bullet_Sniper_Bone_Craftable</defName>                              
+		<label>bone spike</label>
+		
+		<projectile Class="CombatExtended.ProjectilePropertiesCE" MayRequire="Ludeon.Rimworld.Biotech">
+			<damageAmountBase>14</damageAmountBase>
+			<armorPenetrationSharp>15.0</armorPenetrationSharp>
+			<armorPenetrationBlunt>4.0</armorPenetrationBlunt>
+			<speed>150</speed>	
+		</projectile>
+	</ThingDef>
+	
+	
+	
+			<!-- =================== Recipes ===================-->
+				
+	<RecipeDef ParentName="ChargeAmmoRecipeBase" MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>MakeAmmo_Sniper_Bone_Craftable</defName>
+		<label>Make bones x100</label>
+		<description>Craft 100 Bones.</description>
+		<jobString>Making bones.</jobString>
+		<researchPrerequisite>NecroWeapons</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Necro_Meat</li>
+					</thingDefs>
+				</filter>
+				<count>40</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>15</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Neutroamine</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>Necro_Meat</li>
+				<li>Neutroamine</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_Sniper_Bone_Craftable>100</Ammo_Sniper_Bone_Craftable>
+		</products>
+		<workAmount>2400</workAmount>
+	</RecipeDef>
+	
+	
+	
+	
+	
+				<!-- =================== Shotgun Bone =================== -->
+					
+				<!-- =================== Ammunition ===================-->
+	
+	<ThingDef Class="CombatExtended.AmmoDef" Name="Ammo_Shotgun_Bone_Craftable_Base" ParentName="AmmoBase" Abstract="True" MayRequire="Ludeon.Rimworld.Biotech">
+		<description>A makeshift buckshot filled with neutralized infected bone fragments</description>
+		<tradeTags>
+			<li>CE_AutoEnableTrade</li>
+			<li>CE_AutoEnableCrafting_FabricationBench</li>
+		</tradeTags>
+		<thingCategories>
+			<li>AmmoShotguns</li>
+		</thingCategories>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo_Shotgun_Bone_Craftable_Base" MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>Ammo_Shotgun_Bone_Craftable</defName>                                
+		<label>Toxic buckshot</label>
+		<graphicData>
+			<texPath>Things/Ammo/Neolithic/Kunai</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>0.04</Mass>
+			<Bulk>0.03</Bulk>
+		</statBases>
+		<ammoClass>SurgBoneAmmo</ammoClass>
+		<cookOffProjectile>Bullet_Rifle_Bone_Craftable</cookOffProjectile>           
+	</ThingDef>
+	
+
+
+			<!-- =================== Projectiles ===================-->
+	
+	<ThingDef Name="Bullet_Shotgun_Bone_Craftable_Base" ParentName="BaseBulletCE" Abstract="True" MayRequire="Ludeon.Rimworld.Biotech">
+		<graphicData>
+			<texPath>Things/Misc/Bullets/Projectile_Infected</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(0.90, 0.45)</drawSize> 
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE" MayRequire="Ludeon.Rimworld.Biotech">
+			<damageDef>BulletToxic</damageDef>
+			<dropsCasings>false</dropsCasings>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef ParentName="Bullet_Shotgun_Bone_Craftable_Base" MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>Bullet_Shotgun_Bone_Craftable</defName>                              
+		<label>bone fragment</label>
+		
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>6</damageAmountBase>
+			<armorPenetrationSharp>6.5</armorPenetrationSharp>
+			<armorPenetrationBlunt>3.0</armorPenetrationBlunt>
+			<pelletCount>12</pelletCount>
+			<spreadMult>10</spreadMult>
+			<speed>105</speed>		
+		</projectile>
+	</ThingDef>
+	
+
+  
+				<!-- =================== Recipes ===================-->
+				
+	<RecipeDef ParentName="ChargeAmmoRecipeBase" MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>MakeAmmo_Shotgun_Bone_Craftable</defName>
+		<label>Make bones x200</label>
+		<description>Craft 200 Bones.</description>
+		<jobString>Making bones.</jobString>
+		<researchPrerequisite>NecroWeapons</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Necro_Meat</li>
+					</thingDefs>
+				</filter>
+				<count>30</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Neutroamine</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>Necro_Meat</li>
+				<li>Neutroamine</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_Shotgun_Bone_Craftable>200</Ammo_Shotgun_Bone_Craftable>
+		</products>
+		<workAmount>1800</workAmount>
+	</RecipeDef>
+	
+	
+	
+</Defs>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>The Army Of Fetid Corpses (Continued)</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+	
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[@Name="BaseNecronoid"]/damageMultipliers</xpath>
+					
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[@Name="BaseNecronoid"]/damageMultipliers</xpath>
+						<value>
+							<damageMultipliers>
+								<li>
+									<damageDef>Cleansing</damageDef>
+									<multiplier>1.75</multiplier>
+								</li>
+								<li>
+									<damageDef>CleansingGreater</damageDef>
+									<multiplier>3</multiplier>
+								</li>
+								<li>
+									<damageDef>CleansingBlast</damageDef>
+									<multiplier>10</multiplier>
+								</li>
+							</damageMultipliers>
+						</value>
+					</match>
+					
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[@Name="BaseNecronoid"]/damageMultipliersr</xpath>
+						<value>
+							<damageMultipliers>
+								<li>
+									<damageDef>Cleansing</damageDef>
+									<multiplier>1.75</multiplier>
+								</li>
+								<li>
+									<damageDef>CleansingGreater</damageDef>
+									<multiplier>3</multiplier>
+								</li>
+								<li>
+									<damageDef>CleansingBlast</damageDef>
+									<multiplier>10</multiplier>
+								</li>
+							</damageMultipliers>
+						</value>
+					</nomatch>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

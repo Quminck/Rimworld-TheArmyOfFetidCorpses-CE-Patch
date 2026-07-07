@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>The Army Of Fetid Corpses (Continued)</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="Necronoid_FleshMarine"]</xpath>
+					<value>
+						<li Class="CombatExtended.RacePropertiesExtensionCE">
+							<bodyShape>Humanoid</bodyShape>
+						</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Necronoid_FleshMarine"]/race/baseBodySize</xpath>
+				<value>
+					<baseBodySize>1.3</baseBodySize>
+				</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Necronoid_FleshMarine"]/race/baseHealthScale</xpath>
+				<value>
+					<baseHealthScale>3.5</baseHealthScale>
+				</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_FleshMarine"]/statBases</xpath>
+					<value>
+						<MeleeDodgeChance>0.15</MeleeDodgeChance>
+						<MeleeCritChance>0.09</MeleeCritChance>
+						<MeleeParryChance>0.20</MeleeParryChance>
+						<PainShockThreshold>1.0</PainShockThreshold>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Necronoid_FleshMarine"]/tools</xpath>
+					<value>
+						<tools>
+						
+							<li Class="CombatExtended.ToolCE">
+								<label>fists</label>
+								<capacities>
+									<li>Blunt</li>
+								</capacities>
+								<power>8</power>
+								<cooldownTime>1.2</cooldownTime>
+								<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+								<armorPenetrationBlunt>2.5</armorPenetrationBlunt>
+							</li>
+							
+							<li Class="CombatExtended.ToolCE">
+								<label>fists</label>
+								<capacities>
+									<li>Blunt</li>
+								</capacities>
+								<power>8</power>
+								<cooldownTime>1.2</cooldownTime>
+								<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+								<armorPenetrationBlunt>2.5</armorPenetrationBlunt>
+							</li>							
+							
+							<li Class="CombatExtended.ToolCE">
+								<label>elbow blades</label>
+								<capacities>
+									<li>Cut</li>
+								</capacities>
+								<power>22</power>
+								<cooldownTime>1.4</cooldownTime>
+								<linkedBodyPartsGroup>Arms</linkedBodyPartsGroup> 
+								<armorPenetrationSharp>15.0</armorPenetrationSharp> 
+								<armorPenetrationBlunt>6.5</armorPenetrationBlunt>
+							</li>
+
+						</tools>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_FleshMarine"]/statBases</xpath>
+					<value>
+					
+						<ArmorRating_Sharp>20.0</ArmorRating_Sharp>
+						<ArmorRating_Blunt>42.0</ArmorRating_Blunt>
+						
+						<AimingAccuracy>1.95</AimingAccuracy>
+						<ShootingAccuracyPawn>2.95</ShootingAccuracyPawn>
+						<NightVisionEfficiency>0.80</NightVisionEfficiency>
+						<MeleeHitChance>5.0</MeleeHitChance>	
+						
+						<MeatAmount>0</MeatAmount>
+						<LeatherAmount>0</LeatherAmount>
+	
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Necronoid_FleshMarine"]/comps</xpath>
+					<value>
+						<li Class="CombatExtended.CompProperties_ArmorDurability">
+							<Durability>1500</Durability>
+							<Regenerates>true</Regenerates>
+							<RegenInterval>100</RegenInterval>
+							<RegenValue>10</RegenValue>
+							<MinArmorPct>0.80</MinArmorPct>
+						</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="Necronoid_FleshMarine"]</xpath>
+					<value>
+						<li Class="CombatExtended.PartialArmorExt">
+							<stats>
+								<li>
+									<ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+									<parts>
+										<li>Torso</li>
+									</parts>
+								</li>
+								<li>
+									<ArmorRating_Blunt>1.2</ArmorRating_Blunt>
+									<parts>
+										<li>Torso</li>
+									</parts>
+								</li>
+							</stats>
+						</li>
+					</value>
+				</li>					
+				
+				</operations>
+		</match>
+	</Operation>
+						
+</Patch>

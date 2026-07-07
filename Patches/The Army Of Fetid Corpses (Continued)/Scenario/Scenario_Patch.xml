@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>The Army Of Fetid Corpses (Continued)</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ScenarioDef[defName="SevenDaysToDie"]/scenario/parts</xpath>
+					<value>
+
+						<!-- Player starting things -->
+						<li Class="ScenPart_StartingThing_Defined">
+							<def>StartingThing_Defined</def>
+							<thingDef>Ammo_762x25mmTokarev_FMJ</thingDef>
+							<count>500</count>
+						</li>
+						<li Class="ScenPart_StartingThing_Defined">
+							<def>StartingThing_Defined</def>
+							<thingDef>Ammo_12Gauge_Buck</thingDef>
+							<count>240</count>
+						</li>
+						<li Class="ScenPart_StartingThing_Defined">
+							<def>StartingThing_Defined</def>
+							<thingDef>Ammo_3006Springfield_FMJ</thingDef>
+							<count>150</count>
+						</li>
+
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

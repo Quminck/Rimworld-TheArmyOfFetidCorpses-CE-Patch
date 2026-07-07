@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>The Army Of Fetid Corpses (Continued)</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+			
+			
+			
+			<!-- ======================== Combat power ======================== -->
+			
+			
+			
+			<!-- ======================== Slave combat power  ======================== -->
+								
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="LowTier_FleshSlave"]/combatPower</xpath>
+					<value>
+						<combatPower>30</combatPower> 
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="MidTier_FleshSlave"]/combatPower</xpath>
+					<value>
+						<combatPower>55</combatPower> 
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="FleshBoss"]/combatPower</xpath>
+					<value>
+						<combatPower>85</combatPower> 
+					</value>
+				</li>				
+
+				
+			
+			<!-- ======================== Parasite combat power  ======================== -->
+								
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="Necronoid_FetidParasite"]/combatPower</xpath>
+					<value>
+						<combatPower>13</combatPower> 
+					</value>
+				</li>	
+
+				
+			
+			<!-- ======================== Fetid ghoul combat power  ======================== -->
+								
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="Necronoid_FetidGhoul"]/combatPower</xpath>
+					<value>
+						<combatPower>60</combatPower> 
+					</value>
+				</li>	
+
+				
+				
+			<!-- ======================== Bladed ghoul combat power  ======================== -->
+								
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="Necronoid_BladedGhoul"]/combatPower</xpath>
+					<value>
+						<combatPower>175</combatPower> 
+					</value>
+				</li>	
+
+
+				
+			<!-- ======================== Fetid brute combat power  ======================== -->
+								
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="Necronoid_FetidBrute"]/combatPower</xpath>
+					<value>
+						<combatPower>150</combatPower> 
+					</value>
+				</li>				
+				
+				
+				
+			<!-- ======================== Fetid soldier combat power  ======================== -->
+								
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="Necronoid_FetidSoldier"]/combatPower</xpath>
+					<value>
+						<combatPower>160</combatPower> 
+					</value>
+				</li>	
+
+				
+				
+			<!-- ======================== Hag spider combat power  ======================== -->
+								
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="Necronoid_HagSpider"]/combatPower</xpath>
+					<value>
+						<combatPower>450</combatPower> 
+					</value>
+				</li>						
+				
+				
+				
+				
+			<!-- ======================== Bloated ogre combat power  ======================== -->
+								
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="Necronoid_BloatedOgre"]/combatPower</xpath>
+					<value>
+						<combatPower>925</combatPower> 
+					</value>
+				</li>					
+				
+				
+				
+				
+			<!-- ======================== Fetid wolf combat power  ======================== -->
+								
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="Necronoid_FetidWolf"]/combatPower</xpath>
+					<value>
+						<combatPower>175</combatPower> 
+					</value>
+				</li>					
+				
+				
+				
+			<!-- ======================== Fetid marine combat power  ======================== -->
+								
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="Necronoid_FetidMarine"]/combatPower</xpath>
+					<value>
+						<combatPower>300</combatPower> 
+					</value>
+				</li>				
+				
+				
+				
+			<!-- ======================== Fetid hulk combat power  ======================== -->
+								
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="Necronoid_FetidHulk"]/combatPower</xpath>
+					<value>
+						<combatPower>375</combatPower> 
+					</value>
+				</li>	
+
+				
+				
+			<!-- ======================== Howling spider combat power  ======================== -->
+								
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="Necronoid_HowlingSpider"]/combatPower</xpath>
+					<value>
+						<combatPower>775</combatPower> 
+					</value>
+				</li>						
+				
+				
+				
+				
+			<!-- ======================== Chupacabra combat power  ======================== -->
+								
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="Necronoid_BloatedOgre"]/combatPower</xpath>
+					<value>
+						<combatPower>750</combatPower> 
+					</value>
+				</li>					
+				
+				
+				
+				
+				
+			<!-- ======================== BOSS ======================== -->
+				
+			<!-- ======================== Flesh tyrant combat power  ======================== -->
+								
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="Necronoid_FleshTyrant"]/combatPower</xpath>
+					<value>
+						<combatPower>1250</combatPower> 
+					</value>
+				</li>									
+				
+				
+				
+			<!-- ======================== Executioner ghoul combat power  ======================== -->
+								
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="Necronoid_ExecutionerGhoul"]/combatPower</xpath>
+					<value>
+						<combatPower>1300</combatPower> 
+					</value>
+				</li>	
+
+				
+				
+			<!-- ======================== Blood letter ghoul combat power  ======================== -->
+								
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="Necronoid_BloodLetterGhoul"]/combatPower</xpath>
+					<value>
+						<combatPower>1750</combatPower> 
+					</value>
+				</li>						
+				
+				
+				
+				
+			<!-- ======================== Crazed butcher combat power  ======================== -->
+								
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="Necronoid_CrazedButcher"]/combatPower</xpath>
+					<value>
+						<combatPower>900</combatPower> 
+					</value>
+				</li>					
+				
+				
+				
+				
+			<!-- ======================== Wendigo combat power  ======================== -->
+								
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="Necronoid_Wendigo"]/combatPower</xpath>
+					<value>
+						<combatPower>2500</combatPower> 
+					</value>
+				</li>				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

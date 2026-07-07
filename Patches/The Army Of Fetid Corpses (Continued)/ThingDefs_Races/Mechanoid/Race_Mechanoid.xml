@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod" MayRequire="Ludeon.Rimworld.Biotech">
+		<mods>
+			<li>The Army Of Fetid Corpses (Continued)</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+			
+				<li Class="PatchOperationAddModExtension" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/PawnKindDef[defName="Mech_CourierSix" or defName="Mech_GunSlinger"]</xpath>
+					<value>
+						<li Class="CombatExtended.LoadoutPropertiesExtension">
+							<primaryMagazineCount>
+								<min>4</min>
+								<max>5</max>
+							</primaryMagazineCount>
+						</li>
+					</value>
+				</li>
+			
+				<li Class="PatchOperationAddModExtension" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/ThingDef[
+						defName="Mech_CourierSix"
+						or defName="Mech_GunSlinger"
+					]</xpath>
+					<value>
+						<li Class="CombatExtended.RacePropertiesExtensionCE">
+							<bodyShape>Humanoid</bodyShape>
+						</li>
+					</value>
+				</li>	
+
+				<li Class="PatchOperationAdd" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/ThingDef[
+						defName="Mech_CourierSix"
+						or defName="Mech_GunSlinger"
+					]</xpath>
+					<value>
+						<tools>
+							<li Class="CombatExtended.ToolCE">
+								<label>head</label>
+								<capacities>
+									<li>Blunt</li>
+								</capacities>
+								<power>6</power>
+								<cooldownTime>1.8</cooldownTime>
+								<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+							<armorPenetrationBlunt>2.5</armorPenetrationBlunt>
+							</li>
+						</tools>
+					</value>
+				</li>
+				
+
+
+				<li Class="PatchOperationReplace" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/ThingDef[defName="Mech_CourierSix" or defName="Mech_GunSlinger"]/statBases/BandwidthCost</xpath>
+					<value>
+						<BandwidthCost>4</BandwidthCost>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/PawnKindDef[defName="Mech_CentipedeSheriff"]/combatPower</xpath>
+					<value>
+						<combatPower>2000</combatPower>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/PawnKindDef[defName="Mech_CourierSix"]</xpath>
+					<value>
+						<combatPower>800</combatPower>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/PawnKindDef[defName="Mech_GunSlinger"]</xpath>
+					<value>
+						<combatPower>800</combatPower>
+					</value>
+				</li>				
+				
+
+
+							<!-- ================ Courier six ================ -->			
+
+				<li Class="PatchOperationAdd" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/ThingDef[defName="Mech_CourierSix"]/comps</xpath>
+					<value>
+						<li Class="CombatExtended.CompProperties_ArmorDurability">
+							<Durability>400</Durability>
+							<Regenerates>true</Regenerates>
+							<RegenInterval>600</RegenInterval>
+							<RegenValue>5</RegenValue>
+							<MinArmorPct>0.50</MinArmorPct>
+						</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/ThingDef[defName="Mech_CourierSix"]/statBases</xpath>
+					<value>
+						<AimingAccuracy>1.1</AimingAccuracy>
+						<ShootingAccuracyPawn>1.15</ShootingAccuracyPawn>
+						<MeleeDodgeChance>0.23</MeleeDodgeChance>
+						<MeleeCritChance>0.01</MeleeCritChance>
+						<MeleeParryChance>0.05</MeleeParryChance>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/ThingDef[defName="Mech_CourierSix"]/statBases/ArmorRating_Sharp</xpath>
+					<value>
+						<ArmorRating_Sharp>3</ArmorRating_Sharp>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/ThingDef[defName="Mech_CourierSix"]/statBases/ArmorRating_Blunt</xpath>
+					<value>
+						<ArmorRating_Blunt>35</ArmorRating_Blunt>
+					</value>
+				</li>
+
+
+
+							<!-- ================ Gun slinger ================ -->
+
+				<li Class="PatchOperationAdd" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/ThingDef[defName="Mech_GunSlinger"]/comps</xpath>
+					<value>
+						<li Class="CombatExtended.CompProperties_ArmorDurability">
+							<Durability>450</Durability>
+							<Regenerates>true</Regenerates>
+							<RegenInterval>600</RegenInterval>
+							<RegenValue>5</RegenValue>
+							<MinArmorPct>0.60</MinArmorPct>
+						</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/ThingDef[defName="Mech_GunSlinger"]/statBases</xpath>
+					<value>
+						<AimingAccuracy>1.1</AimingAccuracy>
+						<ShootingAccuracyPawn>1.15</ShootingAccuracyPawn>
+						<MeleeDodgeChance>0.21</MeleeDodgeChance>
+						<MeleeCritChance>0.02</MeleeCritChance>
+						<MeleeParryChance>0.07</MeleeParryChance>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/ThingDef[defName="Mech_GunSlinger"]/statBases/ArmorRating_Sharp</xpath>
+					<value>
+						<ArmorRating_Sharp>5</ArmorRating_Sharp>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/ThingDef[defName="Mech_GunSlinger"]/statBases/ArmorRating_Blunt</xpath>
+					<value>
+						<ArmorRating_Blunt>25</ArmorRating_Blunt>
+					</value>
+				</li>
+
+
+
+							<!-- ================ Centipede sheriff ================ -->
+							
+				<li Class="PatchOperationAddModExtension" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/ThingDef[defName="Mech_CentipedeSheriff"]</xpath>
+					<value>
+						<li Class="CombatExtended.RacePropertiesExtensionCE">
+							<bodyShape>QuadrupedLow</bodyShape>
+						</li>
+					</value>
+				</li>	
+
+				<li Class="PatchOperationReplace" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/ThingDef[defName="Mech_CentipedeSheriff"]/tools</xpath>
+					<value>
+						<tools>
+							<li Class="CombatExtended.ToolCE">
+								<label>head</label>
+								<capacities>
+									<li>Blunt</li>
+								</capacities>
+								<power>26.0</power>
+								<cooldownTime>1.8</cooldownTime>
+								<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+							<armorPenetrationBlunt>21.0</armorPenetrationBlunt>
+							</li>
+						</tools>
+					</value>
+				</li>		
+
+				<li Class="PatchOperationReplace" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/ThingDef[defName="Mech_CentipedeSheriff"]/comps</xpath>
+					<value>
+						<comps>
+							<li Class="CompProperties_TurretGun">
+								<turretDef>Gun_SentryTurret</turretDef>
+								<angleOffset>-90</angleOffset>
+								<renderNodeProperties>
+									<li>
+										<nodeClass>PawnRenderNode_TurretGun</nodeClass>
+										<workerClass>PawnRenderNodeWorker_TurretGun</workerClass>
+										<parentTagDef>Body</parentTagDef>
+										<overrideMeshSize>(1.75, 1.75)</overrideMeshSize>
+										<baseLayer>20</baseLayer>
+										<pawnType>Any</pawnType>
+										
+										<drawData>
+											<dataSouth>
+												<offset>(0.0, -0.2, 0.5)</offset>
+											</dataSouth>
+
+											<dataNorth>
+												<offset>(0.0, 0.5, 0.2)</offset>
+											</dataNorth>
+											
+											<dataEast>
+												<offset>(-0.4, 0.1, 0.3)</offset>
+											</dataEast>
+
+											<dataWest>
+												<rotationOffset>180</rotationOffset>
+												<offset>(0.4, 0.1, 0.3)</offset>
+											</dataWest>
+										</drawData>
+										
+									</li>
+								</renderNodeProperties>
+							</li>
+						</comps>
+					</value>
+				</li>				
+
+				<li Class="PatchOperationAdd" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/ThingDef[defName="Mech_CentipedeSheriff"]/comps</xpath>
+					<value>
+						<li Class="CombatExtended.CompProperties_ArmorDurability">
+							<Durability>3900</Durability>
+							<Regenerates>true</Regenerates>
+							<RegenInterval>600</RegenInterval>
+							<RegenValue>5</RegenValue>
+							<MinArmorPct>0.50</MinArmorPct>
+						</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/ThingDef[defName="Mech_CentipedeSheriff"]/statBases</xpath>
+					<value>
+						<AimingAccuracy>1.1</AimingAccuracy>
+						<ShootingAccuracyPawn>1.15</ShootingAccuracyPawn>
+						<MeleeDodgeChance>0.23</MeleeDodgeChance>
+						<MeleeCritChance>0.01</MeleeCritChance>
+						<MeleeParryChance>0.05</MeleeParryChance>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/ThingDef[defName="Mech_CentipedeSheriff"]/statBases/ArmorRating_Sharp</xpath>
+					<value>
+						<ArmorRating_Sharp>32</ArmorRating_Sharp>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/ThingDef[defName="Mech_CentipedeSheriff"]/statBases/ArmorRating_Blunt</xpath>
+					<value>
+						<ArmorRating_Blunt>60</ArmorRating_Blunt>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/ThingDef[defName="Mech_CentipedeSheriff"]/statBases/BandwidthCost</xpath>
+					<value>
+						<BandwidthCost>6</BandwidthCost>
+					</value>
+				</li>
+				
+					
+					
+			</operations>
+		</match>
+	</Operation>
+</Patch>

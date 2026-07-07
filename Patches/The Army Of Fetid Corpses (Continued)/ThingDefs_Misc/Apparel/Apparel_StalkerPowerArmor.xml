@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>The Army Of Fetid Corpses (Continued)</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+
+			
+			
+								<!-- POWER ARMOR BASE -->
+			
+				<li Class="PatchOperationConditional">
+				<xpath>Defs/ThingDef[@Name="StalkerArmorPowerBase"]/statBases</xpath>
+				
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[@Name="StalkerArmorPowerBase"]/statBases</xpath>
+						<value>
+							<statBases>
+								<MaxHitPoints>1200</MaxHitPoints>
+								<Flammability>0</Flammability>
+								
+								<Mass>100</Mass>
+								<Bulk>120</Bulk>
+								
+								<WorkToMake>66000</WorkToMake>
+								<MarketValue>5000</MarketValue>
+								
+								<ArmorRating_Sharp>24</ArmorRating_Sharp>
+								<ArmorRating_Blunt>100</ArmorRating_Blunt>
+								<ArmorRating_Heat>2.0</ArmorRating_Heat>
+								<Insulation_Cold>75</Insulation_Cold>
+								<Insulation_Heat>75</Insulation_Heat>
+								
+								<EquipDelay>14</EquipDelay>			
+								<WornBulk>10</WornBulk>	
+							</statBases>
+						</value>
+					</match>
+
+					<nomatch Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@Name="StalkerArmorPowerBase"]</xpath>
+						<value>
+							<statBases>
+								<MaxHitPoints>500</MaxHitPoints>
+								<Flammability>0</Flammability>
+								
+								<Mass>100</Mass>
+								<Bulk>120</Bulk>
+								
+								<WorkToMake>66000</WorkToMake>
+								<MarketValue>5000</MarketValue>
+								
+								<ArmorRating_Sharp>25</ArmorRating_Sharp>
+								<ArmorRating_Blunt>100</ArmorRating_Blunt>
+								<ArmorRating_Heat>2.0</ArmorRating_Heat>
+								<Insulation_Cold>75</Insulation_Cold>
+								<Insulation_Heat>75</Insulation_Heat>
+								
+								<EquipDelay>14</EquipDelay>			
+								<WornBulk>12</WornBulk>	
+							</statBases>
+						</value>
+					</nomatch>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@Name="StalkerArmorPowerBase"]/equippedStatOffsets</xpath>
+					<value>
+						<CarryWeight>120</CarryWeight>
+						<CarryBulk>20</CarryBulk>
+						
+						<ShootingAccuracyPawn>0.10</ShootingAccuracyPawn>
+						<NightVisionEfficiency>0.1</NightVisionEfficiency>						
+						
+						<ToxicEnvironmentResistance>2.0</ToxicEnvironmentResistance>
+						<PsychicSensitivity>-0.20</PsychicSensitivity>
+						<AimingAccuracy>0.10</AimingAccuracy>
+						<SmokeSensitivity>-2.0</SmokeSensitivity>
+					</value>
+				</li>				
+				
+
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="Apparel_StalkerPowerArmor" or Apparel_StalkerPowerArmor_Empire]</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>Defs/ThingDef[defName="Apparel_StalkerPowerArmor" or Apparel_StalkerPowerArmor_Empire]/modExtensions</xpath>
+
+						<match Class="PatchOperationAdd">
+							<xpath>Defs/ThingDef[defName="Apparel_StalkerPowerArmor" or Apparel_StalkerPowerArmor_Empire]/modExtensions</xpath>
+							<value>
+								<li Class="CombatExtended.PartialArmorExt">
+									<stats>
+										<li>
+											<ArmorRating_Sharp>0.95</ArmorRating_Sharp>
+											<parts>
+												<li>Neck</li>
+												<li>Hand</li>
+											</parts>
+										</li>
+										<li>
+											<ArmorRating_Blunt>0.90</ArmorRating_Blunt>
+											<parts>
+												<li>Neck</li>
+												<li>Hand</li>
+											</parts>
+										</li>
+										<li>
+											<ArmorRating_Sharp>0.85</ArmorRating_Sharp>
+											<parts>
+												<li>Leg</li>
+											</parts>
+										</li>
+										<li>
+											<ArmorRating_Blunt>0.90</ArmorRating_Blunt>
+											<parts>
+												<li>Leg</li>
+											</parts>
+										</li>
+										<li>
+											<ArmorRating_Sharp>0.85</ArmorRating_Sharp>
+											<parts>
+												<li>Arm</li>
+											</parts>
+										</li>
+										<li>
+											<ArmorRating_Blunt>0.90</ArmorRating_Blunt>
+											<parts>
+												<li>Arm</li>
+											</parts>
+										</li>
+									</stats>
+								</li>
+							</value>
+						</match>
+						
+						<nomatch Class="PatchOperationAddModExtension">
+							<xpath>Defs/ThingDef[defName="Apparel_StalkerPowerArmor" or Apparel_StalkerPowerArmor_Empire]</xpath>
+							<value>
+								<li Class="CombatExtended.PartialArmorExt">
+									<stats>
+										<li>
+											<ArmorRating_Sharp>0.95</ArmorRating_Sharp>
+											<parts>
+												<li>Neck</li>
+												<li>Hand</li>
+											</parts>
+										</li>
+										<li>
+											<ArmorRating_Blunt>0.90</ArmorRating_Blunt>
+											<parts>
+												<li>Neck</li>
+												<li>Hand</li>
+											</parts>
+										</li>
+										<li>
+											<ArmorRating_Sharp>0.85</ArmorRating_Sharp>
+											<parts>
+												<li>Leg</li>
+											</parts>
+										</li>
+										<li>
+											<ArmorRating_Blunt>0.90</ArmorRating_Blunt>
+											<parts>
+												<li>Leg</li>
+											</parts>
+										</li>
+										<li>
+											<ArmorRating_Sharp>0.85</ArmorRating_Sharp>
+											<parts>
+												<li>Arm</li>
+											</parts>
+										</li>
+										<li>
+											<ArmorRating_Blunt>0.90</ArmorRating_Blunt>
+											<parts>
+												<li>Arm</li>
+											</parts>
+										</li>
+									</stats>
+								</li>
+							</value>
+						</nomatch>
+					</match>
+				</li>	
+
+
+				
+				
+				
+				<!-- STALKER POWER ARMOR-->
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="Apparel_StalkerPowerArmor"]</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="Apparel_StalkerPowerArmor"]/apparel</xpath>
+						<value>
+							<apparel>
+							
+								<bodyPartGroups>
+									<li>FullHead</li>
+									<li>Eyes</li>	
+									
+									<li>Neck</li>									
+									<li>Torso</li>
+									
+									<li>Shoulders</li>									
+									<li>Arms</li>
+									<li>Hands</li>									
+
+									<li>Legs</li>
+									<li>Feet</li>								
+								</bodyPartGroups>
+								
+								<layers>
+									<li>Middle</li>
+									<li>Shell</li>
+									<li>Overhead</li>
+									<li>OnSkin</li>
+								</layers>
+								
+								<renderSkipFlags>
+									<li>Head</li>
+								</renderSkipFlags>
+								
+								<wornGraphicPath>Things/Apparels/Hazmat_Empire/HazmatExosuit</wornGraphicPath>
+								<shellRenderedBehindHead>false</shellRenderedBehindHead>
+								<blocksAddedPartWoundGraphics>true</blocksAddedPartWoundGraphics>
+								
+								<defaultOutfitTags>
+									<li>Soldier</li>
+								</defaultOutfitTags>
+								<useDeflectMetalEffect>true</useDeflectMetalEffect>
+	
+							</apparel>
+						</value>
+					</match>
+				</li>
+				
+
+
+
+
+				
+				
+				<!-- IMPERIAL POWER ARMOR-->
+		
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="Apparel_StalkerPowerArmor_Empire"]</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="Apparel_StalkerPowerArmor_Empire"]/statBases</xpath>
+						<value>
+							<statBases>
+								<MaxHitPoints>2500</MaxHitPoints>
+								<Flammability>0</Flammability>
+								<Mass>120</Mass>
+								<Bulk>145</Bulk>
+								
+								<WorkToMake>72000</WorkToMake>
+								<MarketValue>7000</MarketValue>
+								
+								<ArmorRating_Sharp>33</ArmorRating_Sharp>
+								<ArmorRating_Blunt>150</ArmorRating_Blunt>
+								<ArmorRating_Heat>2.0</ArmorRating_Heat>
+								<Insulation_Cold>75</Insulation_Cold>
+								<Insulation_Heat>75</Insulation_Heat>
+								
+								<EquipDelay>14</EquipDelay>			
+								<WornBulk>12</WornBulk>
+							</statBases>
+						</value>
+					</match>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="Apparel_StalkerPowerArmor_Empire"]</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="Apparel_StalkerPowerArmor_Empire"]/apparel</xpath>
+						<value>
+							<apparel>
+							
+								<bodyPartGroups>
+									<li>FullHead</li>
+									<li>Eyes</li>	
+									
+									<li>Neck</li>									
+									<li>Torso</li>
+									
+									<li>Shoulders</li>									
+									<li>Arms</li>
+									<li>Hands</li>									
+
+									<li>Legs</li>
+									<li>Feet</li>
+								</bodyPartGroups>
+								
+								<layers>
+									<li>Middle</li>
+									<li>Shell</li>
+									<li>Overhead</li>
+									<li>OnSkin</li>
+								</layers>
+								
+								<renderSkipFlags>
+									<li>Head</li>
+								</renderSkipFlags>
+								
+								<wornGraphicPath>Things/Apparels/Hazmat_Empire/HazmatExosuit_Empire</wornGraphicPath>
+								<shellRenderedBehindHead>false</shellRenderedBehindHead>
+								<blocksAddedPartWoundGraphics>true</blocksAddedPartWoundGraphics>
+								
+								<defaultOutfitTags>
+									<li>Soldier</li>
+								</defaultOutfitTags>
+								<useDeflectMetalEffect>true</useDeflectMetalEffect>
+	
+							</apparel>
+						</value>
+					</match>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="Apparel_StalkerPowerArmor_Empire"]</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="Apparel_StalkerPowerArmor_Empire"]/equippedStatOffsets</xpath>
+						<value>
+							<equippedStatOffsets>
+								<CarryWeight>150</CarryWeight>
+								<CarryBulk>30</CarryBulk>
+								
+								<ShootingAccuracyPawn>0.25</ShootingAccuracyPawn>
+								<NightVisionEfficiency>0.5</NightVisionEfficiency>		
+								
+								<ToxicEnvironmentResistance>2.0</ToxicEnvironmentResistance>
+								<PsychicSensitivity>-0.35</PsychicSensitivity>
+								<AimingAccuracy>0.25</AimingAccuracy>
+								<SmokeSensitivity>-2.0</SmokeSensitivity>
+								
+							</equippedStatOffsets>
+						</value>
+					</match>
+				</li>				
+				
+				</operations>
+		</match>
+	</Operation>
+						
+</Patch>
