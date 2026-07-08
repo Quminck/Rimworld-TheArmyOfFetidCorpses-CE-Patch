@@ -47,7 +47,7 @@
 				
 				
 
-				<!-- ================== Flame Proof Changes ================== -->
+				<!-- ================== Flame Proof ================== -->
 				
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/HediffDef[defName="FlameProof"]/stages/li/statOffsets/ArmorRating_Heat</xpath>
@@ -62,6 +62,26 @@
 						<Flammability>-2.0</Flammability>
 					</value>
 				</li>
+				
+				
+				
+				<!-- ================== Blessing of the dead ================== -->
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/HediffDef[defName="Necronoid_BlessingOfTheDead_AOE" or defName="Necronoid_BlessingOfTheDead"]/stages/li/naturalHealingFactor</xpath>
+					<value>
+						<naturalHealingFactor>15.0</naturalHealingFactor>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/HediffDef[defName="Necronoid_BlessingOfTheDead_AOE" or defName="Necronoid_BlessingOfTheDead"]/stages/li/statOffsets/InjuryHealingFactor</xpath>
+					<value>
+						<InjuryHealingFactor>5.0</InjuryHealingFactor>
+					</value>
+				</li>	
+				
+	
 
 			</operations>
 		</match>
