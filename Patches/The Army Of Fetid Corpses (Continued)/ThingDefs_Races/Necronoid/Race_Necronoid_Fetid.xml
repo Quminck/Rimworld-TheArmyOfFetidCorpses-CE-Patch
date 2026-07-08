@@ -25,6 +25,13 @@
 					</value>
 				</li>
 				
+				<li Class="PatchOperationAdd">
+				  <xpath>Defs/ThingDef[@Name="BaseNecronoid"]/race</xpath>
+				  <value>	 
+					<bleedRateFactor>0.05</bleedRateFactor>
+				  </value>
+				</li>
+				
 				
 				
 				
@@ -1532,24 +1539,26 @@
 				<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName="Necronoid_FetidParasite"]/race</xpath>
 				<value>
-					<baseBodySize>0.1</baseBodySize>
+					<baseBodySize>1.0</baseBodySize>
 				</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Necronoid_FetidParasite"]/race/baseHealthScale</xpath>
 				<value>
-					<baseHealthScale>0.5</baseHealthScale>
+					<baseHealthScale>0.2</baseHealthScale>
 				</value>
 				</li>				
 
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="Necronoid_FetidParasite"]/statBases</xpath>
 					<value>
-						<MeleeDodgeChance>0.35</MeleeDodgeChance>
+						<MeleeDodgeChance>0.32</MeleeDodgeChance>
 						<MeleeCritChance>0.00</MeleeCritChance>
 						<MeleeParryChance>0.00</MeleeParryChance>
 						<PainShockThreshold>0.99</PainShockThreshold>
+						
+						<Mass>0.1</Mass>
 					</value>
 				</li>				
 				
