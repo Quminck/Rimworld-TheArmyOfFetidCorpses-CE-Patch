@@ -275,7 +275,7 @@
 		<defName>Ammo_23x75_UN_Buck</defName>                                   
 		<label>23x75mm R (Cleansing)</label>
 		<graphicData>
-			<texPath>Things/Ammo/Shotgun/Shot</texPath>
+			<texPath>Things/Ammo/Shotgun/Buck_Cleansing</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
@@ -353,7 +353,7 @@
 		<defName>Ammo_23x75_UN_Slug</defName>                                   
 		<label>23x75mm R (Cleansing)</label>
 		<graphicData>
-			<texPath>Things/Ammo/Shotgun/Slug</texPath>
+			<texPath>Things/Ammo/Shotgun/Slug_Cleansing</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
