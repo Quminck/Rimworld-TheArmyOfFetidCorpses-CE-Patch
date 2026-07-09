@@ -58,7 +58,7 @@
 		<defName>Ammo_Rifle_Bone_Craftable</defName>                                
 		<label>Rifle toxic round</label>
 		<graphicData>
-			<texPath>Things/Ammo/Neolithic/Kunai</texPath>
+			<texPath>Things/Ammo/BoneAmmo/Common</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
