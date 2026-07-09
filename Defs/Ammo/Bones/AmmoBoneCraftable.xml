@@ -225,7 +225,7 @@
 						<li>Necro_Meat</li>
 					</thingDefs>
 				</filter>
-				<count>40</count>
+				<count>70</count>
 			</li>
 			<li>
 				<filter>
@@ -254,7 +254,7 @@
 		<products>
 			<Ammo_Sniper_Bone_Craftable>100</Ammo_Sniper_Bone_Craftable>
 		</products>
-		<workAmount>2400</workAmount>
+		<workAmount>7200</workAmount>
 	</RecipeDef>
 	
 	
@@ -367,7 +367,7 @@
 		<products>
 			<Ammo_Shotgun_Bone_Craftable>200</Ammo_Shotgun_Bone_Craftable>
 		</products>
-		<workAmount>1800</workAmount>
+		<workAmount>6300</workAmount>
 	</RecipeDef>
 	
 	
