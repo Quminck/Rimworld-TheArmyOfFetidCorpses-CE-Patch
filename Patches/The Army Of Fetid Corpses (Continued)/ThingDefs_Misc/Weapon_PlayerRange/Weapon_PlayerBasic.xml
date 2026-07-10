@@ -757,8 +757,8 @@
 					
 						<!--AMMO-->
 					<AmmoUser>
-						<magazineSize>12</magazineSize>
-						<reloadTime>0.4</reloadTime>
+						<magazineSize>5</magazineSize>
+						<reloadTime>0.5</reloadTime>
 						<reloadOneAtATime>True</reloadOneAtATime>
 						<ammoSet>AmmoSet_23x75mmR</ammoSet>               <!-- GUN MAGAZINE -->
 					</AmmoUser>
