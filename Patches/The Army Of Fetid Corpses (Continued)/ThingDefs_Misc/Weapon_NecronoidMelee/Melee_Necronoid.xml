@@ -260,7 +260,7 @@
 							<capacities>
 								<li>Cut</li>
 							</capacities>
-							<power>19</power>
+							<power>14</power>
 							<extraMeleeDamages>
 								<li>
 									<def>NecronoidCutDamage</def>
@@ -269,7 +269,7 @@
 								</li>
 							</extraMeleeDamages>
 							<cooldownTime>0.1</cooldownTime>
-							<armorPenetrationSharp>18.0</armorPenetrationSharp>
+							<armorPenetrationSharp>12.0</armorPenetrationSharp>
 							<armorPenetrationBlunt>9.0</armorPenetrationBlunt>
 							<linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
 						</li>
