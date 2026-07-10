@@ -28,16 +28,10 @@
 				<li Class="PatchOperationAdd">
 				  <xpath>Defs/ThingDef[@Name="BaseNecronoid"]/race</xpath>
 				  <value>	 
-					<bleedRateFactor>0.05</bleedRateFactor>
+					<bleedRateFactor>0.10</bleedRateFactor>
 				  </value>
 				</li>
-			
-				<li Class="PatchOperationAdd">
-				  <xpath>Defs/ThingDef[@Name="BaseNecronoid"]/race</xpath>
-				  <value>	 
-				    <deathOnDownedChance>1.0</deathOnDownedChance>
-				  </value>
-				</li>			
+					
 				
 				
 				

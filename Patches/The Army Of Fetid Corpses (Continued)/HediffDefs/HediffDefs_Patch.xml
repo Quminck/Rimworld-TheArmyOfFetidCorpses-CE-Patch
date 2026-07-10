@@ -82,15 +82,50 @@
 				</li>	
 				
 				
+				
 				<!-- ================== Speed buff ================== -->
 				
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/HediffDef[defName="LessRigorMortis"]/stages/li/capMods/offset</xpath>
+					<xpath>Defs/HediffDef[defName="LessRigorMortis"]/stages/li/capMods/li/offset</xpath>
 					<value>
 						<offset>0.35</offset>
 					</value>
 				</li>
 
+
+
+				<!-- ================== Painless (Undead) ================== -->
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/HediffDef[defName="Painless"]/label</xpath>
+					<value>
+						<label>Undead</label>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/HediffDef[defName="Painless"]/description</xpath>
+					<value>
+						<description>The undead feel no pain.</description>
+					</value>
+				</li>				
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/HediffGiverSetDef[defName="Mutations"]/hediffGivers/li[hediff="Painless"]</xpath>
+					<value>
+						<li Class="HediffGiver_Birthday">
+							<hediff>Painless</hediff>
+							<ageFractionChanceCurve>
+								<points>
+									<li>(0, 1.0)</li>
+									<li>(100, 1.0)</li>
+								</points>
+							</ageFractionChanceCurve>
+						</li>
+					</value>
+				</li>
+				
+				
 			</operations>
 		</match>
 	</Operation>
