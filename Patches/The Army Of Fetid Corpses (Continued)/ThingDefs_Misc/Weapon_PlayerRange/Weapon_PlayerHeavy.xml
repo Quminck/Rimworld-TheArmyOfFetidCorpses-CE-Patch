@@ -72,9 +72,10 @@
 					<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer"]/costList</xpath>
 					<value>
 						<costList>
-							<Steel>60</Steel>
-							<Plasteel>40</Plasteel>
-							<ComponentIndustrial>6</ComponentIndustrial>
+							<Steel>120</Steel>
+							<Plasteel>60</Plasteel>
+							<ComponentIndustrial>10</ComponentIndustrial>
+							<ComponentSpacer>1</ComponentSpacer>
 						</costList>
 					</value>
 				</li>
@@ -94,10 +95,10 @@
 							<Mass>20</Mass>
 							<Bulk>10</Bulk>
 							
-							<SellPriceFactor>0.2</SellPriceFactor>
+							<SellPriceFactor>0.25</SellPriceFactor>
 						  
-							<MarketValue>875</MarketValue>
-							<WorkToMake>34000</WorkToMake>
+							<MarketValue>1750</MarketValue>
+							<WorkToMake>57600</WorkToMake>
 						  
 							<SightsEfficiency>0.9</SightsEfficiency>
 							<NightVisionEfficiency_Weapon>0</NightVisionEfficiency_Weapon>
@@ -106,7 +107,7 @@
 							<Recoil>0.8</Recoil>
 							<ShotSpread>5</ShotSpread>
 							
-							<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+							<RangedWeapon_Cooldown>1.15</RangedWeapon_Cooldown>
 						</statBases>
 					</value>
 				</li>
@@ -125,7 +126,7 @@
 								<range>30</range>
 								<minRange>8</minRange>
 								
-								<burstShotCount>20</burstShotCount>
+								<burstShotCount>15</burstShotCount>
 								<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
 								<muzzleFlashScale>12</muzzleFlashScale>
 								
