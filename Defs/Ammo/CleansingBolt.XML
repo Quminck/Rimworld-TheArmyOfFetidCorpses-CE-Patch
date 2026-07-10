@@ -79,7 +79,7 @@
 			<damageDef>Cleansing</damageDef> 
 			<damageAmountBase>15</damageAmountBase>
 			<armorPenetrationBlunt>240</armorPenetrationBlunt>
-			<armorPenetrationSharp>30</armorPenetrationSharp>
+			<armorPenetrationSharp>20</armorPenetrationSharp>
 		</projectile>
 	</ThingDef>
 	

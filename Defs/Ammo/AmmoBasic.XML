@@ -69,8 +69,8 @@
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageDef>Bullet</damageDef>
 			<damageAmountBase>15</damageAmountBase>
-			<armorPenetrationSharp>16</armorPenetrationSharp>
-			<armorPenetrationBlunt>40</armorPenetrationBlunt>
+			<armorPenetrationSharp>12</armorPenetrationSharp>
+			<armorPenetrationBlunt>38</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>Flame_Secondary</def>
@@ -153,7 +153,7 @@
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageDef>Bullet</damageDef>
 			<damageAmountBase>21</damageAmountBase>
-			<armorPenetrationSharp>24</armorPenetrationSharp>
+			<armorPenetrationSharp>18</armorPenetrationSharp>
 			<armorPenetrationBlunt>80</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
@@ -231,13 +231,13 @@
 		<defName>Bullet_20x138mmB_UN</defName>
 		<label>20x138mmB Special</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>50</damageAmountBase>
+			<damageAmountBase>36</damageAmountBase>
 			<armorPenetrationBlunt>1000</armorPenetrationBlunt>
 			<armorPenetrationSharp>55</armorPenetrationSharp>
 			<secondaryDamage>
 				<li>
 					<def>Flame</def>
-					<amount>75</amount>
+					<amount>40</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>
@@ -394,8 +394,8 @@
 		</graphicData>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageDef>Cleansing</damageDef>
-			<damageAmountBase>40</damageAmountBase>
-			<armorPenetrationSharp>14</armorPenetrationSharp>
+			<damageAmountBase>36</damageAmountBase>
+			<armorPenetrationSharp>12</armorPenetrationSharp>
 			<armorPenetrationBlunt>170</armorPenetrationBlunt>
 			<effectiveRangeMultiplier>1.5</effectiveRangeMultiplier>
 			<recoilMultiplier>1.4</recoilMultiplier>
