@@ -743,7 +743,7 @@
 						<hasStandardCommand>True</hasStandardCommand>
 						
 						<warmupTime>1.4</warmupTime>
-						<range>26</range>
+						<range>19</range>
 						
 						<burstShotCount>1</burstShotCount>
 						<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
@@ -874,7 +874,7 @@
 						<hasStandardCommand>True</hasStandardCommand>
 						
 						<warmupTime>1.1</warmupTime>
-						<range>26</range>
+						<range>18</range>
 						
 						<burstShotCount>1</burstShotCount>
 						<!--<ticksBetweenBurstShots>3</ticksBetweenBurstShots>-->
