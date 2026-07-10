@@ -81,7 +81,15 @@
 					</value>
 				</li>	
 				
-	
+				
+				<!-- ================== Speed buff ================== -->
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/HediffDef[defName="LessRigorMortis"]/stages/li/capMods/offset</xpath>
+					<value>
+						<offset>0.35</offset>
+					</value>
+				</li>
 
 			</operations>
 		</match>
