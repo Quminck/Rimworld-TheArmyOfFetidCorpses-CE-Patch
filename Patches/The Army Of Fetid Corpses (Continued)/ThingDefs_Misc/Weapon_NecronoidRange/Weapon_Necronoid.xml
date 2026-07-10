@@ -73,14 +73,14 @@
 						<Mass>3.7</Mass>
 						<Bulk>11.6</Bulk>
 						
-						<SightsEfficiency>1.2</SightsEfficiency>
+						<SightsEfficiency>1.0</SightsEfficiency>
 						<NightVisionEfficiency_Weapon>0.1</NightVisionEfficiency_Weapon> 
 						
-						<SwayFactor>1.33</SwayFactor>
+						<SwayFactor>1.53</SwayFactor>
 						<ShotSpread>0.08</ShotSpread>
-						<Recoil>1.41</Recoil>
+						<Recoil>1.51</Recoil>
 						
-						<RangedWeapon_Cooldown>0.65</RangedWeapon_Cooldown>
+						<RangedWeapon_Cooldown>0.98</RangedWeapon_Cooldown>
 					</statBases>
 			  
 						<!--SHOTS-->
@@ -89,11 +89,11 @@
 						<hasStandardCommand>True</hasStandardCommand>
 						<ai_AvoidFriendlyFireRadius>2</ai_AvoidFriendlyFireRadius>
 						
-						<warmupTime>1</warmupTime>
+						<warmupTime>1.1</warmupTime>
 						<range>48</range>
 						
-						<burstShotCount>6</burstShotCount>
-						<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+						<burstShotCount>4</burstShotCount>
+						<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
 						<muzzleFlashScale>2</muzzleFlashScale>
 						<recoilAmount>0.44</recoilAmount>
 						
@@ -103,7 +103,6 @@
 					</Properties>
 					
 					<FireModes>
-						<aimedBurstShotCount>3</aimedBurstShotCount>
 						<aiAimMode>AimedShot</aiAimMode> 
 					</FireModes>
 					
@@ -133,11 +132,11 @@
 						<SightsEfficiency>1.2</SightsEfficiency>
 						<NightVisionEfficiency_Weapon>0.25</NightVisionEfficiency_Weapon> 
 						
-						<SwayFactor>1.26</SwayFactor>
+						<SwayFactor>1.36</SwayFactor>
 						<ShotSpread>0.06</ShotSpread>
-						<Recoil>1.28</Recoil>
+						<Recoil>1.33</Recoil>
 						
-						<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+						<RangedWeapon_Cooldown>0.89</RangedWeapon_Cooldown>
 					</statBases>
 			  
 						<!--SHOTS-->
@@ -149,8 +148,8 @@
 						<warmupTime>1.2</warmupTime>
 						<range>54</range>
 						
-						<burstShotCount>8</burstShotCount>
-						<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+						<burstShotCount>5</burstShotCount>
+						<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
 						<muzzleFlashScale>2</muzzleFlashScale>
 						<recoilAmount>0.3</recoilAmount>
 						
@@ -193,7 +192,7 @@
 						<ShotSpread>0.13</ShotSpread>
 						<Recoil>2.59</Recoil>
 						
-						<RangedWeapon_Cooldown>0.65</RangedWeapon_Cooldown>
+						<RangedWeapon_Cooldown>1.05</RangedWeapon_Cooldown>
 					</statBases>
 			  
 						<!--SHOTS-->
@@ -249,7 +248,7 @@
 						<ShotSpread>0.04</ShotSpread>
 						<Recoil>1.09</Recoil>
 						
-						<RangedWeapon_Cooldown>1.05</RangedWeapon_Cooldown>
+						<RangedWeapon_Cooldown>1.35</RangedWeapon_Cooldown>
 					</statBases>
 			  
 						<!--SHOTS-->
@@ -362,7 +361,7 @@
 						<ShotSpread>0.03</ShotSpread>
 						<Recoil>1.05</Recoil>
 						
-						<RangedWeapon_Cooldown>0.21</RangedWeapon_Cooldown>
+						<RangedWeapon_Cooldown>0.32</RangedWeapon_Cooldown>
 					</statBases>
 			  
 						<!--SHOTS-->

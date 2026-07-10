@@ -227,8 +227,8 @@
 						<ArmorRating_Sharp>4.8</ArmorRating_Sharp>
 						<ArmorRating_Blunt>3.0</ArmorRating_Blunt>
 						
-						<AimingAccuracy>1.85</AimingAccuracy>
-						<ShootingAccuracyPawn>2.85</ShootingAccuracyPawn>
+						<AimingAccuracy>1.0</AimingAccuracy>
+						<ShootingAccuracyPawn>1.0</ShootingAccuracyPawn>
 						<NightVisionEfficiency>0.40</NightVisionEfficiency>
 
 						
@@ -277,8 +277,8 @@
 						<ArmorRating_Sharp>3.5</ArmorRating_Sharp>
 						<ArmorRating_Blunt>6.0</ArmorRating_Blunt>
 						
-						<AimingAccuracy>1.8</AimingAccuracy>
-						<ShootingAccuracyPawn>2.7</ShootingAccuracyPawn>
+						<AimingAccuracy>1.0</AimingAccuracy>
+						<ShootingAccuracyPawn>1.0</ShootingAccuracyPawn>
 						<NightVisionEfficiency>0.20</NightVisionEfficiency>
 						
 						<MeatAmount>0</MeatAmount>
@@ -325,8 +325,8 @@
 						<ArmorRating_Sharp>5.5</ArmorRating_Sharp>
 						<ArmorRating_Blunt>5.0</ArmorRating_Blunt>
 						
-						<AimingAccuracy>2.15</AimingAccuracy>
-						<ShootingAccuracyPawn>3.25</ShootingAccuracyPawn>
+						<AimingAccuracy>1.0</AimingAccuracy>
+						<ShootingAccuracyPawn>1.25</ShootingAccuracyPawn>
 						<NightVisionEfficiency>0.20</NightVisionEfficiency>				
 						
 						<MeatAmount>0</MeatAmount>
@@ -453,8 +453,8 @@
 						<ArmorRating_Sharp>20.0</ArmorRating_Sharp>
 						<ArmorRating_Blunt>42.0</ArmorRating_Blunt>
 						
-						<AimingAccuracy>1.95</AimingAccuracy>
-						<ShootingAccuracyPawn>2.95</ShootingAccuracyPawn>
+						<AimingAccuracy>1.25</AimingAccuracy>
+						<ShootingAccuracyPawn>1.25</ShootingAccuracyPawn>
 						<NightVisionEfficiency>0.80</NightVisionEfficiency>
 						<MeleeHitChance>5.0</MeleeHitChance>	
 						
@@ -739,8 +739,8 @@
 						<ArmorRating_Sharp>5</ArmorRating_Sharp>
 						<ArmorRating_Blunt>160</ArmorRating_Blunt>
 						
-						<AimingAccuracy>1.8</AimingAccuracy>
-						<ShootingAccuracyPawn>3.25</ShootingAccuracyPawn>
+						<AimingAccuracy>1.1</AimingAccuracy>
+						<ShootingAccuracyPawn>1.1</ShootingAccuracyPawn>
 						<NightVisionEfficiency>0.45</NightVisionEfficiency>	
 						<MeleeHitChance>10.0</MeleeHitChance>						
 						
