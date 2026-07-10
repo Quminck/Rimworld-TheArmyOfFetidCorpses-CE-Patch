@@ -450,7 +450,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="Necronoid_FetidMarine"]/statBases</xpath>
 					<value>
-						<ArmorRating_Sharp>20.0</ArmorRating_Sharp>
+						<ArmorRating_Sharp>16.0</ArmorRating_Sharp>
 						<ArmorRating_Blunt>42.0</ArmorRating_Blunt>
 						
 						<AimingAccuracy>1.25</AimingAccuracy>
@@ -793,7 +793,7 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Necronoid_BloodLetterGhoul"]/race/baseHealthScale</xpath>
 					<value>
-						<baseHealthScale>5.0</baseHealthScale>
+						<baseHealthScale>5.2</baseHealthScale>
 					</value>
 				</li>
 
@@ -804,7 +804,7 @@
 						<ArmorRating_Blunt>10</ArmorRating_Blunt>
 						
 						<MeleeHitChance>10.0</MeleeHitChance>
-						<MoveSpeed>2.0</MoveSpeed>
+						<MoveSpeed>3.0</MoveSpeed>
 						
 						<MeatAmount>0</MeatAmount>
 						<LeatherAmount>0</LeatherAmount>
@@ -863,7 +863,7 @@
 						<ArmorRating_Sharp>10</ArmorRating_Sharp>
 						<ArmorRating_Blunt>10</ArmorRating_Blunt>
 						
-						<MeleeHitChance>10.0</MeleeHitChance>
+						<MeleeHitChance>25.0</MeleeHitChance>
 						<MoveSpeed>5.5</MoveSpeed>						
 						
 						<MeatAmount>0</MeatAmount>
@@ -974,7 +974,7 @@
 						<ArmorRating_Sharp>4</ArmorRating_Sharp>
 						<ArmorRating_Blunt>240</ArmorRating_Blunt>
 						
-						<MeleeHitChance>10.0</MeleeHitChance>
+						<MeleeHitChance>18.0</MeleeHitChance>
 						<MoveSpeed>4.5</MoveSpeed>							
 						
 						<MeatAmount>0</MeatAmount>
