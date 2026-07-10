@@ -14,10 +14,28 @@
 		<CombatExtended.AmmoCategoryDef>
 			<defName>CleansingRound</defName>
 			<label>Cleansing</label>
-			<labelShort>CLN</labelShort>
+			<labelShort>CL</labelShort>
 			<description>An experemental round specifically designed against Necronoid threats.</description>
 			<advanced>true</advanced>			
 		</CombatExtended.AmmoCategoryDef>
+		
+				<!-- =================== shotgun ===================-->		
+		
+		<CombatExtended.AmmoCategoryDef>
+			<defName>CleansingBuckshot</defName>
+			<label>Buckshot (Cleansing)</label>
+			<labelShort>buck-CL</labelShort>
+			<description>An experemental round specifically designed against Necronoid threats.</description>
+			<advanced>true</advanced>			
+		</CombatExtended.AmmoCategoryDef>		
+		
+		<CombatExtended.AmmoCategoryDef>
+			<defName>CleansingSlug</defName>
+			<label>Slug (Cleansing)</label>
+			<labelShort>slug-CL</labelShort>
+			<description>An experemental round specifically designed against Necronoid threats.</description>
+			<advanced>true</advanced>			
+		</CombatExtended.AmmoCategoryDef>			
 
 
 			<!-- =================== 7.92x33mm   StG-44 ===================-->
@@ -283,7 +301,7 @@
 			<Mass>0.035</Mass>
 			<Bulk>0.03</Bulk>
 		</statBases>
-		<ammoClass>CleansingRound</ammoClass>
+		<ammoClass>CleansingBuckshot</ammoClass>
 		<cookOffProjectile>Bullet_23x75_UN_Buck</cookOffProjectile> 
 	</ThingDef>
 	
@@ -361,7 +379,7 @@
 			<Mass>0.035</Mass>
 			<Bulk>0.03</Bulk>
 		</statBases>
-		<ammoClass>CleansingRound</ammoClass>
+		<ammoClass>CleansingSlug</ammoClass>
 		<cookOffProjectile>Bullet_23x75_UN_Slug</cookOffProjectile> 
 	</ThingDef>
 	
