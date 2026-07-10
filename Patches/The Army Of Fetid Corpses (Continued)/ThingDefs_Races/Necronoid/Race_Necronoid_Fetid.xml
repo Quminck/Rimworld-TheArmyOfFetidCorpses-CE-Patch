@@ -13,7 +13,7 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[@Name="BaseNecronoid"]/statBases/Flammability</xpath>
 					<value>
-						<Flammability>2</Flammability>
+						<Flammability>5</Flammability>
 						<SmokeSensitivity>-1.0</SmokeSensitivity>
 					</value>
 				</li>
@@ -164,24 +164,24 @@
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Necronoid_FetidGhoul"]/race/baseBodySize</xpath>
 				<value>
-					<baseBodySize>1.2</baseBodySize>
+					<baseBodySize>1.0</baseBodySize>
 				</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Necronoid_FetidGhoul"]/race/baseHealthScale</xpath>
 				<value>
-					<baseHealthScale>1.75</baseHealthScale>
+					<baseHealthScale>1.40</baseHealthScale>
 				</value>
 				</li>
 				
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="Necronoid_FetidGhoul"]/statBases</xpath>
 					<value>
-						<ArmorRating_Sharp>4.5</ArmorRating_Sharp>
+						<ArmorRating_Sharp>2.2</ArmorRating_Sharp>
 						<ArmorRating_Blunt>3.0</ArmorRating_Blunt>
 											
-						<MoveSpeed>2.8</MoveSpeed>
+						<MoveSpeed>2.65</MoveSpeed>
 						
 						<MeatAmount>0</MeatAmount>
 						<LeatherAmount>0</LeatherAmount>
@@ -192,11 +192,11 @@
 					<xpath>Defs/ThingDef[defName="Necronoid_FetidGhoul"]/comps</xpath>
 					<value>
 						<li Class="CombatExtended.CompProperties_ArmorDurability">
-							<Durability>450</Durability>
+							<Durability>420</Durability>
 							<Regenerates>true</Regenerates>
-							<RegenInterval>90</RegenInterval>
-							<RegenValue>10</RegenValue>
-							<MinArmorPct>0.70</MinArmorPct>
+							<RegenInterval>60</RegenInterval>
+							<RegenValue>8</RegenValue>
+							<MinArmorPct>0.60</MinArmorPct>
 						</li>
 					</value>
 				</li>
@@ -210,21 +210,21 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Necronoid_FetidSoldier"]/race/baseBodySize</xpath>
 					<value>
-						<baseBodySize>1.4</baseBodySize>
+						<baseBodySize>1.0</baseBodySize>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Necronoid_FetidSoldier"]/race/baseHealthScale</xpath>
 					<value>
-						<baseHealthScale>1.9</baseHealthScale>
+						<baseHealthScale>1.25</baseHealthScale>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="Necronoid_FetidSoldier"]/statBases</xpath>
 					<value>
-						<ArmorRating_Sharp>6.5</ArmorRating_Sharp>
+						<ArmorRating_Sharp>4.8</ArmorRating_Sharp>
 						<ArmorRating_Blunt>3.0</ArmorRating_Blunt>
 						
 						<AimingAccuracy>1.85</AimingAccuracy>
@@ -242,11 +242,11 @@
 					<xpath>Defs/ThingDef[defName="Necronoid_FetidSoldier"]/comps</xpath>
 					<value>
 						<li Class="CombatExtended.CompProperties_ArmorDurability">
-							<Durability>490</Durability>
+							<Durability>360</Durability>
 							<Regenerates>true</Regenerates>
 							<RegenInterval>100</RegenInterval>
-							<RegenValue>7</RegenValue>
-							<MinArmorPct>0.60</MinArmorPct>
+							<RegenValue>9</RegenValue>
+							<MinArmorPct>0.30</MinArmorPct>
 						</li>
 					</value>
 				</li>			
@@ -260,22 +260,22 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Necronoid_FetidBrute"]/race/baseBodySize</xpath>
 					<value>
-						<baseBodySize>1.5</baseBodySize>
+						<baseBodySize>1.0</baseBodySize>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Necronoid_FetidBrute"]/race/baseHealthScale</xpath>
 					<value>
-						<baseHealthScale>4.0</baseHealthScale>
+						<baseHealthScale>2.70</baseHealthScale>
 					</value>
 				</li>				
 			
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="Necronoid_FetidBrute"]/statBases</xpath>
 					<value>
-						<ArmorRating_Sharp>8.5</ArmorRating_Sharp>
-						<ArmorRating_Blunt>4.0</ArmorRating_Blunt>
+						<ArmorRating_Sharp>3.5</ArmorRating_Sharp>
+						<ArmorRating_Blunt>6.0</ArmorRating_Blunt>
 						
 						<AimingAccuracy>1.8</AimingAccuracy>
 						<ShootingAccuracyPawn>2.7</ShootingAccuracyPawn>
@@ -290,11 +290,11 @@
 					<xpath>Defs/ThingDef[defName="Necronoid_FetidBrute"]/comps</xpath>
 					<value>
 						<li Class="CombatExtended.CompProperties_ArmorDurability">
-							<Durability>600</Durability>
+							<Durability>800</Durability>
 							<Regenerates>true</Regenerates>
 							<RegenInterval>25</RegenInterval>
-							<RegenValue>3</RegenValue>
-							<MinArmorPct>0.70</MinArmorPct>
+							<RegenValue>8</RegenValue>
+							<MinArmorPct>0.10</MinArmorPct>
 						</li>
 					</value>
 				</li>				
@@ -308,21 +308,21 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Necronoid_FetidHulk"]/race/baseBodySize</xpath>
 					<value>
-						<baseBodySize>1.4</baseBodySize>
+						<baseBodySize>1.0</baseBodySize>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Necronoid_FetidHulk"]/race/baseHealthScale</xpath>
 					<value>
-						<baseHealthScale>2.3</baseHealthScale>
+						<baseHealthScale>1.65</baseHealthScale>
 					</value>
 				</li>
 			
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="Necronoid_FetidHulk"]/statBases</xpath>
 					<value>
-						<ArmorRating_Sharp>9.0</ArmorRating_Sharp>
+						<ArmorRating_Sharp>5.5</ArmorRating_Sharp>
 						<ArmorRating_Blunt>5.0</ArmorRating_Blunt>
 						
 						<AimingAccuracy>2.15</AimingAccuracy>
@@ -338,11 +338,11 @@
 					<xpath>Defs/ThingDef[defName="Necronoid_FetidHulk"]/comps</xpath>
 					<value>
 						<li Class="CombatExtended.CompProperties_ArmorDurability">
-							<Durability>1050</Durability>
+							<Durability>750</Durability>
 							<Regenerates>true</Regenerates>
-							<RegenInterval>100</RegenInterval>
-							<RegenValue>10</RegenValue>
-							<MinArmorPct>0.75</MinArmorPct>
+							<RegenInterval>300</RegenInterval>
+							<RegenValue>25</RegenValue>
+							<MinArmorPct>0.70</MinArmorPct>
 						</li>
 					</value>
 				</li>							
@@ -353,7 +353,7 @@
 						<li Class="CombatExtended.PartialArmorExt">
 							<stats>
 								<li>
-									<ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+									<ArmorRating_Sharp>1.55</ArmorRating_Sharp>
 									<parts>
 										<li>Torso</li>
 									</parts>
@@ -376,14 +376,14 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Necronoid_FetidMarine"]/race/baseBodySize</xpath>
 					<value>
-						<baseBodySize>1.3</baseBodySize>
+						<baseBodySize>1.0</baseBodySize>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Necronoid_FetidMarine"]/race/baseHealthScale</xpath>
 					<value>
-						<baseHealthScale>3.5</baseHealthScale>
+						<baseHealthScale>1.0</baseHealthScale>
 					</value>
 				</li>			
 
@@ -468,11 +468,9 @@
 					<xpath>Defs/ThingDef[defName="Necronoid_FetidMarine"]/comps</xpath>
 					<value>
 						<li Class="CombatExtended.CompProperties_ArmorDurability">
-							<Durability>1500</Durability>
-							<Regenerates>true</Regenerates>
-							<RegenInterval>100</RegenInterval>
-							<RegenValue>10</RegenValue>
-							<MinArmorPct>0.80</MinArmorPct>
+							<Durability>2000</Durability>
+							<Regenerates>false</Regenerates>
+							<MinArmorPct>0.10</MinArmorPct>
 						</li>
 					</value>
 				</li>
@@ -506,14 +504,14 @@
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Necronoid_BladedGhoul"]/race/baseBodySize</xpath>
 				<value>
-					<baseBodySize>1.3</baseBodySize>
+					<baseBodySize>1.0</baseBodySize>
 				</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Necronoid_BladedGhoul"]/race/baseHealthScale</xpath>
 				<value>
-					<baseHealthScale>1.95</baseHealthScale>
+					<baseHealthScale>1.15</baseHealthScale>
 				</value>
 				</li>
 
@@ -578,11 +576,11 @@
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="Necronoid_BladedGhoul"]/statBases</xpath>
 					<value>
-						<ArmorRating_Sharp>10</ArmorRating_Sharp>
+						<ArmorRating_Sharp>6</ArmorRating_Sharp>
 						<ArmorRating_Blunt>6</ArmorRating_Blunt>
 						
 						<MeleeHitChance>2.20</MeleeHitChance>						
-						<MoveSpeed>5.2</MoveSpeed>						
+						<MoveSpeed>5.3</MoveSpeed>						
 						
 						<MeatAmount>0</MeatAmount>
 						<LeatherAmount>0</LeatherAmount>
@@ -596,7 +594,7 @@
 							<Durability>900</Durability>
 							<Regenerates>true</Regenerates>
 							<RegenInterval>60</RegenInterval>
-							<RegenValue>2</RegenValue>
+							<RegenValue>5</RegenValue>
 							<MinArmorPct>0.75</MinArmorPct>
 						</li>
 					</value>
@@ -724,21 +722,21 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Necronoid_BloatedOgre"]/race/baseBodySize</xpath>
 					<value>
-						<baseBodySize>4.2</baseBodySize>
+						<baseBodySize>2.0</baseBodySize>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Necronoid_BloatedOgre"]/race/baseHealthScale</xpath>
 					<value>
-						<baseHealthScale>10</baseHealthScale>
+						<baseHealthScale>6</baseHealthScale>
 					</value>
 				</li>
 
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="Necronoid_BloatedOgre"]/statBases</xpath>
 					<value>
-						<ArmorRating_Sharp>9</ArmorRating_Sharp>
+						<ArmorRating_Sharp>5</ArmorRating_Sharp>
 						<ArmorRating_Blunt>160</ArmorRating_Blunt>
 						
 						<AimingAccuracy>1.8</AimingAccuracy>
@@ -756,11 +754,11 @@
 					<xpath>Defs/ThingDef[defName="Necronoid_BloatedOgre"]/comps</xpath>
 					<value>
 						<li Class="CombatExtended.CompProperties_ArmorDurability">
-							<Durability>3300</Durability>
+							<Durability>2500</Durability>
 							<Regenerates>true</Regenerates>
-							<RegenInterval>30</RegenInterval>
+							<RegenInterval>60</RegenInterval>
 							<RegenValue>5</RegenValue>
-							<MinArmorPct>0.35</MinArmorPct>
+							<MinArmorPct>0.05</MinArmorPct>
 						</li>
 					</value>
 				</li>
@@ -770,12 +768,6 @@
 					<value>
 						<li Class="CombatExtended.PartialArmorExt">
 							<stats>
-								<li>
-									<ArmorRating_Sharp>1.15</ArmorRating_Sharp>
-									<parts>
-										<li>Torso</li>  
-									</parts>
-								</li>
 								<li>
 									<ArmorRating_Blunt>1.75</ArmorRating_Blunt>
 									<parts>
@@ -794,25 +786,25 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Necronoid_BloodLetterGhoul"]/race/baseBodySize</xpath>
 					<value>
-						<baseBodySize>4.1</baseBodySize>
+						<baseBodySize>2.0</baseBodySize>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Necronoid_BloodLetterGhoul"]/race/baseHealthScale</xpath>
 					<value>
-						<baseHealthScale>8.0</baseHealthScale>
+						<baseHealthScale>5.0</baseHealthScale>
 					</value>
 				</li>
 
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="Necronoid_BloodLetterGhoul"]/statBases</xpath>
 					<value>
-						<ArmorRating_Sharp>20</ArmorRating_Sharp>
+						<ArmorRating_Sharp>12</ArmorRating_Sharp>
 						<ArmorRating_Blunt>10</ArmorRating_Blunt>
 						
 						<MeleeHitChance>10.0</MeleeHitChance>
-						<MoveSpeed>4.2</MoveSpeed>
+						<MoveSpeed>2.0</MoveSpeed>
 						
 						<MeatAmount>0</MeatAmount>
 						<LeatherAmount>0</LeatherAmount>
@@ -836,7 +828,7 @@
 						<li Class="CombatExtended.PartialArmorExt">
 							<stats>
 								<li>
-									<ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+									<ArmorRating_Sharp>1.3</ArmorRating_Sharp>
 									<parts>
 										<li>Head</li>  
 										<li>Torso</li>  
@@ -854,25 +846,25 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Necronoid_ExecutionerGhoul"]/race/baseBodySize</xpath>
 					<value>
-						<baseBodySize>4.0</baseBodySize>
+						<baseBodySize>2.0</baseBodySize>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Necronoid_ExecutionerGhoul"]/race/baseHealthScale</xpath>
 					<value>
-						<baseHealthScale>8.0</baseHealthScale>
+						<baseHealthScale>4.25</baseHealthScale>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="Necronoid_ExecutionerGhoul"]/statBases</xpath>
 					<value>
-						<ArmorRating_Sharp>16</ArmorRating_Sharp>
+						<ArmorRating_Sharp>10</ArmorRating_Sharp>
 						<ArmorRating_Blunt>10</ArmorRating_Blunt>
 						
 						<MeleeHitChance>10.0</MeleeHitChance>
-						<MoveSpeed>6.5</MoveSpeed>						
+						<MoveSpeed>5.5</MoveSpeed>						
 						
 						<MeatAmount>0</MeatAmount>
 						<LeatherAmount>0</LeatherAmount>
@@ -897,21 +889,21 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Necronoid_FleshTyrant"]/race/baseBodySize</xpath>
 					<value>
-						<baseBodySize>4.0</baseBodySize>
+						<baseBodySize>2.0</baseBodySize>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Necronoid_FleshTyrant"]/race/baseHealthScale</xpath>
 					<value>
-						<baseHealthScale>10.0</baseHealthScale>
+						<baseHealthScale>6.5</baseHealthScale>
 					</value>
 				</li>
 
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="Necronoid_FleshTyrant"]/statBases</xpath>
 					<value>
-						<ArmorRating_Sharp>20</ArmorRating_Sharp>
+						<ArmorRating_Sharp>10</ArmorRating_Sharp>
 						<ArmorRating_Blunt>10</ArmorRating_Blunt>
 						
 						<MeleeHitChance>10.0</MeleeHitChance>
@@ -965,21 +957,21 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Necronoid_CrazedButcher"]/race/baseBodySize</xpath>
 					<value>
-						<baseBodySize>4.4</baseBodySize>
+						<baseBodySize>2.0</baseBodySize>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Necronoid_CrazedButcher"]/race/baseHealthScale</xpath>
 					<value>
-						<baseHealthScale>11.0</baseHealthScale>
+						<baseHealthScale>7.5</baseHealthScale>
 					</value>
 				</li>				
 
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="Necronoid_CrazedButcher"]/statBases</xpath>
 					<value>
-						<ArmorRating_Sharp>5</ArmorRating_Sharp>
+						<ArmorRating_Sharp>4</ArmorRating_Sharp>
 						<ArmorRating_Blunt>240</ArmorRating_Blunt>
 						
 						<MeleeHitChance>10.0</MeleeHitChance>
@@ -1122,14 +1114,14 @@
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="Necronoid_FetidWolf"]/race</xpath>
 					<value>
-						<baseBodySize>2.0</baseBodySize>
+						<baseBodySize>1.25</baseBodySize>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Necronoid_FetidWolf"]/race/baseHealthScale</xpath>
 					<value>
-						<baseHealthScale>3.5</baseHealthScale>
+						<baseHealthScale>2.5</baseHealthScale>
 					</value>
 				</li>
 				
@@ -1147,7 +1139,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="Necronoid_FetidWolf"]/statBases</xpath>
 					<value>
-						<ArmorRating_Sharp>6.0</ArmorRating_Sharp>
+						<ArmorRating_Sharp>4.0</ArmorRating_Sharp>
 						<ArmorRating_Blunt>80</ArmorRating_Blunt>
 						
 						<MeleeHitChance>1.8</MeleeHitChance>
@@ -1252,7 +1244,7 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Necronoid_Chupacabra"]/race/baseHealthScale</xpath>
 					<value>
-						<baseHealthScale>1.5</baseHealthScale>
+						<baseHealthScale>0.75</baseHealthScale>
 					</value>
 				</li>
 				
@@ -1273,7 +1265,7 @@
 						<ArmorRating_Blunt>55</ArmorRating_Blunt>
 						
 						<MeleeHitChance>1.2</MeleeHitChance>
-						<MoveSpeed>7.5</MoveSpeed>								
+						<MoveSpeed>6.0</MoveSpeed>								
 						
 						<MeatAmount>0</MeatAmount>
 						<LeatherAmount>0</LeatherAmount>
@@ -1303,14 +1295,14 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Necronoid_HagSpider"]/race/baseBodySize</xpath>
 					<value>
-						<baseBodySize>3.5</baseBodySize>
+						<baseBodySize>1.5</baseBodySize>
 					</value>
 				</li>
 
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Necronoid_HagSpider"]/race/baseHealthScale</xpath>
 					<value>
-						<baseHealthScale>6.0</baseHealthScale>
+						<baseHealthScale>3.0</baseHealthScale>
 					</value>
 				</li>
 				
@@ -1387,7 +1379,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="Necronoid_HagSpider"]/statBases</xpath>
 					<value>
-						<ArmorRating_Sharp>10</ArmorRating_Sharp>
+						<ArmorRating_Sharp>7</ArmorRating_Sharp>
 						<ArmorRating_Blunt>45</ArmorRating_Blunt>
 						
 						<MeleeHitChance>2.25</MeleeHitChance>
@@ -1417,14 +1409,14 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Necronoid_HowlingSpider"]/race/baseBodySize</xpath>
 					<value>
-						<baseBodySize>3.5</baseBodySize>
+						<baseBodySize>1.5</baseBodySize>
 					</value>
 				</li>				
 				
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Necronoid_HowlingSpider"]/race/baseHealthScale</xpath>
 				<value>
-					<baseHealthScale>6.0</baseHealthScale>
+					<baseHealthScale>2.85</baseHealthScale>
 				</value>
 				</li>
 
@@ -1500,11 +1492,11 @@
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="Necronoid_HowlingSpider"]/statBases</xpath>
 					<value>
-						<ArmorRating_Sharp>13</ArmorRating_Sharp>
+						<ArmorRating_Sharp>9</ArmorRating_Sharp>
 						<ArmorRating_Blunt>35</ArmorRating_Blunt>
 						
 						<MeleeHitChance>1.4</MeleeHitChance>
-						<MoveSpeed>6.5</MoveSpeed>							
+						<MoveSpeed>5.0</MoveSpeed>							
 						
 						<MeatAmount>0</MeatAmount>
 						<LeatherAmount>0</LeatherAmount>
@@ -1656,14 +1648,14 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Necronoid_Wendigo"]/race/baseBodySize</xpath>
 					<value>
-						<baseBodySize>5.7</baseBodySize>
+						<baseBodySize>3.0</baseBodySize>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Necronoid_Wendigo"]/race/baseHealthScale</xpath>
 					<value>
-						<baseHealthScale>15.0</baseHealthScale>
+						<baseHealthScale>8.0</baseHealthScale>
 					</value>
 				</li>				
 				
@@ -1746,11 +1738,11 @@
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="Necronoid_Wendigo"]/statBases</xpath>
 					<value>
-						<ArmorRating_Sharp>24</ArmorRating_Sharp>
+						<ArmorRating_Sharp>14</ArmorRating_Sharp>
 						<ArmorRating_Blunt>350</ArmorRating_Blunt>
 						
 						<MeleeHitChance>15.0</MeleeHitChance>	
-						<MoveSpeed>6.25</MoveSpeed>							
+						<MoveSpeed>5.25</MoveSpeed>							
 						
 						<MeatAmount>0</MeatAmount>
 						<LeatherAmount>0</LeatherAmount>

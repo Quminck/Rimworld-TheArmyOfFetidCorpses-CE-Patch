@@ -18,6 +18,10 @@
 				<li Class="PatchOperationRemove">
 					<xpath>Defs/HediffDef[defName="HardenedFlesh"]/stages/li/statOffsets/ArmorRating_Sharp</xpath>
 				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/HediffDef[defName="HardenedFlesh"]/stages/li/painFactor</xpath>
+				</li>				
 
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/HediffDef[defName="HardenedFlesh"]/stages/li</xpath>
@@ -81,6 +85,10 @@
 					</value>
 				</li>	
 				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/HediffDef[defName="Necronoid_BlessingOfTheDead_AOE" or defName="Necronoid_BlessingOfTheDead"]/stages/li/painFactor</xpath>
+				</li>					
+				
 				
 				
 				<!-- ================== Speed buff ================== -->
@@ -110,8 +118,44 @@
 					</value>
 				</li>				
 
+
+
+
+
+				<!-- ================== Hediff giver ================== -->
+
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/HediffGiverSetDef[defName="Mutations"]/hediffGivers/li[hediff="Painless"]</xpath>
+					<value>
+						<li Class="HediffGiver_Birthday">
+							<hediff>Painless</hediff>
+							<ageFractionChanceCurve>
+								<points>
+									<li>(0, 1.0)</li>
+									<li>(100, 1.0)</li>
+								</points>
+							</ageFractionChanceCurve>
+						</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/HediffGiverSetDef[defName="MutationsBoss"]/hediffGivers</xpath>
+					<value>
+						<li Class="HediffGiver_Birthday">
+							<hediff>Painless</hediff>
+							<ageFractionChanceCurve>
+								<points>
+									<li>(0, 1.0)</li>
+									<li>(100, 1.0)</li>
+								</points>
+							</ageFractionChanceCurve>
+						</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/HediffGiverSetDef[defName="MutationsAssasin"]/hediffGivers</xpath>
 					<value>
 						<li Class="HediffGiver_Birthday">
 							<hediff>Painless</hediff>
