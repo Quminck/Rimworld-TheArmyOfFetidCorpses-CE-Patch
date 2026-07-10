@@ -241,14 +241,14 @@
 						<Mass>5.2</Mass>
 						<Bulk>12.5</Bulk>
 						
-						<SightsEfficiency>4.0</SightsEfficiency>
+						<SightsEfficiency>2.0</SightsEfficiency>
 						<NightVisionEfficiency_Weapon>0.5</NightVisionEfficiency_Weapon> 
 						
-						<SwayFactor>0.71</SwayFactor>
+						<SwayFactor>1.06</SwayFactor>
 						<ShotSpread>0.04</ShotSpread>
 						<Recoil>1.09</Recoil>
 						
-						<RangedWeapon_Cooldown>1.35</RangedWeapon_Cooldown>
+						<RangedWeapon_Cooldown>2.35</RangedWeapon_Cooldown>
 					</statBases>
 			  
 						<!--SHOTS-->
@@ -361,7 +361,7 @@
 						<ShotSpread>0.03</ShotSpread>
 						<Recoil>1.05</Recoil>
 						
-						<RangedWeapon_Cooldown>0.32</RangedWeapon_Cooldown>
+						<RangedWeapon_Cooldown>0.35</RangedWeapon_Cooldown>
 					</statBases>
 			  
 						<!--SHOTS-->
@@ -409,11 +409,11 @@
 						<SightsEfficiency>1.2</SightsEfficiency>
 						<NightVisionEfficiency_Weapon>0.1</NightVisionEfficiency_Weapon> 
 						
-						<SwayFactor>1.36</SwayFactor>
-						<ShotSpread>0.16</ShotSpread>
-						<Recoil>2.63</Recoil>
+						<SwayFactor>1.43</SwayFactor>
+						<ShotSpread>0.17</ShotSpread>
+						<Recoil>2.71</Recoil>
 						
-						<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+						<RangedWeapon_Cooldown>0.99</RangedWeapon_Cooldown>
 					</statBases>
 			  
 						<!--SHOTS-->
@@ -422,7 +422,7 @@
 						<hasStandardCommand>True</hasStandardCommand>
 						<ai_AvoidFriendlyFireRadius>2</ai_AvoidFriendlyFireRadius>
 						
-						<warmupTime>1.05</warmupTime>
+						<warmupTime>1.21</warmupTime>
 						<range>20</range>
 						
 						<burstShotCount>1</burstShotCount>
