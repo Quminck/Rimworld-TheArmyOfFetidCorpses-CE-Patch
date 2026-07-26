@@ -132,7 +132,7 @@
 						<warmupTime>1</warmupTime>
 						<range>48</range>
 						
-						<burstShotCount>10</burstShotCount>
+						<burstShotCount>6</burstShotCount>
 						<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
 						<muzzleFlashScale>6</muzzleFlashScale>
 						<recoilAmount>0.4</recoilAmount>
@@ -151,7 +151,7 @@
 			  
 						<!--FIRE MODS-->
 					<FireModes>
-						<aimedBurstShotCount>5</aimedBurstShotCount>
+						<aimedBurstShotCount>3</aimedBurstShotCount>
 					</FireModes>
 			   
 						<!--TAGS-->
@@ -215,7 +215,7 @@
 						<warmupTime>1.5</warmupTime>
 						<range>54</range>
 						
-						<burstShotCount>30</burstShotCount>
+						<burstShotCount>20</burstShotCount>
 						<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
 						<muzzleFlashScale>1</muzzleFlashScale>
 						<recoilAmount>0.6</recoilAmount>
@@ -227,14 +227,14 @@
 				
 						<!--AMMO-->
 					<AmmoUser>
-						<magazineSize>150</magazineSize>
-						<reloadTime>5.4</reloadTime>
+						<magazineSize>100</magazineSize>
+						<reloadTime>4.6</reloadTime>
 						<ammoSet>AmmoSet_792x57mmMauser</ammoSet>    <!-- GUN MAGAZINE -->
 					</AmmoUser>
 			  
 						<!--FIRE MODS-->
 					<FireModes>
-						<aimedBurstShotCount>10</aimedBurstShotCount>
+						<aimedBurstShotCount>5</aimedBurstShotCount>
 					</FireModes>
 			   
 						<!--TAGS-->
@@ -757,8 +757,8 @@
 					
 						<!--AMMO-->
 					<AmmoUser>
-						<magazineSize>5</magazineSize>
-						<reloadTime>0.5</reloadTime>
+						<magazineSize>4</magazineSize>
+						<reloadTime>0.6</reloadTime>
 						<reloadOneAtATime>True</reloadOneAtATime>
 						<ammoSet>AmmoSet_23x75mmR</ammoSet>               <!-- GUN MAGAZINE -->
 					</AmmoUser>
