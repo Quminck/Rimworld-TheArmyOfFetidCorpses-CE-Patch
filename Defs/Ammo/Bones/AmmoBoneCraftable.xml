@@ -44,7 +44,7 @@
 				<!-- =================== Ammunition ===================-->
   
 	<ThingDef Class="CombatExtended.AmmoDef" Name="Ammo_Rifle_Bone_Craftable_Base" ParentName="AmmoBase" Abstract="True" MayRequire="Ludeon.Rimworld.Biotech">
-		<description>A makeshift rifle round. It fires a chemically neutralized bone shard. While safe from the virus it remains extremely toxic for any lifeforms</description>
+		<description>A makeshift rifle round. It fires a chemically neutralized bone shard. Safe from the infection, but remains extremely toxic for any lifeforms</description>
 		<tradeTags>
 			<li>CE_AutoEnableTrade</li>
 			<li>CE_AutoEnableCrafting_FabricationBench</li>
@@ -56,7 +56,7 @@
   
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo_Rifle_Bone_Craftable_Base" MayRequire="Ludeon.Rimworld.Biotech">
 		<defName>Ammo_Rifle_Bone_Craftable</defName>                                
-		<label>Rifle toxic round</label>
+		<label>Toxic round</label>
 		<graphicData>
 			<texPath>Things/Ammo/BoneAmmo/Common</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
@@ -87,7 +87,7 @@
 	
 	<ThingDef ParentName="Bullet_Rifle_Bone_Craftable_Base" MayRequire="Ludeon.Rimworld.Biotech">
 		<defName>Bullet_Rifle_Bone_Craftable</defName>                              
-		<label>Shard bone</label>
+		<label>toxic bullet</label>
 		
 		<projectile Class="CombatExtended.ProjectilePropertiesCE" MayRequire="Ludeon.Rimworld.Biotech">
 			<damageAmountBase>10</damageAmountBase>
@@ -103,9 +103,9 @@
 				
 	<RecipeDef ParentName="ChargeAmmoRecipeBase" MayRequire="Ludeon.Rimworld.Biotech">
 		<defName>MakeAmmo_Rifle_Bone_Craftable</defName>
-		<label>Make toxic bones x200</label>
-		<description>Craft 200 toxic bones.</description>
-		<jobString>Making toxic bones.</jobString>
+		<label>Make toxic round x200</label>
+		<description>Craft 200 toxic rounds.</description>
+		<jobString>Making toxic rounds.</jobString>
 		<researchPrerequisite>NecroWeapons</researchPrerequisite>
 		<ingredients>
 			<li>
@@ -164,7 +164,7 @@
 				<!-- =================== Ammunition ===================-->
 	
 	<ThingDef Class="CombatExtended.AmmoDef" Name="Ammo_Sniper_Bone_Craftable_Base" ParentName="AmmoBase" Abstract="True" MayRequire="Ludeon.Rimworld.Biotech">
-		<description>A makeshift High-caliber round. It fires a chemically neutralized bone spikes extremely toxic for any lifeforms</description>
+		<description>A makeshift High-caliber round. It fires a chemically neutralized bone spikes, extremely toxic for any lifeforms</description>
 		<tradeTags>
 			<li>CE_AutoEnableTrade</li>
 			<li>CE_AutoEnableCrafting_FabricationBench</li>
@@ -176,7 +176,7 @@
 	
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo_Sniper_Bone_Craftable_Base" MayRequire="Ludeon.Rimworld.Biotech">
 		<defName>Ammo_Sniper_Bone_Craftable</defName>                                
-		<label>High-caliber toxic round</label>
+		<label>Toxic spike</label>
 		<graphicData>
 			<texPath>Things/Ammo/Neolithic/Kunai</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
@@ -207,7 +207,7 @@
 	
 	<ThingDef ParentName="Bullet_Sniper_Bone_Craftable_Base" MayRequire="Ludeon.Rimworld.Biotech">
 		<defName>Bullet_Sniper_Bone_Craftable</defName>                              
-		<label>bone spike</label>
+		<label>toxic spike</label>
 		
 		<projectile Class="CombatExtended.ProjectilePropertiesCE" MayRequire="Ludeon.Rimworld.Biotech">
 			<damageAmountBase>14</damageAmountBase>
@@ -223,9 +223,9 @@
 				
 	<RecipeDef ParentName="ChargeAmmoRecipeBase" MayRequire="Ludeon.Rimworld.Biotech">
 		<defName>MakeAmmo_Sniper_Bone_Craftable</defName>
-		<label>Make bones x100</label>
-		<description>Craft 100 Bones.</description>
-		<jobString>Making bones.</jobString>
+		<label>Make toxic spike x100</label>
+		<description>Craft 100 toxic spikes.</description>
+		<jobString>Making toxic spikes.</jobString>
 		<researchPrerequisite>NecroWeapons</researchPrerequisite>
 		<ingredients>
 			<li>
@@ -327,7 +327,7 @@
 	
 	<ThingDef ParentName="Bullet_Shotgun_Bone_Craftable_Base" MayRequire="Ludeon.Rimworld.Biotech">
 		<defName>Bullet_Shotgun_Bone_Craftable</defName>                              
-		<label>bone fragment</label>
+		<label>toxic fragment</label>
 		
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageAmountBase>6</damageAmountBase>
@@ -345,9 +345,9 @@
 				
 	<RecipeDef ParentName="ChargeAmmoRecipeBase" MayRequire="Ludeon.Rimworld.Biotech">
 		<defName>MakeAmmo_Shotgun_Bone_Craftable</defName>
-		<label>Make toxic bones x100</label>
-		<description>Craft 100 toxic bones.</description>
-		<jobString>Making toxic bones.</jobString>
+		<label>Make toxic buckshot x100</label>
+		<description>Craft 100 toxic buckshot.</description>
+		<jobString>Making toxic buckshot.</jobString>
 		<researchPrerequisite>NecroWeapons</researchPrerequisite>
 		<ingredients>
 			<li>
