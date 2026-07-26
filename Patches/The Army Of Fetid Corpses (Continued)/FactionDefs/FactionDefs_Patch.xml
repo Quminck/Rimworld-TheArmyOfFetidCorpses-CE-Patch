@@ -23,8 +23,10 @@
 					<value>
 						<maxPawnCostPerTotalPointsCurve>
 							<points>
-								<li>(400, 250)</li>
-								<li>(2500, 2500)</li> 
+								<li>(400, 200)</li>
+								<li>(1000, 800)</li>
+								<li>(2500, 2500)</li>
+
 								<li>(100000, 10000)</li>
 							</points>
 						</maxPawnCostPerTotalPointsCurve>
@@ -74,8 +76,8 @@
 								<options>
 									<LowTier_FleshSlave>2</LowTier_FleshSlave>
 									<MidTier_FleshSlave>1</MidTier_FleshSlave>
-									<Necronoid_FetidBrute>4</Necronoid_FetidBrute>
-									<Necronoid_FetidSoldier>10</Necronoid_FetidSoldier>
+									<Necronoid_FetidBrute>8</Necronoid_FetidBrute>
+									<Necronoid_FetidSoldier>20</Necronoid_FetidSoldier>
 								</options>
 							</li>
 							
@@ -84,10 +86,10 @@
 								<kindDef>Combat</kindDef>
 								<commonality>40</commonality>
 								<options>
-									<LowTier_FleshSlave>4</LowTier_FleshSlave>								
+									<LowTier_FleshSlave>1</LowTier_FleshSlave>								
 									<FleshBoss>1</FleshBoss>
-									<Necronoid_FetidMarine>10</Necronoid_FetidMarine>
-									<Necronoid_FetidHulk>4</Necronoid_FetidHulk>
+									<Necronoid_FetidMarine>25</Necronoid_FetidMarine>
+									<Necronoid_FetidHulk>10</Necronoid_FetidHulk>
 								</options>
 							</li>							
 							
@@ -116,7 +118,7 @@
 								<!-- =============== Hag Spiders =============== -->							
 							<li>
 								<kindDef>Combat</kindDef>
-								<commonality>25</commonality>
+								<commonality>15</commonality>
 								<options>
 									<Necronoid_HagSpider>1</Necronoid_HagSpider>
 								</options>
@@ -133,7 +135,6 @@
 								<kindDef>Combat</kindDef>
 								<commonality>20</commonality>
 								<options>
-									<FleshBoss>1</FleshBoss>
 									<Necronoid_HagSpider>10</Necronoid_HagSpider>
 									<Necronoid_BloatedOgre>5</Necronoid_BloatedOgre>						
 								</options>
@@ -145,7 +146,8 @@
 								<commonality>15</commonality>
 								<options>
 									<Necronoid_FleshTyrant>8</Necronoid_FleshTyrant>
-									<Necronoid_BladedGhoul>4</Necronoid_BladedGhoul>						
+									<Necronoid_BladedGhoul>4</Necronoid_BladedGhoul>
+									<Necronoid_FetidHulk>3</Necronoid_FetidHulk>
 								</options>
 							</li>
 							
@@ -155,7 +157,8 @@
 								<commonality>15</commonality>
 								<options>
 									<Necronoid_ExecutionerGhoul>8</Necronoid_ExecutionerGhoul>
-									<Necronoid_BladedGhoul>4</Necronoid_BladedGhoul>											
+									<Necronoid_BladedGhoul>4</Necronoid_BladedGhoul>
+									<Necronoid_FetidHulk>3</Necronoid_FetidHulk>
 								</options>
 							</li>
 							
@@ -165,7 +168,8 @@
 								<commonality>15</commonality>
 								<options>
 									<Necronoid_BloodLetterGhoul>8</Necronoid_BloodLetterGhoul>
-									<Necronoid_BladedGhoul>4</Necronoid_BladedGhoul>						
+									<Necronoid_BladedGhoul>4</Necronoid_BladedGhoul>
+									<Necronoid_FetidHulk>3</Necronoid_FetidHulk>
 								</options>
 							</li>
 							
@@ -176,6 +180,7 @@
 								<options>
 									<Necronoid_CrazedButcher>8</Necronoid_CrazedButcher>
 									<Necronoid_BladedGhoul>4</Necronoid_BladedGhoul>
+									<Necronoid_FetidHulk>3</Necronoid_FetidHulk>
 								</options>
 							</li>
 							
