@@ -45,8 +45,6 @@
 		<statBases>
 			<Mass>0.08</Mass>
 			<Bulk>0.1</Bulk>
-			
-			<MarketValue>0.8</MarketValue>
 		</statBases>
 		<ammoClass>PrometheumSpecial</ammoClass>
 		<cookOffProjectile>BulletHVFuel</cookOffProjectile>              

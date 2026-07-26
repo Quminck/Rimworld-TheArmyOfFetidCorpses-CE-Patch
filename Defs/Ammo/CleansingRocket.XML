@@ -43,7 +43,6 @@
 		</graphicData>
 		<stackLimit>5</stackLimit>
 		<statBases>
-			<MarketValue>250</MarketValue>
 			<Mass>2.5</Mass>
 			<Bulk>3.2</Bulk>
 		</statBases>
