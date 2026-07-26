@@ -70,9 +70,20 @@
 						<SwayFactor>1.33</SwayFactor>
 						<ShotSpread>0.08</ShotSpread>
 						<Recoil>1.41</Recoil>
-						
+					
 						<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+						
+						<MarketValue>1600</MarketValue>
+						<WorkToMake>78000</WorkToMake>								
 					</statBases>
+					
+								<!--CRAFT-->
+					<costList>
+						<Steel>40</Steel>
+						<Plasteel>20</Plasteel>
+						<ComponentSpacer>2</ComponentSpacer>
+						<Necro_Meat>90</Necro_Meat>
+					</costList>					
 			  
 						<!--SHOTS-->
 					<Properties>
@@ -83,7 +94,7 @@
 						<warmupTime>1</warmupTime>
 						<range>50</range>
 						
-						<burstShotCount>6</burstShotCount>
+						<burstShotCount>5</burstShotCount>
 						<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
 						<muzzleFlashScale>2</muzzleFlashScale>
 						<recoilAmount>0.44</recoilAmount>
@@ -108,6 +119,8 @@
 					<weaponTags>
 						<li>CE_AI_AR</li>
 					</weaponTags>
+					
+
 			  
 				</li>
 				
@@ -135,7 +148,18 @@
 						<Recoil>1.28</Recoil>
 						
 						<RangedWeapon_Cooldown>0.85</RangedWeapon_Cooldown>
+						
+						<MarketValue>2250</MarketValue>
+						<WorkToMake>111000</WorkToMake>								
 					</statBases>
+					
+								<!--CRAFT-->
+					<costList>
+						<Steel>65</Steel>
+						<Plasteel>45</Plasteel>
+						<ComponentSpacer>4</ComponentSpacer>
+						<Necro_Meat>125</Necro_Meat>
+					</costList>	
 			  
 						<!--SHOTS-->
 					<Properties>
@@ -157,8 +181,8 @@
 					</Properties>
 					
 					<AmmoUser>
-						<magazineSize>40</magazineSize>
-						<reloadTime>4.2</reloadTime>
+						<magazineSize>48</magazineSize>
+						<reloadTime>4.9</reloadTime>
 						<ammoSet>AmmoSet_Rifle_Bone_Craftable</ammoSet>              
 					</AmmoUser>
 					
@@ -198,7 +222,18 @@
 						<Recoil>2.59</Recoil>
 						
 						<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+						
+						<MarketValue>1500</MarketValue>
+						<WorkToMake>75000</WorkToMake>								
 					</statBases>
+					
+								<!--CRAFT-->
+					<costList>
+						<Steel>45</Steel>
+						<Plasteel>20</Plasteel>
+						<ComponentSpacer>2</ComponentSpacer>
+						<Necro_Meat>80</Necro_Meat>
+					</costList>	
 			  
 						<!--SHOTS-->
 					<Properties>
@@ -261,7 +296,18 @@
 						<Recoil>1.09</Recoil>
 						
 						<RangedWeapon_Cooldown>1.15</RangedWeapon_Cooldown>
+						
+						<MarketValue>1950</MarketValue>
+						<WorkToMake>85000</WorkToMake>								
 					</statBases>
+					
+								<!--CRAFT-->
+					<costList>
+						<Steel>55</Steel>
+						<Plasteel>40</Plasteel>
+						<ComponentSpacer>3</ComponentSpacer>
+						<Necro_Meat>100</Necro_Meat>
+					</costList>	
 			  
 						<!--SHOTS-->
 					<Properties>
@@ -323,7 +369,18 @@
 						<Recoil>0.93</Recoil>
 						
 						<RangedWeapon_Cooldown>0.45</RangedWeapon_Cooldown>
+					
+						<MarketValue>2650</MarketValue>
+						<WorkToMake>125000</WorkToMake>								
 					</statBases>
+					
+								<!--CRAFT-->
+					<costList>
+						<Steel>65</Steel>
+						<Plasteel>55</Plasteel>
+						<ComponentSpacer>4</ComponentSpacer>
+						<Necro_Meat>155</Necro_Meat>
+					</costList>						
 			  
 						<!--SHOTS-->
 					<Properties>
@@ -334,7 +391,7 @@
 						<warmupTime>2.45</warmupTime>
 						<range>46</range>
 						
-						<burstShotCount>58</burstShotCount>
+						<burstShotCount>50</burstShotCount>
 						<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
 						<muzzleFlashScale>2</muzzleFlashScale>
 						<recoilAmount>0.5</recoilAmount>
@@ -345,13 +402,13 @@
 					</Properties>
 					
 					<AmmoUser>
-						<magazineSize>300</magazineSize>
-						<reloadTime>9.0</reloadTime>
+						<magazineSize>250</magazineSize>
+						<reloadTime>6.5</reloadTime>
 						<ammoSet>AmmoSet_Rifle_Bone_Craftable</ammoSet>               <!-- GUN MAGAZINE -->
 					</AmmoUser>
 					
 					<FireModes>
-						<aimedBurstShotCount>15</aimedBurstShotCount>
+						<aimedBurstShotCount>10</aimedBurstShotCount>
 						<aiAimMode>SuppressFire</aiAimMode> 
 						<aiUseBurstMode>FALSE</aiUseBurstMode> 
 					</FireModes>
