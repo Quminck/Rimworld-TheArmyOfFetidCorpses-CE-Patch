@@ -297,9 +297,8 @@
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
-			<MarketValue>0.5</MarketValue>
-			<Mass>0.035</Mass>
-			<Bulk>0.03</Bulk>
+			<Mass>0.1</Mass>
+			<Bulk>0.1</Bulk>
 		</statBases>
 		<ammoClass>CleansingBuckshot</ammoClass>
 		<cookOffProjectile>Bullet_23x75_UN_Buck</cookOffProjectile> 
@@ -375,7 +374,6 @@
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
-			<MarketValue>0.5</MarketValue>
 			<Mass>0.035</Mass>
 			<Bulk>0.03</Bulk>
 		</statBases>
@@ -454,9 +452,8 @@
 			<graphicClass>Verse.Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
-			<MarketValue>8.5</MarketValue>
-			<Mass>0.10</Mass>
-			<Bulk>0.12</Bulk>
+			<Mass>0.13</Mass>
+			<Bulk>0.14</Bulk>
 		</statBases>
 		<ammoClass>CleansingRound</ammoClass>
 		<cookOffProjectile>Bullet_20x105_Cl</cookOffProjectile>               
