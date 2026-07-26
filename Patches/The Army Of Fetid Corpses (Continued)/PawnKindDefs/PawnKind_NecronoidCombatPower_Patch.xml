@@ -20,21 +20,21 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/PawnKindDef[defName="LowTier_FleshSlave"]/combatPower</xpath>
 					<value>
-						<combatPower>135</combatPower>  <!-- base = 30 -->
+						<combatPower>380</combatPower>  <!-- base = 80 -->
 					</value>
 				</li>
 
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/PawnKindDef[defName="MidTier_FleshSlave"]/combatPower</xpath>
 					<value>
-						<combatPower>250</combatPower>  <!-- base = 55 -->
+						<combatPower>625</combatPower>  <!-- base = 135 -->
 					</value>
 				</li>
 
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/PawnKindDef[defName="FleshBoss"]/combatPower</xpath>
 					<value>
-						<combatPower>400</combatPower>  <!-- base = 85 -->
+						<combatPower>900</combatPower>  <!-- base = 190 -->
 					</value>
 				</li>				
 
@@ -135,7 +135,7 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/PawnKindDef[defName="Necronoid_FetidMarine"]/combatPower</xpath>
 					<value>
-						<combatPower>1400</combatPower>  <!-- base = 300 -->
+						<combatPower>2100</combatPower>  <!-- base = 450 -->
 					</value>
 				</li>				
 				
