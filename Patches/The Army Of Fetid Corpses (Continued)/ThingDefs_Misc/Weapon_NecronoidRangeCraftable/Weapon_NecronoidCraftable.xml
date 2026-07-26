@@ -38,14 +38,7 @@
 								<capacities>
 									<li>Stab</li>
 								</capacities>
-								<power>6</power>
-								<extraMeleeDamages>
-									<li>
-										<def>NecronoidCutDamage</def>
-										<amount>2</amount>
-										<chance>0.05</chance>
-									</li>
-								</extraMeleeDamages>
+								<power>8</power>
 								<cooldownTime>1.6</cooldownTime>
 								<armorPenetrationBlunt>1.8</armorPenetrationBlunt>
 								<armorPenetrationSharp>1.4</armorPenetrationSharp>
