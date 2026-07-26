@@ -50,8 +50,8 @@
 				<graphicClass>Graphic_StackCount</graphicClass>
 			</graphicData>
 			<statBases>
-				<Mass>0.028</Mass>
-				<Bulk>0.03</Bulk>
+				<Mass>0.02</Mass>
+				<Bulk>0.02</Bulk>
 			</statBases>
 			<ammoClass>IncendiarySpecial</ammoClass>
 			<cookOffProjectile>Bullet_792x33Kurz_UN</cookOffProjectile>
@@ -95,7 +95,7 @@
 						<li>Prometheum</li>
 					</thingDefs>
 				</filter>
-				<count>7</count>
+				<count>6</count>
 			</li>
 			<li>
 				<filter>
@@ -103,19 +103,19 @@
 						<li>Steel</li>
 					</thingDefs>
 				</filter>
-				<count>30</count>
+				<count>25</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>Prometheum</li>
 				<li>Steel</li>
+				<li>Prometheum</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
 			<Ammo_792x33Kurz_UN>500</Ammo_792x33Kurz_UN>
 		</products>
-		<workAmount>3120</workAmount>
+		<workAmount>4200</workAmount>
 	</RecipeDef>
 	
 	
@@ -192,8 +192,8 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>Prometheum</li>
 				<li>Steel</li>
+				<li>Prometheum</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
@@ -258,7 +258,7 @@
 						<li>Prometheum</li>
 					</thingDefs>
 				</filter>
-				<count>15</count>
+				<count>30</count>
 			</li>
 			<li>
 				<filter>
@@ -266,13 +266,13 @@
 						<li>Steel</li>
 					</thingDefs>
 				</filter>
-				<count>60</count>
+				<count>120</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>Prometheum</li>
 				<li>Steel</li>
+				<li>Prometheum</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
@@ -417,7 +417,7 @@
 						<li>Plasteel</li>
 					</thingDefs>
 				</filter>
-				<count>10</count>
+				<count>8</count>
 			</li>
 			<li>
 				<filter>
@@ -491,7 +491,7 @@
 						<li>Plasteel</li>
 					</thingDefs>
 				</filter>
-				<count>25</count>
+				<count>40</count>
 			</li>
 			<li>
 				<filter>
@@ -499,7 +499,7 @@
 						<li>Uranium</li>
 					</thingDefs>
 				</filter>
-				<count>20</count>
+				<count>5</count>
 			</li>
 			<li>
 				<filter>
@@ -507,7 +507,15 @@
 						<li>Neutroamine</li>
 					</thingDefs>
 				</filter>
-				<count>15</count>
+				<count>30</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>16</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -515,6 +523,7 @@
 			<li>Plasteel</li>
 			<li>Uranium</li>
 			<li>Neutroamine</li>
+			<li>ComponentIndustrial</li>
 		</thingDefs>
 		</fixedIngredientFilter>
 		<products>

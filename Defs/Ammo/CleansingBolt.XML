@@ -118,12 +118,21 @@
 				</filter>
 				<count>30</count>
 			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>			
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>Plasteel</li>
 				<li>Uranium</li>
 				<li>Neutroamine</li>
+				<li>ComponentIndustrial</li>
 		</thingDefs>
 		</fixedIngredientFilter>
 		<products>
