@@ -103,8 +103,8 @@
 				
 	<RecipeDef ParentName="ChargeAmmoRecipeBase" MayRequire="Ludeon.Rimworld.Biotech">
 		<defName>MakeAmmo_Rifle_Bone_Craftable</defName>
-		<label>Make toxic round x200</label>
-		<description>Craft 200 toxic rounds.</description>
+		<label>Make toxic round x250</label>
+		<description>Craft 250 toxic rounds.</description>
 		<jobString>Making toxic rounds.</jobString>
 		<researchPrerequisite>NecroWeapons</researchPrerequisite>
 		<ingredients>
@@ -150,7 +150,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Ammo_Rifle_Bone_Craftable>200</Ammo_Rifle_Bone_Craftable>
+			<Ammo_Rifle_Bone_Craftable>250</Ammo_Rifle_Bone_Craftable>
 		</products>
 		<workAmount>7200</workAmount>
 	</RecipeDef>
@@ -345,8 +345,8 @@
 				
 	<RecipeDef ParentName="ChargeAmmoRecipeBase" MayRequire="Ludeon.Rimworld.Biotech">
 		<defName>MakeAmmo_Shotgun_Bone_Craftable</defName>
-		<label>Make toxic buckshot x100</label>
-		<description>Craft 100 toxic buckshot.</description>
+		<label>Make toxic buckshot x200</label>
+		<description>Craft 200 toxic buckshot.</description>
 		<jobString>Making toxic buckshot.</jobString>
 		<researchPrerequisite>NecroWeapons</researchPrerequisite>
 		<ingredients>
@@ -392,7 +392,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Ammo_Shotgun_Bone_Craftable>100</Ammo_Shotgun_Bone_Craftable>
+			<Ammo_Shotgun_Bone_Craftable>200</Ammo_Shotgun_Bone_Craftable>
 		</products>
 		<workAmount>8100</workAmount>
 	</RecipeDef>
