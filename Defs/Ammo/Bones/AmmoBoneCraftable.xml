@@ -122,7 +122,7 @@
 						<li>Steel</li>
 					</thingDefs>
 				</filter>
-				<count>25</count>
+				<count>20</count>
 			</li>
 			<li>
 				<filter>
@@ -130,7 +130,7 @@
 						<li>Neutroamine</li>
 					</thingDefs>
 				</filter>
-				<count>8</count>
+				<count>3</count>
 			</li>
 			<li>
 				<filter>
@@ -138,7 +138,7 @@
 						<li>ComponentIndustrial</li>
 					</thingDefs>
 				</filter>
-				<count>4</count>
+				<count>1</count>
 			</li>			
 		</ingredients>
 		<fixedIngredientFilter>
@@ -178,7 +178,7 @@
 		<defName>Ammo_Sniper_Bone_Craftable</defName>                                
 		<label>Toxic spike</label>
 		<graphicData>
-			<texPath>Things/Ammo/Neolithic/Kunai</texPath>
+			<texPath>Things/Ammo/BoneAmmo/Spike</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
@@ -242,7 +242,7 @@
 						<li>Steel</li>
 					</thingDefs>
 				</filter>
-				<count>40</count>
+				<count>25</count>
 			</li>
 			<li>
 				<filter>
@@ -250,7 +250,7 @@
 						<li>Neutroamine</li>
 					</thingDefs>
 				</filter>
-				<count>12</count>
+				<count>5</count>
 			</li>
 			<li>
 				<filter>
@@ -258,7 +258,7 @@
 						<li>ComponentIndustrial</li>
 					</thingDefs>
 				</filter>
-				<count>5</count>
+				<count>1</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -298,7 +298,7 @@
 		<defName>Ammo_Shotgun_Bone_Craftable</defName>                                
 		<label>Toxic buckshot</label>
 		<graphicData>
-			<texPath>Things/Ammo/Neolithic/Kunai</texPath>
+			<texPath>Things/Ammo/BoneAmmo/Buckshot</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
@@ -372,7 +372,7 @@
 						<li>Neutroamine</li>
 					</thingDefs>
 				</filter>
-				<count>10</count>
+				<count>4</count>
 			</li>
 <li>
 				<filter>
@@ -380,7 +380,7 @@
 						<li>ComponentIndustrial</li>
 					</thingDefs>
 				</filter>
-				<count>4</count>
+				<count>1</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
