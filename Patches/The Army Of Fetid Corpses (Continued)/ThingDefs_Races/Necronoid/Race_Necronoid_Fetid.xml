@@ -32,7 +32,14 @@
 				  </value>
 				</li>
 					
-				
+				<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[contains(defName, 'Necronoid_') and race]/comps</xpath>
+				<value>
+				  <li Class="VEF.AnimalBehaviours.CompProperties_InitialHediff">
+					<hediffname>Painless</hediffname>
+				  </li>
+				</value>
+				</li>				
 				
 				
 				
