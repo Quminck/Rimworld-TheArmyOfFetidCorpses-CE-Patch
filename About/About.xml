@@ -6,7 +6,7 @@
 	<supportedVersions>
 		<li>1.6</li>
 	</supportedVersions>
-	<modVersion>1.3.1.1</modVersion>
+	<modVersion>1.3.1.2</modVersion>
 	<description>
 CE compatibility patch for The Army Of Fetid Corpses mod
 
@@ -32,9 +32,15 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2890901044
 			<displayName>The Army Of Fetid Corpses</displayName>
 			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3597124120</steamWorkshopUrl>
 		</li>
+		<li>
+			<packageId>oskarpotocki.vanillafactionsexpanded.core</packageId>
+			<displayName>Vanilla Expanded Framework</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2023507013</steamWorkshopUrl>
+		</li>		
 	</modDependencies>
 	
 	<loadAfter>
+		<li>oskarpotocki.vanillafactionsexpanded.core</li>	
 		<li>CETeam.CombatExtended</li>
 		<li>zal.taofc</li>
 	</loadAfter>
