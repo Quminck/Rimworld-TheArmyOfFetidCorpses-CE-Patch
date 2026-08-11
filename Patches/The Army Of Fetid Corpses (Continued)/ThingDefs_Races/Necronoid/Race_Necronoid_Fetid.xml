@@ -475,7 +475,7 @@
 					<xpath>Defs/ThingDef[defName="Necronoid_FetidMarine"]/comps</xpath>
 					<value>
 						<li Class="CombatExtended.CompProperties_ArmorDurability">
-							<Durability>2000</Durability>
+							<Durability>1500</Durability>
 							<Regenerates>false</Regenerates>
 							<MinArmorPct>0.10</MinArmorPct>
 						</li>
@@ -536,6 +536,19 @@
 					<xpath>Defs/ThingDef[defName="Necronoid_BladedGhoul"]/tools</xpath>
 					<value>
 						<tools>
+						
+							<li Class="CombatExtended.ToolCE">
+								<label>head</label>
+								<capacities>
+									<li>Cut</li>
+								</capacities>
+								<power>5</power>
+								<chanceFactor>0.1</chanceFactor>
+								<cooldownTime>1.6</cooldownTime>
+								<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+								<armorPenetrationSharp>0</armorPenetrationSharp>
+								<armorPenetrationBlunt>0.5</armorPenetrationBlunt>
+							</li>						
 							
 							<li Class="CombatExtended.ToolCE">
 								<label>claws</label>
@@ -914,7 +927,7 @@
 						<ArmorRating_Blunt>10</ArmorRating_Blunt>
 						
 						<MeleeHitChance>10.0</MeleeHitChance>
-						<MoveSpeed>2.5</MoveSpeed>							
+						<MoveSpeed>2.5</MoveSpeed>					
 						
 						<MeatAmount>0</MeatAmount>
 						<LeatherAmount>0</LeatherAmount>
@@ -1121,7 +1134,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="Necronoid_FetidWolf"]/race</xpath>
 					<value>
-						<baseBodySize>1.25</baseBodySize>
+						<baseBodySize>1.0</baseBodySize>
 					</value>
 				</li>
 				
@@ -1244,7 +1257,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="Necronoid_Chupacabra"]/race</xpath>
 					<value>
-						<baseBodySize>1.5</baseBodySize>
+						<baseBodySize>1.0</baseBodySize>
 					</value>
 				</li>
 				
@@ -1302,7 +1315,7 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Necronoid_HagSpider"]/race/baseBodySize</xpath>
 					<value>
-						<baseBodySize>1.5</baseBodySize>
+						<baseBodySize>1.0</baseBodySize>
 					</value>
 				</li>
 
@@ -1416,7 +1429,7 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Necronoid_HowlingSpider"]/race/baseBodySize</xpath>
 					<value>
-						<baseBodySize>1.5</baseBodySize>
+						<baseBodySize>1.0</baseBodySize>
 					</value>
 				</li>				
 				
@@ -1655,7 +1668,7 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Necronoid_Wendigo"]/race/baseBodySize</xpath>
 					<value>
-						<baseBodySize>3.0</baseBodySize>
+						<baseBodySize>2.0</baseBodySize>
 					</value>
 				</li>
 				
