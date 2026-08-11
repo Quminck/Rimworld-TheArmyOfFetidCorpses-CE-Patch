@@ -538,17 +538,23 @@
 						<tools>
 						
 							<li Class="CombatExtended.ToolCE">
-								<label>head</label>
+								<label>teeth</label>
 								<capacities>
-									<li>Cut</li>
+									<li>Bite</li>
 								</capacities>
-								<power>5</power>
-								<chanceFactor>0.1</chanceFactor>
-								<cooldownTime>1.6</cooldownTime>
-								<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-								<armorPenetrationSharp>0</armorPenetrationSharp>
-								<armorPenetrationBlunt>0.5</armorPenetrationBlunt>
-							</li>						
+								<power>6</power>
+								<extraMeleeDamages>
+									<li>
+										<def>NecronoidBiteDamage</def>
+										<amount>4</amount>
+										<chance>0.25</chance>
+									</li>
+								</extraMeleeDamages>
+								<cooldownTime>1.3</cooldownTime>
+								<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+								<armorPenetrationSharp>1.3</armorPenetrationSharp>
+								<armorPenetrationBlunt>3.1</armorPenetrationBlunt>
+							</li>					
 							
 							<li Class="CombatExtended.ToolCE">
 								<label>claws</label>
