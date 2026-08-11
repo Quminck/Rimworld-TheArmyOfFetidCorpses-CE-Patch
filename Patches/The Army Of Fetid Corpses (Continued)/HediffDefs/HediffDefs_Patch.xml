@@ -107,14 +107,14 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/HediffDef[defName="Painless"]/label</xpath>
 					<value>
-						<label>Undead</label>
+						<label>Necronoid</label>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/HediffDef[defName="Painless"]/description</xpath>
 					<value>
-						<description>The undead feel no pain.</description>
+						<description>The nervous system of this creature is completely deadened, leaving no functional nerve endings. It is entirely immune to physical pain and shock, fighting until its body is physically destroyed.</description>
 					</value>
 				</li>				
 
