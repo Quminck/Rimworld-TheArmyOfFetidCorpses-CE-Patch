@@ -284,8 +284,8 @@
 						<ArmorRating_Sharp>3.5</ArmorRating_Sharp>
 						<ArmorRating_Blunt>6.0</ArmorRating_Blunt>
 						
-						<AimingAccuracy>1.0</AimingAccuracy>
-						<ShootingAccuracyPawn>1.0</ShootingAccuracyPawn>
+						<AimingAccuracy>1.15</AimingAccuracy>
+						<ShootingAccuracyPawn>1.05</ShootingAccuracyPawn>
 						<NightVisionEfficiency>0.20</NightVisionEfficiency>
 						
 						<MeatAmount>0</MeatAmount>
