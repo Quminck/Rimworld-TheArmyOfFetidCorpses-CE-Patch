@@ -62,7 +62,7 @@
 				<li Class="PatchOperationReplace" MayRequire="Ludeon.Rimworld.Biotech">
 					<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer"]/description</xpath>
 					<value>
-						<description>A long-ranged heavy flamethrower capable of spreading fire over a massive area, plunging entire enemy squads and positions into a sea of inferno. It serves as an exceptionally effective tool for purging necronoid structures and managing swarms from a safe distance.</description>
+						<description>A long-ranged heavy flamethrower capable of spreading fire over a massive area, plunging entire enemy squads and positions into a sea of fire. It is a highly effective weapon for destroying Necronoid structures and swarms from a safe distance.</description>
 					</value>
 				</li>
 				
@@ -94,8 +94,6 @@
 							
 							<Mass>20</Mass>
 							<Bulk>10</Bulk>
-							
-							<SellPriceFactor>0.25</SellPriceFactor>
 						  
 							<MarketValue>1750</MarketValue>
 							<WorkToMake>57600</WorkToMake>
@@ -107,7 +105,7 @@
 							<Recoil>0.8</Recoil>
 							<ShotSpread>5</ShotSpread>
 							
-							<RangedWeapon_Cooldown>1.15</RangedWeapon_Cooldown>
+							<RangedWeapon_Cooldown>1.75</RangedWeapon_Cooldown>
 						</statBases>
 					</value>
 				</li>
@@ -236,8 +234,6 @@
 							
 							<Mass>20</Mass>
 							<Bulk>15</Bulk>
-							
-							<SellPriceFactor>0.2</SellPriceFactor>
 					  
 							<MarketValue>2100</MarketValue>
 							<WorkToMake>57000</WorkToMake>
@@ -248,7 +244,7 @@
 							<SwayFactor>0.65</SwayFactor>
 							<ShotSpread>0.01</ShotSpread>
 							<Recoil>0.2</Recoil>
-							<RangedWeapon_Cooldown>2.65</RangedWeapon_Cooldown>
+							<RangedWeapon_Cooldown>2.05</RangedWeapon_Cooldown>
 						</statBases>
 					</value>
 				</li>
@@ -264,7 +260,7 @@
 								<hasStandardCommand>True</hasStandardCommand>
 								<warmupTime>2.5</warmupTime>
 								
-								<range>62</range>
+								<range>48</range>
 								<minRange>2</minRange>
 								
 								<burstShotCount>1</burstShotCount>
