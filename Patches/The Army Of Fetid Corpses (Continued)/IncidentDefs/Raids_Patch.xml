@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>The Army Of Fetid Corpses (Continued)</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+			
+			
+			
+			
+			
+				<!-- ================= Chupacabras silent raid ================= -->
+			
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/IncidentDef[defName="Chupacabras_SilentRaid"]</xpath>
+					<value>					
+						<minThreatPoints>900</minThreatPoints>
+						<minRefireDays>10</minRefireDays>						
+
+					</value>
+				</li>
+	
+
+
+
+
+				<!-- ================= Howling spiders silent raid ================= -->				
+							
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/IncidentDef[defName="HowlingSpiders_SilentRaid"]</xpath>
+					<value>
+						<minThreatPoints>1050</minThreatPoints>
+						<minRefireDays>20</minRefireDays>
+					</value>
+				</li>
+					
+
+
+
+
+				<!-- ================= Wendigo silent raid ================= -->
+					
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/IncidentDef[defName="Wendigo_SilentRaid"]</xpath>
+					<value>
+						<minThreatPoints>2000</minThreatPoints>
+						<minRefireDays>40</minRefireDays>						
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/IncidentDef[defName="Wendigo_SilentRaid"]/earliestDay</xpath>
+					<value>
+						<earliestDay>100</earliestDay>					
+					</value>
+				</li>				
+				
+				
+				
+				
+				
+				<!-- ================= Corrupted Ship with hives raid ================= -->
+					
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/IncidentDef[defName="CorruptedShip"]/minThreatPoints</xpath>
+					<value>
+						<minThreatPoints>900</minThreatPoints>					
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/IncidentDef[defName="CorruptedShip"]/earliestDay</xpath>
+					<value>
+						<earliestDay>50</earliestDay>					
+					</value>
+				</li>		
+						
+						
+						
+						
+					
+				<!-- ================= Corrupted Ship with fetid marines raid ================= -->
+					
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/IncidentDef[defName="CorruptedDropShip"]/minThreatPoints</xpath>
+					<value>
+						<minThreatPoints>1250</minThreatPoints>					
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/IncidentDef[defName="CorruptedDropShip"]/earliestDay</xpath>
+					<value>
+						<earliestDay>100</earliestDay>					
+					</value>
+				</li>				
+				
+				
+				
+
+			</operations>
+		</match>
+	</Operation>
+						
+</Patch>			
