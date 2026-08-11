@@ -189,8 +189,8 @@
 						<SightsEfficiency>1</SightsEfficiency>
 						<NightVisionEfficiency_Weapon>0</NightVisionEfficiency_Weapon> 
 						
-						<SwayFactor>1.5</SwayFactor>
-						<ShotSpread>0.05</ShotSpread>
+						<SwayFactor>2.1</SwayFactor>
+						<ShotSpread>0.09</ShotSpread>
 						<Recoil>1.9</Recoil>
 					
 						<RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
@@ -270,14 +270,14 @@
 						<Mass>35</Mass>
 						<Bulk>22.4</Bulk>
 						
-						<SightsEfficiency>2</SightsEfficiency>
+						<SightsEfficiency>1.75</SightsEfficiency>
 						<NightVisionEfficiency_Weapon>0</NightVisionEfficiency_Weapon> 
 						
 						<SwayFactor>2.8</SwayFactor>
 						<ShotSpread>0.02</ShotSpread>
 						<Recoil>4</Recoil>
 						
-						<RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+						<RangedWeapon_Cooldown>2.85</RangedWeapon_Cooldown>
 						
 						<MarketValue>1300</MarketValue>
 						<WorkToMake>37800</WorkToMake>						
@@ -296,7 +296,7 @@
 						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 						<hasStandardCommand>True</hasStandardCommand>
 						
-						<warmupTime>4.1</warmupTime>
+						<warmupTime>3.75</warmupTime>
 						<range>60</range>
 						
 						<burstShotCount>1</burstShotCount>
