@@ -8,6 +8,19 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 			
+			
+							
+							
+				
+				<li Class="PatchOperationAdd" MayRequire="Ludeon.Rimworld.Biotech">
+				<xpath>Defs/ThingDef[contains(defName, 'Mech_') and race]/statBases</xpath>
+						<value>
+							<NecrotionResistance>2.0</NecrotionResistance>
+							<NecrotionEnvironmentResistance>2.0</NecrotionEnvironmentResistance>
+					</value>
+				</li>
+	
+			
 				<li Class="PatchOperationAddModExtension" MayRequire="Ludeon.Rimworld.Biotech">
 					<xpath>Defs/PawnKindDef[defName="Mech_CourierSix" or defName="Mech_GunSlinger"]</xpath>
 					<value>
