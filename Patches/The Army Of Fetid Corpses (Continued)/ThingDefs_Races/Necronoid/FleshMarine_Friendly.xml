@@ -91,8 +91,8 @@
 						<ArmorRating_Sharp>16.0</ArmorRating_Sharp>
 						<ArmorRating_Blunt>40.0</ArmorRating_Blunt>
 						
-						<AimingAccuracy>1.0</AimingAccuracy>
-						<ShootingAccuracyPawn>1.0</ShootingAccuracyPawn>
+						<AimingAccuracy>1.25</AimingAccuracy>
+						<ShootingAccuracyPawn>1.25</ShootingAccuracyPawn>
 						<NightVisionEfficiency>0.70</NightVisionEfficiency>
 						<MeleeHitChance>5.0</MeleeHitChance>	
 						
