@@ -20,14 +20,14 @@
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Necronoid_FleshMarine"]/race/baseBodySize</xpath>
 				<value>
-					<baseBodySize>1.3</baseBodySize>
+					<baseBodySize>1.0</baseBodySize>
 				</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Necronoid_FleshMarine"]/race/baseHealthScale</xpath>
 				<value>
-					<baseHealthScale>3.5</baseHealthScale>
+					<baseHealthScale>1.0</baseHealthScale>
 				</value>
 				</li>
 
@@ -88,12 +88,12 @@
 					<xpath>Defs/ThingDef[defName="Necronoid_FleshMarine"]/statBases</xpath>
 					<value>
 					
-						<ArmorRating_Sharp>20.0</ArmorRating_Sharp>
-						<ArmorRating_Blunt>42.0</ArmorRating_Blunt>
+						<ArmorRating_Sharp>16.0</ArmorRating_Sharp>
+						<ArmorRating_Blunt>40.0</ArmorRating_Blunt>
 						
-						<AimingAccuracy>1.95</AimingAccuracy>
-						<ShootingAccuracyPawn>2.95</ShootingAccuracyPawn>
-						<NightVisionEfficiency>0.80</NightVisionEfficiency>
+						<AimingAccuracy>1.0</AimingAccuracy>
+						<ShootingAccuracyPawn>1.0</ShootingAccuracyPawn>
+						<NightVisionEfficiency>0.70</NightVisionEfficiency>
 						<MeleeHitChance>5.0</MeleeHitChance>	
 						
 						<MeatAmount>0</MeatAmount>
@@ -107,10 +107,8 @@
 					<value>
 						<li Class="CombatExtended.CompProperties_ArmorDurability">
 							<Durability>1500</Durability>
-							<Regenerates>true</Regenerates>
-							<RegenInterval>100</RegenInterval>
-							<RegenValue>10</RegenValue>
-							<MinArmorPct>0.80</MinArmorPct>
+							<Regenerates>false</Regenerates>
+							<MinArmorPct>0.20</MinArmorPct>
 						</li>
 					</value>
 				</li>
