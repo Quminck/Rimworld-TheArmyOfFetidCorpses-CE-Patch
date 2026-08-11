@@ -131,7 +131,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<AmmoHVFuel>120</AmmoHVFuel>
+			<AmmoHVFuel>60</AmmoHVFuel>
 		</products>
 		<workAmount>9000</workAmount>
 	</RecipeDef>

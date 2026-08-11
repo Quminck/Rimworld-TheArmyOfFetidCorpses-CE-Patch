@@ -151,8 +151,8 @@
 					<value>
 							<!-- ====== Ammo ====== -->
 						<li Class="CombatExtended.CompProperties_AmmoUser">
-							<magazineSize>60</magazineSize>
-							<reloadTime>6</reloadTime>
+							<magazineSize>30</magazineSize>
+							<reloadTime>5</reloadTime>
 							<ammoSet>AmmoSetHVFuel</ammoSet>
 						</li>
 								<!-- ====== Fire mods ====== -->
