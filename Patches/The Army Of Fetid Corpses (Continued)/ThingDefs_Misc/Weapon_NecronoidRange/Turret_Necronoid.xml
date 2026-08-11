@@ -18,15 +18,15 @@
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="Turret_NecroTurret"]/statBases</xpath>
 					<value>
-						<AimingAccuracy>0.5</AimingAccuracy>
-						<SightsEfficiency>1</SightsEfficiency>
+						<AimingAccuracy>0.45</AimingAccuracy>
+						<SightsEfficiency>1.0</SightsEfficiency>
 					</value>
 				</li>
 
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Turret_NecroTurret"]/statBases/ShootingAccuracyTurret</xpath>
 					<value>
-						<ShootingAccuracyTurret>0.5</ShootingAccuracyTurret>
+						<ShootingAccuracyTurret>0.75</ShootingAccuracyTurret>
 					</value>
 				</li>
 
@@ -41,16 +41,16 @@
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Turret_NecroTurret"]/building/turretBurstCooldownTime</xpath>
 				<value>
-					<turretBurstCooldownTime>2.5</turretBurstCooldownTime>
+					<turretBurstCooldownTime>3.2</turretBurstCooldownTime>
 				</value>
 			</li>
 			
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName="Gun_NecroTurret"]/statBases</xpath>
 				<value>
-					<SwayFactor>0.95</SwayFactor>
-					<Recoil>0.7</Recoil>
-					<ShotSpread>0.1</ShotSpread>   
+					<SwayFactor>1.75</SwayFactor>
+					<Recoil>1.35</Recoil>
+					<ShotSpread>0.15</ShotSpread>   
 				</value>
 			</li>
 
@@ -64,13 +64,13 @@
 							<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 							<hasStandardCommand>True</hasStandardCommand>
 							
-							<warmupTime>0.8</warmupTime>
+							<warmupTime>2.5</warmupTime>
 							
-							<range>50</range>
+							<range>36</range>
 							
 							<burstShotCount>5</burstShotCount>
-							<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
-							<muzzleFlashScale>5</muzzleFlashScale>
+							<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+							<muzzleFlashScale>8</muzzleFlashScale>
 							
 							<defaultProjectile>Bullet_Bone_Turret</defaultProjectile>
 							
