@@ -86,6 +86,13 @@
 					</value>
 				</li>	
 
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/DamageDef[defName="PlagueBile"]/additionalHediffs/li/severityPerDamageDealt</xpath>
+					<value>
+							<severityPerDamageDealt>0.003</severityPerDamageDealt>
+					</value>
+				</li>	
+				
 				
 
 			</operations>
