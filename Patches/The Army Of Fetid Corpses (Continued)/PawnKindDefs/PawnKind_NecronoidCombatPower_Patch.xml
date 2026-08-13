@@ -80,17 +80,6 @@
 
 			<!-- ======================== Ranged ======================== -->	
 				
-			<!-- ======================== Fetid brute combat power  ======================== -->
-								
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/PawnKindDef[defName="Necronoid_FetidBrute"]/combatPower</xpath>
-					<value>
-						<combatPower>600</combatPower>  <!-- base = 150 -->
-					</value>
-				</li>				
-				
-				
-				
 			<!-- ======================== Fetid soldier combat power  ======================== -->
 								
 				<li Class="PatchOperationReplace">
@@ -100,7 +89,18 @@
 					</value>
 				</li>	
 
-				
+
+
+							<!-- ======================== Fetid brute combat power  ======================== -->
+								
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="Necronoid_FetidBrute"]/combatPower</xpath>
+					<value>
+						<combatPower>950</combatPower>  <!-- base = 275 -->
+					</value>
+				</li>	
+
+
 
 			<!-- ======================== Fetid hulk combat power  ======================== -->
 								
@@ -167,7 +167,7 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/PawnKindDef[defName="Necronoid_HagSpider"]/combatPower</xpath>
 					<value>
-						<combatPower>1500</combatPower>  <!-- base = 500 -->
+						<combatPower>1500</combatPower>  <!-- base = 400 -->
 					</value>
 				</li>					
 

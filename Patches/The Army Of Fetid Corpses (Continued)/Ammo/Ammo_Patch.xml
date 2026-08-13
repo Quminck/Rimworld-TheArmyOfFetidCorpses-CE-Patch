@@ -60,13 +60,31 @@
 						<Ammo_20x105_Cl>Bullet_20x105_Cl</Ammo_20x105_Cl>
 					</value>
 				</li>
+				
+				
+				
+					<!-- ================= Plague bile ================= -->
+					
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/DamageDef[defName="PlagueBile"]/hediff</xpath>
+					<value>
+						<hediff>ChemicalBurn</hediff>
+					</value>
+				</li>				
+					
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/DamageDef[defName="PlagueBile"]/hediffSolid</xpath>
+					<value>
+						<hediffSolid>ChemicalBurn</hediffSolid>
+					</value>
+				</li>	
 
-
-
-
-
-
-
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/DamageDef[defName="PlagueBile"]/defaultDamage</xpath>
+					<value>
+						<defaultDamage>0</defaultDamage>
+					</value>
+				</li>	
 
 				
 
