@@ -743,7 +743,7 @@
 						<hasStandardCommand>True</hasStandardCommand>
 						
 						<warmupTime>1.4</warmupTime>
-						<range>19</range>
+						<range>16</range>
 						
 						<burstShotCount>1</burstShotCount>
 						<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
