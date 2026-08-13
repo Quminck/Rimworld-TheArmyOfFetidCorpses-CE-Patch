@@ -124,7 +124,7 @@
 			<preExplosionSpawnThingDef>Filth_SpentAcid</preExplosionSpawnThingDef>
 			<preExplosionSpawnChance>0.75</preExplosionSpawnChance>
 			
-			<soundExplode>CE_FlamethrowerExplosion</soundExplode>
+			<soundExplode>ToxicShellLanded</soundExplode>
 			
 			<speed>20</speed>
 			<dropsCasings>false</dropsCasings>
