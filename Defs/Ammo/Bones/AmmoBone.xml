@@ -103,30 +103,34 @@
 	
 	
 	
-			<!-- ==================== Plague bone as bullet ====================  -->
+			<!-- ==================== Plague bile as bullet ====================  -->
 	
 	<ThingDef ParentName="Bullet_Bone_Base">
 		<defName>Bullet_Bone_Plague</defName>                               <!-- MAIN BULLET -->
-		<label>Plague bone fragments</label>
+		<label>Plague bile</label>
 		<graphicData>
-			<drawSize>(0.45, 1.20)</drawSize>
+			<drawSize>(1.0, 1.0)</drawSize>
+			<texPath>Things/Misc/Bullets/Projectile_Green</texPath>
 		</graphicData>
-		
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>10</damageAmountBase>
-			<armorPenetrationSharp>7.0</armorPenetrationSharp>
-			<armorPenetrationBlunt>4.5</armorPenetrationBlunt>
-			<pelletCount>8</pelletCount>
-			<spreadMult>12</spreadMult>		
-			<secondaryDamage>
-				<li>
-					<def>PlagueBile</def>
-						<amount>2</amount>
-					<chance>0.10</chance>
-				</li>
-			</secondaryDamage>
-			<speed>100</speed>
-			<suppressionFactor>0.25</suppressionFactor>		
+			<damageDef>PlagueBile</damageDef> 
+			<damageAmountBase>3</damageAmountBase>
+ 
+			<explosionRadius>2.0</explosionRadius>
+			<pelletCount>3</pelletCount> 
+			<spreadMult>5</spreadMult>
+						
+			<explosionDamageFalloff>true</explosionDamageFalloff>
+			<preExplosionSpawnThingDef>Filth_SpentAcid</preExplosionSpawnThingDef>
+			<preExplosionSpawnChance>0.75</preExplosionSpawnChance>
+			
+			<soundExplode>CE_FlamethrowerExplosion</soundExplode>
+			
+			<speed>20</speed>
+			<dropsCasings>false</dropsCasings>
+			<ai_IsIncendiary>true</ai_IsIncendiary>
+			
+			<screenShakeFactor>0</screenShakeFactor>
 		</projectile>
 	</ThingDef>
   
