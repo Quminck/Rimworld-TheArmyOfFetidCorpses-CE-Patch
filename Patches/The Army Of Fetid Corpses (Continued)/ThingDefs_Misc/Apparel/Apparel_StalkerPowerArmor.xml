@@ -226,7 +226,7 @@
 									<li>Head</li>
 								</renderSkipFlags>
 								
-								<wornGraphicPath>Things/Apparels/Hazmat_Empire/HazmatExosuit</wornGraphicPath>
+								<wornGraphicPath>Things/Apparels/Hazmat/HazmatExosuit</wornGraphicPath>
 								<shellRenderedBehindHead>false</shellRenderedBehindHead>
 								<blocksAddedPartWoundGraphics>true</blocksAddedPartWoundGraphics>
 								
