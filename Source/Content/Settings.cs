@@ -4,15 +4,14 @@ using Verse;
 
 namespace CEtaofcDifficulty
 {
-[HarmonyPatch(
-    typeof(IncidentQueue),"Add",new[] 
+	[HarmonyPatch(typeof(IncidentQueue),"Add",new[] 
     {
         typeof(IncidentDef),
         typeof(int),
         typeof(IncidentParms),
         typeof(int)
     }
-)]
+	)]
     public static class Patch_NecronoidRaidPoints
     {
         public static void Prefix(IncidentDef def, IncidentParms parms)
