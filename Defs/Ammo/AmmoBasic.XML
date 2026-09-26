@@ -15,7 +15,7 @@
 			<defName>CleansingRound</defName>
 			<label>Cleansing</label>
 			<labelShort>CL</labelShort>
-			<description>An experemental round specifically designed against Necronoid threats.</description>
+			<description>An experemental round specifically designed to combat Necronoid threats.</description>
 			<advanced>true</advanced>			
 		</CombatExtended.AmmoCategoryDef>
 		
@@ -25,7 +25,7 @@
 			<defName>CleansingBuckshot</defName>
 			<label>Buckshot (Cleansing)</label>
 			<labelShort>buck-CL</labelShort>
-			<description>An experemental round specifically designed against Necronoid threats.</description>
+			<description>An experemental round specifically designed to combat Necronoid threats.</description>
 			<advanced>true</advanced>			
 		</CombatExtended.AmmoCategoryDef>		
 		
@@ -33,7 +33,7 @@
 			<defName>CleansingSlug</defName>
 			<label>Slug (Cleansing)</label>
 			<labelShort>slug-CL</labelShort>
-			<description>An experemental round specifically designed against Necronoid threats.</description>
+			<description>An experemental round specifically designed to combat Necronoid threats.</description>
 			<advanced>true</advanced>			
 		</CombatExtended.AmmoCategoryDef>			
 
