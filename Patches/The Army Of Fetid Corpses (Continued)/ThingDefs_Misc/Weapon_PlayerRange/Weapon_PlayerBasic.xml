@@ -16,6 +16,16 @@
 				<li Class="PatchOperationRemove">
 					<xpath>Defs/ThingDef[defName="Gun_ImperialCleansingBolter"]/weaponTags/li[text()="SpacerGun"]</xpath>
 				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[
+					   defName="Gun_CleansingShotgun" 
+					or defName="Gun_CleansingBolter" 
+					or defName="Gun_ImperialCleansingBolter" 
+					or defName="Gun_ImperialCleansingBolterMG" 
+					or defName="Gun_ImperialCleansingAutocannon" 
+					]/comps/li[@Class="CompProperties_Biocodable"]</xpath>
+				</li>					
 					
 						
 							<!-- ====================== MELEE ====================== -->
@@ -75,7 +85,7 @@
 					
 				</li>
 				
-				
+			
 				
 				
 				
