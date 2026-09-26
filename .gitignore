@@ -27,3 +27,4 @@ UnityEngine.dll
 __pycache__
 ModPatches/*/Assemblies/
 .vs/
+/Source/obj

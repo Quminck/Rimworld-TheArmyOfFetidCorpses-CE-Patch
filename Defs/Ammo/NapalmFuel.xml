@@ -3,7 +3,7 @@
 
   		<CombatExtended.AmmoCategoryDef>
 			<defName>PrometheumSpecial</defName>
-			<label>Necro-Prometheum</label>
+			<label>Condensed prometheum</label>
 			<labelShort>N-P</labelShort>
 			<description>Сoncentrated prometheum created to burn necronoids alive.</description>
 			<advanced>true</advanced>
@@ -22,7 +22,7 @@
 		<!-- ============================ AMMUNITION ============================== -->
   
 	<ThingDef Class="CombatExtended.AmmoDef" Name="AmmoHVFuelBase" ParentName="HeavyAmmoBase" Abstract="True" MayRequire="Ludeon.Rimworld.Biotech">
-		<description>A condense prometheum designed specifically for heavy flamethrowers.</description>
+		<description>A condensed prometheum designed specifically for heavy flamethrowers.</description>
 		<tradeTags>
 			<li>CE_AutoEnableTrade</li>
 			<li>CE_AutoEnableCrafting_TableMachining</li>
