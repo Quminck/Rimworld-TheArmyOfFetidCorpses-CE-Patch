@@ -99,7 +99,7 @@
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Gun_IncendiaryAssaultRifle"]/description</xpath>
 					<value>
-						<description>A modernized version of the standard sturmgewehr 44, which uses new experemental cartridge.</description>
+						<description>A modernized version of the standard StG 44 adapted for the use of experimental ammunition.</description>
 					</value>
 				</li>
 				
@@ -182,7 +182,7 @@
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Gun_IncendiaryMachineGun"]/description</xpath>
 					<value>
-						<description>A modernized variant of the legendary MG 42 machine gun modernized to shoot an experemental cartridges.</description>
+						<description>A modernized variant of the legendary MG 42 adapted to fire experimental ammunition.</description>
 					</value>
 				</li>
 			
@@ -266,7 +266,7 @@
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Gun_IncendiaryAntiMaterial"]/description</xpath>
 					<value>
-						<description>Modernized version of a Finnish anti-tank rifle, which uses experemental devastating 20mm rounds.</description>
+						<description>A modernized version of the Finnish Lahti L-39 anti-tank rifle adapted to fire experimental 20mm ammunition.</description>
 					</value>
 				</li>
 			
@@ -355,14 +355,14 @@
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Gun_CleansingBolter"]/label</xpath>
 					<value>
-						<label>Makeshift Bolt carabine</label>
+						<label>Makeshift Bolt carbine</label>
 					</value>
 				</li>
 						
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Gun_CleansingBolter"]/description</xpath>
 					<value>
-						<description>A crude makeshift replica of an advanced Bolter design, heavily modified to fire 5mm cleansing bolts.</description>
+						<description>A crude imitation of an advanced bolter heavily modified to fire cleansing bolts.</description>
 					</value>
 				</li>
 				
@@ -444,14 +444,14 @@
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Gun_ImperialCleansingBolter"]/label</xpath>
 					<value>
-						<label>Imperial Bolt carabine</label>
+						<label>Imperial Bolt carbine</label>
 					</value>
 				</li>
 					
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Gun_ImperialCleansingBolter"]/description</xpath>
 					<value>
-						<description>Deadly Imperial carbine manufactured according to strict blueprints designed for high-velocity 5mm cleansing bolt.</description>
+						<description>A deadly Imperial carbine manufactured to strict blueprints and designed to fire high-velocity cleansing bolts.</description>
 					</value>
 				</li>
 				
@@ -540,7 +540,7 @@
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Gun_ImperialCleansingBolterMG"]/description</xpath>
 					<value>
-						<description>A heavy automatic variant of the Imperial carbine, built to sustain suppressive fire using 5mm cleansing bolts</description>
+						<description>A heavy automatic variant of the Imperial carbine designed to sustain suppressive fire with cleansing bolts.</description>
 					</value>
 				</li>
 				
@@ -617,14 +617,14 @@
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Gun_ImperialCleansingAutocannon"]/label</xpath>
 					<value>
-						<label>Imperial AutoCannon</label>
+						<label>Imperial Autocannon</label>
 					</value>
 				</li>
 						
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Gun_ImperialCleansingAutocannon"]/description</xpath>
 					<value>
-						<description>Heavy Imperial Antimaterie AutoCannon designed for 20mm cleansing rounds.</description>
+						<description>A heavy Imperial antimatter autocannon designed to fire 20 mm rounds.</description>
 					</value>
 				</li>
 
@@ -705,14 +705,14 @@
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Gun_CleansingShotgun"]/label</xpath>
 					<value>
-						<label>Heavy shotgun</label>
+						<label>KS-23</label>
 					</value>
 				</li>
 						
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Gun_CleansingShotgun"]/description</xpath>
 					<value>
-						<description>A heavy pump-action shotgun developed in Soviet Union for the needs of the Ministry of Internal Affairs. Modernized to shoot experemental cleansing buckshot</description>
+						<description>A heavy pump-action shotgun developed in the Soviet Union for use by the Ministry of Internal Affairs adapted to fire experimental cleansing buckshot.</description>
 					</value>
 				</li>
 

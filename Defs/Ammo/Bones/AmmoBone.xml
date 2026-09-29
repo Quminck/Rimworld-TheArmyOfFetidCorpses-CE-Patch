@@ -140,7 +140,7 @@
 	
 	<ThingDef ParentName="Bullet_Bone_Base">
 		<defName>Bullet_Bone_AutoCannon</defName>                               <!-- MAIN BULLET -->
-		<label>Infected thigh-bone spike</label>
+		<label>Infected bone spike</label>
 		<graphicData>
 			<drawSize>(1.95, 2.25)</drawSize>
 		</graphicData>
