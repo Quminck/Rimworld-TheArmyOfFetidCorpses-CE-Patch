@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  		<CombatExtended.AmmoCategoryDef>
+			<defName>PrometheumSpecial</defName>
+			<label>Hellfire Gel</label>
+			<labelShort>HfG</labelShort>
+			<description>A highly concentrated incendiary gel designed to burn necronoids to ash.</description>
+			<advanced>true</advanced>
+		</CombatExtended.AmmoCategoryDef>
+		
+		<!-- =========================== AMMUNITION SET ============================= -->
+  
+	<CombatExtended.AmmoSetDef MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>AmmoSetHVFuel</defName> 
+		<label>Hellfire gel</label>
+		<ammoTypes>
+			<AmmoHVFuel>BulletHVFuel</AmmoHVFuel>    
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+  
+		<!-- ============================ AMMUNITION ============================== -->
+  
+	<ThingDef Class="CombatExtended.AmmoDef" Name="AmmoHVFuelBase" ParentName="HeavyAmmoBase" Abstract="True" MayRequire="Ludeon.Rimworld.Biotech">
+		<description>A highly effective incendiary compound. Its thick and stick consistency extremely flammable making it effective against necronoids.</description>
+		<tradeTags>
+			<li>CE_AutoEnableTrade</li>
+			<li>CE_AutoEnableCrafting_DrugLab</li>
+		</tradeTags>
+		<thingCategories>
+			<li>AmmoFlamethrower</li>        
+		</thingCategories>
+	</ThingDef>
+  
+			<!-- Ammunition stats -->
+  
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="AmmoHVFuelBase" MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>AmmoHVFuel</defName>                                 
+		<label>Hellfire gel</label>
+		<graphicData>
+			<texPath>Things/Ammo/FuelTank/Incendiary</texPath>
+			<graphicClass>Verse.Graphic_StackCount</graphicClass>
+		</graphicData>
+		<stackLimit>250</stackLimit>
+		<statBases>
+			<Mass>0.08</Mass>
+			<Bulk>0.1</Bulk>
+		</statBases>
+		<ammoClass>PrometheumSpecial</ammoClass>
+		<cookOffProjectile>BulletHVFuel</cookOffProjectile>              
+	</ThingDef>
+  
+  
+  
+					<!-- =================== Projectiles ===================-->
+
+			<!-- Bullet stats -->  
+			
+	<ThingDef ParentName="BaseFlamethrowerBullet" MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>BulletHVFuel</defName>
+		<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>		
+		<label>jellied prometheum stream</label>
+		
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>PrometheumFlame</damageDef> 
+			<damageAmountBase>5</damageAmountBase>
+	
+			<pelletCount>3</pelletCount>
+			<spreadMult>5.0</spreadMult>			
+			<explosionRadius>2.0</explosionRadius>
+
+			
+			<explosionDamageFalloff>true</explosionDamageFalloff>
+			<preExplosionSpawnThingDef>FilthPrometheum</preExplosionSpawnThingDef>
+			<preExplosionSpawnChance>0.8</preExplosionSpawnChance>
+			
+			<soundExplode>CE_FlamethrowerExplosion</soundExplode>
+
+			<ai_IsIncendiary>true</ai_IsIncendiary>
+			<screenShakeFactor>0</screenShakeFactor>
+		</projectile>
+	</ThingDef>
+
+
+
+
+
+
+	<RecipeDef ParentName="LauncherAmmoRecipeBase" MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>MakeAmmoHVFuel</defName>
+		<label>Make Hellfire gel x100</label>
+		<description>Сraft 100 units of Hellfire gel.</description>
+		<jobString>Making Hellfire gel</jobString>
+		<researchPrerequisite>IncendiaryWeapons</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Chemfuel</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Prometheum</li>
+					</thingDefs>
+				</filter>
+				<count>15</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Chemfuel</li>
+				<li>Prometheum</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<AmmoHVFuel>100</AmmoHVFuel>
+		</products>
+		<workAmount>9000</workAmount>
+	</RecipeDef>
+	
+</Defs>

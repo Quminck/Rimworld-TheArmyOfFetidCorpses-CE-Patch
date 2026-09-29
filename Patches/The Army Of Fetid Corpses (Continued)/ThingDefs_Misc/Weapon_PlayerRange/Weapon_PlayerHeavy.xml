@@ -62,7 +62,7 @@
 				<li Class="PatchOperationReplace" MayRequire="Ludeon.Rimworld.Biotech">
 					<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer"]/description</xpath>
 					<value>
-						<description>A long-ranged heavy flamethrower capable of spreading fire over a massive area, plunging entire enemy squads and positions into a sea of fire. It is a highly effective weapon for destroying Necronoid structures and swarms from a safe distance.</description>
+						<description>A heavy long-range flamethrower capable of spreading fire over a wide area. It highly effective against Necronoid structures and large swarms</description>
 					</value>
 				</li>
 				
@@ -101,9 +101,9 @@
 							<SightsEfficiency>0.9</SightsEfficiency>
 							<NightVisionEfficiency_Weapon>0</NightVisionEfficiency_Weapon>
 							
-							<SwayFactor>5</SwayFactor>
+							<SwayFactor>1.28</SwayFactor>
 							<Recoil>0.8</Recoil>
-							<ShotSpread>5</ShotSpread>
+							<ShotSpread>2.5</ShotSpread>
 							
 							<RangedWeapon_Cooldown>1.75</RangedWeapon_Cooldown>
 						</statBases>
@@ -121,8 +121,8 @@
 								
 								<warmupTime>2.5</warmupTime>
 								
-								<range>30</range>
-								<minRange>8</minRange>
+								<range>21</range>
+								<minRange>4.0</minRange>
 								
 								<burstShotCount>15</burstShotCount>
 								<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
@@ -145,40 +145,29 @@
 					<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer"]/comps/li[@Class="Necro.CompProperties_ReloadableWeapon"]</xpath> 
 				</li>
 
-						<!-- ====== comps ====== -->
+							<!-- ====== comps ====== -->
 				<li Class="PatchOperationAdd" MayRequire="Ludeon.Rimworld.Biotech">
 					<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer"]/comps</xpath>
 					<value>
 							<!-- ====== Ammo ====== -->
 						<li Class="CombatExtended.CompProperties_AmmoUser">
-							<magazineSize>30</magazineSize>
+							<magazineSize>45</magazineSize>
 							<reloadTime>5</reloadTime>
 							<ammoSet>AmmoSetHVFuel</ammoSet>
 						</li>
 								<!-- ====== Fire mods ====== -->
 						<li Class="CombatExtended.CompProperties_FireModes">
-							<noSingleShot>true</noSingleShot>       
-							<noSnapshot>true</noSnapshot>            
+							<noSingleShot>true</noSingleShot>                 
 						</li>
 				
-				</value>
+					</value>
 				</li>
 
-						<!-- ====== weaponTags ====== -->
-				<li Class="PatchOperationConditional" MayRequire="Ludeon.Rimworld.Biotech">
-					<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer"]/weaponTags</xpath>
-					<nomatch Class="PatchOperationAdd">
-						<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer"]</xpath>
-						<value>
-							<weaponTags/>
-						</value>
-					</nomatch>
-				</li>
-				
-				<li Class="PatchOperationReplace" MayRequire="Ludeon.Rimworld.Biotech">
-					<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer"]/weaponTags</xpath>
+							<!-- ====== weaponTags ====== -->
+				<li Class="PatchOperationAdd" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer"]</xpath>
 					<value>
-						<weaponTags Inherit="False">
+						<weaponTags>
 							<li>GunHeavy</li>
 							<li>CE_AI_AOE</li>
 						</weaponTags>
@@ -196,14 +185,14 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Gun_CleansingRocketLauncher"]/label	</xpath>
 					<value>
-						<label>Imperial Rocketlauncher</label>
+						<label>Imperial Rocket Launcher</label>
 					</value>
 				</li>
 						
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Gun_CleansingRocketLauncher"]/description</xpath>
 					<value>
-						<description>A heavy single-shot rocket system specifically designed to shot anti-necronoid rockets.</description>
+						<description>A heavy single-shot rocket launcher specifically designed to fire anti-necronoid rockets.</description>
 					</value>
 				</li>
 				
