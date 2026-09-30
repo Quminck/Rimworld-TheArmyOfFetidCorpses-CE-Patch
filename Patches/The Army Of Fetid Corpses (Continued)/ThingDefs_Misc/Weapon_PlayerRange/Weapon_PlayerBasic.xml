@@ -99,7 +99,7 @@
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Gun_IncendiaryAssaultRifle"]/description</xpath>
 					<value>
-						<description>A modernized version of the standard StG 44 adapted for the use of experimental ammunition.</description>
+						<description>A modernized version of the standard StG 44 to fire experimental ammunition.</description>
 					</value>
 				</li>
 				
@@ -362,7 +362,7 @@
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Gun_CleansingBolter"]/description</xpath>
 					<value>
-						<description>A crude imitation of an advanced bolter heavily modified to fire cleansing bolts.</description>
+						<description>A crude imitation of an advanced bolter, heavily modified to fire cleansing bolts.</description>
 					</value>
 				</li>
 				
@@ -444,7 +444,7 @@
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Gun_ImperialCleansingBolter"]/label</xpath>
 					<value>
-						<label>Imperial Bolt carbine</label>
+						<label>Imperial Bolt Carbine</label> 
 					</value>
 				</li>
 					
@@ -678,7 +678,7 @@
 					
 						<!--AMMO-->
 					<AmmoUser>
-						<magazineSize>15</magazineSize>
+						<magazineSize>8</magazineSize>
 						<reloadTime>4.6</reloadTime>
 						<ammoSet>AmmoSet_20x105mmCharged</ammoSet>    <!-- GUN MAGAZINE -->
 					</AmmoUser>
@@ -712,7 +712,7 @@
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Gun_CleansingShotgun"]/description</xpath>
 					<value>
-						<description>A heavy pump-action shotgun developed in the Soviet Union for use by the Ministry of Internal Affairs adapted to fire experimental cleansing buckshot.</description>
+						<description>A heavy long-range flamethrower capable of spreading fire over a wide area. It is highly effective against Necronoid structures and large swarms.</description>
 					</value>
 				</li>
 

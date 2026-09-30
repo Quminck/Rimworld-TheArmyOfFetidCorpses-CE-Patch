@@ -22,7 +22,7 @@
 		<!-- ============================ AMMUNITION ============================== -->
 
 	<ThingDef Class="CombatExtended.AmmoDef" Name="AmmoANBrocket_Base" ParentName="MediumAmmoBase" Abstract="True">
-		<description>A specialized HEAT rocket designed to annihilate heavily mutated necronoids.</description>
+		<description>A specialized HEAT rocket designed to destroy heavily mutated necronoids.</description>
 		<tradeTags>
 			<li>CE_AutoEnableTrade</li>
 			<li>CE_AutoEnableCrafting_TableMachining</li>
@@ -101,9 +101,9 @@
 
 	<RecipeDef ParentName="AdvancedLauncherAmmoRecipeBase">
 		<defName>MakeAmmoANBrocket</defName>
-		<label>Make Anti-necronoid rockets x5</label>
+		<label>make Anti-necronoid rockets x5</label>
 		<description>Craft 5 Anti-necronoid rockets.</description>
-		<jobString>Making Anti-necronoid rocket.</jobString>
+		<jobString>Making Anti-necronoid rockets</jobString>
 		<researchPrerequisite>CleansingWeaponsEmpire</researchPrerequisite>
 		<ingredients>
 			<li>

@@ -387,7 +387,7 @@
   
 	<RecipeDef ParentName="ChargeAmmoRecipeBase">
 		<defName>MakeAmmo_23x75_UN_Slug</defName>
-		<label>Make 23x75mmR (Slug-CL) shell x100</label>
+		<label>make 23x75mmR (Slug-CL) shell x100</label>
 		<description>Craft 100 23x75mmR (Slug-CL).</description>
 		<jobString>Making 23x75mmR (Slug-CL)</jobString>
 		<researchPrerequisite>CleansingWeapons</researchPrerequisite>
@@ -460,7 +460,7 @@
   
 	<RecipeDef ParentName="ChargeAmmoRecipeBase">
 		<defName>MakeAmmo_20x105_Cl</defName>
-		<label>Make 20x105mm (Cleansing) cartridge x100</label>
+		<label>make 20x105mm (Cleansing) cartridge x100</label>
 		<description>Craft 100 20x105mm (Cleansing) cartridges.</description>
 		<jobString>Making 20x105mm (Cleansing) cartridges</jobString>
 		<researchPrerequisite>CleansingWeaponsEmpire</researchPrerequisite>

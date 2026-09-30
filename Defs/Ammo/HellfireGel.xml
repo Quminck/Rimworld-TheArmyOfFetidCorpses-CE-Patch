@@ -22,7 +22,7 @@
 		<!-- ============================ AMMUNITION ============================== -->
   
 	<ThingDef Class="CombatExtended.AmmoDef" Name="AmmoHVFuelBase" ParentName="HeavyAmmoBase" Abstract="True" MayRequire="Ludeon.Rimworld.Biotech">
-		<description>A highly effective incendiary compound. Its thick and stick consistency extremely flammable making it effective against necronoids.</description>
+		<description>A highly effective incendiary compound. It is thick, sticky, and extremely flammable, making it effective against Necronoids.</description>
 		<tradeTags>
 			<li>CE_AutoEnableTrade</li>
 			<li>CE_AutoEnableCrafting_DrugLab</li>
@@ -88,8 +88,8 @@
 
 	<RecipeDef ParentName="LauncherAmmoRecipeBase" MayRequire="Ludeon.Rimworld.Biotech">
 		<defName>MakeAmmoHVFuel</defName>
-		<label>Make Hellfire gel x100</label>
-		<description>Сraft 100 units of Hellfire gel.</description>
+		<label>make Hellfire gel x100</label>
+		<description>Craft 100 units of Hellfire gel.</description>
 		<jobString>Making Hellfire gel</jobString>
 		<researchPrerequisite>IncendiaryWeapons</researchPrerequisite>
 		<ingredients>
