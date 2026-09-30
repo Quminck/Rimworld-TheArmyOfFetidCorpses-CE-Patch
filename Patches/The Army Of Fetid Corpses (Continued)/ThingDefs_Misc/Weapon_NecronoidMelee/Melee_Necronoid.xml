@@ -55,7 +55,7 @@
 				<xpath>Defs/ThingDef[defName="Melee_BloodLetterMace"]/statBases</xpath>
 				<value>
 					<Bulk>20</Bulk>
-					<MeleeCounterParryBonus>0.08</MeleeCounterParryBonus>
+					<MeleeCounterParryBonus>0.51</MeleeCounterParryBonus>
 				</value>
 			</li>
 
@@ -63,9 +63,9 @@
 				<xpath>Defs/ThingDef[defName="Melee_BloodLetterMace"]</xpath>
 				<value>
 					<equippedStatOffsets>
-						<MeleeCritChance>0.35</MeleeCritChance>
-						<MeleeParryChance>0.05</MeleeParryChance>
-						<MeleeDodgeChance>0.1</MeleeDodgeChance>
+						<MeleeCritChance>1.05</MeleeCritChance>
+						<MeleeParryChance>0.35</MeleeParryChance>
+						<MeleeDodgeChance>0.28</MeleeDodgeChance>
 					</equippedStatOffsets>
 				</value>
 			</li>
@@ -133,7 +133,7 @@
 				<xpath>Defs/ThingDef[defName="Melee_ExecutionerAxe"]/statBases</xpath>
 				<value>
 					<Bulk>26</Bulk>
-					<MeleeCounterParryBonus>0.6</MeleeCounterParryBonus>
+					<MeleeCounterParryBonus>0.13</MeleeCounterParryBonus>
 				</value>
 			</li>
 
@@ -141,9 +141,9 @@
 				<xpath>Defs/ThingDef[defName="Melee_ExecutionerAxe"]</xpath>
 				<value>
 					<equippedStatOffsets>
-						<MeleeCritChance>0.15</MeleeCritChance>
-						<MeleeParryChance>0.25</MeleeParryChance>
-						<MeleeDodgeChance>0.4</MeleeDodgeChance>
+						<MeleeCritChance>0.55</MeleeCritChance>
+						<MeleeParryChance>0.31</MeleeParryChance>
+						<MeleeDodgeChance>0.25</MeleeDodgeChance>
 					</equippedStatOffsets>
 				</value>
 			</li>
@@ -218,7 +218,7 @@
 				<xpath>Defs/ThingDef[defName="Melee_FleshCleaver"]/statBases</xpath>
 				<value>
 					<Bulk>28</Bulk>
-					<MeleeCounterParryBonus>0.21</MeleeCounterParryBonus>
+					<MeleeCounterParryBonus>0.76</MeleeCounterParryBonus>
 				</value>
 			</li>
 
@@ -226,9 +226,9 @@
 				<xpath>Defs/ThingDef[defName="Melee_FleshCleaver"]</xpath>
 				<value>
 					<equippedStatOffsets>
-						<MeleeCritChance>0.24</MeleeCritChance>
+						<MeleeCritChance>0.52</MeleeCritChance>
 						<MeleeParryChance>0.6</MeleeParryChance>
-						<MeleeDodgeChance>0.13</MeleeDodgeChance>
+						<MeleeDodgeChance>0.37</MeleeDodgeChance>
 					</equippedStatOffsets>
 				</value>
 			</li>
@@ -289,9 +289,9 @@
 				<xpath>Defs/ThingDef[defName="Melee_SteelSaw"]</xpath>
 				<value>
 					<equippedStatOffsets>
-						<MeleeCritChance>-0.06</MeleeCritChance>
-						<MeleeParryChance>-0.10</MeleeParryChance>
-						<MeleeDodgeChance>-0.08</MeleeDodgeChance>
+						<MeleeCritChance>-0.1</MeleeCritChance>
+						<MeleeParryChance>1.15</MeleeParryChance>
+						<MeleeDodgeChance>-0.25</MeleeDodgeChance>
 					</equippedStatOffsets>
 				</value>
 			</li>
