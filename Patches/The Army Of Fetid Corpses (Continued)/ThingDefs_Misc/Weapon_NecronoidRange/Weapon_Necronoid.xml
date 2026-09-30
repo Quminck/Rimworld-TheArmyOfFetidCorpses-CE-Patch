@@ -9,7 +9,7 @@
 			<operations>
 			
 			
-						<!-- Necronoid weapon base (Meele tools)-->
+						<!-- Necronoid weapon base (Melee tools)-->
       
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[@Name="NecronoidWeaponBase"]/tools</xpath>
@@ -78,7 +78,7 @@
 						
 						<SwayFactor>1.53</SwayFactor>
 						<ShotSpread>0.08</ShotSpread>
-						<Recoil>1.51</Recoil>
+						<Recoil>1.41</Recoil>
 						
 						<RangedWeapon_Cooldown>0.98</RangedWeapon_Cooldown>
 					</statBases>
@@ -93,8 +93,8 @@
 						<range>48</range>
 						
 						<burstShotCount>4</burstShotCount>
-						<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
-						<muzzleFlashScale>2</muzzleFlashScale>
+						<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+						<muzzleFlashScale>5</muzzleFlashScale>
 						<recoilAmount>0.44</recoilAmount>
 						
 						<defaultProjectile>Bullet_Bone_Rifle</defaultProjectile>
@@ -159,7 +159,6 @@
 					</Properties>
 					
 				  <FireModes>
-					<aimedBurstShotCount>4</aimedBurstShotCount>
 					<aiAimMode>AimedShot</aiAimMode>
 				  </FireModes>
 
@@ -185,7 +184,7 @@
 						<Mass>4.1</Mass>
 						<Bulk>11.6</Bulk>
 						
-						<SightsEfficiency>1.2</SightsEfficiency>
+						<SightsEfficiency>1.0</SightsEfficiency>
 						<NightVisionEfficiency_Weapon>0.1</NightVisionEfficiency_Weapon> 
 						
 						<SwayFactor>1.43</SwayFactor>
@@ -241,7 +240,7 @@
 						<Mass>5.2</Mass>
 						<Bulk>12.5</Bulk>
 						
-						<SightsEfficiency>2.0</SightsEfficiency>
+						<SightsEfficiency>1.45</SightsEfficiency>
 						<NightVisionEfficiency_Weapon>0.5</NightVisionEfficiency_Weapon> 
 						
 						<SwayFactor>1.06</SwayFactor>
@@ -316,7 +315,7 @@
 						<warmupTime>2.45</warmupTime>
 						<range>46</range>
 						
-						<burstShotCount>50</burstShotCount>
+						<burstShotCount>30</burstShotCount>
 						<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
 						<muzzleFlashScale>2</muzzleFlashScale>
 						<recoilAmount>0.5</recoilAmount>
@@ -326,8 +325,7 @@
 						<soundCastTail>GunTail_Heavy</soundCastTail>
 					</Properties>
 					
-					<FireModes>
-					<aimedBurstShotCount>15</aimedBurstShotCount>				
+					<FireModes>			
 						<aiAimMode>SuppressFire</aiAimMode> 
 					</FireModes>
 					
@@ -413,7 +411,7 @@
 						<ShotSpread>0.17</ShotSpread>
 						<Recoil>2.71</Recoil>
 						
-						<RangedWeapon_Cooldown>4.75</RangedWeapon_Cooldown>
+						<RangedWeapon_Cooldown>4.15</RangedWeapon_Cooldown>
 					</statBases>
 			  
 						<!--SHOTS-->
@@ -422,7 +420,7 @@
 						<hasStandardCommand>True</hasStandardCommand>
 						<ai_AvoidFriendlyFireRadius>2</ai_AvoidFriendlyFireRadius>
 						
-						<warmupTime>3.25</warmupTime>
+						<warmupTime>3.05</warmupTime>
 						<range>20</range>
 						
 						<burstShotCount>1</burstShotCount>

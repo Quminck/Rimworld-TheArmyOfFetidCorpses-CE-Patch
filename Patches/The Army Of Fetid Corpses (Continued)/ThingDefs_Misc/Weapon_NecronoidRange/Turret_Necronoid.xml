@@ -18,7 +18,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="Turret_NecroTurret"]/statBases</xpath>
 					<value>
-						<AimingAccuracy>0.45</AimingAccuracy>
+						<AimingAccuracy>0.65</AimingAccuracy>
 						<SightsEfficiency>1.0</SightsEfficiency>
 					</value>
 				</li>
@@ -26,7 +26,7 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Turret_NecroTurret"]/statBases/ShootingAccuracyTurret</xpath>
 					<value>
-						<ShootingAccuracyTurret>0.75</ShootingAccuracyTurret>
+						<ShootingAccuracyTurret>1.15</ShootingAccuracyTurret>
 					</value>
 				</li>
 

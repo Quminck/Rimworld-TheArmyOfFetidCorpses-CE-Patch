@@ -91,14 +91,14 @@
 				<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
 					<xpath>Defs/PawnKindDef[defName="Empire_Fighter_NecroHunter"]</xpath>
 					<value>
-						<biocodeWeaponChance>1</biocodeWeaponChance>
+						<biocodeWeaponChance>1.0</biocodeWeaponChance>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
 					<xpath>Defs/PawnKindDef[defName="Empire_Fighter_NecroHunter"]/combatPower</xpath>
 					<value>
-						<combatPower>750</combatPower> 
+						<combatPower>600</combatPower> 
 					</value>
 				</li>	
 
@@ -110,8 +110,8 @@
 					<xpath>Defs/PawnKindDef[defName="Empire_Fighter_Janissary"]/modExtensions/li[@Class="CombatExtended.LoadoutPropertiesExtension"]</xpath>
 					<value>
 						<weightedAmmoCategories>
-							<IncendiarySpecial>0.3</IncendiarySpecial>
-							<CleansingRound>0.5</CleansingRound>
+							<IncendiarySpecial>1.0</IncendiarySpecial>
+							<CleansingRound>1.0</CleansingRound>
 						</weightedAmmoCategories>						
 					</value>
 				</li>				
