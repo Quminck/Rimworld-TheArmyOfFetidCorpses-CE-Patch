@@ -30,12 +30,16 @@
 							</li>	
 							<li>
 								<damageDef>PrometheumFlame</damageDef>
-								<multiplier>2.25</multiplier>
+								<multiplier>2.0</multiplier>
 							</li>	
 							<li MayRequire="Ludeon.Rimworld.Anomaly">
 								<damageDef>BioferriteFlame</damageDef>
 								<multiplier>1.5</multiplier>
 							</li>	
+							<li>
+								<damageDef>HellfireFlame</damageDef>
+								<multiplier>2.5</multiplier>
+							</li>								
 						</damageMultipliers>
 					</value>
 				</li>

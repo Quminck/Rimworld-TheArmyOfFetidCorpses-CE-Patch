@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HediffDef>
+		<defName>HellfireSlowed</defName>		
+		<label>slowed</label>		
+		<description>This creature's movement is slowed.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<maxSeverity>1</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-15</severityPerDay>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath" />
+		</comps>		
+		<stages>
+			<li>
+				<minSeverity>0.15</minSeverity>
+				<label>low</label>
+				<statFactors>
+					<MoveSpeed>0.90</MoveSpeed>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>0.35</minSeverity>
+				<label>medium</label>
+				<statFactors>
+					<MoveSpeed>0.75</MoveSpeed>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>0.70</minSeverity>
+				<label>high</label>
+				<statFactors>
+					<MoveSpeed>0.60</MoveSpeed>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>0.90</minSeverity>
+				<label>maximum</label>
+				<statFactors>
+					<MoveSpeed>0.50</MoveSpeed>
+				</statFactors>
+			</li>
+		</stages>		
+	</HediffDef>	
+</Defs>
