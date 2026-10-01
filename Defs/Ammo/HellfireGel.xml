@@ -31,9 +31,7 @@
 			<li>AmmoFlamethrower</li>        
 		</thingCategories>
 	</ThingDef>
-  
-			<!-- Ammunition stats -->
-  
+
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="AmmoHVFuelBase" MayRequire="Ludeon.Rimworld.Biotech">
 		<defName>AmmoHVFuel</defName>                                 
 		<label>Hellfire gel</label>
@@ -53,21 +51,19 @@
   
   
 					<!-- =================== Projectiles ===================-->
-
-			<!-- Bullet stats -->  
-			
+					
 	<ThingDef ParentName="BaseFlamethrowerBullet" MayRequire="Ludeon.Rimworld.Biotech">
 		<defName>BulletHVFuel</defName>
 		<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>		
-		<label>jellied prometheum stream</label>
+		<label>Hell fire</label>
 		
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageDef>PrometheumFlame</damageDef> 
+			<damageDef>HellfireFlame</damageDef> 
 			<damageAmountBase>5</damageAmountBase>
 	
-			<pelletCount>4</pelletCount>
+			<pelletCount>3</pelletCount>
 			<spreadMult>4.0</spreadMult>			
-			<explosionRadius>1.25</explosionRadius>
+			<explosionRadius>1.5</explosionRadius>
 
 			<explosionDamageFalloff>true</explosionDamageFalloff>
 			<preExplosionSpawnThingDef>FilthPrometheum</preExplosionSpawnThingDef>
@@ -79,9 +75,6 @@
 			<screenShakeFactor>0</screenShakeFactor>
 		</projectile>
 	</ThingDef>
-
-
-
 
 
 
