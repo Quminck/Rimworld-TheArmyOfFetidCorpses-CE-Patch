@@ -7,12 +7,10 @@
 		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
-
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ScenarioDef[defName="SevenDaysToDie"]/scenario/parts</xpath>
 					<value>
 
-						<!-- Player starting things -->
 						<li Class="ScenPart_StartingThing_Defined">
 							<def>StartingThing_Defined</def>
 							<thingDef>Ammo_762x25mmTokarev_FMJ</thingDef>

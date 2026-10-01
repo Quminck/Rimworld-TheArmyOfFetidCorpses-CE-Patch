@@ -17,7 +17,6 @@
 				
 				
 				
-				
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/FactionDef[defName="Necronoid"]/maxPawnCostPerTotalPointsCurve</xpath>
 					<value>
@@ -32,6 +31,7 @@
 						</maxPawnCostPerTotalPointsCurve>
 					</value>
 				</li>			
+
 
 
 				<li Class="PatchOperationRemove">
@@ -140,7 +140,7 @@
 								</options>
 							</li>	
 							
-								<!-- =============== Boss 1 =============== -->		
+								<!-- =============== Flesh Tyrant =============== -->		
 							<li>					
 								<kindDef>Combat</kindDef>
 								<commonality>15</commonality>
@@ -151,7 +151,7 @@
 								</options>
 							</li>
 							
-								<!-- =============== Boss 2 =============== -->
+								<!-- =============== Executioner Ghoul =============== -->
 							<li>
 								<kindDef>Combat</kindDef>
 								<commonality>15</commonality>
@@ -162,7 +162,7 @@
 								</options>
 							</li>
 							
-								<!-- =============== Boss 3 =============== -->
+								<!-- =============== BloodLetter Ghoul =============== -->
 							<li>
 								<kindDef>Combat</kindDef>
 								<commonality>15</commonality>
@@ -173,7 +173,7 @@
 								</options>
 							</li>
 							
-								<!-- =============== Boss 4 =============== -->
+								<!-- =============== Crazed Butcher =============== -->
 							<li>
 								<kindDef>Combat</kindDef>
 								<commonality>15</commonality>
@@ -206,6 +206,8 @@
 									<Necronoid_FetidParasite>2</Necronoid_FetidParasite>
 								</options>
 							</li>
+							
+							
 							
 								<!-- =============== Settlement =============== -->							
 							<li>

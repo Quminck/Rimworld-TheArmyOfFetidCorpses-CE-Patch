@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-
-			
-
-
 	<Operation Class="PatchOperationFindMod">
 		<mods>
 			<li>The Army Of Fetid Corpses (Continued)</li>
 		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
-			
-			
-
 				<li Class="PatchOperationRemove">
 					<xpath>Defs/ThingDef[defName="Gun_ImperialCleansingBolter"]/weaponTags/li[text()="SpacerGun"]</xpath>
 				</li>
-				
 				<li Class="PatchOperationRemove">
 					<xpath>Defs/ThingDef[
 					   defName="Gun_CleansingShotgun" 
@@ -25,11 +17,8 @@
 					or defName="Gun_ImperialCleansingBolterMG" 
 					or defName="Gun_ImperialCleansingAutocannon" 
 					]/comps/li[@Class="CompProperties_Biocodable"]</xpath>
-				</li>					
-					
-						
-							<!-- ====================== MELEE ====================== -->
-						
+				</li>	
+				
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[
 					defName="Gun_IncendiaryAssaultRifle"
@@ -46,7 +35,6 @@
 					or defName="Gun_SuperShotGun"
 					or defName="Gun_SurvivalistSniperRifle"
 					]/tools</xpath>
-					
 					<value>
 						<tools>
 							<li Class="CombatExtended.ToolCE">
@@ -82,20 +70,11 @@
 							</li>
 						</tools>
 					</value>
-					
 				</li>
-				
-			
-				
-				
-				
-				
-				<!-- ====================== INCENDIARY ====================== -->
-				
-				<!-- ====================== StG-44 ====================== -->
-				
-							 <!-- ======= Description ======= -->
-				
+
+
+
+					<!-- ====================== StG-44 ====================== -->
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Gun_IncendiaryAssaultRifle"]/description</xpath>
 					<value>
@@ -103,12 +82,8 @@
 					</value>
 				</li>
 				
-								 <!-- ======= Gun ======= -->
-				
 				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
 				<defName>Gun_IncendiaryAssaultRifle</defName>
-				
-						<!--STATS-->
 					<statBases>
 						<Mass>5.2</Mass>
 						<Bulk>9.2</Bulk>
@@ -125,16 +100,12 @@
 						<MarketValue>875</MarketValue>
 						<WorkToMake>30000</WorkToMake>
 					</statBases>
-					
-						<!--CRAFT-->
 					<costList>
 						<Steel>70</Steel>
 						<ComponentIndustrial>7</ComponentIndustrial>
 						<Plasteel>25</Plasteel>
 						<Chemfuel>10</Chemfuel>
 					</costList>
-			  
-						<!--SHOTS-->
 					<Properties>
 						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 						<hasStandardCommand>True</hasStandardCommand>
@@ -147,51 +118,36 @@
 						<muzzleFlashScale>6</muzzleFlashScale>
 						<recoilAmount>0.4</recoilAmount>
 						
-						<defaultProjectile>Bullet_792x33mmKurz_FMJ</defaultProjectile>         <!-- MAIN BULLET -->
+						<defaultProjectile>Bullet_792x33mmKurz_FMJ</defaultProjectile>
 						<soundCast>Shot_Sturmgewehr_44</soundCast>
 						<soundCastTail>GunTail_Medium</soundCastTail>
 					</Properties>
-					
-						<!--AMMO-->
 					<AmmoUser>
 						<magazineSize>30</magazineSize>
 						<reloadTime>3.5</reloadTime>
-						<ammoSet>AmmoSet_792x33mmKurz</ammoSet>               <!-- GUN MAGAZINE -->
+						<ammoSet>AmmoSet_792x33mmKurz</ammoSet>
 					</AmmoUser>
-			  
-						<!--FIRE MODS-->
 					<FireModes>
+						<aiAimMode>AimedShot</aiAimMode>
 						<aimedBurstShotCount>3</aimedBurstShotCount>
 					</FireModes>
-			   
-						<!--TAGS-->
 					<weaponTags>
 						<li>CE_AI_AR</li>
 					</weaponTags>
-			  
 				</li>
-			
-			
-			
-			
-			
-			  <!-- ====================== MG-42 ====================== -->
-			  
-						  <!-- ======= Description ======= -->
-			  
+				
+				
+				
+					<!-- ====================== MG-42 ====================== -->
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Gun_IncendiaryMachineGun"]/description</xpath>
 					<value>
 						<description>A modernized variant of the legendary MG 42 adapted to fire experimental ammunition.</description>
 					</value>
 				</li>
-			
-							 <!-- ======= Gun ======= -->
-			  
+				
 				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
 				<defName>Gun_IncendiaryMachineGun</defName>
-			
-						<!--STATS-->
 					<statBases>
 						<Mass>11.5</Mass>
 						<Bulk>12.2</Bulk>
@@ -208,16 +164,12 @@
 						<MarketValue>1050</MarketValue>
 						<WorkToMake>34800</WorkToMake>
 					</statBases>
-				
-						<!--CRAFT-->
 					<costList>
 						<Steel>100</Steel>
 						<ComponentIndustrial>8</ComponentIndustrial>
 						<Plasteel>40</Plasteel>
 						<Chemfuel>10</Chemfuel>
 					</costList>
-
-					<!--SHOTS-->
 					<Properties>
 						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 						<hasStandardCommand>True</hasStandardCommand>
@@ -230,52 +182,37 @@
 						<muzzleFlashScale>1</muzzleFlashScale>
 						<recoilAmount>0.6</recoilAmount>
 						
-						<defaultProjectile>Bullet_792x57mmMauser_FMJ</defaultProjectile>   <!-- MAIN BULLET -->
+						<defaultProjectile>Bullet_792x57mmMauser_FMJ</defaultProjectile>
 						<soundCast>Shot_MG42</soundCast>
 						<soundCastTail>GunTail_Medium</soundCastTail>
 					</Properties>
-				
-						<!--AMMO-->
 					<AmmoUser>
 						<magazineSize>100</magazineSize>
 						<reloadTime>4.6</reloadTime>
-						<ammoSet>AmmoSet_792x57mmMauser</ammoSet>    <!-- GUN MAGAZINE -->
+						<ammoSet>AmmoSet_792x57mmMauser</ammoSet>
 					</AmmoUser>
-			  
-						<!--FIRE MODS-->
 					<FireModes>
-						<aimedBurstShotCount>5</aimedBurstShotCount>
+						<aiAimMode>Snapshot</aiAimMode>
+						<aimedBurstShotCount>5</aimedBurstShotCount>		
 					</FireModes>
-			   
-						<!--TAGS-->
 					<weaponTags>
 						<li>Bipod_LMG</li>
 						<li>CE_AI_AssaultWeapon</li>
 					</weaponTags>
-		  
 				</li>
  
 			  
 			  
-			  
-			  
-			<!-- ====================== Lahti L-39 ====================== -->
-			
-						   <!-- ======= Description ======= -->
-					
+					<!-- ====================== Lahti L-39 ====================== -->
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Gun_IncendiaryAntiMaterial"]/description</xpath>
 					<value>
 						<description>A modernized version of the Finnish Lahti L-39 anti-tank rifle adapted to fire experimental 20mm ammunition.</description>
 					</value>
 				</li>
-			
-							  <!-- ======= Gun ======= -->
 					
 				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
 				<defName>Gun_IncendiaryAntiMaterial</defName>
-			
-						<!--STATS-->
 					<statBases>
 						<Mass>35</Mass>
 						<Bulk>22.4</Bulk>
@@ -292,16 +229,12 @@
 						<MarketValue>1300</MarketValue>
 						<WorkToMake>37800</WorkToMake>						
 					</statBases>
-					
-						<!--CRAFT-->
 					<costList>
 						<Steel>110</Steel>
 						<ComponentIndustrial>10</ComponentIndustrial>
 						<Plasteel>50</Plasteel>
 						<Chemfuel>10</Chemfuel>
 					</costList>
-
-						<!--SHOTS-->
 					<Properties>
 						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 						<hasStandardCommand>True</hasStandardCommand>
@@ -312,46 +245,27 @@
 						<burstShotCount>1</burstShotCount>
 						<muzzleFlashScale>20</muzzleFlashScale>
 						
-						<defaultProjectile>Bullet_20x138mmB_AP</defaultProjectile>   <!-- MAIN BULLET -->
+						<defaultProjectile>Bullet_20x138mmB_AP</defaultProjectile>
 						<soundCast>Shot_Lahti</soundCast>
 						<soundCastTail>GunTail_Heavy</soundCastTail>
 					</Properties>
-					
-						<!--AMMO-->
 					<AmmoUser>
 						<magazineSize>10</magazineSize>
 						<reloadTime>5</reloadTime>
-						<ammoSet>AmmoSet_20x138mmB</ammoSet>    <!-- GUN MAGAZINE -->
+						<ammoSet>AmmoSet_20x138mmB</ammoSet>
 					</AmmoUser>
-		  
-					<!--FIRE MODS-->
 					<FireModes>
+						<aiAimMode>AimedShot</aiAimMode> 					
 					</FireModes>
-		   
-					<!--TAGS-->
 					<weaponTags>
 						<li>Bipod_AMR</li>
 						<li>CE_AntiMaterielRifle</li>
 					</weaponTags>
-		  
 				</li>
 				
 				
 				
-
-
-
-
-				
-		
-		
-		
-						<!-- ====================== CLEANSING ====================== -->
-						
-						 <!-- ====================== Bolter ====================== -->
-						 
-									  <!-- ======= Description ======= -->
-						 
+					 <!-- ====================== Cleansing Bolter ====================== -->
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Gun_CleansingBolter"]/label</xpath>
 					<value>
@@ -365,13 +279,9 @@
 						<description>A crude imitation of an advanced bolter, heavily modified to fire cleansing bolts.</description>
 					</value>
 				</li>
-				
-										  <!-- ======= Gun ======= -->
 										  
 				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
 				<defName>Gun_CleansingBolter</defName>
-			
-						<!--STATS-->
 					<statBases>
 						<Mass>7</Mass>
 						<Bulk>9</Bulk>
@@ -388,16 +298,12 @@
 						<MarketValue>1350</MarketValue>
 						<WorkToMake>31200</WorkToMake>
 					</statBases>
-					
-						<!--CRAFT-->
 					<costList>
 						<Steel>70</Steel>
 						<ComponentSpacer>2</ComponentSpacer>
 						<ComponentIndustrial>4</ComponentIndustrial>
 						<Plasteel>35</Plasteel>
 					</costList>
-			  
-						<!--SHOTS-->
 					<Properties>
 						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 						<hasStandardCommand>True</hasStandardCommand>
@@ -410,37 +316,27 @@
 						<muzzleFlashScale>11</muzzleFlashScale>
 						<recoilAmount>1.12</recoilAmount>
 						
-						<defaultProjectile>BulletANBbolt</defaultProjectile>         <!-- MAIN BULLET -->
+						<defaultProjectile>BulletANBbolt</defaultProjectile>
 						<soundCast>Shot_Bolterz</soundCast>
 						<soundCastTail>GunTail_Heavy</soundCastTail>
 					</Properties>
-					
-						<!--AMMO-->
 					<AmmoUser>
 						<magazineSize>15</magazineSize>
 						<reloadTime>3.5</reloadTime>
-						<ammoSet>AmmoSetANBbolt</ammoSet>               <!-- GUN MAGAZINE -->
+						<ammoSet>AmmoSetANBbolt</ammoSet>
 					</AmmoUser>
-			  
-						<!--FIRE MODS-->
 					<FireModes>
+						<aiAimMode>AimedShot</aiAimMode>
 						<aimedBurstShotCount>3</aimedBurstShotCount>
 					</FireModes>
-			   
-						<!--TAGS-->
 					<weaponTags>
 						<li>CE_AI_SMG</li>
 					</weaponTags>
 				</li>
-					
-					
-					
-					
-					
-					 <!-- ====================== Imperial Bolter ====================== -->
-						 
-									  <!-- ======= Description ======= -->
-						 
+				
+				
+				
+					 <!-- ====================== Imperial Cleansing Bolter ====================== -->
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Gun_ImperialCleansingBolter"]/label</xpath>
 					<value>
@@ -455,12 +351,8 @@
 					</value>
 				</li>
 				
-										  <!-- ======= Gun ======= -->
-					
 				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
 				<defName>Gun_ImperialCleansingBolter</defName>
-				
-						<!--STATS-->
 					<statBases>
 						<Mass>9</Mass>
 						<Bulk>11.5</Bulk>
@@ -477,15 +369,11 @@
 						<MarketValue>1550</MarketValue>
 						<WorkToMake>37500</WorkToMake>	
 					</statBases>
-					
-						<!--CRAFT-->
 					<costList>
 						<Steel>40</Steel>
 						<ComponentSpacer>3</ComponentSpacer>
 						<Plasteel>60</Plasteel>
 					</costList>
-			  
-						<!--SHOTS-->
 					<Properties>
 						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 						<hasStandardCommand>True</hasStandardCommand>
@@ -498,38 +386,27 @@
 						<muzzleFlashScale>5</muzzleFlashScale>
 						<recoilAmount>0.5</recoilAmount>
 						
-						<defaultProjectile>BulletANBbolt</defaultProjectile>         <!-- MAIN BULLET -->
+						<defaultProjectile>BulletANBbolt</defaultProjectile>
 						<soundCast>Shot_Bolterz</soundCast>
 						<soundCastTail>GunTail_Heavy</soundCastTail>
 					</Properties>
-					
-						<!--AMMO-->
 					<AmmoUser>
 						<magazineSize>35</magazineSize>
 						<reloadTime>4.5</reloadTime>
-						<ammoSet>AmmoSetANBbolt</ammoSet>               <!-- GUN MAGAZINE -->
+						<ammoSet>AmmoSetANBbolt</ammoSet>
 					</AmmoUser>
-			  
-						<!--FIRE MODS-->
 					<FireModes>
+						<aiAimMode>AimedShot</aiAimMode>
 						<aimedBurstShotCount>3</aimedBurstShotCount>
 					</FireModes>
-			   
-						<!--TAGS-->
 					<weaponTags>
 						<li>CE_AI_AR</li>
 					</weaponTags>
-			  
 				</li>
 				
 				
 				
-				
-				
-					<!-- ====================== Imperial Bolter Machinegun ====================== -->
-						 
-										  <!-- ======= Description ======= -->
-						 
+					<!-- ====================== Imperial Cleansing Bolter Machinegun ====================== -->
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Gun_ImperialCleansingBolterMG"]/label</xpath>
 					<value>
@@ -544,12 +421,8 @@
 					</value>
 				</li>
 				
-										     <!-- ======= Gun ======= -->
-				
 				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
 				<defName>Gun_ImperialCleansingBolterMG</defName>
-				
-						<!--STATS-->
 					<statBases>
 						<Mass>11.5</Mass>
 						<Bulk>13</Bulk>
@@ -566,15 +439,11 @@
 						<MarketValue>1750</MarketValue>
 						<WorkToMake>42000</WorkToMake>
 					</statBases>
-					
-						<!--CRAFT-->
 					<costList>
 						<Steel>40</Steel>
 						<ComponentSpacer>4</ComponentSpacer>
 						<Plasteel>80</Plasteel>
 					</costList>
-			  
-						<!--SHOTS-->
 					<Properties>
 						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 						<hasStandardCommand>True</hasStandardCommand>
@@ -587,33 +456,24 @@
 						<muzzleFlashScale>1</muzzleFlashScale>
 						<recoilAmount>0.6</recoilAmount>
 						
-						<defaultProjectile>BulletANBbolt</defaultProjectile>         <!-- MAIN BULLET -->
+						<defaultProjectile>BulletANBbolt</defaultProjectile>
 						<soundCast>Shot_Bolterz</soundCast>
 						<soundCastTail>GunTail_Heavy</soundCastTail>
 					</Properties>
-					
-						<!--AMMO-->
 					<AmmoUser>
 						<magazineSize>60</magazineSize>
 						<reloadTime>5.2</reloadTime>
-						<ammoSet>AmmoSetANBbolt</ammoSet>               <!-- GUN MAGAZINE -->
+						<ammoSet>AmmoSetANBbolt</ammoSet>
 					</AmmoUser>
-			  
-						<!--FIRE MODS-->
 					<FireModes>
+						<aiAimMode>AimedShot</aiAimMode>
 						<aimedBurstShotCount>5</aimedBurstShotCount>
 					</FireModes>
-			  
 				</li>
 				
-					
-					
-					
 				
-					<!-- ====================== Imperial Auto Cannon ====================== -->
-						 
-										  <!-- ======= Description ======= -->
-					
+				
+					<!-- ====================== Imperial Cleansing Auto Cannon ====================== -->
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Gun_ImperialCleansingAutocannon"]/label</xpath>
 					<value>
@@ -627,13 +487,9 @@
 						<description>A heavy Imperial antimatter autocannon designed to fire 20 mm rounds.</description>
 					</value>
 				</li>
-
-										     <!-- ======= Gun ======= -->
-					
-			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-				<defName>Gun_ImperialCleansingAutocannon</defName>
 				
-						<!--STATS-->
+				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>Gun_ImperialCleansingAutocannon</defName>
 					<statBases>
 						<Mass>32</Mass>
 						<Bulk>25</Bulk>
@@ -650,15 +506,11 @@
 						<MarketValue>2100</MarketValue>
 						<WorkToMake>48000</WorkToMake>
 					</statBases>
-					
-							<!--CRAFT-->
 					<costList>
 						<Steel>40</Steel>
 						<ComponentSpacer>6</ComponentSpacer>
 						<Plasteel>90</Plasteel>
 					</costList>
-
-						<!--SHOTS-->
 					<Properties>
 						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 						<hasStandardCommand>True</hasStandardCommand>
@@ -671,37 +523,26 @@
 						<muzzleFlashScale>10</muzzleFlashScale>
 						<recoilAmount>1</recoilAmount>
 						
-						<defaultProjectile>Bullet_20x105mmCharged</defaultProjectile>   <!-- MAIN BULLET -->
+						<defaultProjectile>Bullet_20x105mmCharged</defaultProjectile>
 						<soundCast>Shot_Autocannon</soundCast>
 						<soundCastTail>GunTail_Heavy</soundCastTail>
 					</Properties>
-					
-						<!--AMMO-->
 					<AmmoUser>
 						<magazineSize>8</magazineSize>
 						<reloadTime>4.6</reloadTime>
-						<ammoSet>AmmoSet_20x105mmCharged</ammoSet>    <!-- GUN MAGAZINE -->
+						<ammoSet>AmmoSet_20x105mmCharged</ammoSet>
 					</AmmoUser>
-			  
-						<!--FIRE MODS-->
 					<FireModes>
+						<aiAimMode>AimedShot</aiAimMode>
 					</FireModes>
-			   
-						<!--TAGS-->
 					<weaponTags>
 						<li>Bipod_AMR</li>
 					</weaponTags>
-			  
 				</li>
 		
 		
 		
-		
-		
-							<!-- ====================== KS-23 ====================== -->
-						 
-										<!-- ======= Description ======= -->
-					
+					<!-- ====================== KS-23 ====================== -->
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Gun_CleansingShotgun"]/label</xpath>
 					<value>
@@ -715,13 +556,9 @@
 						<description>A heavy long-range flamethrower capable of spreading fire over a wide area. It is highly effective against Necronoid structures and large swarms.</description>
 					</value>
 				</li>
-
-										     <!-- ======= Gun ======= -->
-											 
+				
 				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
 				<defName>Gun_CleansingShotgun</defName>
-				
-						<!--STATS-->
 					<statBases>
 						<Mass>4</Mass>
 						<Bulk>12</Bulk>
@@ -738,16 +575,12 @@
 						<MarketValue>850</MarketValue>
 						<WorkToMake>35400</WorkToMake>
 					</statBases>
-					
-						<!--CRAFT-->
 					<costList>
 						<Steel>60</Steel>
 						<ComponentSpacer>1</ComponentSpacer>
 						<ComponentIndustrial>2</ComponentIndustrial>
 						<Plasteel>20</Plasteel>
 					</costList>
-			  
-						<!--SHOTS-->
 					<Properties>
 						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 						<hasStandardCommand>True</hasStandardCommand>
@@ -760,47 +593,29 @@
 						<muzzleFlashScale>1</muzzleFlashScale>
 						<recoilAmount>0.4</recoilAmount>
 						
-						<defaultProjectile>Bullet_23x75mmR_Buck</defaultProjectile>         <!-- MAIN BULLET -->
+						<defaultProjectile>Bullet_23x75mmR_Buck</defaultProjectile>
 						<soundCast>Shot_Remington870</soundCast>
 						<soundCastTail>GunTail_Heavy</soundCastTail>
 					</Properties>
-					
-						<!--AMMO-->
 					<AmmoUser>
 						<magazineSize>4</magazineSize>
 						<reloadTime>0.6</reloadTime>
 						<reloadOneAtATime>True</reloadOneAtATime>
-						<ammoSet>AmmoSet_23x75mmR</ammoSet>               <!-- GUN MAGAZINE -->
+						<ammoSet>AmmoSet_23x75mmR</ammoSet>
 					</AmmoUser>
-			  
-						<!--FIRE MODS-->
 					<FireModes>
+						<aiAimMode>Snapshot</aiAimMode>
 					</FireModes>
-			   
-						<!--TAGS-->
 					<weaponTags>
 						<li>CE_AI_BROOM</li>
 					</weaponTags>
-			  
 				</li>
 				
 				
 				
-				
-				
-				
-				
-				
-				
-				
-						<!-- ====================== SCENARIO WEAPONS ====================== -->
-						
-						    <!-- ====================== Ppsh-41 ====================== -->
-										
+					<!-- ====================== Ppsh-41 ====================== -->		
 				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
 				<defName>Gun_SuperSMG</defName>
-				
-						<!--STATS-->
 					<statBases>
 						<Mass>3</Mass>
 						<Bulk>9</Bulk>
@@ -817,8 +632,6 @@
 						<MarketValue>350</MarketValue>			
 						<!--<WorkToMake></WorkToMake>-->						
 					</statBases>
-
-						<!--SHOTS-->
 					<Properties>
 						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 						<hasStandardCommand>True</hasStandardCommand>
@@ -831,37 +644,30 @@
 						<muzzleFlashScale>4</muzzleFlashScale>
 						<recoilAmount>0.4</recoilAmount>
 						
-						<defaultProjectile>Bullet_762x25mmTokarev_FMJ</defaultProjectile>   <!-- MAIN BULLET -->
+						<defaultProjectile>Bullet_762x25mmTokarev_FMJ</defaultProjectile>
 						<soundCast>Shot_SovietSubmachineGun</soundCast>
 						<soundCastTail>GunTail_Heavy</soundCastTail>
 					</Properties>
-					
-						<!--AMMO-->
 					<AmmoUser>
 						<magazineSize>71</magazineSize>
 						<reloadTime>2.6</reloadTime>
-						<ammoSet>AmmoSet_762x25mmTokarev</ammoSet>    <!-- GUN MAGAZINE -->
+						<ammoSet>AmmoSet_762x25mmTokarev</ammoSet>
 					</AmmoUser>
-			  
-						<!--FIRE MODS-->
 					<FireModes>
+						<aiAimMode>Snapshot</aiAimMode>
 						<aimedBurstShotCount>5</aimedBurstShotCount>
 					</FireModes>
-			   
-						<!--TAGS-->
 					<weaponTags>
 						<li>CE_SMG</li>
 						<li>CE_AI_BROOM</li>
 					</weaponTags>
-			  
 				</li>
 				
+				
+				
 						    <!-- ====================== Remington-870 ====================== -->			
-
 				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
 				<defName>Gun_SuperShotGun</defName>
-				
-						<!--STATS-->
 					<statBases>
 						<Mass>5</Mass>
 						<Bulk>12</Bulk>
@@ -873,12 +679,10 @@
 						<ShotSpread>0.18</ShotSpread>
 						<Recoil>1.2</Recoil>
 						
-						<RangedWeapon_Cooldown>0.22</RangedWeapon_Cooldown>
+						<RangedWeapon_Cooldown>0.43</RangedWeapon_Cooldown>
 						
 						<MarketValue>550</MarketValue>
 					</statBases>
-
-						<!--SHOTS-->
 					<Properties>
 						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 						<hasStandardCommand>True</hasStandardCommand>
@@ -891,37 +695,29 @@
 						<muzzleFlashScale>5</muzzleFlashScale>
 						<recoilAmount>0.1</recoilAmount>
 						
-						<defaultProjectile>Bullet_12Gauge_Buck</defaultProjectile>   <!-- MAIN BULLET -->
-					<soundCast>Shot_Remington870</soundCast>
-					<soundCastTail>GunTail_Heavy</soundCastTail>
+						<defaultProjectile>Bullet_12Gauge_Buck</defaultProjectile>
+						<soundCast>Shot_Remington870</soundCast>
+						<soundCastTail>GunTail_Heavy</soundCastTail>
 					</Properties>
-					
-						<!--AMMO-->
 					<AmmoUser>
-						<magazineSize>12</magazineSize>
+						<magazineSize>8</magazineSize>
 						<reloadTime>0.4</reloadTime>
 						<reloadOneAtATime>true</reloadOneAtATime>
-						<ammoSet>AmmoSet_12Gauge</ammoSet>    <!-- GUN MAGAZINE -->
+						<ammoSet>AmmoSet_12Gauge</ammoSet>
 					</AmmoUser>
-			  
-						<!--FIRE MODS-->
 					<FireModes>
-						<noSnapshot>true</noSnapshot>   
+						<aiAimMode>Snapshot</aiAimMode>
 					</FireModes>
-			   
-						<!--TAGS-->
 					<weaponTags>
 						<li>CE_AI_BROOM</li>				
 					</weaponTags>
-			  
-			</li>
+				</li>
+			
+			
 			
 						    <!-- ====================== Hunting rifle ====================== -->
-							
 				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
 				<defName>Gun_SurvivalistSniperRifle</defName>
-				
-						<!--STATS-->
 					<statBases>
 						<Mass>5</Mass>
 						<Bulk>12.4</Bulk>
@@ -937,8 +733,6 @@
 						
 						<MarketValue>450</MarketValue>
 					</statBases>
-
-						<!--SHOTS-->
 					<Properties>
 						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 						<hasStandardCommand>True</hasStandardCommand>
@@ -950,31 +744,22 @@
 						<muzzleFlashScale>5</muzzleFlashScale>
 						<recoilAmount>0.5</recoilAmount>
 						
-						<defaultProjectile>Bullet_3006Springfield_FMJ</defaultProjectile>   <!-- MAIN BULLET -->
-				<soundCast>Shot_SniperRifle</soundCast>
-				<soundCastTail>GunTail_Heavy</soundCastTail>
+						<defaultProjectile>Bullet_3006Springfield_FMJ</defaultProjectile>
+						<soundCast>Shot_SniperRifle</soundCast>
+						<soundCastTail>GunTail_Heavy</soundCastTail>
 					</Properties>
-					
-						<!--AMMO-->
 					<AmmoUser>
 						<magazineSize>10</magazineSize>
 						<reloadTime>4</reloadTime>
-						<ammoSet>AmmoSet_3006Springfield</ammoSet>    <!-- GUN MAGAZINE -->
+						<ammoSet>AmmoSet_3006Springfield</ammoSet>
 					</AmmoUser>
-			  
-						<!--FIRE MODS-->
 					<FireModes>
+						<aiAimMode>AimedShot</aiAimMode>
 					</FireModes>
-			   
-						<!--TAGS-->
 					<weaponTags>
 						<li>CE_AI_SR</li>
-						<li>Bipod_DMR</li>
 					</weaponTags>
-			  
-				</li>							
-		
-		
+				</li>
 			</operations>
 		</match>
 	</Operation>

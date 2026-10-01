@@ -8,10 +8,6 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 			
-			
-			
-			
-			
 				<!-- ================= Chupacabras silent raid ================= -->
 			
 				<li Class="PatchOperationAdd">
@@ -23,10 +19,8 @@
 					</value>
 				</li>
 	
-
-
-
-
+	
+	
 				<!-- ================= Howling spiders silent raid ================= -->				
 							
 				<li Class="PatchOperationAdd">
@@ -37,8 +31,6 @@
 					</value>
 				</li>
 					
-
-
 
 
 				<!-- ================= Wendigo silent raid ================= -->
@@ -57,10 +49,8 @@
 						<earliestDay>100</earliestDay>					
 					</value>
 				</li>				
-				
-				
-				
-				
+		
+		
 				
 				<!-- ================= Corrupted Ship with hives raid ================= -->
 					
@@ -77,11 +67,9 @@
 						<earliestDay>50</earliestDay>					
 					</value>
 				</li>		
-						
-						
-						
-						
-					
+		
+		
+		
 				<!-- ================= Corrupted Ship with fetid marines raid ================= -->
 					
 				<li Class="PatchOperationReplace">
@@ -97,10 +85,7 @@
 						<earliestDay>100</earliestDay>					
 					</value>
 				</li>				
-				
-				
-				
-
+		
 			</operations>
 		</match>
 	</Operation>

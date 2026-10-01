@@ -7,10 +7,7 @@
 		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
-			
-			
-						<!-- Necronoid weapon base (Melee tools)-->
-      
+
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[@Name="NecronoidWeaponBase"]/tools</xpath>
 					<value>
@@ -57,18 +54,10 @@
 					</value>
 				</li>
 				
-				
-				
-				
-				
 				<!-- ====================== Boneshard rifle ====================== -->
-				
-									 <!-- ======= Gun ======= -->
 
 				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
 				<defName>Gun_BoneshardRifle</defName>
-				
-						<!--STATS-->
 					<statBases>
 						<Mass>3.7</Mass>
 						<Bulk>11.6</Bulk>
@@ -82,8 +71,6 @@
 						
 						<RangedWeapon_Cooldown>0.98</RangedWeapon_Cooldown>
 					</statBases>
-			  
-						<!--SHOTS-->
 					<Properties>
 						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 						<hasStandardCommand>True</hasStandardCommand>
@@ -100,31 +87,20 @@
 						<defaultProjectile>Bullet_Bone_Rifle</defaultProjectile>
 						<soundCast>Shot_Necronoid_Pistol</soundCast>
 						<soundCastTail>GunTail_Heavy</soundCastTail>
-					</Properties>
-					
+					</Properties>	
 					<FireModes>
 						<aiAimMode>AimedShot</aiAimMode> 
 					</FireModes>
-					
-						<!--TAGS-->
 					<weaponTags>
 						<li>CE_AI_AR</li>
 					</weaponTags>
-			  
 				</li>
 				
-				
-				
-				
-				
-			<!-- ====================== Advanced boneshard rifle ====================== -->
-				
-									 <!-- ======= Gun ======= -->
 
+
+			<!-- ====================== Advanced boneshard rifle ====================== -->
 				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
 				<defName>Gun_AdvancedBoneshardRifle</defName>
-				
-						<!--STATS-->
 					<statBases>
 						<Mass>3.95</Mass>
 						<Bulk>12.1</Bulk>
@@ -138,8 +114,6 @@
 						
 						<RangedWeapon_Cooldown>0.89</RangedWeapon_Cooldown>
 					</statBases>
-			  
-						<!--SHOTS-->
 					<Properties>
 						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 						<hasStandardCommand>True</hasStandardCommand>
@@ -157,29 +131,19 @@
 						<soundCast>Shot_Necronoid_Pistol</soundCast>
 						<soundCastTail>GunTail_Heavy</soundCastTail>
 					</Properties>
-					
-				  <FireModes>
-					<aiAimMode>AimedShot</aiAimMode>
-				  </FireModes>
-
-				  <weaponTags>
-					<li>CE_AI_AR</li>
-				  </weaponTags>
-			  
+					<FireModes>
+						<aiAimMode>AimedShot</aiAimMode>
+					</FireModes>
+					<weaponTags>
+						<li>CE_AI_AR</li>
+					</weaponTags>
 				</li>
-				
-				
-				
-				
-				
-				<!-- ====================== boneshard shotgun ====================== -->
-				
-									 <!-- ======= Gun ======= -->
 
+
+
+				<!-- ====================== boneshard shotgun ====================== -->
 				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
 				<defName>Gun_BoneshardShotgun</defName>
-				
-						<!--STATS-->
 					<statBases>
 						<Mass>4.1</Mass>
 						<Bulk>11.6</Bulk>
@@ -193,8 +157,6 @@
 						
 						<RangedWeapon_Cooldown>1.05</RangedWeapon_Cooldown>
 					</statBases>
-			  
-						<!--SHOTS-->
 					<Properties>
 						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 						<hasStandardCommand>True</hasStandardCommand>
@@ -212,30 +174,20 @@
 						<soundCast>Shot_Necronoid_Shotgun</soundCast>
 						<soundCastTail>GunTail_Heavy</soundCastTail>
 					</Properties>
-					
 					<FireModes>
 						<aiAimMode>Snapshot</aiAimMode> 
 					</FireModes>
-					
 						<!--TAGS
 					<weaponTags>
 						<li>CE_AI_BROOM</li>
 					</weaponTags-->
-			  
 				</li>
 				
-				
-				
-				
-				
-					<!-- ====================== boneshard sniper ====================== -->
-				
-									 <!-- ======= Gun ======= -->
 
+
+					<!-- ====================== boneshard sniper ====================== -->
 				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
 				<defName>Gun_BoneshardSniperRifle</defName>
-				
-						<!--STATS-->
 					<statBases>
 						<Mass>5.2</Mass>
 						<Bulk>12.5</Bulk>
@@ -249,8 +201,6 @@
 						
 						<RangedWeapon_Cooldown>2.35</RangedWeapon_Cooldown>
 					</statBases>
-			  
-						<!--SHOTS-->
 					<Properties>
 						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 						<hasStandardCommand>True</hasStandardCommand>
@@ -268,30 +218,19 @@
 						<soundCast>Shot_Necronoid_Pistol</soundCast>
 						<soundCastTail>GunTail_Heavy</soundCastTail>
 					</Properties>
-					
 					<FireModes>
 						<aiAimMode>AimedShot</aiAimMode> 
 					</FireModes>
-					
-						<!--TAGS-->
 					<weaponTags>
 						<li>CE_AI_SR</li>
 					</weaponTags>
-			  
 				</li>
-				
-				
-				
-				
-				
-				<!-- ====================== boneshard minigun ====================== -->
-				
-									 <!-- ======= Gun ======= -->
 
+
+
+				<!-- ====================== boneshard minigun ====================== -->
 				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
 				<defName>Gun_BoneshardRapidBlaster</defName>
-				
-						<!--STATS-->
 					<statBases>
 						<Mass>23</Mass>
 						<Bulk>10</Bulk>
@@ -305,8 +244,6 @@
 						
 						<RangedWeapon_Cooldown>0.35</RangedWeapon_Cooldown>
 					</statBases>
-			  
-						<!--SHOTS-->
 					<Properties>
 						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 						<hasStandardCommand>True</hasStandardCommand>
@@ -324,30 +261,20 @@
 						<soundCast>Shot_Necronoid_Pistol</soundCast>
 						<soundCastTail>GunTail_Heavy</soundCastTail>
 					</Properties>
-					
 					<FireModes>			
-						<aiAimMode>SuppressFire</aiAimMode> 
+						<aiAimMode>Snapshot</aiAimMode> 
 					</FireModes>
-					
-						<!--TAGS-->
 					<weaponTags>
 						<li>CE_AI_Minigun</li>
 					</weaponTags>
 			  
 				</li>
-				
-				
-				
-				
-				
-				<!-- ====================== boneshard auto cannon ====================== -->
-				
-									 <!-- ======= Gun ======= -->
 
+
+
+				<!-- ====================== boneshard auto cannon ====================== -->
 				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
 				<defName>Gun_BoneshardAutoCannon</defName>
-				
-						<!--STATS-->
 					<statBases>
 						<Mass>28.5</Mass>
 						<Bulk>16</Bulk>
@@ -361,8 +288,6 @@
 						
 						<RangedWeapon_Cooldown>0.35</RangedWeapon_Cooldown>
 					</statBases>
-			  
-						<!--SHOTS-->
 					<Properties>
 						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 						<hasStandardCommand>True</hasStandardCommand>
@@ -380,26 +305,19 @@
 						<soundCast>Shot_Necronoid_Pistol</soundCast>
 						<soundCastTail>GunTail_Heavy</soundCastTail>
 					</Properties>
-					
-						<!--TAGS-->
+					<FireModes>			
+						<aiAimMode>Snapshot</aiAimMode> 
+					</FireModes>					
 					<weaponTags>
 						<li>CE_AI_HeavyWeapons</li>
 					</weaponTags>
-			  
 				</li>
 				
 				
 				
-				
-				
 				<!-- ====================== plague spewer ====================== -->
-				
-									 <!-- ======= Gun ======= -->
-
 				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
 				<defName>Gun_PlagueSpewer</defName>
-				
-						<!--STATS-->
 					<statBases>
 						<Mass>3.8</Mass>
 						<Bulk>11.8</Bulk>
@@ -413,8 +331,6 @@
 						
 						<RangedWeapon_Cooldown>4.15</RangedWeapon_Cooldown>
 					</statBases>
-			  
-						<!--SHOTS-->
 					<Properties>
 						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 						<hasStandardCommand>True</hasStandardCommand>
@@ -432,15 +348,14 @@
 						<soundCast>Shot_Necronoid_Shotgun</soundCast>
 						<soundCastTail>GunTail_Heavy</soundCastTail>
 					</Properties>
-					
-						<!--TAGS-->
+					<FireModes>
+						<aiAimMode>AimedShot</aiAimMode> 
+					</FireModes>					
 					<weaponTags>
 						<li>CE_AI_AOE</li>
 					</weaponTags>
-			  
 				</li>
-      
-		</operations>
+			</operations>
 		</match>
 	</Operation>
 </Patch>

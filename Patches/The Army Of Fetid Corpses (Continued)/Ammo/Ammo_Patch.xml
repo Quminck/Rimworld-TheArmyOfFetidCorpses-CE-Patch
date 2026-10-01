@@ -9,7 +9,7 @@
 			<operations>		
 					
 			
-					<!-- ================= StG-44 AMMO ================= -->
+					<!-- ================= 7.92x33mm ================= -->
 							
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_792x33mmKurz"]/ammoTypes</xpath>
@@ -18,7 +18,7 @@
 					</value>
 				</li>
 				
-					<!-- ================= MG-42 AMMO ================= -->
+					<!-- ================= 7.92x57mm ================= -->
 							
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_792x57mmMauser"]/ammoTypes</xpath>
@@ -29,7 +29,7 @@
 		
 				
 				
-				  <!-- ================= Lahti L-39 AMMO ================= -->
+				  <!-- ================= 20x138mmB ================= -->
 							
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_20x138mmB"]/ammoTypes</xpath>
@@ -40,7 +40,7 @@
 				
 				
 				
-				    <!-- ================= KS-23 AMMO ================= -->
+				    <!-- ================= 23x75mmR ================= -->
 							
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_23x75mmR"]/ammoTypes</xpath>
@@ -52,7 +52,7 @@
 				
 				
 				
-					<!-- ================= Imperial auto cannon AMMO ================= -->
+					<!-- ================= 20x105mm Charged ================= -->
 							
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_20x105mmCharged"]/ammoTypes</xpath>

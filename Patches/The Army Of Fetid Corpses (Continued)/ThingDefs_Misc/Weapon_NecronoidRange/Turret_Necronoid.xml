@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-
 		<Operation Class="PatchOperationFindMod">
 		<mods>
 			<li>The Army Of Fetid Corpses (Continued)</li>
@@ -15,21 +14,20 @@
 				</value>
 			</li>
 			
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName="Turret_NecroTurret"]/statBases</xpath>
-					<value>
-						<AimingAccuracy>0.65</AimingAccuracy>
-						<SightsEfficiency>1.0</SightsEfficiency>
-					</value>
-				</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Turret_NecroTurret"]/statBases</xpath>
+				<value>
+					<AimingAccuracy>0.65</AimingAccuracy>
+					<SightsEfficiency>1.0</SightsEfficiency>
+				</value>
+			</li>
 
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="Turret_NecroTurret"]/statBases/ShootingAccuracyTurret</xpath>
-					<value>
-						<ShootingAccuracyTurret>1.15</ShootingAccuracyTurret>
-					</value>
-				</li>
-
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Turret_NecroTurret"]/statBases/ShootingAccuracyTurret</xpath>
+				<value>
+					<ShootingAccuracyTurret>1.15</ShootingAccuracyTurret>
+				</value>
+			</li>
 
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Turret_NecroTurret"]/fillPercent</xpath>
@@ -54,12 +52,10 @@
 				</value>
 			</li>
 
-						<!--SHOOTING-->
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Gun_NecroTurret"]/verbs</xpath>
 				<value>
 					<verbs>
-			
 						<li Class="CombatExtended.VerbPropertiesCE">
 							<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 							<hasStandardCommand>True</hasStandardCommand>
@@ -76,14 +72,10 @@
 							
 							<soundCast>Shot_Necronoid_Pistol</soundCast>
 							<soundCastTail>GunTail_Light</soundCastTail>
-
 						</li>
-			  
 					</verbs>
 				</value>
 			</li>
-			
-			
 			</operations>
 		</match>
 	</Operation>

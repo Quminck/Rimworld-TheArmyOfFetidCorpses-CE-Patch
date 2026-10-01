@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-
-			<!-- MOD -->
 	<Operation Class="PatchOperationFindMod">
 		<mods>
 			<li>The Army Of Fetid Corpses (Continued)</li>
 		</mods>
 		<match Class="PatchOperationSequence">
 		<operations>
-		
-		
-		
-		
-					<!-- =============== Blood letter mace =============== -->
+
+					<!-- =============== Bloodletter mace =============== -->
 		
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Melee_BloodLetterMace"]/tools</xpath>
@@ -69,12 +64,11 @@
 					</equippedStatOffsets>
 				</value>
 			</li>
-			
-			
-			
-			
+
+
+
 			<!-- =============== Executioner axe =============== -->
-			
+
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Melee_ExecutionerAxe"]/tools</xpath>
 				<value>
@@ -147,8 +141,6 @@
 					</equippedStatOffsets>
 				</value>
 			</li>
-			
-			
 			
 			
 			
@@ -235,8 +227,6 @@
 			
 			
 			
-			
-			
 				<!-- =============== Steel saw =============== -->	
 				
 			<li Class="PatchOperationReplace">
@@ -295,9 +285,6 @@
 					</equippedStatOffsets>
 				</value>
 			</li>
-			
-			
-			
 		</operations>
 		</match>
 	</Operation>
