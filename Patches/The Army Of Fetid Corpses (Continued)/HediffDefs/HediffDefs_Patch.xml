@@ -8,8 +8,6 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 
-
-
 				<!-- ================== Hardened Flesh ================== -->
 
 				<li Class="PatchOperationRemove">
@@ -32,6 +30,8 @@
 						</statFactors>
 					</value>
 				</li>
+
+
 
 				<!-- ================== Corpse Gladiator ================== -->
 				
@@ -114,62 +114,10 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/HediffDef[defName="Painless"]/description</xpath>
 					<value>
-						<description>The nervous system of this creature is completely deadened, leaving no functional nerve endings. It is entirely immune to physical pain and shock, fighting until its body is physically destroyed.</description>
+						<description>The nervous system of this creature is completely deadened, preventing it from transmitting pain signals. It is entirely immune to physical pain and shock, fighting until its body is physically destroyed.</description>
 					</value>
 				</li>				
 
-
-
-
-
-				<!-- ================== Hediff giver ================== -->
-
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/HediffGiverSetDef[defName="Mutations"]/hediffGivers/li[hediff="Painless"]</xpath>
-					<value>
-						<li Class="HediffGiver_Birthday">
-							<hediff>Painless</hediff>
-							<ageFractionChanceCurve>
-								<points>
-									<li>(0, 1.0)</li>
-									<li>(100, 1.0)</li>
-								</points>
-							</ageFractionChanceCurve>
-						</li>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/HediffGiverSetDef[defName="MutationsBoss"]/hediffGivers</xpath>
-					<value>
-						<li Class="HediffGiver_Birthday">
-							<hediff>Painless</hediff>
-							<ageFractionChanceCurve>
-								<points>
-									<li>(0, 1.0)</li>
-									<li>(100, 1.0)</li>
-								</points>
-							</ageFractionChanceCurve>
-						</li>
-					</value>
-				</li>
-
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/HediffGiverSetDef[defName="MutationsAssasin"]/hediffGivers</xpath>
-					<value>
-						<li Class="HediffGiver_Birthday">
-							<hediff>Painless</hediff>
-							<ageFractionChanceCurve>
-								<points>
-									<li>(0, 1.0)</li>
-									<li>(100, 1.0)</li>
-								</points>
-							</ageFractionChanceCurve>
-						</li>
-					</value>
-				</li>
-				
-				
 			</operations>
 		</match>
 	</Operation>
