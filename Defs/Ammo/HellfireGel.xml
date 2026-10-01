@@ -65,14 +65,13 @@
 			<damageDef>PrometheumFlame</damageDef> 
 			<damageAmountBase>5</damageAmountBase>
 	
-			<pelletCount>3</pelletCount>
-			<spreadMult>5.0</spreadMult>			
-			<explosionRadius>2.0</explosionRadius>
+			<pelletCount>4</pelletCount>
+			<spreadMult>4.0</spreadMult>			
+			<explosionRadius>1.25</explosionRadius>
 
-			
 			<explosionDamageFalloff>true</explosionDamageFalloff>
 			<preExplosionSpawnThingDef>FilthPrometheum</preExplosionSpawnThingDef>
-			<preExplosionSpawnChance>0.8</preExplosionSpawnChance>
+			<preExplosionSpawnChance>0.60</preExplosionSpawnChance>
 			
 			<soundExplode>CE_FlamethrowerExplosion</soundExplode>
 
