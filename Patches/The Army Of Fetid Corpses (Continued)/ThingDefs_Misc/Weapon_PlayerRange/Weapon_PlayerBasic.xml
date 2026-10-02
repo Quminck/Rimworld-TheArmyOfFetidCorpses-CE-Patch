@@ -567,7 +567,7 @@
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Gun_CleansingShotgun"]/description</xpath>
 					<value>
-						<description>A heavy pump-action shotgun developed in the Soviet Union for the needs of the Ministry of Internal Affairs, adapted to fire experimental cleansing buckshot.</description>
+						<description>A heavy pump-action shotgun developed in the Soviet Union for the needs of the Ministry of Internal Affairs, adapted to fire experimental cleansing shells.</description>
 					</value>
 				</li>
 				
