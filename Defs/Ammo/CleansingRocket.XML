@@ -112,7 +112,7 @@
 						<li>Neutroamine</li>
 					</thingDefs>
 				</filter>
-				<count>35</count>
+				<count>6</count>
 		  </li>
 		   <li>
 				<filter>
@@ -125,7 +125,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>Plasteel</li>
+						<li>Steel</li>
 					</thingDefs>
 				</filter>
 				<count>50</count>

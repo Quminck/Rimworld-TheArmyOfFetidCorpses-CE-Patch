@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-
 		<CombatExtended.AmmoCategoryDef>
 			<defName>IncendiarySpecial</defName>
 			<label>armor-piercing incendiary - Specialized </label>
@@ -10,7 +8,6 @@
 			<advanced>true</advanced>
 		</CombatExtended.AmmoCategoryDef>
 
-
 		<CombatExtended.AmmoCategoryDef>
 			<defName>CleansingRound</defName>
 			<label>Cleansing</label>
@@ -18,9 +15,7 @@
 			<description>An experimental round specifically designed to combat Necronoid threats.</description>
 			<advanced>true</advanced>			
 		</CombatExtended.AmmoCategoryDef>
-		
-				<!-- =================== shotgun ===================-->		
-		
+
 		<CombatExtended.AmmoCategoryDef>
 			<defName>CleansingBuckshot</defName>
 			<label>Buck (Cleansing)</label>
@@ -38,10 +33,7 @@
 		</CombatExtended.AmmoCategoryDef>			
 
 
-			<!-- =================== 7.92x33mm   StG-44 ===================-->
-
-				<!-- =================== Ammunition ===================-->
-  
+			<!-- =================== 7.92x33mm ===================-->
 		<ThingDef Class="CombatExtended.AmmoDef" ParentName="792x33mmKurzBase">
 			<defName>Ammo_792x33Kurz_UN</defName>
 			<label>7.92x33mm Kurz (AP-I-S)</label>
@@ -55,17 +47,16 @@
 			<ammoClass>IncendiarySpecial</ammoClass>
 			<cookOffProjectile>Bullet_792x33Kurz_UN</cookOffProjectile>
 		</ThingDef>
-  
-				<!-- =================== Projectiles ===================-->
-  
+		
+			<!-- ================== Projectiles ================== -->
 	<ThingDef ParentName="Base792x33mmKurzBullet">
 		<defName>Bullet_792x33Kurz_UN</defName>
 		<label>7.92x33mm Kurz (AP-I-S) bullet</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageDef>Bullet</damageDef>
 			<damageAmountBase>15</damageAmountBase>
-			<armorPenetrationSharp>12</armorPenetrationSharp>
-			<armorPenetrationBlunt>38</armorPenetrationBlunt>
+			<armorPenetrationSharp>10</armorPenetrationSharp>
+			<armorPenetrationBlunt>37.54</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>Flame_Secondary</def>
@@ -74,10 +65,9 @@
 			</secondaryDamage>
 		</projectile>
 	</ThingDef>
-  
-				<!-- =================== Recipes ===================-->
-				
-	<RecipeDef ParentName="AmmoRecipeBase">
+	
+			<!-- ==================== Recipes ========================== -->
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_792x33Kurz_UN</defName>
 		<label>make 7.92x33mm Kurz (AP-I-S) cartridge x500</label>
 		<description>Craft 500 7.92x33mm Kurz (AP-I-S) cartridges.</description>
@@ -110,17 +100,11 @@
 		<products>
 			<Ammo_792x33Kurz_UN>500</Ammo_792x33Kurz_UN>
 		</products>
-		<workAmount>4200</workAmount>
+		<workAmount>3300</workAmount>
 	</RecipeDef>
 	
 	
-	
-	
-	
-			 <!-- =================== 7.92x57mm   MG-42 ===================-->
-
-				<!-- =================== Ammunition ===================-->
-  
+			 <!-- =================== 7.92x57mm ===================-->
 		<ThingDef Class="CombatExtended.AmmoDef" ParentName="792x57mmMauserBase">
 			<defName>Ammo_792x57Mauser_UN</defName>
 			<label>7.92x57mm Mauser (AP-I-S)</label>
@@ -135,17 +119,16 @@
 			<ammoClass>IncendiarySpecial</ammoClass>
 			<cookOffProjectile>Bullet_792x57Mauser_UN</cookOffProjectile>
 		</ThingDef>
-  
-				<!-- =================== Projectile ===================-->
-  
+		
+			<!-- ================== Projectiles ================== -->
 	<ThingDef ParentName="Base792x57mmMauserBullet">
 		<defName>Bullet_792x57Mauser_UN</defName>
 		<label>7.92x57mm Mauser (AP-I-S) bullet</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageDef>Bullet</damageDef>
-			<damageAmountBase>21</damageAmountBase>
-			<armorPenetrationSharp>18</armorPenetrationSharp>
-			<armorPenetrationBlunt>80</armorPenetrationBlunt>
+			<damageAmountBase>17</damageAmountBase>
+			<armorPenetrationSharp>12</armorPenetrationSharp>
+			<armorPenetrationBlunt>78.68</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>Flame_Secondary</def>
@@ -154,10 +137,9 @@
 			</secondaryDamage>
 		</projectile>
 	</ThingDef>
-  
-				<!-- =================== Recipe ===================-->
-				
-	<RecipeDef ParentName="AmmoRecipeBase">
+	
+			<!-- ==================== Recipes ========================== -->	
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_792x57Mauser_UN</defName>
 		<label>make 7.92x57mm Mauser AP-I-S cartridge x500</label>
 		<description>Craft 500 7.92x57mm Mauser AP-I-S cartridges.</description>
@@ -178,7 +160,7 @@
 						<li>Steel</li>
 					</thingDefs>
 				</filter>
-				<count>35</count>
+				<count>30</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -190,17 +172,11 @@
 		<products>
 			<Ammo_792x57Mauser_UN>500</Ammo_792x57Mauser_UN>
 		</products>
-		<workAmount>4500</workAmount>
+		<workAmount>4800</workAmount>
 	</RecipeDef>
 	
 	
-	
-	
-  
 			<!-- ===================  20x138mm  Lahti L-39 ===================-->
-  
-				<!-- =================== Ammunition ===================-->
-  
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo20x138mmBBase">
 		<defName>Ammo_20x138mmB_UN</defName>
 		<label>20x138mmB (AP-I-S)</label>
@@ -215,28 +191,26 @@
 		<ammoClass>IncendiarySpecial</ammoClass>
 		<cookOffProjectile>Bullet_20x138mmB_UN</cookOffProjectile>
 	</ThingDef>
-  
-					<!-- =================== Projectile ===================-->
-  
+	
+			<!-- ================== Projectiles ================== -->
 	<ThingDef ParentName="Base20x138mmBBullet">
 		<defName>Bullet_20x138mmB_UN</defName>
 		<label>20x138mmB (AP-I-S) bullet</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>36</damageAmountBase>
-			<armorPenetrationBlunt>1000</armorPenetrationBlunt>
-			<armorPenetrationSharp>55</armorPenetrationSharp>
+			<damageAmountBase>54</damageAmountBase>
+			<armorPenetrationBlunt>972</armorPenetrationBlunt>
+			<armorPenetrationSharp>34</armorPenetrationSharp>
 			<secondaryDamage>
 				<li>
 					<def>Flame</def>
-					<amount>40</amount>
+					<amount>52</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>
 	</ThingDef>
 	
-				<!-- =================== Recipe ===================-->
-				
-	<RecipeDef ParentName="AmmoRecipeBase">
+			<!-- ==================== Recipes ========================== -->	
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_20x138mmB_UN</defName>
 		<label>make 20x138mmB (AP-I-S) cartridge x200</label>
 		<description>Craft 200 20x138mmB (AP-I-S) cartridges.</description>
@@ -249,7 +223,7 @@
 						<li>Prometheum</li>
 					</thingDefs>
 				</filter>
-				<count>30</count>
+				<count>36</count>
 			</li>
 			<li>
 				<filter>
@@ -271,15 +245,9 @@
 		</products>
 		<workAmount>18000</workAmount>
 	</RecipeDef>
-	
-	
-	
-	
+  
   
 			   <!-- ===================  23x75mm KS-23 ===================-->
-	
-				<!-- =================== Ammunition ===================-->
-  
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="23x75mmRBase">
 		<defName>Ammo_23x75_UN_Buck</defName>                                   
 		<label>23x75mmR shell (Buck-CL)</label>
@@ -291,8 +259,18 @@
 		<cookOffProjectile>Bullet_23x75_UN_Buck</cookOffProjectile> 
 	</ThingDef>
 	
-				<!-- =================== Projectile ===================-->
-  
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="23x75mmRBase">
+		<defName>Ammo_23x75_UN_Slug</defName>                                   
+		<label>23x75mmR shell (Slug-CL)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Shotgun/Slug_Cleansing</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>CleansingSlug</ammoClass>
+		<cookOffProjectile>Bullet_23x75_UN_Slug</cookOffProjectile> 
+	</ThingDef>	
+	
+			<!-- ================== Projectiles ================== -->
 	<ThingDef ParentName="Base23x75mmRBullet">
 		<defName>Bullet_23x75_UN_Buck</defName>                  
 		<label>Cleansing buckshot pellet</label>
@@ -303,69 +281,14 @@
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageDef>Cleansing</damageDef>
 			<damageAmountBase>8</damageAmountBase>
-			<pelletCount>13</pelletCount>
-			<armorPenetrationSharp>8</armorPenetrationSharp>
-			<armorPenetrationBlunt>11</armorPenetrationBlunt>
-			<spreadMult>10</spreadMult>
+			<pelletCount>14</pelletCount>
+			<armorPenetrationSharp>4.5</armorPenetrationSharp>
+			<armorPenetrationBlunt>8.1</armorPenetrationBlunt>
+			<spreadMult>7.9</spreadMult>
 			<shieldDamageMultiplier>0.33</shieldDamageMultiplier>
 		</projectile>
 	</ThingDef>  
-  
-				<!-- =================== Recipe ===================-->
-  
-	<RecipeDef ParentName="ChargeAmmoRecipeBase">
-		<defName>MakeAmmo_23x75_UN_Buck</defName>
-		<label>make 23x75mmR (Buck-CL) shell x100</label>
-		<description>Craft 100 23x75mmR (Buck-CL).</description>
-		<jobString>Making 23x75mmR (Buck-CL)</jobString>
-		<researchPrerequisite>CleansingWeapons</researchPrerequisite>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Plasteel</li>
-					</thingDefs>
-				</filter>
-				<count>10</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Neutroamine</li>
-					</thingDefs>
-				</filter>
-				<count>10</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-		<thingDefs>
-			<li>Plasteel</li>
-			<li>Neutroamine</li>
-		</thingDefs>
-		</fixedIngredientFilter>
-		<products>
-			<Ammo_23x75_UN_Buck>100</Ammo_23x75_UN_Buck>
-		</products>
-		<workAmount>4200</workAmount>
-	</RecipeDef>
 	
-	
-	
-	
-	
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="23x75mmRBase">
-		<defName>Ammo_23x75_UN_Slug</defName>                                   
-		<label>23x75mmR shell (Slug-CL)</label>
-		<graphicData>
-			<texPath>Things/Ammo/Shotgun/Slug_Cleansing</texPath>
-			<graphicClass>Graphic_StackCount</graphicClass>
-		</graphicData>
-		<ammoClass>CleansingSlug</ammoClass>
-		<cookOffProjectile>Bullet_23x75_UN_Slug</cookOffProjectile> 
-	</ThingDef>
-	
-				<!-- =================== Projectile ===================-->
-  
 	<ThingDef ParentName="Base23x75mmRBullet">
 		<defName>Bullet_23x75_UN_Slug</defName>                  
 		<label>Cleansing shotgun slug</label>
@@ -375,30 +298,65 @@
 		</graphicData>	
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageDef>CleansingGreater</damageDef>
-			<damageAmountBase>29</damageAmountBase>
-			<armorPenetrationSharp>12</armorPenetrationSharp>
-			<armorPenetrationBlunt>170</armorPenetrationBlunt>
+			<damageAmountBase>30</damageAmountBase>
+			<armorPenetrationSharp>7.5</armorPenetrationSharp>
+			<armorPenetrationBlunt>162.5</armorPenetrationBlunt>
 			<effectiveRangeMultiplier>1.5</effectiveRangeMultiplier>
-			<recoilMultiplier>1.4</recoilMultiplier>
+			<recoilMultiplier>1.33</recoilMultiplier>
 		</projectile>
-	</ThingDef>  
-  
-				<!-- =================== Recipe ===================-->
-  
-	<RecipeDef ParentName="ChargeAmmoRecipeBase">
-		<defName>MakeAmmo_23x75_UN_Slug</defName>
-		<label>make 23x75mmR (Slug-CL) shell x100</label>
-		<description>Craft 100 23x75mmR (Slug-CL).</description>
-		<jobString>Making 23x75mmR (Slug-CL)</jobString>
-		<researchPrerequisite>CleansingWeapons</researchPrerequisite>
+	</ThingDef>  	
+	
+			<!-- ==================== Recipes ========================== -->	
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_23x75_UN_Buck</defName>
+		<label>make 23x75mmR (Buck-CL) shell x100</label>
+		<description>Craft 100 23x75mmR (Buck-CL).</description>
+		<jobString>Making 23x75mmR (Buck-CL)</jobString>
+		<researchPrerequisite>CleansingWeapons</researchPrerequisite>		
 		<ingredients>
 			<li>
 				<filter>
 					<thingDefs>
-						<li>Plasteel</li>
+						<li>Steel</li>
 					</thingDefs>
 				</filter>
-				<count>8</count>
+				<count>50</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Neutroamine</li>
+					</thingDefs>
+				</filter>
+				<count>14</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+		<thingDefs>
+			<li>Steel</li>
+			<li>Neutroamine</li>
+		</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_23x75_UN_Buck>200</Ammo_23x75_UN_Buck>
+		</products>
+		<workAmount>4500</workAmount>
+	</RecipeDef>
+
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_23x75_UN_Slug</defName>
+		<label>make 23x75mmR (Slug-CL) shell x100</label>
+		<description>Craft 100 23x75mmR (Slug-CL).</description>
+		<jobString>Making 23x75mmR (Slug-CL)</jobString>
+		<researchPrerequisite>CleansingWeapons</researchPrerequisite>	
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
 			</li>
 			<li>
 				<filter>
@@ -411,25 +369,22 @@
 		</ingredients>
 		<fixedIngredientFilter>
 		<thingDefs>
-			<li>Plasteel</li>
+			<li>Steel</li>
 			<li>Neutroamine</li>
 		</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Ammo_23x75_UN_Slug>100</Ammo_23x75_UN_Slug>
+			<Ammo_23x75_UN_Slug>200</Ammo_23x75_UN_Slug>
 		</products>
-		<workAmount>4380</workAmount>
+		<workAmount>4500</workAmount>
 	</RecipeDef>	
 	
 	
 	
-	<!-- ===================  20x105mm Special Imperial auto cannon ===================-->
-	
-				<!-- =================== Ammunition ===================-->
-  
+				<!-- ===================  20x105mm Charged ===================-->
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="20x105mmChargedBase">
 		<defName>Ammo_20x105_Cl</defName>                                   
-		<label>20x105mm (Cleansing)</label>
+		<label>20x105mm Charged (Cleansing)</label>
 		<graphicData>
 			<texPath>Things/Ammo/Charged/LargeCleansing</texPath>
 			<graphicClass>Verse.Graphic_StackCount</graphicClass>
@@ -441,28 +396,25 @@
 		<ammoClass>CleansingRound</ammoClass>
 		<cookOffProjectile>Bullet_20x105_Cl</cookOffProjectile>               
 	</ThingDef>
-  
 	
-				<!-- =================== Projectile ===================-->
-  
+			<!-- ================== Projectiles ================== -->
 	<ThingDef ParentName="Base20x105mmChargedBullet">
 		<defName>Bullet_20x105_Cl</defName>                               
-		<label>20x105mm Cleansing bullet</label>
+		<label>20x105mm Charged Cleansing bullet</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageDef>CleansingGreater</damageDef> 
 			<damageAmountBase>58</damageAmountBase>
-			<armorPenetrationSharp>72</armorPenetrationSharp>
-			<armorPenetrationBlunt>1250</armorPenetrationBlunt>
+			<armorPenetrationSharp>70</armorPenetrationSharp>
+			<armorPenetrationBlunt>1210</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef> 
-  
-				<!-- =================== Recipe ===================-->
-  
+
+			<!-- ==================== Recipes ========================== -->
 	<RecipeDef ParentName="ChargeAmmoRecipeBase">
 		<defName>MakeAmmo_20x105_Cl</defName>
-		<label>make 20x105mm (Cleansing) cartridge x100</label>
-		<description>Craft 100 20x105mm (Cleansing) cartridges.</description>
-		<jobString>Making 20x105mm (Cleansing) cartridges</jobString>
+		<label>make 20x105mm Charged (Cleansing) cartridge x100</label>
+		<description>Craft 100 20x105mm Charged (Cleansing) cartridges.</description>
+		<jobString>Making 20x105mm Charged (Cleansing) cartridges</jobString>
 		<researchPrerequisite>CleansingWeaponsEmpire</researchPrerequisite>
 		<ingredients>
 			<li>
@@ -476,18 +428,10 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>Uranium</li>
-					</thingDefs>
-				</filter>
-				<count>5</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
 						<li>Neutroamine</li>
 					</thingDefs>
 				</filter>
-				<count>30</count>
+				<count>10</count>
 			</li>
 			<li>
 				<filter>
@@ -495,13 +439,12 @@
 						<li>ComponentIndustrial</li>
 					</thingDefs>
 				</filter>
-				<count>16</count>
+				<count>18</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
 		<thingDefs>
 			<li>Plasteel</li>
-			<li>Uranium</li>
 			<li>Neutroamine</li>
 			<li>ComponentIndustrial</li>
 		</thingDefs>

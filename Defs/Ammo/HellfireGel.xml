@@ -80,9 +80,9 @@
 
 	<RecipeDef ParentName="LauncherAmmoRecipeBase" MayRequire="Ludeon.Rimworld.Biotech">
 		<defName>MakeAmmoHVFuel</defName>
-		<label>make Hellfire gel x100</label>
-		<description>Craft 100 units of Hellfire gel.</description>
-		<jobString>Making Hellfire gel</jobString>
+		<label>make hellfire gel x100</label>
+		<description>Craft 100 units of hellfire gel.</description>
+		<jobString>Making hellfire gel</jobString>
 		<researchPrerequisite>IncendiaryWeapons</researchPrerequisite>
 		<ingredients>
 			<li>
@@ -91,7 +91,7 @@
 						<li>Chemfuel</li>
 					</thingDefs>
 				</filter>
-				<count>50</count>
+				<count>10</count>
 			</li>
 			<li>
 				<filter>
@@ -99,7 +99,7 @@
 						<li>Prometheum</li>
 					</thingDefs>
 				</filter>
-				<count>15</count>
+				<count>12</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -111,7 +111,7 @@
 		<products>
 			<AmmoHVFuel>100</AmmoHVFuel>
 		</products>
-		<workAmount>9000</workAmount>
+		<workAmount>12000</workAmount>
 	</RecipeDef>
 	
 </Defs>

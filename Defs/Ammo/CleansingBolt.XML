@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-
-			<!-- Ammo category -->-->
-
 	<ThingCategoryDef>
 		<defName>AmmoCategoryANBbolt</defName>
 		<label>Bolt (Cleansing)</label>
 		<parent>AmmoAdvanced</parent>
 		<iconPath>UI/Icons/ThingCategories/CaliberRailgunPistol</iconPath>
 	</ThingCategoryDef>
-  
-			<!-- Ammunition set -->
-  
+
 	<CombatExtended.AmmoSetDef>
 		<defName>AmmoSetANBbolt</defName>
 		<label>Bolt (Cleansing)</label>
@@ -20,11 +14,7 @@
 		<AmmoANBbolt>BulletANBbolt</AmmoANBbolt>   
 		</ammoTypes>
 	</CombatExtended.AmmoSetDef>
-  
-  
-  
-				<!-- =================== Ammunition ===================-->
-  
+
 	<ThingDef Class="CombatExtended.AmmoDef" Name="AmmoANBbolt_Base" ParentName="SpacerAmmoBase" Abstract="True">
 		<description>An experimental cleansing sabot bolt designed for bolt carbines. This high-velocity round can penetrate heavy armor while its cleansing element deals increased damage to Necronoids.</description>
 		<tradeTags>
@@ -35,9 +25,7 @@
 			<li>AmmoCategoryANBbolt</li> 
 		</thingCategories>
 	</ThingDef>
-  
-			<!-- Ammunition stats -->>
-  
+
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="AmmoANBbolt_Base">
 		<defName>AmmoANBbolt</defName> 
 		<label>Bolt (Cleansing)</label>
@@ -53,10 +41,7 @@
 		<cookOffProjectile>BulletANBbolt</cookOffProjectile> 
 	</ThingDef>
 		
-	
-		
 				<!-- =================== Projectiles ===================-->
-  
 	<ThingDef Name="BulletANBbolt_Base" ParentName="BaseBulletCE" Abstract="True">
 		<graphicData>
 			<texPath>Things/Misc/Bullets/Projectile_Bolter</texPath>
@@ -67,9 +52,7 @@
 			<dropsCasings>true</dropsCasings>
 		</projectile>
 	</ThingDef>
-  
-				<!-- Bullet stats -->
-  
+
 	<ThingDef ParentName="BulletANBbolt_Base">
 		<defName>BulletANBbolt</defName>  
 		<label>Cleansing bolt</label>
@@ -81,15 +64,12 @@
 			<armorPenetrationSharp>20</armorPenetrationSharp>
 		</projectile>
 	</ThingDef>
-	
-	
-	
+
 			<!-- =================== Recipes ===================-->
-  
 	<RecipeDef ParentName="ChargeAmmoRecipeBase">
 		<defName>MakeAmmoANBbolt</defName>
-		<label>make bolt (Cleansing) x100</label>
-		<description>Craft 100 bolts (Cleansing).</description>
+		<label>make bolt (Cleansing) x500</label>
+		<description>Craft 500 bolts (Cleansing).</description>
 		<jobString>Making bolts (Cleansing)</jobString>
 		<researchPrerequisite>CleansingWeapons</researchPrerequisite>
 		<ingredients>
@@ -99,7 +79,7 @@
 						<li>Neutroamine</li>
 					</thingDefs>
 				</filter>
-				<count>15</count>
+				<count>4</count>
 			</li>
 			<li>
 				<filter>
@@ -107,7 +87,7 @@
 						<li>Plasteel</li>
 					</thingDefs>
 				</filter>
-				<count>20</count>
+				<count>6</count>
 			</li>
 			<li>
 				<filter>
@@ -115,7 +95,7 @@
 						<li>Uranium</li>
 					</thingDefs>
 				</filter>
-				<count>30</count>
+				<count>8</count>
 			</li>
 			<li>
 				<filter>
@@ -123,7 +103,7 @@
 						<li>ComponentIndustrial</li>
 					</thingDefs>
 				</filter>
-				<count>5</count>
+				<count>4</count>
 			</li>			
 		</ingredients>
 		<fixedIngredientFilter>
@@ -135,9 +115,9 @@
 		</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<AmmoANBbolt>100</AmmoANBbolt>
+			<AmmoANBbolt>500</AmmoANBbolt>
 		</products>
-		<workAmount>9000</workAmount>
+		<workAmount>7500</workAmount>
 	</RecipeDef>
 	
 </Defs>
