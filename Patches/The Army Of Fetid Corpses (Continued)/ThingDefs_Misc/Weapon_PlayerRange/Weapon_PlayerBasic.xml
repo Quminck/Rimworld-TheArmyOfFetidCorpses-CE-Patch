@@ -9,6 +9,7 @@
 				<li Class="PatchOperationRemove">
 					<xpath>Defs/ThingDef[defName="Gun_ImperialCleansingBolter"]/weaponTags/li[text()="SpacerGun"]</xpath>
 				</li>
+				
 				<li Class="PatchOperationRemove">
 					<xpath>Defs/ThingDef[
 					   defName="Gun_CleansingShotgun" 
@@ -18,6 +19,24 @@
 					or defName="Gun_ImperialCleansingAutocannon" 
 					]/comps/li[@Class="CompProperties_Biocodable"]</xpath>
 				</li>	
+				
+				<!--li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[
+					defName="Gun_IncendiaryAssaultRifle"
+					or defName="Gun_IncendiaryMachineGun"
+					or defName="Gun_IncendiaryAntiMaterial"
+					
+					or defName="Gun_CleansingShotgun"
+					or defName="Gun_CleansingBolter"
+					or defName="Gun_ImperialCleansingBolter"
+					or defName="Gun_ImperialCleansingBolterMG"
+					or defName="Gun_ImperialCleansingAutocannon"
+					
+					or defName="Gun_SuperSMG"
+					or defName="Gun_SuperShotGun"
+					or defName="Gun_SurvivalistSniperRifle"
+					]/statBases/MarketValue</xpath>
+				</li-->					
 				
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[
@@ -86,24 +105,23 @@
 				<defName>Gun_IncendiaryAssaultRifle</defName>
 					<statBases>
 						<Mass>5.2</Mass>
-						<Bulk>9.2</Bulk>
+						<Bulk>9.4</Bulk>
 						
 						<SightsEfficiency>1</SightsEfficiency>
 						<NightVisionEfficiency_Weapon>0</NightVisionEfficiency_Weapon> 
 						
-						<SwayFactor>1.2</SwayFactor>
-						<ShotSpread>0.04</ShotSpread>
-						<Recoil>1.45</Recoil>
+						<SwayFactor>1.41</SwayFactor>
+						<ShotSpread>0.07</ShotSpread>
 						
 						<RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
 						
-						<MarketValue>875</MarketValue>
-						<WorkToMake>30000</WorkToMake>
+						<MarketValue>480</MarketValue>
+						<WorkToMake>31800</WorkToMake>
 					</statBases>
 					<costList>
-						<Steel>70</Steel>
-						<ComponentIndustrial>7</ComponentIndustrial>
-						<Plasteel>25</Plasteel>
+						<Steel>55</Steel>
+						<ComponentIndustrial>5</ComponentIndustrial>
+						<Plasteel>5</Plasteel>
 						<Chemfuel>10</Chemfuel>
 					</costList>
 					<Properties>
@@ -111,12 +129,12 @@
 						<hasStandardCommand>True</hasStandardCommand>
 						
 						<warmupTime>1</warmupTime>
-						<range>48</range>
+						<range>44</range>
 						
 						<burstShotCount>6</burstShotCount>
 						<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
-						<muzzleFlashScale>6</muzzleFlashScale>
-						<recoilAmount>0.4</recoilAmount>
+						<muzzleFlashScale>9</muzzleFlashScale>
+						<recoilAmount>1.24</recoilAmount>
 						
 						<defaultProjectile>Bullet_792x33mmKurz_FMJ</defaultProjectile>
 						<soundCast>Shot_Sturmgewehr_44</soundCast>
@@ -155,32 +173,31 @@
 						<SightsEfficiency>1</SightsEfficiency>
 						<NightVisionEfficiency_Weapon>0</NightVisionEfficiency_Weapon> 
 						
-						<SwayFactor>2.1</SwayFactor>
-						<ShotSpread>0.09</ShotSpread>
-						<Recoil>1.9</Recoil>
+						<SwayFactor>1.71</SwayFactor>
+						<ShotSpread>0.08</ShotSpread>
 					
-						<RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+						<RangedWeapon_Cooldown>0.46</RangedWeapon_Cooldown>
 											
-						<MarketValue>1050</MarketValue>
-						<WorkToMake>34800</WorkToMake>
+						<MarketValue>720</MarketValue>
+						<WorkToMake>34500</WorkToMake>
 					</statBases>
 					<costList>
-						<Steel>100</Steel>
+						<Steel>85</Steel>
 						<ComponentIndustrial>8</ComponentIndustrial>
-						<Plasteel>40</Plasteel>
-						<Chemfuel>10</Chemfuel>
+						<Plasteel>10</Plasteel>
+						<Chemfuel>20</Chemfuel>
 					</costList>
 					<Properties>
 						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 						<hasStandardCommand>True</hasStandardCommand>
 						
 						<warmupTime>1.5</warmupTime>
-						<range>54</range>
+						<range>58</range>
 						
 						<burstShotCount>20</burstShotCount>
-						<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
-						<muzzleFlashScale>1</muzzleFlashScale>
-						<recoilAmount>0.6</recoilAmount>
+						<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+						<muzzleFlashScale>9</muzzleFlashScale>
+						<recoilAmount>1.36</recoilAmount>
 						
 						<defaultProjectile>Bullet_792x57mmMauser_FMJ</defaultProjectile>
 						<soundCast>Shot_MG42</soundCast>
@@ -188,16 +205,17 @@
 					</Properties>
 					<AmmoUser>
 						<magazineSize>100</magazineSize>
-						<reloadTime>4.6</reloadTime>
+						<reloadTime>7.3</reloadTime>
 						<ammoSet>AmmoSet_792x57mmMauser</ammoSet>
 					</AmmoUser>
 					<FireModes>
 						<aiAimMode>Snapshot</aiAimMode>
+						<aiUseBurstMode>False</aiUseBurstMode>
 						<aimedBurstShotCount>5</aimedBurstShotCount>		
 					</FireModes>
 					<weaponTags>
 						<li>Bipod_LMG</li>
-						<li>CE_AI_AssaultWeapon</li>
+						<li>CE_MachineGun</li>
 					</weaponTags>
 				</li>
  
@@ -214,26 +232,24 @@
 				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
 				<defName>Gun_IncendiaryAntiMaterial</defName>
 					<statBases>
-						<Mass>35</Mass>
+						<Mass>50.9</Mass>
 						<Bulk>22.4</Bulk>
 						
-						<SightsEfficiency>1.75</SightsEfficiency>
+						<SightsEfficiency>1.95</SightsEfficiency>
 						<NightVisionEfficiency_Weapon>0</NightVisionEfficiency_Weapon> 
 						
-						<SwayFactor>2.8</SwayFactor>
+						<SwayFactor>3.12</SwayFactor>
 						<ShotSpread>0.02</ShotSpread>
-						<Recoil>4</Recoil>
 						
-						<RangedWeapon_Cooldown>2.85</RangedWeapon_Cooldown>
+						<RangedWeapon_Cooldown>1.93</RangedWeapon_Cooldown>
 						
-						<MarketValue>1300</MarketValue>
-						<WorkToMake>37800</WorkToMake>						
+						<MarketValue>680</MarketValue>
+						<WorkToMake>39000</WorkToMake>						
 					</statBases>
 					<costList>
-						<Steel>110</Steel>
-						<ComponentIndustrial>10</ComponentIndustrial>
-						<Plasteel>50</Plasteel>
-						<Chemfuel>10</Chemfuel>
+						<Steel>105</Steel>
+						<ComponentIndustrial>7</ComponentIndustrial>
+						<Plasteel>10</Plasteel>
 					</costList>
 					<Properties>
 						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
@@ -243,7 +259,8 @@
 						<range>60</range>
 						
 						<burstShotCount>1</burstShotCount>
-						<muzzleFlashScale>20</muzzleFlashScale>
+						<muzzleFlashScale>16</muzzleFlashScale>
+						<recoilAmount>2.41</recoilAmount>
 						
 						<defaultProjectile>Bullet_20x138mmB_AP</defaultProjectile>
 						<soundCast>Shot_Lahti</soundCast>
@@ -284,50 +301,49 @@
 				<defName>Gun_CleansingBolter</defName>
 					<statBases>
 						<Mass>7</Mass>
-						<Bulk>9</Bulk>
+						<Bulk>9.2</Bulk>
 						
 						<SightsEfficiency>1</SightsEfficiency>
 						<NightVisionEfficiency_Weapon>0</NightVisionEfficiency_Weapon> 
 						
-						<SwayFactor>2.04</SwayFactor>
-						<ShotSpread>0.11</ShotSpread>
-						<Recoil>1.68</Recoil>
+						<SwayFactor>1.64</SwayFactor>
+						<ShotSpread>0.16</ShotSpread>
 						
 						<RangedWeapon_Cooldown>1.09</RangedWeapon_Cooldown>
 						
-						<MarketValue>1350</MarketValue>
-						<WorkToMake>31200</WorkToMake>
+						<MarketValue>800</MarketValue>
+						<WorkToMake>42000</WorkToMake>
 					</statBases>
 					<costList>
-						<Steel>70</Steel>
-						<ComponentSpacer>2</ComponentSpacer>
+						<Steel>90</Steel>
+						<ComponentSpacer>1</ComponentSpacer>
 						<ComponentIndustrial>4</ComponentIndustrial>
-						<Plasteel>35</Plasteel>
+						<Plasteel>15</Plasteel>
 					</costList>
 					<Properties>
 						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 						<hasStandardCommand>True</hasStandardCommand>
 						
 						<warmupTime>1.2</warmupTime>
-						<range>36</range>
+						<range>25</range>
 						
-						<burstShotCount>5</burstShotCount>
+						<burstShotCount>4</burstShotCount>
 						<ticksBetweenBurstShots>23</ticksBetweenBurstShots>
-						<muzzleFlashScale>11</muzzleFlashScale>
-						<recoilAmount>1.12</recoilAmount>
+						<muzzleFlashScale>10</muzzleFlashScale>
+						<recoilAmount>1.88</recoilAmount>
 						
 						<defaultProjectile>BulletANBbolt</defaultProjectile>
 						<soundCast>Shot_Bolterz</soundCast>
 						<soundCastTail>GunTail_Heavy</soundCastTail>
 					</Properties>
 					<AmmoUser>
-						<magazineSize>15</magazineSize>
-						<reloadTime>3.5</reloadTime>
+						<magazineSize>12</magazineSize>
+						<reloadTime>4.7</reloadTime>
 						<ammoSet>AmmoSetANBbolt</ammoSet>
 					</AmmoUser>
 					<FireModes>
 						<aiAimMode>AimedShot</aiAimMode>
-						<aimedBurstShotCount>3</aimedBurstShotCount>
+						<aimedBurstShotCount>2</aimedBurstShotCount>
 					</FireModes>
 					<weaponTags>
 						<li>CE_AI_SMG</li>
@@ -354,44 +370,43 @@
 				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
 				<defName>Gun_ImperialCleansingBolter</defName>
 					<statBases>
-						<Mass>9</Mass>
-						<Bulk>11.5</Bulk>
+						<Mass>6.8</Mass>
+						<Bulk>10.1</Bulk>
 						
-						<SightsEfficiency>1</SightsEfficiency>
-						<NightVisionEfficiency_Weapon>0.45</NightVisionEfficiency_Weapon>
+						<SightsEfficiency>1.1</SightsEfficiency>
+						<NightVisionEfficiency_Weapon>0.35</NightVisionEfficiency_Weapon>
 						
-						<SwayFactor>1.6</SwayFactor>
-						<ShotSpread>0.04</ShotSpread>
-						<Recoil>1.35</Recoil>
+						<SwayFactor>1.35</SwayFactor>
+						<ShotSpread>0.05</ShotSpread>
 						
 						<RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
 						
-						<MarketValue>1550</MarketValue>
-						<WorkToMake>37500</WorkToMake>	
+						<MarketValue>1200</MarketValue>
+						<WorkToMake>48000</WorkToMake>	
 					</statBases>
 					<costList>
-						<Steel>40</Steel>
+						<Steel>65</Steel>
 						<ComponentSpacer>3</ComponentSpacer>
-						<Plasteel>60</Plasteel>
+						<Plasteel>30</Plasteel>
 					</costList>
 					<Properties>
 						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 						<hasStandardCommand>True</hasStandardCommand>
 						
 						<warmupTime>1.4</warmupTime>
-						<range>46</range>
+						<range>50</range>
 						
-						<burstShotCount>7</burstShotCount>
+						<burstShotCount>4</burstShotCount>
 						<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-						<muzzleFlashScale>5</muzzleFlashScale>
-						<recoilAmount>0.5</recoilAmount>
+						<muzzleFlashScale>7</muzzleFlashScale>
+						<recoilAmount>1.43</recoilAmount>
 						
 						<defaultProjectile>BulletANBbolt</defaultProjectile>
 						<soundCast>Shot_Bolterz</soundCast>
 						<soundCastTail>GunTail_Heavy</soundCastTail>
 					</Properties>
 					<AmmoUser>
-						<magazineSize>35</magazineSize>
+						<magazineSize>20</magazineSize>
 						<reloadTime>4.5</reloadTime>
 						<ammoSet>AmmoSetANBbolt</ammoSet>
 					</AmmoUser>
@@ -424,37 +439,36 @@
 				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
 				<defName>Gun_ImperialCleansingBolterMG</defName>
 					<statBases>
-						<Mass>11.5</Mass>
-						<Bulk>13</Bulk>
+						<Mass>16.5</Mass>
+						<Bulk>10.6</Bulk>
 						
 						<SightsEfficiency>1.2</SightsEfficiency>
-						<NightVisionEfficiency_Weapon>0.45</NightVisionEfficiency_Weapon>
+						<NightVisionEfficiency_Weapon>0.35</NightVisionEfficiency_Weapon>
 						
-						<SwayFactor>1.9</SwayFactor>
-						<ShotSpread>0.3</ShotSpread>
-						<Recoil>1.35</Recoil>
+						<SwayFactor>2.19</SwayFactor>
+						<ShotSpread>0.06</ShotSpread>
 						
-						<RangedWeapon_Cooldown>0.2</RangedWeapon_Cooldown>
+						<RangedWeapon_Cooldown>0.56</RangedWeapon_Cooldown>
 						
-						<MarketValue>1750</MarketValue>
-						<WorkToMake>42000</WorkToMake>
+						<MarketValue>1500</MarketValue>
+						<WorkToMake>52500</WorkToMake>
 					</statBases>
 					<costList>
-						<Steel>40</Steel>
+						<Steel>80</Steel>
 						<ComponentSpacer>4</ComponentSpacer>
-						<Plasteel>80</Plasteel>
+						<Plasteel>35</Plasteel>
 					</costList>
 					<Properties>
 						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 						<hasStandardCommand>True</hasStandardCommand>
 						
-						<warmupTime>1.5</warmupTime>
-						<range>45</range>
+						<warmupTime>2.12</warmupTime>
+						<range>46</range>
 						
-						<burstShotCount>15</burstShotCount>
+						<burstShotCount>10</burstShotCount>
 						<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
-						<muzzleFlashScale>1</muzzleFlashScale>
-						<recoilAmount>0.6</recoilAmount>
+						<muzzleFlashScale>8</muzzleFlashScale>
+						<recoilAmount>1.51</recoilAmount>
 						
 						<defaultProjectile>BulletANBbolt</defaultProjectile>
 						<soundCast>Shot_Bolterz</soundCast>
@@ -462,12 +476,12 @@
 					</Properties>
 					<AmmoUser>
 						<magazineSize>60</magazineSize>
-						<reloadTime>5.2</reloadTime>
+						<reloadTime>7.8</reloadTime>
 						<ammoSet>AmmoSetANBbolt</ammoSet>
 					</AmmoUser>
 					<FireModes>
 						<aiAimMode>AimedShot</aiAimMode>
-						<aimedBurstShotCount>5</aimedBurstShotCount>
+						<aimedBurstShotCount>3</aimedBurstShotCount>
 					</FireModes>
 				</li>
 				
@@ -491,25 +505,25 @@
 				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
 				<defName>Gun_ImperialCleansingAutocannon</defName>
 					<statBases>
-						<Mass>32</Mass>
-						<Bulk>25</Bulk>
+						<Mass>30.5</Mass>
+						<Bulk>20</Bulk>
 						
 						<SightsEfficiency>2.5</SightsEfficiency>
 						<NightVisionEfficiency_Weapon>0.65</NightVisionEfficiency_Weapon>
 						
-						<SwayFactor>1.9</SwayFactor>
-						<ShotSpread>0.01</ShotSpread>
-						<Recoil>3.8</Recoil>
+						<SwayFactor>1.67</SwayFactor>
+						<ShotSpread>0.02</ShotSpread>
 						
 						<RangedWeapon_Cooldown>0.55</RangedWeapon_Cooldown>
 						
-						<MarketValue>2100</MarketValue>
-						<WorkToMake>48000</WorkToMake>
+						<MarketValue>2000</MarketValue>
+						<WorkToMake>55500</WorkToMake>
 					</statBases>
 					<costList>
-						<Steel>40</Steel>
+						<Steel>90</Steel>
 						<ComponentSpacer>6</ComponentSpacer>
-						<Plasteel>90</Plasteel>
+						<Plasteel>40</Plasteel>
+						<Chemfuel>15</Chemfuel>
 					</costList>
 					<Properties>
 						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
@@ -521,7 +535,7 @@
 						<burstShotCount>1</burstShotCount>
 						<!--ticksBetweenBurstShots>45</ticksBetweenBurstShots-->
 						<muzzleFlashScale>10</muzzleFlashScale>
-						<recoilAmount>1</recoilAmount>
+						<recoilAmount>2.52</recoilAmount>
 						
 						<defaultProjectile>Bullet_20x105mmCharged</defaultProjectile>
 						<soundCast>Shot_Autocannon</soundCast>
@@ -553,26 +567,25 @@
 				<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="Gun_CleansingShotgun"]/description</xpath>
 					<value>
-						<description>A heavy long-range flamethrower capable of spreading fire over a wide area. It is highly effective against Necronoid structures and large swarms.</description>
+						<description>A heavy pump-action shotgun developed in the Soviet Union for the needs of the Ministry of Internal Affairs, adapted to fire experimental cleansing buckshot.</description>
 					</value>
 				</li>
 				
 				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
 				<defName>Gun_CleansingShotgun</defName>
 					<statBases>
-						<Mass>4</Mass>
-						<Bulk>12</Bulk>
+						<Mass>3.85</Mass>
+						<Bulk>10.4</Bulk>
 						
 						<SightsEfficiency>1</SightsEfficiency>
 						<NightVisionEfficiency_Weapon>0</NightVisionEfficiency_Weapon> 
 						
-						<SwayFactor>1.5</SwayFactor>
-						<ShotSpread>0.22</ShotSpread>
-						<Recoil>3.25</Recoil>
+						<SwayFactor>1.43</SwayFactor>
+						<ShotSpread>0.19</ShotSpread>
 						
-						<RangedWeapon_Cooldown>0.8</RangedWeapon_Cooldown>
+						<RangedWeapon_Cooldown>0.98</RangedWeapon_Cooldown>
 						
-						<MarketValue>850</MarketValue>
+						<MarketValue>700</MarketValue>
 						<WorkToMake>35400</WorkToMake>
 					</statBases>
 					<costList>
@@ -590,8 +603,8 @@
 						
 						<burstShotCount>1</burstShotCount>
 						<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
-						<muzzleFlashScale>1</muzzleFlashScale>
-						<recoilAmount>0.4</recoilAmount>
+						<muzzleFlashScale>9</muzzleFlashScale>
+						<recoilAmount>3.91</recoilAmount>
 						
 						<defaultProjectile>Bullet_23x75mmR_Buck</defaultProjectile>
 						<soundCast>Shot_Remington870</soundCast>
@@ -599,7 +612,7 @@
 					</Properties>
 					<AmmoUser>
 						<magazineSize>4</magazineSize>
-						<reloadTime>0.6</reloadTime>
+						<reloadTime>0.9</reloadTime>
 						<reloadOneAtATime>True</reloadOneAtATime>
 						<ammoSet>AmmoSet_23x75mmR</ammoSet>
 					</AmmoUser>
@@ -608,6 +621,7 @@
 					</FireModes>
 					<weaponTags>
 						<li>CE_AI_BROOM</li>
+						<li>CE_AI_AssaultWeapon</li>
 					</weaponTags>
 				</li>
 				
@@ -617,19 +631,18 @@
 				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
 				<defName>Gun_SuperSMG</defName>
 					<statBases>
-						<Mass>3</Mass>
-						<Bulk>9</Bulk>
+						<Mass>3.5</Mass>
+						<Bulk>5.3</Bulk>
 
 						<SightsEfficiency>0.9</SightsEfficiency>
 						<NightVisionEfficiency_Weapon>0</NightVisionEfficiency_Weapon>
 						
-						<SwayFactor>1.55</SwayFactor>
+						<SwayFactor>1.04</SwayFactor>
 						<ShotSpread>0.18</ShotSpread>
-						<Recoil>1.1</Recoil>
 						
-						<RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+						<RangedWeapon_Cooldown>0.48</RangedWeapon_Cooldown>
 						
-						<MarketValue>350</MarketValue>			
+						<!--MarketValue>350</MarketValue-->			
 						<!--<WorkToMake></WorkToMake>-->						
 					</statBases>
 					<Properties>
@@ -637,12 +650,12 @@
 						<hasStandardCommand>True</hasStandardCommand>
 						
 						<warmupTime>0.6</warmupTime>
-						<range>32</range>
+						<range>26</range>
 						
 						<burstShotCount>20</burstShotCount>
 						<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
-						<muzzleFlashScale>4</muzzleFlashScale>
-						<recoilAmount>0.4</recoilAmount>
+						<muzzleFlashScale>9</muzzleFlashScale>
+						<recoilAmount>1.4</recoilAmount>
 						
 						<defaultProjectile>Bullet_762x25mmTokarev_FMJ</defaultProjectile>
 						<soundCast>Shot_SovietSubmachineGun</soundCast>
@@ -650,7 +663,7 @@
 					</Properties>
 					<AmmoUser>
 						<magazineSize>71</magazineSize>
-						<reloadTime>2.6</reloadTime>
+						<reloadTime>4.2</reloadTime>
 						<ammoSet>AmmoSet_762x25mmTokarev</ammoSet>
 					</AmmoUser>
 					<FireModes>
@@ -659,7 +672,7 @@
 					</FireModes>
 					<weaponTags>
 						<li>CE_SMG</li>
-						<li>CE_AI_BROOM</li>
+						<li>IndustrialGunAdvanced</li>
 					</weaponTags>
 				</li>
 				
@@ -669,31 +682,30 @@
 				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
 				<defName>Gun_SuperShotGun</defName>
 					<statBases>
-						<Mass>5</Mass>
-						<Bulk>12</Bulk>
+						<Mass>3.6</Mass>
+						<Bulk>10.6</Bulk>
 						
 						<SightsEfficiency>1.5</SightsEfficiency>
 						<NightVisionEfficiency_Weapon>0</NightVisionEfficiency_Weapon>
 						
-						<SwayFactor>1.8</SwayFactor>
+						<SwayFactor>1.73</SwayFactor>
 						<ShotSpread>0.18</ShotSpread>
-						<Recoil>1.2</Recoil>
 						
 						<RangedWeapon_Cooldown>0.43</RangedWeapon_Cooldown>
 						
-						<MarketValue>550</MarketValue>
+						<!--MarketValue>500</MarketValue-->
 					</statBases>
 					<Properties>
 						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 						<hasStandardCommand>True</hasStandardCommand>
 						
 						<warmupTime>1.1</warmupTime>
-						<range>18</range>
+						<range>14</range>
 						
 						<burstShotCount>1</burstShotCount>
 						<!--<ticksBetweenBurstShots>3</ticksBetweenBurstShots>-->
 						<muzzleFlashScale>5</muzzleFlashScale>
-						<recoilAmount>0.1</recoilAmount>
+						<recoilAmount>2.73</recoilAmount>
 						
 						<defaultProjectile>Bullet_12Gauge_Buck</defaultProjectile>
 						<soundCast>Shot_Remington870</soundCast>
@@ -701,7 +713,7 @@
 					</Properties>
 					<AmmoUser>
 						<magazineSize>8</magazineSize>
-						<reloadTime>0.4</reloadTime>
+						<reloadTime>0.45</reloadTime>
 						<reloadOneAtATime>true</reloadOneAtATime>
 						<ammoSet>AmmoSet_12Gauge</ammoSet>
 					</AmmoUser>
@@ -709,7 +721,7 @@
 						<aiAimMode>Snapshot</aiAimMode>
 					</FireModes>
 					<weaponTags>
-						<li>CE_AI_BROOM</li>				
+						<li>IndustrialGunAdvanced</li>				
 					</weaponTags>
 				</li>
 			
@@ -719,30 +731,29 @@
 				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
 				<defName>Gun_SurvivalistSniperRifle</defName>
 					<statBases>
-						<Mass>5</Mass>
-						<Bulk>12.4</Bulk>
+						<Mass>3.9</Mass>
+						<Bulk>11</Bulk>
 					
-						<SightsEfficiency>1</SightsEfficiency>
+						<SightsEfficiency>2.02</SightsEfficiency>
 						<NightVisionEfficiency_Weapon>0</NightVisionEfficiency_Weapon>
 						
-						<SwayFactor>0.65</SwayFactor>
+						<SwayFactor>1.65</SwayFactor>
 						<ShotSpread>0.03</ShotSpread>
-						<Recoil>0.95</Recoil>
 						
-						<RangedWeapon_Cooldown>1.45</RangedWeapon_Cooldown>
+						<RangedWeapon_Cooldown>1.67</RangedWeapon_Cooldown>
 						
-						<MarketValue>450</MarketValue>
+						<!--MarketValue>450</MarketValue-->
 					</statBases>
 					<Properties>
 						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 						<hasStandardCommand>True</hasStandardCommand>
 						
-						<warmupTime>1.5</warmupTime>
-						<range>56</range>
+						<warmupTime>1.4</warmupTime>
+						<range>68</range>
 						
 						<burstShotCount>1</burstShotCount>
-						<muzzleFlashScale>5</muzzleFlashScale>
-						<recoilAmount>0.5</recoilAmount>
+						<muzzleFlashScale>9</muzzleFlashScale>
+						<recoilAmount>2.17</recoilAmount>
 						
 						<defaultProjectile>Bullet_3006Springfield_FMJ</defaultProjectile>
 						<soundCast>Shot_SniperRifle</soundCast>
@@ -758,6 +769,7 @@
 					</FireModes>
 					<weaponTags>
 						<li>CE_AI_SR</li>
+						<li>IndustrialGunAdvanced</li>	
 					</weaponTags>
 				</li>
 			</operations>
