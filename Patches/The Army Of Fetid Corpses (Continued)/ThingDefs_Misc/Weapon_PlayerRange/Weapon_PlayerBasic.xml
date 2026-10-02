@@ -620,7 +620,6 @@
 						<aiAimMode>Snapshot</aiAimMode>
 					</FireModes>
 					<weaponTags>
-						<li>CE_AI_BROOM</li>
 						<li>CE_AI_AssaultWeapon</li>
 					</weaponTags>
 				</li>

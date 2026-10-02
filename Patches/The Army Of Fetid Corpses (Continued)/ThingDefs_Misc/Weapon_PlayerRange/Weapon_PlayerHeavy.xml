@@ -28,6 +28,15 @@
 				</li>
 	
 						<!-- =============== Heavy Flamer =============== -->
+				<li Class="PatchOperationAdd" MayRequire="Ludeon.Rimworld.Biotech">
+					<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer"]</xpath>
+					<value>
+						<weaponTags>
+							<li>HeavyFlamer</li>
+						</weaponTags>
+					</value>
+				</li>					
+						
 				<li Class="PatchOperationReplace" MayRequire="Ludeon.Rimworld.Biotech">
 					<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer"]/description</xpath>
 					<value>
@@ -243,7 +252,6 @@
 					<value>
 						<weaponTags Inherit="False">
 							<li>GunHeavy</li>
-							<li>CE_AI_AOE</li>
 						</weaponTags>
 					</value>
 				</li>
