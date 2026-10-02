@@ -168,7 +168,7 @@
 							<Mass>24</Mass>
 							<Bulk>15.25</Bulk>
 					  
-							<!--MarketValue>2100</MarketValue-->
+							<MarketValue>1950</MarketValue>
 							<WorkToMake>57000</WorkToMake>
 					  
 							<SightsEfficiency>2.8</SightsEfficiency>
