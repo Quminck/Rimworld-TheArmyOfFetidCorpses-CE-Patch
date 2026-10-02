@@ -309,8 +309,8 @@
 			<!-- ==================== Recipes ========================== -->	
 	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_23x75_UN_Buck</defName>
-		<label>make 23x75mmR (Buck-CL) shell x100</label>
-		<description>Craft 100 23x75mmR (Buck-CL).</description>
+		<label>make 23x75mmR (Buck-CL) shell x200</label>
+		<description>Craft 200 23x75mmR (Buck-CL).</description>
 		<jobString>Making 23x75mmR (Buck-CL)</jobString>
 		<researchPrerequisite>CleansingWeapons</researchPrerequisite>		
 		<ingredients>
@@ -345,8 +345,8 @@
 
 	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_23x75_UN_Slug</defName>
-		<label>make 23x75mmR (Slug-CL) shell x100</label>
-		<description>Craft 100 23x75mmR (Slug-CL).</description>
+		<label>make 23x75mmR (Slug-CL) shell x200</label>
+		<description>Craft 200 23x75mmR (Slug-CL).</description>
 		<jobString>Making 23x75mmR (Slug-CL)</jobString>
 		<researchPrerequisite>CleansingWeapons</researchPrerequisite>	
 		<ingredients>
