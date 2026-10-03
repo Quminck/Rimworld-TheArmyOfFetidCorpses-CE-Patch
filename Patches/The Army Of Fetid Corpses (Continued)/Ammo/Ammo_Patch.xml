@@ -1,102 +1,72 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-
-	<Operation Class="PatchOperationFindMod">
-		<mods>
-			<li>The Army Of Fetid Corpses (Continued)</li>
-		</mods>
-		<match Class="PatchOperationSequence">
-			<operations>		
-					
-			
-					<!-- ================= 7.92x33mm ================= -->
-							
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_792x33mmKurz"]/ammoTypes</xpath>
-					<value>
-						<Ammo_792x33Kurz_UN>Bullet_792x33Kurz_UN</Ammo_792x33Kurz_UN>
-					</value>
-				</li>
-				
-					<!-- ================= 7.92x57mm ================= -->
-							
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_792x57mmMauser"]/ammoTypes</xpath>
-					<value>
-						<Ammo_792x57Mauser_UN>Bullet_792x57Mauser_UN</Ammo_792x57Mauser_UN>
-					</value>
-				</li>
-		
-				
-				
-				  <!-- ================= 20x138mmB ================= -->
-							
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_20x138mmB"]/ammoTypes</xpath>
-					<value>
-						<Ammo_20x138mmB_UN>Bullet_20x138mmB_UN</Ammo_20x138mmB_UN>
-					</value>
-				</li>
-				
-				
-				
-				    <!-- ================= 23x75mmR ================= -->
-							
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_23x75mmR"]/ammoTypes</xpath>
-					<value>
-						<Ammo_23x75_UN_Buck>Bullet_23x75_UN_Buck</Ammo_23x75_UN_Buck>
-						<Ammo_23x75_UN_Slug>Bullet_23x75_UN_Slug</Ammo_23x75_UN_Slug>
-					</value>
-				</li>
-				
-				
-				
-					<!-- ================= 20x105mm Charged ================= -->
-							
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_20x105mmCharged"]/ammoTypes</xpath>
-					<value>
-						<Ammo_20x105_Cl>Bullet_20x105_Cl</Ammo_20x105_Cl>
-					</value>
-				</li>
-				
-				
-				
-					<!-- ================= Plague bile ================= -->
-					
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/DamageDef[defName="PlagueBile"]/hediff</xpath>
-					<value>
-						<hediff>ChemicalBurn</hediff>
-					</value>
-				</li>				
-					
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/DamageDef[defName="PlagueBile"]/hediffSolid</xpath>
-					<value>
-						<hediffSolid>ChemicalBurn</hediffSolid>
-					</value>
-				</li>	
-
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/DamageDef[defName="PlagueBile"]/defaultDamage</xpath>
-					<value>
-						<defaultDamage>0</defaultDamage>
-					</value>
-				</li>	
-
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/DamageDef[defName="PlagueBile"]/additionalHediffs/li/severityPerDamageDealt</xpath>
-					<value>
-							<severityPerDamageDealt>0.003</severityPerDamageDealt>
-					</value>
-				</li>	
-				
-				
-
-			</operations>
-		</match>
+		<!-- ================= 7.92x33mm ================= -->	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_792x33mmKurz"]/ammoTypes</xpath>
+		<value>
+			<Ammo_792x33Kurz_UN>Bullet_792x33Kurz_UN</Ammo_792x33Kurz_UN>
+		</value>
 	</Operation>
+	
+		<!-- ================= 7.92x57mm ================= -->	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_792x57mmMauser"]/ammoTypes</xpath>
+		<value>
+			<Ammo_792x57Mauser_UN>Bullet_792x57Mauser_UN</Ammo_792x57Mauser_UN>
+		</value>
+	</Operation>
+	
+	  <!-- ================= 20x138mmB ================= -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_20x138mmB"]/ammoTypes</xpath>
+		<value>
+			<Ammo_20x138mmB_UN>Bullet_20x138mmB_UN</Ammo_20x138mmB_UN>
+		</value>
+	</Operation>
+	
+		<!-- ================= 23x75mmR ================= -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_23x75mmR"]/ammoTypes</xpath>
+		<value>
+			<Ammo_23x75_UN_Buck>Bullet_23x75_UN_Buck</Ammo_23x75_UN_Buck>
+			<Ammo_23x75_UN_Slug>Bullet_23x75_UN_Slug</Ammo_23x75_UN_Slug>
+		</value>
+	</Operation>
+	
+		<!-- ================= 20x105mm Charged ================= -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_20x105mmCharged"]/ammoTypes</xpath>
+		<value>
+			<Ammo_20x105_Cl>Bullet_20x105_Cl</Ammo_20x105_Cl>
+		</value>
+	</Operation>
+	
+		<!-- ================= Plague bile ================= -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/DamageDef[defName="PlagueBile"]/hediff</xpath>
+		<value>
+			<hediff>ChemicalBurn</hediff>
+		</value>
+	</Operation>				
+		
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/DamageDef[defName="PlagueBile"]/hediffSolid</xpath>
+		<value>
+			<hediffSolid>ChemicalBurn</hediffSolid>
+		</value>
+	</Operation>	
 
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/DamageDef[defName="PlagueBile"]/defaultDamage</xpath>
+		<value>
+			<defaultDamage>0</defaultDamage>
+		</value>
+	</Operation>	
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/DamageDef[defName="PlagueBile"]/additionalHediffs/li/severityPerDamageDealt</xpath>
+		<value>
+				<severityPerDamageDealt>0.003</severityPerDamageDealt>
+		</value>
+	</Operation>
 </Patch>

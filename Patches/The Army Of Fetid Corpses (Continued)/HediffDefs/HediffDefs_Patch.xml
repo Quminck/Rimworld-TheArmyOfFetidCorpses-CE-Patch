@@ -1,125 +1,97 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
+	<!-- ================== Hardened Flesh ================== -->
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/HediffDef[defName="HardenedFlesh"]/stages/li/statOffsets/ArmorRating_Blunt</xpath>
+	</Operation>
+	
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/HediffDef[defName="HardenedFlesh"]/stages/li/statOffsets/ArmorRating_Sharp</xpath>
+	</Operation>
+	
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/HediffDef[defName="HardenedFlesh"]/stages/li/painFactor</xpath>
+	</Operation>				
 
-	<Operation Class="PatchOperationFindMod">
-		<mods>
-			<li>The Army Of Fetid Corpses (Continued)</li>
-		</mods>
-		<match Class="PatchOperationSequence">
-			<operations>
-
-				<!-- ================== Hardened Flesh ================== -->
-
-				<li Class="PatchOperationRemove">
-					<xpath>Defs/HediffDef[defName="HardenedFlesh"]/stages/li/statOffsets/ArmorRating_Blunt</xpath>
-				</li>
-				<li Class="PatchOperationRemove">
-					<xpath>Defs/HediffDef[defName="HardenedFlesh"]/stages/li/statOffsets/ArmorRating_Sharp</xpath>
-				</li>
-				
-				<li Class="PatchOperationRemove">
-					<xpath>Defs/HediffDef[defName="HardenedFlesh"]/stages/li/painFactor</xpath>
-				</li>				
-
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/HediffDef[defName="HardenedFlesh"]/stages/li</xpath>
-					<value>
-						<statFactors>
-							<ArmorRating_Sharp>1.25</ArmorRating_Sharp> 
-							<ArmorRating_Blunt>1.50</ArmorRating_Blunt> 
-						</statFactors>
-					</value>
-				</li>
-
-
-
-				<!-- ================== Corpse Gladiator ================== -->
-				
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/HediffDef[defName="CorpseGladiator"]/stages/li/statFactors/MeleeDPS</xpath>
-					<value>
-						<MeleeDPS>1.25</MeleeDPS>
-					</value>
-				</li>
-
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/HediffDef[defName="CorpseGladiator"]/stages/li/statFactors/MeleeDamageFactor</xpath>
-					<value>
-						<MeleeDamageFactor>1.25</MeleeDamageFactor>
-					</value>
-				</li>
-				
-				
-
-				<!-- ================== Flame Proof ================== -->
-				
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/HediffDef[defName="FlameProof"]/stages/li/statOffsets/ArmorRating_Heat</xpath>
-					<value>
-						<ArmorRating_Heat>0.50</ArmorRating_Heat>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/HediffDef[defName="FlameProof"]/stages/li/statOffsets</xpath>
-					<value>
-						<Flammability>-2.0</Flammability>
-					</value>
-				</li>
-				
-				
-				
-				<!-- ================== Blessing of the dead ================== -->
-				
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/HediffDef[defName="Necronoid_BlessingOfTheDead_AOE" or defName="Necronoid_BlessingOfTheDead"]/stages/li/naturalHealingFactor</xpath>
-					<value>
-						<naturalHealingFactor>15.0</naturalHealingFactor>
-					</value>
-				</li>
-
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/HediffDef[defName="Necronoid_BlessingOfTheDead_AOE" or defName="Necronoid_BlessingOfTheDead"]/stages/li/statOffsets/InjuryHealingFactor</xpath>
-					<value>
-						<InjuryHealingFactor>5.0</InjuryHealingFactor>
-					</value>
-				</li>	
-				
-				<li Class="PatchOperationRemove">
-					<xpath>Defs/HediffDef[defName="Necronoid_BlessingOfTheDead_AOE" or defName="Necronoid_BlessingOfTheDead"]/stages/li/painFactor</xpath>
-				</li>					
-				
-				
-				
-				<!-- ================== Speed buff ================== -->
-				
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/HediffDef[defName="LessRigorMortis"]/stages/li/capMods/li/offset</xpath>
-					<value>
-						<offset>0.35</offset>
-					</value>
-				</li>
-
-
-
-				<!-- ================== Painless (Undead) ================== -->
-
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/HediffDef[defName="Painless"]/label</xpath>
-					<value>
-						<label>Necronoid</label>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/HediffDef[defName="Painless"]/description</xpath>
-					<value>
-						<description>The nervous system of this creature is completely deadened, preventing it from transmitting pain signals. It is entirely immune to physical pain and shock, fighting until its body is physically destroyed.</description>
-					</value>
-				</li>				
-
-			</operations>
-		</match>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/HediffDef[defName="HardenedFlesh"]/stages/li</xpath>
+		<value>
+			<statFactors>
+				<ArmorRating_Sharp>1.25</ArmorRating_Sharp> 
+				<ArmorRating_Blunt>1.50</ArmorRating_Blunt> 
+			</statFactors>
+		</value>
 	</Operation>
 
+	<!-- ================== Corpse Gladiator ================== -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/HediffDef[defName="CorpseGladiator"]/stages/li/statFactors/MeleeDPS</xpath>
+		<value>
+			<MeleeDPS>1.25</MeleeDPS>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/HediffDef[defName="CorpseGladiator"]/stages/li/statFactors/MeleeDamageFactor</xpath>
+		<value>
+			<MeleeDamageFactor>1.25</MeleeDamageFactor>
+		</value>
+	</Operation>
+	
+	<!-- ================== Flame Proof ================== -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/HediffDef[defName="FlameProof"]/stages/li/statOffsets/ArmorRating_Heat</xpath>
+		<value>
+			<ArmorRating_Heat>0.50</ArmorRating_Heat>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/HediffDef[defName="FlameProof"]/stages/li/statOffsets</xpath>
+		<value>
+			<Flammability>-2.0</Flammability>
+		</value>
+	</Operation>
+	
+	<!-- ================== Blessing of the dead ================== -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/HediffDef[defName="Necronoid_BlessingOfTheDead_AOE" or defName="Necronoid_BlessingOfTheDead"]/stages/li/naturalHealingFactor</xpath>
+		<value>
+			<naturalHealingFactor>15.0</naturalHealingFactor>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/HediffDef[defName="Necronoid_BlessingOfTheDead_AOE" or defName="Necronoid_BlessingOfTheDead"]/stages/li/statOffsets/InjuryHealingFactor</xpath>
+		<value>
+			<InjuryHealingFactor>5.0</InjuryHealingFactor>
+		</value>
+	</Operation>	
+	
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/HediffDef[defName="Necronoid_BlessingOfTheDead_AOE" or defName="Necronoid_BlessingOfTheDead"]/stages/li/painFactor</xpath>
+	</Operation>					
+	
+	<!-- ================== Speed buff ================== -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/HediffDef[defName="LessRigorMortis"]/stages/li/capMods/li/offset</xpath>
+		<value>
+			<offset>0.35</offset>
+		</value>
+	</Operation>
+
+	<!-- ================== Painless (Undead) ================== -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/HediffDef[defName="Painless"]/label</xpath>
+		<value>
+			<label>Necronoid</label>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/HediffDef[defName="Painless"]/description</xpath>
+		<value>
+			<description>The nervous system of this creature is completely deadened, preventing it from transmitting pain signals. It is entirely immune to physical pain and shock, fighting until its body is physically destroyed.</description>
+		</value>
+	</Operation>
 </Patch>

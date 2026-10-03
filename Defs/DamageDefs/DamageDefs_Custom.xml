@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
 	<!-- =================== Necronoids =================== -->
-
 	<DamageDef>
 		<defName>NecronoidBiteDamage</defName>
 		<label>infected bite</label>
-
 		<workerClass>DamageWorker_Bite</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has been bitten to death by a monster.</deathMessage>
-		
 		<hediff>Bite</hediff> 
 		<hediffSolid>Crack</hediffSolid>
-		
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<armorCategory>Sharp</armorCategory>
 		<overkillPctToDestroyPart>0~0.3</overkillPctToDestroyPart>
-		
 		<additionalHediffs>
 			<li>
 				<hediff>BloodLoss</hediff>
@@ -31,10 +25,7 @@
 		</additionalHediffs>
 	</DamageDef>
 	
-	
-	
 		<!-- =================== Weapons =================== -->
-	
 	<DamageDef ParentName="Flame">
 		<defName>HellfireFlame</defName>
 		<label>Hell fire</label>
@@ -44,6 +35,5 @@
 				<severityPerDamageDealt>0.0075</severityPerDamageDealt>
 			</li>
 		</additionalHediffs>
-	</DamageDef>	
-
+	</DamageDef>
 </Defs>

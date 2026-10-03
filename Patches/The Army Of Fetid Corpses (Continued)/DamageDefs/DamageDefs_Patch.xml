@@ -1,51 +1,38 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-
-	<Operation Class="PatchOperationFindMod">
-		<mods>
-			<li>The Army Of Fetid Corpses (Continued)</li>
-		</mods>
-		<match Class="PatchOperationSequence">
-			<operations>
-	
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[@Name="BaseNecronoid"]/damageMultipliers</xpath>
-					<value>
-						<damageMultipliers>
-							<li>
-								<damageDef>Cleansing</damageDef>
-								<multiplier>1.75</multiplier>
-							</li>
-							<li>
-								<damageDef>CleansingGreater</damageDef>
-								<multiplier>3</multiplier>
-							</li>
-							<li>
-								<damageDef>CleansingBlast</damageDef>
-								<multiplier>10</multiplier>
-							</li>
-							<li>
-								<damageDef>Flame</damageDef>
-								<multiplier>1.75</multiplier>
-							</li>	
-							<li>
-								<damageDef>PrometheumFlame</damageDef>
-								<multiplier>2.0</multiplier>
-							</li>	
-							<li MayRequire="Ludeon.Rimworld.Anomaly">
-								<damageDef>BioferriteFlame</damageDef>
-								<multiplier>1.5</multiplier>
-							</li>	
-							<li>
-								<damageDef>HellfireFlame</damageDef>
-								<multiplier>2.5</multiplier>
-							</li>								
-						</damageMultipliers>
-					</value>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[@Name="BaseNecronoid"]/damageMultipliers</xpath>
+		<value>
+			<damageMultipliers>
+				<li>
+					<damageDef>Cleansing</damageDef>
+					<multiplier>1.75</multiplier>
 				</li>
-			
-			</operations>
-		</match>
+				<li>
+					<damageDef>CleansingGreater</damageDef>
+					<multiplier>3</multiplier>
+				</li>
+				<li>
+					<damageDef>CleansingBlast</damageDef>
+					<multiplier>10</multiplier>
+				</li>
+				<li>
+					<damageDef>Flame</damageDef>
+					<multiplier>1.75</multiplier>
+				</li>	
+				<li>
+					<damageDef>PrometheumFlame</damageDef>
+					<multiplier>2.0</multiplier>
+				</li>	
+				<li MayRequire="Ludeon.Rimworld.Anomaly">
+					<damageDef>BioferriteFlame</damageDef>
+					<multiplier>1.5</multiplier>
+				</li>	
+				<li>
+					<damageDef>HellfireFlame</damageDef>
+					<multiplier>2.5</multiplier>
+				</li>								
+			</damageMultipliers>
+		</value>
 	</Operation>
-
 </Patch>

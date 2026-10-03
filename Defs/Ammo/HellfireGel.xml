@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   		<CombatExtended.AmmoCategoryDef>
 			<defName>PrometheumSpecial</defName>
 			<label>Hellfire Gel</label>
@@ -9,8 +8,8 @@
 			<advanced>true</advanced>
 		</CombatExtended.AmmoCategoryDef>
 		
-		<!-- =========================== AMMUNITION SET ============================= -->
-  
+		<!-- ==================== AmmoSet ========================== -->
+	
 	<CombatExtended.AmmoSetDef MayRequire="Ludeon.Rimworld.Biotech">
 		<defName>AmmoSetHVFuel</defName> 
 		<label>Hellfire gel</label>
@@ -19,20 +18,9 @@
 		</ammoTypes>
 	</CombatExtended.AmmoSetDef>
   
-		<!-- ============================ AMMUNITION ============================== -->
-  
-	<ThingDef Class="CombatExtended.AmmoDef" Name="AmmoHVFuelBase" ParentName="HeavyAmmoBase" Abstract="True" MayRequire="Ludeon.Rimworld.Biotech">
-		<description>A highly effective incendiary compound. It is thick, sticky, and extremely flammable, making it effective against Necronoids.</description>
-		<tradeTags>
-			<li>CE_AutoEnableTrade</li>
-			<li>CE_AutoEnableCrafting_DrugLab</li>
-		</tradeTags>
-		<thingCategories>
-			<li>AmmoFlamethrower</li>        
-		</thingCategories>
-	</ThingDef>
+		<!-- ==================== Ammo ========================== -->
 
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="AmmoHVFuelBase" MayRequire="Ludeon.Rimworld.Biotech">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="FlamethrowerBase" MayRequire="Ludeon.Rimworld.Biotech">
 		<defName>AmmoHVFuel</defName>                                 
 		<label>Hellfire gel</label>
 		<graphicData>
@@ -47,10 +35,8 @@
 		<ammoClass>PrometheumSpecial</ammoClass>
 		<cookOffProjectile>BulletHVFuel</cookOffProjectile>              
 	</ThingDef>
-  
-  
-  
-					<!-- =================== Projectiles ===================-->
+	
+		<!-- ================== Projectiles ================== -->
 					
 	<ThingDef ParentName="BaseFlamethrowerBullet" MayRequire="Ludeon.Rimworld.Biotech">
 		<defName>BulletHVFuel</defName>
@@ -60,24 +46,20 @@
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageDef>HellfireFlame</damageDef> 
 			<damageAmountBase>5</damageAmountBase>
-	
 			<pelletCount>3</pelletCount>
 			<spreadMult>4.0</spreadMult>			
 			<explosionRadius>1.5</explosionRadius>
-
 			<explosionDamageFalloff>true</explosionDamageFalloff>
 			<preExplosionSpawnThingDef>FilthPrometheum</preExplosionSpawnThingDef>
 			<preExplosionSpawnChance>0.60</preExplosionSpawnChance>
-			
 			<soundExplode>CE_FlamethrowerExplosion</soundExplode>
-
 			<ai_IsIncendiary>true</ai_IsIncendiary>
 			<screenShakeFactor>0</screenShakeFactor>
 		</projectile>
 	</ThingDef>
-
-
-
+	
+		<!-- ==================== Recipes ========================== -->
+	
 	<RecipeDef ParentName="LauncherAmmoRecipeBase" MayRequire="Ludeon.Rimworld.Biotech">
 		<defName>MakeAmmoHVFuel</defName>
 		<label>make hellfire gel x100</label>
@@ -113,5 +95,4 @@
 		</products>
 		<workAmount>12000</workAmount>
 	</RecipeDef>
-	
 </Defs>
