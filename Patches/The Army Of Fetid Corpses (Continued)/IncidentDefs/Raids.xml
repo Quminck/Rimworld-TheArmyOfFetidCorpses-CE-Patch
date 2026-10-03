@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+		<!-- ======================== Chupacabras silent raid ======================== -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/IncidentDef[defName="Chupacabras_SilentRaid"]</xpath>
+		<value>					
+			<minThreatPoints>900</minThreatPoints>
+			<minRefireDays>10</minRefireDays>						
+
+		</value>
+	</Operation>
+	
+	<!-- ======================== Howling spiders silent raid ======================== -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/IncidentDef[defName="HowlingSpiders_SilentRaid"]</xpath>
+		<value>
+			<minThreatPoints>1050</minThreatPoints>
+			<minRefireDays>20</minRefireDays>
+		</value>
+	</Operation>
+		
+	<!-- ======================== Wendigo silent raid ======================== -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/IncidentDef[defName="Wendigo_SilentRaid"]</xpath>
+		<value>
+			<minThreatPoints>2000</minThreatPoints>
+			<minRefireDays>40</minRefireDays>						
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/IncidentDef[defName="Wendigo_SilentRaid"]/earliestDay</xpath>
+		<value>
+			<earliestDay>100</earliestDay>					
+		</value>
+	</Operation>				
+
+	<!-- ======================== Corrupted Ship with hives raid ======================== -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/IncidentDef[defName="CorruptedShip"]/minThreatPoints</xpath>
+		<value>
+			<minThreatPoints>900</minThreatPoints>					
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/IncidentDef[defName="CorruptedShip"]/earliestDay</xpath>
+		<value>
+			<earliestDay>50</earliestDay>					
+		</value>
+	</Operation>
+	
+	<!-- ======================== Corrupted Ship with fetid marines raid ======================== -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/IncidentDef[defName="CorruptedDropShip"]/minThreatPoints</xpath>
+		<value>
+			<minThreatPoints>1250</minThreatPoints>					
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/IncidentDef[defName="CorruptedDropShip"]/earliestDay</xpath>
+		<value>
+			<earliestDay>100</earliestDay>					
+		</value>
+	</Operation>				
+</Patch>			
