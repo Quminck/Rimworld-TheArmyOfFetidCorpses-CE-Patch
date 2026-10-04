@@ -130,7 +130,7 @@
 				</li>
 			</secondaryDamage>
 			<speed>140</speed>
-			<suppressionFactor>0.60</suppressionFactor>		
+			<suppressionFactor>2.15</suppressionFactor>		
 		</projectile>
 	</ThingDef>
 	
