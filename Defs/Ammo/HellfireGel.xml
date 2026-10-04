@@ -42,7 +42,6 @@
 		<defName>BulletHVFuel</defName>
 		<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>		
 		<label>Hell fire</label>
-		
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageDef>HellfireFlame</damageDef> 
 			<damageAmountBase>5</damageAmountBase>
@@ -73,7 +72,7 @@
 						<li>Chemfuel</li>
 					</thingDefs>
 				</filter>
-				<count>10</count>
+				<count>20</count>
 			</li>
 			<li>
 				<filter>
@@ -81,7 +80,7 @@
 						<li>Prometheum</li>
 					</thingDefs>
 				</filter>
-				<count>12</count>
+				<count>15</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
