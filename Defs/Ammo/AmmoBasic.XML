@@ -4,7 +4,7 @@
 			<defName>IncendiarySpecial</defName>
 			<label>armor-piercing incendiary - Specialized </label>
 			<labelShort>AP-I-S</labelShort>
-			<description>A modified AP-I round hastily developed at the beginning of the Necronoid outbreak.</description>
+			<description>A modified AP-I round hastily developed at the beginning of the Necronoid outbreak. It can ignite targets on impact, causing them to catch fire.</description>
 			<advanced>true</advanced>
 		</CombatExtended.AmmoCategoryDef>
 
@@ -53,13 +53,13 @@
 		<label>7.92x33mm Kurz (AP-I-S) bullet</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageDef>Bullet</damageDef>
-			<damageAmountBase>15</damageAmountBase>
+			<damageAmountBase>9</damageAmountBase>
 			<armorPenetrationSharp>10</armorPenetrationSharp>
 			<armorPenetrationBlunt>37.54</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
-					<def>Flame_Secondary</def>
-					<amount>10</amount>
+					<def>Flame</def>
+					<amount>11</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>
@@ -76,18 +76,18 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>Prometheum</li>
+						<li>Steel</li>
 					</thingDefs>
 				</filter>
-				<count>6</count>
+				<count>20</count>
 			</li>
 			<li>
 				<filter>
 					<thingDefs>
-						<li>Steel</li>
+						<li>Prometheum</li>
 					</thingDefs>
 				</filter>
-				<count>25</count>
+				<count>8</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -124,13 +124,13 @@
 		<label>7.92x57mm Mauser (AP-I-S) bullet</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageDef>Bullet</damageDef>
-			<damageAmountBase>17</damageAmountBase>
-			<armorPenetrationSharp>12</armorPenetrationSharp>
+			<damageAmountBase>12</damageAmountBase>
+			<armorPenetrationSharp>15</armorPenetrationSharp>
 			<armorPenetrationBlunt>78.68</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
-					<def>Flame_Secondary</def>
-					<amount>14</amount>
+					<def>Flame</def>
+					<amount>13</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>
@@ -139,19 +139,11 @@
 			<!-- ==================== Recipes ========================== -->	
 	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_792x57Mauser_UN</defName>
-		<label>make 7.92x57mm Mauser AP-I-S cartridge x500</label>
-		<description>Craft 500 7.92x57mm Mauser AP-I-S cartridges.</description>
-		<jobString>Making 7.92x57mm Mauser AP-I-S cartridges</jobString>
+		<label>make 7.92x57mm Mauser (AP-I-S) cartridge x500</label>
+		<description>Craft 500 7.92x57mm Mauser (AP-I-S) cartridges.</description>
+		<jobString>Making 7.92x57mm Mauser (AP-I-S) cartridges</jobString>
 		<researchPrerequisite>IncendiaryWeapons</researchPrerequisite>
 		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Prometheum</li>
-					</thingDefs>
-				</filter>
-				<count>9</count>
-			</li>
 			<li>
 				<filter>
 					<thingDefs>
@@ -159,6 +151,14 @@
 					</thingDefs>
 				</filter>
 				<count>30</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Prometheum</li>
+					</thingDefs>
+				</filter>
+				<count>12</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -194,13 +194,13 @@
 		<defName>Bullet_20x138mmB_UN</defName>
 		<label>20x138mmB (AP-I-S) bullet</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>54</damageAmountBase>
+			<damageAmountBase>39</damageAmountBase>
 			<armorPenetrationBlunt>972</armorPenetrationBlunt>
 			<armorPenetrationSharp>34</armorPenetrationSharp>
 			<secondaryDamage>
 				<li>
 					<def>Flame</def>
-					<amount>52</amount>
+					<amount>57</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>
@@ -217,18 +217,18 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>Prometheum</li>
-					</thingDefs>
-				</filter>
-				<count>36</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
 						<li>Steel</li>
 					</thingDefs>
 				</filter>
 				<count>120</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Prometheum</li>
+					</thingDefs>
+				</filter>
+				<count>48</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -435,12 +435,21 @@
 				</filter>
 				<count>18</count>
 			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>6</count>
+			</li>
 		</ingredients>
 		<fixedIngredientFilter>
 		<thingDefs>
 			<li>Plasteel</li>
 			<li>Neutroamine</li>
 			<li>ComponentIndustrial</li>
+			<li>Steel</li>
 		</thingDefs>
 		</fixedIngredientFilter>
 		<products>
