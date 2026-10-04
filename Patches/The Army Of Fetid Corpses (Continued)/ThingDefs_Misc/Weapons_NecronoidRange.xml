@@ -34,7 +34,7 @@
 						<li>
 							<def>NecronoidCutDamage</def>
 							<amount>2</amount>
-							<chance>0.05</chance>
+							<chance>0.25</chance>
 						</li>
 					</extraMeleeDamages>
 					<cooldownTime>1.6</cooldownTime>
@@ -50,30 +50,31 @@
 	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
 		<defName>Gun_BoneshardRifle</defName>
 		<statBases>
-			<Mass>3.7</Mass>
-			<Bulk>11.6</Bulk>
+			<Mass>3.8</Mass>
+			<Bulk>9.7</Bulk>
 			<SightsEfficiency>1.0</SightsEfficiency>
 			<NightVisionEfficiency_Weapon>0.1</NightVisionEfficiency_Weapon> 
 			<SwayFactor>1.53</SwayFactor>
 			<ShotSpread>0.08</ShotSpread>
-			<RangedWeapon_Cooldown>0.98</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>0.68</RangedWeapon_Cooldown>
 		</statBases>
 		<Properties>
 			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 			<hasStandardCommand>True</hasStandardCommand>
-			<ai_AvoidFriendlyFireRadius>2</ai_AvoidFriendlyFireRadius>
 			<warmupTime>1.1</warmupTime>
 			<range>48</range>
-			<burstShotCount>4</burstShotCount>
-			<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+			<burstShotCount>5</burstShotCount>
+			<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
 			<muzzleFlashScale>6</muzzleFlashScale>
-			<recoilAmount>1.24</recoilAmount>
+			<recoilAmount>1.44</recoilAmount>
 			<defaultProjectile>Bullet_Bone_Rifle</defaultProjectile>
 			<soundCast>Shot_Necronoid_Pistol</soundCast>
-			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<soundCastTail>GunTail_Medium</soundCastTail>
 		</Properties>	
 		<FireModes>
-			<aiAimMode>AimedShot</aiAimMode> 
+			<aiAimMode>AimedShot</aiAimMode>
+			<aiUseBurstMode>true</aiUseBurstMode>
+			<aimedBurstShotCount>3</aimedBurstShotCount>
 		</FireModes>
 		<weaponTags>
 			<li>CE_AI_AR</li>
@@ -85,29 +86,30 @@
 		<defName>Gun_AdvancedBoneshardRifle</defName>
 		<statBases>
 			<Mass>3.95</Mass>
-			<Bulk>12.1</Bulk>
+			<Bulk>10.1</Bulk>
 			<SightsEfficiency>1.2</SightsEfficiency>
 			<NightVisionEfficiency_Weapon>0.25</NightVisionEfficiency_Weapon> 
-			<SwayFactor>1.36</SwayFactor>
-			<ShotSpread>0.06</ShotSpread>
-			<RangedWeapon_Cooldown>0.89</RangedWeapon_Cooldown>
+			<SwayFactor>1.44</SwayFactor>
+			<ShotSpread>0.07</ShotSpread>
+			<RangedWeapon_Cooldown>0.65</RangedWeapon_Cooldown>
 		</statBases>
 		<Properties>
 			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 			<hasStandardCommand>True</hasStandardCommand>
-			<ai_AvoidFriendlyFireRadius>2</ai_AvoidFriendlyFireRadius>
 			<warmupTime>1.2</warmupTime>
 			<range>54</range>
 			<burstShotCount>5</burstShotCount>
-			<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
-			<muzzleFlashScale>2</muzzleFlashScale>
-			<recoilAmount>1.17</recoilAmount>
+			<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+			<muzzleFlashScale>6</muzzleFlashScale>
+			<recoilAmount>1.41</recoilAmount>
 			<defaultProjectile>Bullet_Bone_Rifle</defaultProjectile>
 			<soundCast>Shot_Necronoid_Pistol</soundCast>
-			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<soundCastTail>GunTail_Medium</soundCastTail>
 		</Properties>
 		<FireModes>
 			<aiAimMode>AimedShot</aiAimMode>
+			<aiUseBurstMode>true</aiUseBurstMode>
+			<aimedBurstShotCount>3</aimedBurstShotCount>
 		</FireModes>
 		<weaponTags>
 			<li>CE_AI_AR</li>
@@ -118,21 +120,19 @@
 	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
 		<defName>Gun_BoneshardShotgun</defName>
 		<statBases>
-			<Mass>4.1</Mass>
-			<Bulk>11.6</Bulk>
+			<Mass>3.</Mass>
+			<Bulk>9.1</Bulk>
 			<SightsEfficiency>1.0</SightsEfficiency>
 			<NightVisionEfficiency_Weapon>0.1</NightVisionEfficiency_Weapon> 
-			<SwayFactor>1.43</SwayFactor>
-			<ShotSpread>0.13</ShotSpread>
+			<SwayFactor>1.40</SwayFactor>
+			<ShotSpread>0.14</ShotSpread>
 			<RangedWeapon_Cooldown>1.05</RangedWeapon_Cooldown>
 		</statBases>
 		<Properties>
 			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 			<hasStandardCommand>True</hasStandardCommand>
-			<ai_AvoidFriendlyFireRadius>2</ai_AvoidFriendlyFireRadius>
-			<warmupTime>1.15</warmupTime>
-			<range>18</range>
-			<burstShotCount>1</burstShotCount>
+			<warmupTime>0.95</warmupTime>
+			<range>15</range>
 			<muzzleFlashScale>7</muzzleFlashScale>
 			<recoilAmount>2.86</recoilAmount>
 			<defaultProjectile>Bullet_Bone_Shotgun</defaultProjectile>
@@ -153,21 +153,19 @@
 		<statBases>
 			<Mass>5.2</Mass>
 			<Bulk>12.5</Bulk>
-			<SightsEfficiency>1.45</SightsEfficiency>
-			<NightVisionEfficiency_Weapon>0.5</NightVisionEfficiency_Weapon>
-			<SwayFactor>1.06</SwayFactor>
+			<SightsEfficiency>1.50</SightsEfficiency>
+			<NightVisionEfficiency_Weapon>0.35</NightVisionEfficiency_Weapon>
+			<SwayFactor>1.21</SwayFactor>
 			<ShotSpread>0.04</ShotSpread>
-			<RangedWeapon_Cooldown>2.35</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>1.71</RangedWeapon_Cooldown>
 		</statBases>
 		<Properties>
 			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 			<hasStandardCommand>True</hasStandardCommand>
-			<ai_AvoidFriendlyFireRadius>2</ai_AvoidFriendlyFireRadius>
 			<warmupTime>1.7</warmupTime>
-			<range>72</range>
-			<burstShotCount>1</burstShotCount>
-			<muzzleFlashScale>2</muzzleFlashScale>
-			<recoilAmount>1.23</recoilAmount>
+			<range>68</range>
+			<muzzleFlashScale>8</muzzleFlashScale>
+			<recoilAmount>1.73</recoilAmount>
 			<defaultProjectile>Bullet_Bone_Sniper</defaultProjectile>
 			<soundCast>Shot_Necronoid_Pistol</soundCast>
 			<soundCastTail>GunTail_Heavy</soundCastTail>
@@ -185,32 +183,31 @@
 		<defName>Gun_BoneshardRapidBlaster</defName>
 		<statBases>
 			<Mass>23</Mass>
-			<Bulk>10</Bulk>
+			<Bulk>14</Bulk>
 			<SightsEfficiency>1.2</SightsEfficiency>
 			<NightVisionEfficiency_Weapon>0.1</NightVisionEfficiency_Weapon>
-			<SwayFactor>3.17</SwayFactor>
+			<SwayFactor>2.77</SwayFactor>
 			<ShotSpread>0.06</ShotSpread>
-			<RangedWeapon_Cooldown>0.35</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>0.56</RangedWeapon_Cooldown>
 		</statBases>
 		<Properties>
 			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 			<hasStandardCommand>True</hasStandardCommand>
-			<ai_AvoidFriendlyFireRadius>2</ai_AvoidFriendlyFireRadius>
 			<warmupTime>2.45</warmupTime>
-			<range>46</range>
-			<burstShotCount>30</burstShotCount>
-			<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
-			<muzzleFlashScale>2</muzzleFlashScale>
-			<recoilAmount>1.31</recoilAmount>
+			<range>45</range>
+			<burstShotCount>40</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<muzzleFlashScale>7</muzzleFlashScale>
+			<recoilAmount>1.71</recoilAmount>
 			<defaultProjectile>Bullet_Bone_Rifle</defaultProjectile>
 			<soundCast>Shot_Necronoid_Pistol</soundCast>
 			<soundCastTail>GunTail_Heavy</soundCastTail>
 		</Properties>
 		<FireModes>			
-			<aiAimMode>Snapshot</aiAimMode> 
+			<aiAimMode>SuppressFire</aiAimMode> 
 		</FireModes>
 		<weaponTags>
-			<li>CE_AI_Minigun</li>
+			<li>CE_AI_Suppressive</li>
 		</weaponTags>
 	</Operation>
 
@@ -218,29 +215,27 @@
 	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
 		<defName>Gun_BoneshardAutoCannon</defName>
 		<statBases>
-			<Mass>28.5</Mass>
+			<Mass>41.5</Mass>
 			<Bulk>16</Bulk>
 			<SightsEfficiency>2.0</SightsEfficiency>
 			<NightVisionEfficiency_Weapon>0.3</NightVisionEfficiency_Weapon>
-			<SwayFactor>1.13</SwayFactor>
+			<SwayFactor>0.93</SwayFactor>
 			<ShotSpread>0.03</ShotSpread>
-			<RangedWeapon_Cooldown>0.45</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>0.25</RangedWeapon_Cooldown>
 		</statBases>
 		<Properties>
 			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 			<hasStandardCommand>True</hasStandardCommand>
-			<ai_AvoidFriendlyFireRadius>2</ai_AvoidFriendlyFireRadius>
-			<warmupTime>0.75</warmupTime>
-			<range>46</range>
-			<burstShotCount>1</burstShotCount>
-			<muzzleFlashScale>2</muzzleFlashScale>
-			<recoilAmount>1.05</recoilAmount>
+			<warmupTime>1.20</warmupTime>
+			<range>45</range>
+			<muzzleFlashScale>8</muzzleFlashScale>
+			<recoilAmount>1.01</recoilAmount>
 			<defaultProjectile>Bullet_Bone_AutoCannon</defaultProjectile>
 			<soundCast>Shot_Necronoid_Pistol</soundCast>
 			<soundCastTail>GunTail_Heavy</soundCastTail>
 		</Properties>
-		<FireModes>			
-			<aiAimMode>SuppressFire</aiAimMode> 
+		<FireModes>
+			<aiAimMode>Snapshot</aiAimMode>
 		</FireModes>					
 		<weaponTags>
 			<li>CE_AI_HeavyWeapons</li>
@@ -257,24 +252,23 @@
 			<NightVisionEfficiency_Weapon>0.1</NightVisionEfficiency_Weapon> 
 			<SwayFactor>1.43</SwayFactor>
 			<ShotSpread>0.17</ShotSpread>
-			<RangedWeapon_Cooldown>4.15</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>3.6</RangedWeapon_Cooldown>
 		</statBases>
 		<Properties>
 			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 			<hasStandardCommand>True</hasStandardCommand>
-			<ai_AvoidFriendlyFireRadius>2</ai_AvoidFriendlyFireRadius>
-			<warmupTime>3.05</warmupTime>
+			<warmupTime>2.11</warmupTime>
 			<range>20</range>
-			<burstShotCount>1</burstShotCount>
-			<muzzleFlashScale>2</muzzleFlashScale>
-			<recoilAmount>1.5</recoilAmount>
+			<!--burstShotCount>1</burstShotCount-->
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<recoilAmount>2.97</recoilAmount>
 			<defaultProjectile>Bullet_Bone_Plague</defaultProjectile>						
 			<soundCast>Shot_Necronoid_Shotgun</soundCast>
 			<soundCastTail>GunTail_Heavy</soundCastTail>
 		</Properties>
 		<FireModes>
-			<aiAimMode>AimedShot</aiAimMode> 
-		</FireModes>					
+			<aiAimMode>SuppressFire</aiAimMode>
+		</FireModes>			
 		<weaponTags>
 			<li>CE_AI_AOE</li>
 		</weaponTags>
@@ -331,7 +325,7 @@
 					<burstShotCount>5</burstShotCount>
 					<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
 					<muzzleFlashScale>5</muzzleFlashScale>
-					<recoilAmount>0.98</recoilAmount>
+					<recoilAmount>1.28</recoilAmount>
 					<defaultProjectile>Bullet_Bone_Turret</defaultProjectile>
 					<soundCast>Shot_Necronoid_Pistol</soundCast>
 					<soundCastTail>GunTail_Light</soundCastTail>

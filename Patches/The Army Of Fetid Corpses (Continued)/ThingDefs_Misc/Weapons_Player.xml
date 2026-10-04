@@ -109,8 +109,8 @@
 		</statBases>
 		<costList>
 			<Steel>55</Steel>
-			<ComponentIndustrial>5</ComponentIndustrial>
 			<Plasteel>5</Plasteel>
+			<ComponentIndustrial>5</ComponentIndustrial>
 			<Chemfuel>10</Chemfuel>
 		</costList>
 		<Properties>
@@ -163,8 +163,8 @@
 		</statBases>
 		<costList>
 			<Steel>85</Steel>
-			<ComponentIndustrial>8</ComponentIndustrial>
 			<Plasteel>10</Plasteel>
+			<ComponentIndustrial>8</ComponentIndustrial>
 			<Chemfuel>20</Chemfuel>
 		</costList>
 		<Properties>
@@ -219,8 +219,9 @@
 		</statBases>
 		<costList>
 			<Steel>105</Steel>
-			<ComponentIndustrial>7</ComponentIndustrial>
 			<Plasteel>10</Plasteel>
+			<ComponentIndustrial>7</ComponentIndustrial>
+			<Chemfuel>10</Chemfuel>
 		</costList>
 		<Properties>
 			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
@@ -266,12 +267,12 @@
 	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
 		<defName>Gun_CleansingBolter</defName>
 		<statBases>
-			<Mass>7</Mass>
+			<Mass>4.3</Mass>
 			<Bulk>9.2</Bulk>
 			<SightsEfficiency>1</SightsEfficiency>
 			<NightVisionEfficiency_Weapon>0</NightVisionEfficiency_Weapon>
 			<SwayFactor>1.64</SwayFactor>
-			<ShotSpread>0.16</ShotSpread>
+			<ShotSpread>0.11</ShotSpread>
 			<RangedWeapon_Cooldown>1.09</RangedWeapon_Cooldown>
 			<MarketValue>800</MarketValue>
 			<WorkToMake>42000</WorkToMake>
@@ -288,7 +289,7 @@
 			<warmupTime>1.2</warmupTime>
 			<range>25</range>
 			<burstShotCount>4</burstShotCount>
-			<ticksBetweenBurstShots>23</ticksBetweenBurstShots>
+			<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
 			<muzzleFlashScale>10</muzzleFlashScale>
 			<recoilAmount>1.88</recoilAmount>
 			<defaultProjectile>BulletANBbolt</defaultProjectile>
@@ -313,7 +314,7 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Gun_ImperialCleansingBolter"]/label</xpath>
 		<value>
-			<label>Imperial Bolt Carbine</label> 
+			<label>Imperial Bolt carbine</label> 
 		</value>
 	</Operation>
 		
@@ -327,7 +328,7 @@
 	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
 		<defName>Gun_ImperialCleansingBolter</defName>
 		<statBases>
-			<Mass>6.8</Mass>
+			<Mass>5.1</Mass>
 			<Bulk>10.1</Bulk>
 			<SightsEfficiency>1.1</SightsEfficiency>
 			<NightVisionEfficiency_Weapon>0.35</NightVisionEfficiency_Weapon>
@@ -347,7 +348,7 @@
 			<hasStandardCommand>True</hasStandardCommand>
 			<warmupTime>1.4</warmupTime>
 			<range>50</range>
-			<burstShotCount>4</burstShotCount>
+			<burstShotCount>5</burstShotCount>
 			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
 			<muzzleFlashScale>7</muzzleFlashScale>
 			<recoilAmount>1.43</recoilAmount>
@@ -356,7 +357,7 @@
 			<soundCastTail>GunTail_Heavy</soundCastTail>
 		</Properties>
 		<AmmoUser>
-			<magazineSize>20</magazineSize>
+			<magazineSize>30</magazineSize>
 			<reloadTime>4.5</reloadTime>
 			<ammoSet>AmmoSetANBbolt</ammoSet>
 		</AmmoUser>
@@ -393,7 +394,7 @@
 			<Bulk>10.6</Bulk>
 			<SightsEfficiency>1.2</SightsEfficiency>
 			<NightVisionEfficiency_Weapon>0.35</NightVisionEfficiency_Weapon>
-			<SwayFactor>2.19</SwayFactor>
+			<SwayFactor>1.89</SwayFactor>
 			<ShotSpread>0.06</ShotSpread>
 			<RangedWeapon_Cooldown>0.56</RangedWeapon_Cooldown>
 			<MarketValue>1500</MarketValue>
@@ -426,6 +427,10 @@
 			<aiAimMode>AimedShot</aiAimMode>
 			<aimedBurstShotCount>3</aimedBurstShotCount>
 		</FireModes>
+		<weaponTags>
+			<li>CE_MachineGun</li>
+			<li>Bipod_LMG</li>
+		</weaponTags>
 	</Operation>
 	
 		<!-- ====================== Imperial Cleansing Auto Cannon ====================== -->
@@ -513,14 +518,13 @@
 			<SwayFactor>1.43</SwayFactor>
 			<ShotSpread>0.19</ShotSpread>
 			<RangedWeapon_Cooldown>0.98</RangedWeapon_Cooldown>
-			<MarketValue>700</MarketValue>
+			<!--MarketValue>700</MarketValue-->
 			<WorkToMake>35400</WorkToMake>
 		</statBases>
 		<costList>
 			<Steel>60</Steel>
-			<ComponentSpacer>1</ComponentSpacer>
-			<ComponentIndustrial>2</ComponentIndustrial>
 			<Plasteel>20</Plasteel>
+			<ComponentIndustrial>7</ComponentIndustrial>
 		</costList>
 		<Properties>
 			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
@@ -719,9 +723,9 @@
 			<Bulk>11.4</Bulk>
 			<SightsEfficiency>1</SightsEfficiency>
 			<NightVisionEfficiency_Weapon>0</NightVisionEfficiency_Weapon> 
-			<SwayFactor>1.28</SwayFactor>
-			<ShotSpread>2.5</ShotSpread>
-			<RangedWeapon_Cooldown>1.75</RangedWeapon_Cooldown>
+			<SwayFactor>1.40</SwayFactor>
+			<ShotSpread>3.15</ShotSpread>
+			<RangedWeapon_Cooldown>0.95</RangedWeapon_Cooldown>
 			<MarketValue>1100</MarketValue>
 			<WorkToMake>63000</WorkToMake>
 		</statBases>
@@ -738,7 +742,7 @@
 			<burstShotCount>15</burstShotCount>
 			<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
 			<muzzleFlashScale>12</muzzleFlashScale>
-			<recoilAmount>0.34</recoilAmount>
+			<recoilAmount>0.60</recoilAmount>
 			<defaultProjectile>BulletHVFuel</defaultProjectile>
 			<soundCast>Shot_MiniFlameblaster</soundCast>	
 		<targetParams>
@@ -754,10 +758,6 @@
 			<aiAimMode>Snapshot</aiAimMode>
 			<aimedBurstShotCount>5</aimedBurstShotCount>
 		</FireModes>
-		<weaponTags>
-			<li>GunHeavy</li>
-			<li>CE_AI_AOE</li>
-		</weaponTags>
 	</Operation>
 
 		<!-- ====================== (Cleansing) Imperial rocket launcher  ====================== -->
@@ -780,10 +780,10 @@
 		<statBases>
 			<Mass>24</Mass>
 			<Bulk>15.25</Bulk>
-			<SightsEfficiency>2.8</SightsEfficiency>
-			<NightVisionEfficiency_Weapon>0.9</NightVisionEfficiency_Weapon>
-			<SwayFactor>3.15</SwayFactor>
-			<ShotSpread>0.01</ShotSpread>
+			<SightsEfficiency>1.85</SightsEfficiency>
+			<NightVisionEfficiency_Weapon>0.75</NightVisionEfficiency_Weapon>
+			<SwayFactor>2.95</SwayFactor>
+			<ShotSpread>0.02</ShotSpread>
 			<RangedWeapon_Cooldown>2.05</RangedWeapon_Cooldown>
 			<MarketValue>1950</MarketValue>
 			<WorkToMake>57000</WorkToMake>
@@ -806,10 +806,7 @@
 			<recoilAmount>0.64</recoilAmount>
 			<targetParams>
 			  <canTargetLocations>True</canTargetLocations>
-			</targetParams>							
-		<targetParams>
-			<canTargetLocations>True</canTargetLocations>
-		</targetParams>
+			</targetParams>
 		</Properties>
 		<AmmoUser>
 			<magazineSize>1</magazineSize>
@@ -820,7 +817,7 @@
 			<aiAimMode>AimedShot</aiAimMode>		
 		</FireModes>
 		<weaponTags>
-			<li>GunHeavy</li>
+			<li>CE_AI_Launcher</li>
 		</weaponTags>
 	</Operation>
 </Patch>
