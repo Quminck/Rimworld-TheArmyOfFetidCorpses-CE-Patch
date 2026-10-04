@@ -1,148 +1,163 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-		<!-- ======================== Empire NecroHunter ======================== -->
-		<Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
-			<xpath>Defs/PawnKindDef[defName="Empire_Fighter_NecroHunter"]/specificApparelRequirements</xpath>
-			<value>
-				<specificApparelRequirements Inherit="False" />
-			</value>
-		</Operation>
+	<!-- ======================== Empire NecroHunter ======================== -->
+	<Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+		<xpath>Defs/PawnKindDef[defName="Empire_Fighter_NecroHunter"]/specificApparelRequirements</xpath>
+		<value>
+			<specificApparelRequirements Inherit="False" />
+		</value>
+	</Operation>
 
-		<Operation Class="PatchOperationConditional" MayRequire="Ludeon.RimWorld.Royalty">
+	<Operation Class="PatchOperationConditional" MayRequire="Ludeon.RimWorld.Royalty">
+		<xpath>Defs/PawnKindDef[defName="Empire_Fighter_NecroHunter"]/apparelAllowHeadgearChance</xpath>
+		<match Class="PatchOperationReplace">
 			<xpath>Defs/PawnKindDef[defName="Empire_Fighter_NecroHunter"]/apparelAllowHeadgearChance</xpath>
-			<match Class="PatchOperationReplace">
-				<xpath>Defs/PawnKindDef[defName="Empire_Fighter_NecroHunter"]/apparelAllowHeadgearChance</xpath>
-				<value>
-					<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
-				</value>
-			</match>
-			<nomatch Class="PatchOperationAdd">
-				<xpath>Defs/PawnKindDef[defName="Empire_Fighter_NecroHunter"]</xpath>
-				<value>
-					<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
-				</value>
-			</nomatch>
-		</Operation>
-		
-		<Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
-			<xpath>Defs/PawnKindDef[defName="Empire_Fighter_NecroHunter"]/weaponTags</xpath>
 			<value>
-				<weaponTags>
-					<li>CleanseBolterImperial</li>
-					<li>CleanseAutocannonImperial</li>
-					<li>CleanseScopedBolterLMGImperial</li>
-					<li>CleanseShotgun</li>
-				</weaponTags>
+				<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
 			</value>
-		</Operation>	
-		
-		<Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
-			<xpath>Defs/PawnKindDef[defName="Empire_Fighter_NecroHunter"]/skills</xpath>
-			<value>
-				<skills>
-					<li>
-						<skill>Shooting</skill>
-						<range>10~14</range>
-					</li>
-					<li>
-						<skill>Melee</skill>
-						<range>8~12</range>
-					</li>							
-				</skills>
-			</value>
-		</Operation>				
-		
-		<Operation Class="PatchOperationAddModExtension" MayRequire="Ludeon.RimWorld.Royalty">
+		</match>
+		<nomatch Class="PatchOperationAdd">
 			<xpath>Defs/PawnKindDef[defName="Empire_Fighter_NecroHunter"]</xpath>
 			<value>
-				<li Class="CombatExtended.LoadoutPropertiesExtension">
-					<primaryMagazineCount>
-						<min>5</min>
-						<max>6</max>
-					</primaryMagazineCount>
-					<sidearms>
-						<li>
-							<generateChance>1.0</generateChance>
-							<sidearmMoney>
-								<min>3000</min>
-								<max>6000</max>
-							</sidearmMoney>
-							<weaponTags>
-								<li>UltratechMelee</li>
-							</weaponTags>
-						</li>
-					</sidearms>
+				<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
+		<xpath>Defs/PawnKindDef[@Name="NecroHuntertBase"]</xpath>
+		<value>
+			<apparelColor>(70, 72, 85)</apparelColor>
+			<minGenerationAge>24</minGenerationAge>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+		<xpath>Defs/PawnKindDef[defName="Empire_Fighter_NecroHunter"]/weaponTags</xpath>
+		<value>
+			<weaponTags>
+				<li>CleanseBolterImperial</li>
+				<li>CleanseAutocannonImperial</li>
+				<li>CleanseScopedBolterLMGImperial</li>
+				<li>CleanseShotgun</li>
+			</weaponTags>
+		</value>
+	</Operation>	
+	
+	<Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+		<xpath>Defs/PawnKindDef[defName="Empire_Fighter_NecroHunter"]/weaponMoney</xpath>
+		<value>
+			<weaponMoney>4000~6500</weaponMoney>
+		</value>
+	</Operation>	
+	
+	<Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+		<xpath>Defs/PawnKindDef[defName="Empire_Fighter_NecroHunter"]/skills</xpath>
+		<value>
+			<skills>
+				<li>
+					<skill>Shooting</skill>
+					<range>10~14</range>
 				</li>
-			</value>
-		</Operation>
-		
-		<Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
-			<xpath>Defs/PawnKindDef[defName="Empire_Fighter_NecroHunter"]</xpath>
-			<value>
-				<biocodeWeaponChance>1.0</biocodeWeaponChance>
-			</value>
-		</Operation>
-		
-		<Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
-			<xpath>Defs/PawnKindDef[defName="Empire_Fighter_NecroHunter"]/combatPower</xpath>
-			<value>
-				<combatPower>600</combatPower> 
-			</value>
-		</Operation>
-		
-		<!-- ======================== Empire Grenadier ======================== -->
-		<Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
-			<xpath>Defs/PawnKindDef[defName="Empire_Fighter_Grenadier"]/weaponTags</xpath>
-			<value>
-				<li>CleansingRocketLauncher</li>
-				<li>HeavyFlamer</li>
-			</value>
-		</Operation>
-		
-		<!-- =============== Empire Janissary =============== -->
-		<Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
-			<xpath>Defs/PawnKindDef[defName="Empire_Fighter_Janissary"]/modExtensions/li[@Class="CombatExtended.LoadoutPropertiesExtension"]</xpath>
-			<value>
+				<li>
+					<skill>Melee</skill>
+					<range>8~12</range>
+				</li>							
+			</skills>
+		</value>
+	</Operation>				
+	
+	<Operation Class="PatchOperationAddModExtension" MayRequire="Ludeon.RimWorld.Royalty">
+		<xpath>Defs/PawnKindDef[defName="Empire_Fighter_NecroHunter"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>5</min>
+					<max>6</max>
+				</primaryMagazineCount>
 				<weightedAmmoCategories>
-					<IncendiarySpecial>1.0</IncendiarySpecial>
 					<CleansingRound>1.0</CleansingRound>
-				</weightedAmmoCategories>						
-			</value>
-		</Operation>
-		
-		<!-- =============== Empire Cataphract =============== -->
-		<Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
-			<xpath>Defs/PawnKindDef[defName="Empire_Fighter_Cataphract"]/weaponTags</xpath>
-			<value>
-				<li>CleanseBolterImperial</li>
-				<li>CleanseScopedBolterLMGImperial</li>
-				<li>CleanseAutocannonImperial</li>
-			</value>
-		</Operation>
-		
-		<Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
-			<xpath>Defs/PawnKindDef[defName="Empire_Fighter_Cataphract"]/modExtensions/li[@Class="CombatExtended.LoadoutPropertiesExtension"]/weightedAmmoCategories</xpath>
-			<value>
-				<IncendiarySpecial>1.0</IncendiarySpecial>
-				<CleansingRound>1.0</CleansingRound>
-			</value>
-		</Operation>
-		
-		<!-- =============== Empire Stellic Guard =============== -->
-		<Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
-			<xpath>Defs/PawnKindDef[defName="Empire_Fighter_StellicGuardRanged"]/weaponTags</xpath>
-			<value>
-				<li>CleanseBolterImperial</li>
-				<li>CleanseScopedBolterLMGImperial</li>
-				<li>CleanseAutocannonImperial</li>
-			</value>
-		</Operation>
+				</weightedAmmoCategories>	
+				<forcedSidearm>
+					<sidearmMoney>
+						<min>3000</min>
+						<max>4000</max>
+					</sidearmMoney>
+					<weaponTags>
+						<li>UltratechMelee</li>
+					</weaponTags>
+				</forcedSidearm>
+			</li>
+		</value>
+	</Operation>
 
-		<Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
-			<xpath>Defs/PawnKindDef[defName="Empire_Fighter_StellicGuardRanged"]/modExtensions/li[@Class="CombatExtended.LoadoutPropertiesExtension"]/weightedAmmoCategories</xpath>
-			<value>
+	<Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
+		<xpath>Defs/PawnKindDef[defName="Empire_Fighter_NecroHunter"]</xpath>
+		<value>
+			<biocodeWeaponChance>1.0</biocodeWeaponChance>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+		<xpath>Defs/PawnKindDef[defName="Empire_Fighter_NecroHunter"]/combatPower</xpath>
+		<value>
+			<combatPower>600</combatPower> 
+		</value>
+	</Operation>
+	
+	<!-- ======================== Empire Grenadier ======================== -->
+	<Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
+		<xpath>Defs/PawnKindDef[defName="Empire_Fighter_Grenadier"]/weaponTags</xpath>
+		<value>
+			<li>CleansingRocketLauncher</li>
+			<li>HeavyFlamer</li>
+		</value>
+	</Operation>
+	
+	<!-- =============== Empire Janissary =============== -->
+	<Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
+		<xpath>Defs/PawnKindDef[defName="Empire_Fighter_Janissary"]/modExtensions/li[@Class="CombatExtended.LoadoutPropertiesExtension"]</xpath>
+		<value>
+			<weightedAmmoCategories>
 				<IncendiarySpecial>1.0</IncendiarySpecial>
 				<CleansingRound>1.0</CleansingRound>
-			</value>
-		</Operation>
+			</weightedAmmoCategories>						
+		</value>
+	</Operation>
+	
+	<!-- =============== Empire Cataphract =============== -->
+	<Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
+		<xpath>Defs/PawnKindDef[defName="Empire_Fighter_Cataphract"]/weaponTags</xpath>
+		<value>
+			<li>CleanseBolterImperial</li>
+			<li>CleanseScopedBolterLMGImperial</li>
+			<li>CleanseAutocannonImperial</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
+		<xpath>Defs/PawnKindDef[defName="Empire_Fighter_Cataphract"]/modExtensions/li[@Class="CombatExtended.LoadoutPropertiesExtension"]/weightedAmmoCategories</xpath>
+		<value>
+			<IncendiarySpecial>1.0</IncendiarySpecial>
+			<CleansingRound>1.0</CleansingRound>
+		</value>
+	</Operation>
+	
+	<!-- =============== Empire Stellic Guard =============== -->
+	<Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
+		<xpath>Defs/PawnKindDef[defName="Empire_Fighter_StellicGuardRanged"]/weaponTags</xpath>
+		<value>
+			<li>CleanseBolterImperial</li>
+			<li>CleanseScopedBolterLMGImperial</li>
+			<li>CleanseAutocannonImperial</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
+		<xpath>Defs/PawnKindDef[defName="Empire_Fighter_StellicGuardRanged"]/modExtensions/li[@Class="CombatExtended.LoadoutPropertiesExtension"]/weightedAmmoCategories</xpath>
+		<value>
+			<IncendiarySpecial>1.0</IncendiarySpecial>
+			<CleansingRound>1.0</CleansingRound>
+		</value>
+	</Operation>
 </Patch>
