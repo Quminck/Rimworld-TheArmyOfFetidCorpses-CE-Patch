@@ -32,7 +32,7 @@
 		<additionalHediffs>
 			<li>
 				<hediff>HellfireSoaked</hediff>
-				<severityPerDamageDealt>0.0075</severityPerDamageDealt>
+				<severityPerDamageDealt>0.025</severityPerDamageDealt>
 			</li>
 		</additionalHediffs>
 	</DamageDef>
