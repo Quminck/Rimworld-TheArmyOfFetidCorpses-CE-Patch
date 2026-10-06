@@ -306,7 +306,7 @@
 			<aimedBurstShotCount>2</aimedBurstShotCount>
 		</FireModes>
 		<weaponTags>
-			<li>CE_AI_SMG</li>
+			<li>CE_AI_AR</li>
 		</weaponTags>
 	</Operation>
 	
@@ -611,7 +611,6 @@
 			<li>CE_SMG</li>
 			<li>IndustrialGunAdvanced</li>
 		</weaponTags>
-		<researchPrerequisite>SurvivalistWeapons</researchPrerequisite>
 	</Operation>
 	
 		<!-- ====================== Remington-870 ====================== -->		
@@ -671,7 +670,6 @@
 		<weaponTags>
 			<li>IndustrialGunAdvanced</li>				
 		</weaponTags>
-		<researchPrerequisite>SurvivalistWeapons</researchPrerequisite>
 	</Operation>
 	
 		<!-- ====================== Hunting rifle ====================== -->		
@@ -730,7 +728,6 @@
 			<li>CE_AI_SR</li>
 			<li>IndustrialGunAdvanced</li>	
 		</weaponTags>
-		<researchPrerequisite>SurvivalistWeapons</researchPrerequisite>
 	</Operation>
 	
 		<!-- ====================== Heavy weapon ====================== -->	
