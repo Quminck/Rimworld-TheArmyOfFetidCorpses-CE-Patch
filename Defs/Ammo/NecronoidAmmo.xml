@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+				<!-- =================== Projectiles ===================-->
+  
+	<ThingDef Name="InfectedBulletBase" ParentName="BaseBulletCE" Abstract="True">
+		<graphicData>
+			<texPath>Things/Misc/Bullets/Projectile_Infected</texPath>
+			<graphicClass>Verse.Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>RangedStab</damageDef>
+			<dropsCasings>false</dropsCasings>
+		</projectile>
+	</ThingDef>
+	
+			<!-- ==================== Assault bullet ====================  -->
+  
+	<ThingDef ParentName="InfectedBulletBase">
+		<defName>Bullet_Bone_Rifle</defName>
+		<label>Infected bullet</label>
+		<graphicData>
+			<drawSize>(1.0, 1.0)</drawSize> 	
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>18</damageAmountBase>
+			<armorPenetrationSharp>10.0</armorPenetrationSharp>
+			<armorPenetrationBlunt>5.0</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>NecronoidRangeDamage</def>
+						<amount>8</amount>
+					<chance>0.08</chance>
+				</li>
+			</secondaryDamage>
+			<speed>125</speed>	
+		</projectile>
+	</ThingDef>
+	
+			<!-- ==================== Shotgun shell ====================  -->>
+	
+	<ThingDef ParentName="InfectedBulletBase">
+		<defName>Bullet_Bone_Shotgun</defName>
+		<label>Infected fragments</label>
+		<graphicData>
+			<drawSize>(0.45, 0.95)</drawSize>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationSharp>6.0</armorPenetrationSharp>
+			<armorPenetrationBlunt>4.0</armorPenetrationBlunt>
+			<pelletCount>8</pelletCount>
+			<spreadMult>12</spreadMult>
+			<secondaryDamage>
+				<li>
+					<def>NecronoidRangeDamage</def>
+						<amount>6</amount>
+					<chance>0.04</chance>
+				</li>
+			</secondaryDamage>
+			<speed>100</speed>	
+		</projectile>
+	</ThingDef>
+	
+			<!-- ==================== Sniper bullet ====================  -->
+	
+	<ThingDef ParentName="InfectedBulletBase">
+		<defName>Bullet_Bone_Sniper</defName>                               
+		<label>Infected spike</label>
+		<graphicData>
+			<drawSize>(0.9, 1.3)</drawSize>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>26</damageAmountBase>
+			<armorPenetrationSharp>18.0</armorPenetrationSharp>
+			<armorPenetrationBlunt>6.0</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>NecronoidRangeDamage</def>
+						<amount>10</amount>
+					<chance>0.15</chance>
+				</li>
+			</secondaryDamage>
+			<speed>135</speed>	
+		</projectile>
+	</ThingDef>
+	
+			<!-- ==================== Plague bile ====================  -->
+	
+	<ThingDef ParentName="InfectedBulletBase">
+		<defName>Bullet_Bone_Plague</defName>                            
+		<label>Plague bile</label>
+		<graphicData>
+			<drawSize>(1.0, 1.0)</drawSize>
+			<texPath>Things/Misc/Bullets/Projectile_Green</texPath>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>PlagueBile</damageDef> 
+			<damageAmountBase>4</damageAmountBase>
+			<explosionRadius>2.0</explosionRadius>
+			<pelletCount>3</pelletCount> 
+			<spreadMult>5</spreadMult>
+			<explosionDamageFalloff>true</explosionDamageFalloff>
+			<preExplosionSpawnThingDef>Filth_SpentAcid</preExplosionSpawnThingDef>
+			<preExplosionSpawnChance>0.75</preExplosionSpawnChance>
+			<soundExplode>ToxicShellLanded</soundExplode>
+			<speed>25</speed>
+			<dropsCasings>false</dropsCasings>
+			<ai_IsIncendiary>true</ai_IsIncendiary>
+			<screenShakeFactor>0</screenShakeFactor>
+		</projectile>
+	</ThingDef>
+  
+  			<!-- ==================== Auto cannon bullet ====================  -->
+	
+	<ThingDef ParentName="InfectedBulletBase">
+		<defName>Bullet_Bone_AutoCannon</defName>
+		<label>Infected spike</label>
+		<graphicData>
+			<drawSize>(1.95, 2.25)</drawSize>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>23</damageAmountBase>
+			<armorPenetrationSharp>21.0</armorPenetrationSharp>
+			<armorPenetrationBlunt>7.0</armorPenetrationBlunt>	
+			<secondaryDamage>
+				<li>
+					<def>NecronoidRangeDamage</def>
+						<amount>19</amount>
+					<chance>0.1</chance>
+				</li>
+			</secondaryDamage>
+			<speed>140</speed>
+			<suppressionFactor>2.15</suppressionFactor>		
+		</projectile>
+	</ThingDef>
+	
+	  			<!-- ==================== Turret bullet ====================  -->
+	
+	<ThingDef ParentName="InfectedBulletBase">
+		<defName>Bullet_Bone_Turret</defName>
+		<label>Infected round</label>
+		<graphicData>
+			<drawSize>(1.0, 1.0)</drawSize>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>7</damageAmountBase>
+			<armorPenetrationSharp>8.0</armorPenetrationSharp>
+			<armorPenetrationBlunt>4.5</armorPenetrationBlunt>	
+			<secondaryDamage>
+				<li>
+					<def>NecronoidRangeDamage</def>
+						<amount>4</amount>
+					<chance>0.04</chance>
+				</li>
+			</secondaryDamage>
+			<speed>120</speed>
+		</projectile>
+	</ThingDef>
+</Defs>
