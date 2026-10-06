@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[@Name="BaseNecronoid"]/damageMultipliers</xpath>
+		<value>
+			<damageMultipliers>
+				<li>
+					<damageDef>Flame</damageDef>
+					<multiplier>2.0</multiplier>
+				</li>	
+				<li>
+					<damageDef>PrometheumFlame</damageDef>
+					<multiplier>2.5</multiplier>
+				</li>	
+				<li MayRequire="Ludeon.Rimworld.Anomaly">
+					<damageDef>BioferriteFlame</damageDef>
+					<multiplier>1.75</multiplier>
+				</li>	
+				<li MayRequire="Ludeon.Rimworld.Biotech">
+					<damageDef>HellfireFlame</damageDef>
+					<multiplier>3.5</multiplier>
+				</li>
+			</damageMultipliers>
+		</value>
+	</Operation>
+</Patch>
