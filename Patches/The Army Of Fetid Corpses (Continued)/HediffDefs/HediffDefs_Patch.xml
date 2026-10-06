@@ -80,7 +80,7 @@
 		</value>
 	</Operation>
 
-	<!-- ================== Painless (Undead) ================== -->
+	<!-- ================== Painless ================== -->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/HediffDef[defName="Painless"]/label</xpath>
 		<value>
