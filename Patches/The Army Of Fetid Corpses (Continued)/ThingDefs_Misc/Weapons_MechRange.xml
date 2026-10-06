@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-	<Operation Class="PatchOperationReplace" MayRequire="Ludeon.Rimworld.Biotech">
+	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[
 		defName="Gun_MilitorScopedRifle" 
 		or defName="Gun_UnderTaker" 
@@ -23,7 +23,7 @@
 	</Operation>			
 
 	<!-- ====================== Militor scoped rifle ====================== -->	   
-	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible" MayRequire="Ludeon.Rimworld.Biotech">
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
 		<defName>Gun_MilitorScopedRifle</defName>
 		<statBases>
 			<Mass>4.25</Mass>
@@ -63,7 +63,7 @@
 	</Operation>
 
 	<!-- ====================== Undertaker ====================== -->	   
-	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible" MayRequire="Ludeon.Rimworld.Biotech">
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
 		<defName>Gun_UnderTaker</defName>
 		<statBases>
 			<Mass>1.4</Mass>
@@ -102,7 +102,7 @@
 	</Operation>
 	
 	<!-- ====================== Revolving auto cannon ====================== -->	   
-	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible" MayRequire="Ludeon.Rimworld.Biotech">
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
 		<defName>Gun_RevolvingAutoCannon</defName>
 		<statBases>
 			<Mass>16.5</Mass>
@@ -141,7 +141,7 @@
 	</Operation>
 
 	<!-- ====================== Sentry centipede sheriff turret ====================== -->	 
-	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible" MayRequire="Ludeon.Rimworld.Biotech">
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
 		<defName>Gun_SentryTurret</defName>
 		<statBases>
 			<SightsEfficiency>1</SightsEfficiency>

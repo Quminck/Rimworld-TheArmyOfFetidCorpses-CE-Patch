@@ -10,7 +10,7 @@
 		
 		<!-- ==================== AmmoSet ========================== -->
 	
-	<CombatExtended.AmmoSetDef MayRequire="Ludeon.Rimworld.Biotech">
+	<CombatExtended.AmmoSetDef>
 		<defName>AmmoSetHVFuel</defName> 
 		<label>Hellfire gel</label>
 		<ammoTypes>
@@ -20,7 +20,7 @@
   
 		<!-- ==================== Ammo ========================== -->
 
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="FlamethrowerBase" MayRequire="Ludeon.Rimworld.Biotech">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="FlamethrowerBase">
 		<defName>AmmoHVFuel</defName>                                 
 		<label>Hellfire gel</label>
 		<graphicData>
@@ -38,7 +38,7 @@
 	
 		<!-- ================== Projectiles ================== -->
 					
-	<ThingDef ParentName="BaseFlamethrowerBullet" MayRequire="Ludeon.Rimworld.Biotech">
+	<ThingDef ParentName="BaseFlamethrowerBullet">
 		<defName>BulletHVFuel</defName>
 		<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>		
 		<label>Hell fire</label>
@@ -59,7 +59,7 @@
 	
 		<!-- ==================== Recipes ========================== -->
 	
-	<RecipeDef ParentName="LauncherAmmoRecipeBase" MayRequire="Ludeon.Rimworld.Biotech">
+	<RecipeDef ParentName="LauncherAmmoRecipeBase">
 		<defName>MakeAmmoHVFuel</defName>
 		<label>make hellfire gel x100</label>
 		<description>Craft 100 units of hellfire gel.</description>

@@ -6,7 +6,7 @@
 		<label>infected bite</label>
 		<workerClass>DamageWorker_Bite</workerClass>
 		<externalViolence>true</externalViolence>
-		<deathMessage>{0} has been bitten to death by a monster.</deathMessage>
+		<deathMessage>{0} has been bitten to death.</deathMessage>
 		<hediff>Bite</hediff> 
 		<hediffSolid>Crack</hediffSolid>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>

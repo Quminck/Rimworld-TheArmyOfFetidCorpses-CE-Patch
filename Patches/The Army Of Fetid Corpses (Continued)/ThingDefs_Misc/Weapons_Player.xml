@@ -15,7 +15,7 @@
 		]/comps/li[@Class="CompProperties_Biocodable"]</xpath>
 	</Operation>	
 	
-	<!--li Class="PatchOperationRemove">
+	<!--Operation Class="PatchOperationRemove">
 		<xpath>Defs/ThingDef[
 		defName="Gun_IncendiaryAssaultRifle"
 		or defName="Gun_IncendiaryMachineGun"
@@ -31,7 +31,7 @@
 		or defName="Gun_SuperShotGun"
 		or defName="Gun_SurvivalistSniperRifle"
 		]/statBases/MarketValue</xpath>
-	</li-->					
+	</Operation-->					
 	
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[
@@ -336,7 +336,7 @@
 			<ShotSpread>0.05</ShotSpread>
 			<RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
 			<MarketValue>1200</MarketValue>
-			<WorkToMake>48000</WorkToMake>	
+			<WorkToMake>51000</WorkToMake>	
 		</statBases>
 		<costList>
 			<Steel>65</Steel>
@@ -397,8 +397,8 @@
 			<SwayFactor>1.89</SwayFactor>
 			<ShotSpread>0.06</ShotSpread>
 			<RangedWeapon_Cooldown>0.56</RangedWeapon_Cooldown>
-			<MarketValue>1500</MarketValue>
-			<WorkToMake>52500</WorkToMake>
+			<MarketValue>1600</MarketValue>
+			<WorkToMake>72000</WorkToMake>
 		</statBases>
 		<costList>
 			<Steel>80</Steel>
@@ -458,8 +458,8 @@
 			<SwayFactor>1.67</SwayFactor>
 			<ShotSpread>0.02</ShotSpread>
 			<RangedWeapon_Cooldown>0.55</RangedWeapon_Cooldown>
-			<MarketValue>2000</MarketValue>
-			<WorkToMake>55500</WorkToMake>
+			<MarketValue>2100</MarketValue>
+			<WorkToMake>79500</WorkToMake>
 		</statBases>
 		<costList>
 			<Steel>90</Steel>
@@ -518,7 +518,7 @@
 			<SwayFactor>1.43</SwayFactor>
 			<ShotSpread>0.19</ShotSpread>
 			<RangedWeapon_Cooldown>0.98</RangedWeapon_Cooldown>
-			<!--MarketValue>700</MarketValue-->
+			<MarketValue>700</MarketValue>
 			<WorkToMake>35400</WorkToMake>
 		</statBases>
 		<costList>
@@ -554,6 +554,20 @@
 	</Operation>
 	
 		<!-- ====================== Ppsh-41 ====================== -->		
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Gun_SuperSMG"]/label</xpath>
+		<value>
+			<label>PPSh-41</label>
+		</value>
+	</Operation>		
+		
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Gun_SuperSMG"]/description</xpath>
+		<value>
+			<description>Legendary Soviet submachine gun.</description>
+		</value>
+	</Operation>		
+		
 	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
 		<defName>Gun_SuperSMG</defName>
 		<statBases>
@@ -566,6 +580,11 @@
 			<RangedWeapon_Cooldown>0.48</RangedWeapon_Cooldown>
 			<MarketValue>400</MarketValue>					
 		</statBases>
+		<costList>
+			<Steel>35</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<Chemfuel>15</Chemfuel>
+		</costList>
 		<Properties>
 			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 			<hasStandardCommand>True</hasStandardCommand>
@@ -592,9 +611,25 @@
 			<li>CE_SMG</li>
 			<li>IndustrialGunAdvanced</li>
 		</weaponTags>
+		<researchPrerequisite>SurvivalistWeapons</researchPrerequisite>
 	</Operation>
 	
-		<!-- ====================== Remington-870 ====================== -->			
+		<!-- ====================== Remington-870 ====================== -->		
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Gun_SuperShotGun"]/label</xpath>
+		<value>
+			<label>Remington 870</label>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Gun_SuperShotGun"]/description</xpath>
+		<value>
+			<description>Remington 870</description>
+		</value>
+	</Operation>
+	
+	
 	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
 		<defName>Gun_SuperShotGun</defName>
 		<statBases>
@@ -605,8 +640,13 @@
 			<SwayFactor>1.73</SwayFactor>
 			<ShotSpread>0.18</ShotSpread>
 			<RangedWeapon_Cooldown>0.43</RangedWeapon_Cooldown>
-			<MarketValue>385</MarketValue>
+			<MarketValue>350</MarketValue>
 		</statBases>
+		<costList>
+			<Steel>55</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<WoodLog>15</WoodLog>
+		</costList>
 		<Properties>
 			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 			<hasStandardCommand>True</hasStandardCommand>
@@ -631,21 +671,41 @@
 		<weaponTags>
 			<li>IndustrialGunAdvanced</li>				
 		</weaponTags>
+		<researchPrerequisite>SurvivalistWeapons</researchPrerequisite>
 	</Operation>
 	
-		<!-- ====================== Hunting rifle ====================== -->
+		<!-- ====================== Hunting rifle ====================== -->		
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Gun_SurvivalistSniperRifle"]/label</xpath>
+		<value>
+			<label>Lee-Enfield No. 4 mk1</label>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Gun_SurvivalistSniperRifle"]/description</xpath>
+		<value>
+			<description>Legendary variant of British rifle Lee-Enfield. It was valued for its absolute reliability in extreme Arctic cold.</description>
+		</value>
+	</Operation>
+	
 	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
 		<defName>Gun_SurvivalistSniperRifle</defName>
 		<statBases>
 			<Mass>3.9</Mass>
-			<Bulk>11</Bulk>
-			<SightsEfficiency>2.02</SightsEfficiency>
+			<Bulk>11.3</Bulk>
+			<SightsEfficiency>1.8</SightsEfficiency>
 			<NightVisionEfficiency_Weapon>0</NightVisionEfficiency_Weapon>
 			<SwayFactor>1.65</SwayFactor>
 			<ShotSpread>0.03</ShotSpread>
 			<RangedWeapon_Cooldown>1.67</RangedWeapon_Cooldown>
 			<MarketValue>475</MarketValue>
 		</statBases>
+		<costList>
+			<Steel>65</Steel>
+			<ComponentIndustrial>6</ComponentIndustrial>
+			<Chemfuel>15</Chemfuel>
+		</costList>
 		<Properties>
 			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 			<hasStandardCommand>True</hasStandardCommand>
@@ -654,14 +714,14 @@
 			<burstShotCount>1</burstShotCount>
 			<muzzleFlashScale>9</muzzleFlashScale>
 			<recoilAmount>2.17</recoilAmount>
-			<defaultProjectile>Bullet_3006Springfield_FMJ</defaultProjectile>
+			<defaultProjectile>Bullet_303British_FMJ</defaultProjectile>
 			<soundCast>Shot_SniperRifle</soundCast>
 			<soundCastTail>GunTail_Heavy</soundCastTail>
 		</Properties>
 		<AmmoUser>
 			<magazineSize>10</magazineSize>
 			<reloadTime>4</reloadTime>
-			<ammoSet>AmmoSet_3006Springfield</ammoSet>
+			<ammoSet>AmmoSet_303British</ammoSet>
 		</AmmoUser>
 		<FireModes>
 			<aiAimMode>AimedShot</aiAimMode>
@@ -670,10 +730,11 @@
 			<li>CE_AI_SR</li>
 			<li>IndustrialGunAdvanced</li>	
 		</weaponTags>
+		<researchPrerequisite>SurvivalistWeapons</researchPrerequisite>
 	</Operation>
 	
 		<!-- ====================== Heavy weapon ====================== -->	
-	<Operation Class="PatchOperationReplace" MayRequire="Ludeon.Rimworld.Biotech">
+	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer" or defName="Gun_CleansingRocketLauncher"]/tools</xpath>
 		<value>
 			<tools>
@@ -691,16 +752,16 @@
 		</value>
 	</Operation>
 	
-	<Operation Class="PatchOperationRemove" MayRequire="Ludeon.Rimworld.Biotech">
+	<Operation Class="PatchOperationRemove">
 		<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer" or defName="Gun_CleansingRocketLauncher"]/comps/li[@Class="Necro.CompProperties_ReloadableWeapon"]</xpath> 
 	</Operation>			
 
-	<Operation Class="PatchOperationRemove" MayRequire="Ludeon.Rimworld.Biotech">
+	<Operation Class="PatchOperationRemove">
 		<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer" or defName="Gun_CleansingRocketLauncher"]/verbs</xpath>
 	</Operation>					
 
 		<!-- ====================== Heavy Flamer ====================== -->
-	<Operation Class="PatchOperationAdd" MayRequire="Ludeon.Rimworld.Biotech">
+	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer"]</xpath>
 		<value>
 			<weaponTags>
@@ -709,7 +770,7 @@
 		</value>
 	</Operation>					
 			
-	<Operation Class="PatchOperationReplace" MayRequire="Ludeon.Rimworld.Biotech">
+	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer"]/description</xpath>
 		<value>
 			<description>A heavy long-range flamethrower capable of spreading fire over a wide area. It highly effective against Necronoid structures and large swarms</description>
@@ -786,7 +847,7 @@
 			<ShotSpread>0.02</ShotSpread>
 			<RangedWeapon_Cooldown>2.05</RangedWeapon_Cooldown>
 			<MarketValue>1950</MarketValue>
-			<WorkToMake>57000</WorkToMake>
+			<WorkToMake>60000</WorkToMake>
 		</statBases>
 		<costList>
 			<Steel>60</Steel>

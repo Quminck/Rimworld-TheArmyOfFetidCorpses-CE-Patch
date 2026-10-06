@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-	<Operation Class="PatchOperationReplace" MayRequire="Ludeon.Rimworld.Biotech">
+	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[@Name="NecroWeaponsBase"]/tools
 		</xpath>
 		<value>
@@ -41,7 +41,7 @@
 	</Operation>
 
 		<!-- ====================== Boneshard rifle craftable ====================== -->
-	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible" MayRequire="Ludeon.Rimworld.Biotech">
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
 		<defName>Gun_Craftable_BoneshardRifle</defName>
 		<statBases>
 			<Mass>3.7</Mass>
@@ -89,7 +89,7 @@
 	</Operation>
 
 		<!-- ====================== Advanced boneshard rifle craftable ====================== -->
-	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible" MayRequire="Ludeon.Rimworld.Biotech">
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
 		<defName>Gun_Craftable_AdvancedBoneshardRifle</defName>
 		<statBases>
 			<Mass>3.95</Mass>
@@ -137,7 +137,7 @@
 	</Operation>
 	
 		<!-- ====================== boneshard shotgun craftable ====================== -->
-	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible" MayRequire="Ludeon.Rimworld.Biotech">
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
 		<defName>Gun_Craftable_BoneshardShotgun</defName>
 		<statBases>
 			<Mass>4.1</Mass>
@@ -184,7 +184,7 @@
 	</Operation>
 	
 		<!-- ====================== boneshard sniper craftable ====================== -->
-	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible" MayRequire="Ludeon.Rimworld.Biotech">
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
 		<defName>Gun_Craftable_BoneshardSniperRifle</defName>
 		<statBases>
 			<Mass>5.2</Mass>
@@ -230,7 +230,7 @@
 	</Operation>
 	
 		<!-- ====================== boneshard minigun craftable ====================== -->
-	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible" MayRequire="Ludeon.Rimworld.Biotech"> 
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible"> 
 		<defName>Gun_Craftable_BoneshardRapidBlaster</defName>
 		<statBases>
 			<Mass>23</Mass>
