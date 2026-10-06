@@ -2,7 +2,7 @@
 <Defs>
 		<CombatExtended.AmmoCategoryDef>
 			<defName>IncendiarySpecial</defName>
-			<label>armor-piercing incendiary - Specialized </label>
+			<label>armor-piercing incendiary - Specialized</label>
 			<labelShort>AP-I-S</labelShort>
 			<description>A modified AP-I round hastily developed at the beginning of the Necronoid outbreak. It can ignite targets on impact, causing them to catch fire.</description>
 			<advanced>true</advanced>
@@ -18,7 +18,7 @@
 
 		<CombatExtended.AmmoCategoryDef>
 			<defName>CleansingBuckshot</defName>
-			<label>Buck (Cleansing)</label>
+			<label>buckshot (Cleansing)</label>
 			<labelShort>Buck-CL</labelShort>
 			<description>An experimental round specifically designed to combat Necronoid threats.</description>
 			<advanced>true</advanced>			
