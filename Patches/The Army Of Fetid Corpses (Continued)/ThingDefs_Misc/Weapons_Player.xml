@@ -88,9 +88,16 @@
 
 		<!-- ====================== StG-44 ====================== -->
 	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Gun_IncendiaryAssaultRifle"]/label</xpath>
+		<value>
+			<label>StG-44</label>
+		</value>
+	</Operation>		
+		
+	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Gun_IncendiaryAssaultRifle"]/description</xpath>
 		<value>
-			<description>A modernized version of the standard StG 44 to fire experimental ammunition.</description>
+			<description>A modernized version of the standard StG 44, adapted to fire experimental ammunition.</description>
 		</value>
 	</Operation>
 	
@@ -142,9 +149,16 @@
 	
 		<!-- ====================== MG-42 ====================== -->
 	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Gun_IncendiaryMachineGun"]/label</xpath>
+		<value>
+			<label>MG-42</label>
+		</value>
+	</Operation>		
+		
+	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Gun_IncendiaryMachineGun"]/description</xpath>
 		<value>
-			<description>A modernized variant of the legendary MG 42 adapted to fire experimental ammunition.</description>
+			<description>A modernized variant of the legendary MG 42, adapted to fire experimental ammunition.</description>
 		</value>
 	</Operation>
 	
@@ -160,6 +174,7 @@
 			<RangedWeapon_Cooldown>0.46</RangedWeapon_Cooldown>
 			<MarketValue>720</MarketValue>
 			<WorkToMake>34500</WorkToMake>
+			<ai_AvoidFriendlyFireRadius>1.5</ai_AvoidFriendlyFireRadius>
 		</statBases>
 		<costList>
 			<Steel>85</Steel>
@@ -198,6 +213,13 @@
 
 		<!-- ====================== Lahti L-39 ====================== -->
 	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Gun_IncendiaryAntiMaterial"]/label</xpath>
+		<value>
+			<label>Lahti L-39</label>
+		</value>
+	</Operation>		
+		
+	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Gun_IncendiaryAntiMaterial"]/description</xpath>
 		<value>
 			<description>A modernized version of the Finnish Lahti L-39 anti-tank rifle adapted to fire experimental 20mm ammunition.</description>
@@ -215,7 +237,8 @@
 			<ShotSpread>0.02</ShotSpread>
 			<RangedWeapon_Cooldown>1.93</RangedWeapon_Cooldown>
 			<MarketValue>680</MarketValue>
-			<WorkToMake>39000</WorkToMake>						
+			<WorkToMake>39000</WorkToMake>			
+			<ai_AvoidFriendlyFireRadius>1.5</ai_AvoidFriendlyFireRadius>			
 		</statBases>
 		<costList>
 			<Steel>105</Steel>
@@ -250,20 +273,6 @@
 	</Operation>
 	
 		 <!-- ====================== Cleansing Bolter ====================== -->
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="Gun_CleansingBolter"]/label</xpath>
-		<value>
-			<label>Makeshift Bolt carbine</label>
-		</value>
-	</Operation>
-			
-	<Operation Class="PatchOperationReplace">
-	<xpath>Defs/ThingDef[defName="Gun_CleansingBolter"]/description</xpath>
-		<value>
-			<description>A crude imitation of an advanced bolter, heavily modified to fire cleansing bolts.</description>
-		</value>
-	</Operation>
-							  
 	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
 		<defName>Gun_CleansingBolter</defName>
 		<statBases>
@@ -271,8 +280,8 @@
 			<Bulk>9.2</Bulk>
 			<SightsEfficiency>1</SightsEfficiency>
 			<NightVisionEfficiency_Weapon>0</NightVisionEfficiency_Weapon>
-			<SwayFactor>1.64</SwayFactor>
-			<ShotSpread>0.11</ShotSpread>
+			<SwayFactor>1.44</SwayFactor>
+			<ShotSpread>0.09</ShotSpread>
 			<RangedWeapon_Cooldown>1.09</RangedWeapon_Cooldown>
 			<MarketValue>800</MarketValue>
 			<WorkToMake>42000</WorkToMake>
@@ -289,15 +298,15 @@
 			<warmupTime>1.2</warmupTime>
 			<range>25</range>
 			<burstShotCount>4</burstShotCount>
-			<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+			<ticksBetweenBurstShots>16</ticksBetweenBurstShots>
 			<muzzleFlashScale>10</muzzleFlashScale>
-			<recoilAmount>1.88</recoilAmount>
+			<recoilAmount>1.56</recoilAmount>
 			<defaultProjectile>BulletANBbolt</defaultProjectile>
 			<soundCast>Shot_Bolterz</soundCast>
 			<soundCastTail>GunTail_Heavy</soundCastTail>
 		</Properties>
 		<AmmoUser>
-			<magazineSize>12</magazineSize>
+			<magazineSize>20</magazineSize>
 			<reloadTime>4.7</reloadTime>
 			<ammoSet>AmmoSetANBbolt</ammoSet>
 		</AmmoUser>
@@ -399,6 +408,7 @@
 			<RangedWeapon_Cooldown>0.56</RangedWeapon_Cooldown>
 			<MarketValue>1600</MarketValue>
 			<WorkToMake>72000</WorkToMake>
+			<ai_AvoidFriendlyFireRadius>1.5</ai_AvoidFriendlyFireRadius>
 		</statBases>
 		<costList>
 			<Steel>80</Steel>
@@ -444,7 +454,7 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Gun_ImperialCleansingAutocannon"]/description</xpath>
 		<value>
-			<description>A heavy Imperial antimatter autocannon designed to fire 20 mm rounds.</description>
+			<description>One of the most effective heavy weapon againsts any necronoid entity. The autocannon adapted for a special 20mm AP cleansing bullet, capable of breaching even the hardest of necronoid flesh and deals massive amounts of damage upon impact. This weapon is seen being used by the imperial necro hunters.</description>
 		</value>
 	</Operation>
 	
@@ -460,6 +470,7 @@
 			<RangedWeapon_Cooldown>0.55</RangedWeapon_Cooldown>
 			<MarketValue>2100</MarketValue>
 			<WorkToMake>79500</WorkToMake>
+			<ai_AvoidFriendlyFireRadius>1.5</ai_AvoidFriendlyFireRadius>
 		</statBases>
 		<costList>
 			<Steel>90</Steel>
@@ -504,7 +515,7 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Gun_CleansingShotgun"]/description</xpath>
 		<value>
-			<description>A heavy pump-action shotgun developed in the Soviet Union for the needs of the Ministry of Internal Affairs, adapted to fire experimental cleansing shells.</description>
+			<description>A KS 23 shotgun carbine developed in the Soviet Union for the needs of the Ministry of Internal Affairs. It was adapted to fire cleansing shotgun shells that deals a monstrous damage againsts any necronoid entity, giving it a fitting title as "The Doom Giver".</description>
 		</value>
 	</Operation>
 	
