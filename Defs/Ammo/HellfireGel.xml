@@ -72,7 +72,7 @@
 						<li>Chemfuel</li>
 					</thingDefs>
 				</filter>
-				<count>20</count>
+				<count>15</count>
 			</li>
 			<li>
 				<filter>
@@ -80,7 +80,7 @@
 						<li>Prometheum</li>
 					</thingDefs>
 				</filter>
-				<count>15</count>
+				<count>12</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
