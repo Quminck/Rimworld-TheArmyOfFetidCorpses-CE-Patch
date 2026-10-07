@@ -924,7 +924,7 @@
 			<MeleeParryChance>0.10</MeleeParryChance>
 		</value>
 	</Operation>
-			<baseHealthScale>1.4</baseHealthScale>
+	
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Necronoid_FetidWolf"]/race/baseHealthScale</xpath>
 		<value>
