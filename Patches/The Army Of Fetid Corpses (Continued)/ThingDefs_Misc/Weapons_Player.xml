@@ -174,7 +174,6 @@
 			<RangedWeapon_Cooldown>0.46</RangedWeapon_Cooldown>
 			<MarketValue>720</MarketValue>
 			<WorkToMake>34500</WorkToMake>
-			<ai_AvoidFriendlyFireRadius>1.5</ai_AvoidFriendlyFireRadius>
 		</statBases>
 		<costList>
 			<Steel>85</Steel>
@@ -194,6 +193,7 @@
 			<defaultProjectile>Bullet_792x57mmMauser_FMJ</defaultProjectile>
 			<soundCast>Shot_MG42</soundCast>
 			<soundCastTail>GunTail_Medium</soundCastTail>
+			<ai_AvoidFriendlyFireRadius>1.5</ai_AvoidFriendlyFireRadius>
 		</Properties>
 		<AmmoUser>
 			<magazineSize>100</magazineSize>
@@ -237,8 +237,7 @@
 			<ShotSpread>0.02</ShotSpread>
 			<RangedWeapon_Cooldown>1.93</RangedWeapon_Cooldown>
 			<MarketValue>680</MarketValue>
-			<WorkToMake>39000</WorkToMake>			
-			<ai_AvoidFriendlyFireRadius>1.5</ai_AvoidFriendlyFireRadius>			
+			<WorkToMake>39000</WorkToMake>					
 		</statBases>
 		<costList>
 			<Steel>105</Steel>
@@ -257,6 +256,7 @@
 			<defaultProjectile>Bullet_20x138mmB_AP</defaultProjectile>
 			<soundCast>Shot_Lahti</soundCast>
 			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<ai_AvoidFriendlyFireRadius>1.5</ai_AvoidFriendlyFireRadius>	
 		</Properties>
 		<AmmoUser>
 			<magazineSize>10</magazineSize>
@@ -408,7 +408,6 @@
 			<RangedWeapon_Cooldown>0.56</RangedWeapon_Cooldown>
 			<MarketValue>1600</MarketValue>
 			<WorkToMake>72000</WorkToMake>
-			<ai_AvoidFriendlyFireRadius>1.5</ai_AvoidFriendlyFireRadius>
 		</statBases>
 		<costList>
 			<Steel>80</Steel>
@@ -427,6 +426,7 @@
 			<defaultProjectile>BulletANBbolt</defaultProjectile>
 			<soundCast>Shot_Bolterz</soundCast>
 			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<ai_AvoidFriendlyFireRadius>1.5</ai_AvoidFriendlyFireRadius>
 		</Properties>
 		<AmmoUser>
 			<magazineSize>60</magazineSize>
@@ -470,7 +470,6 @@
 			<RangedWeapon_Cooldown>0.55</RangedWeapon_Cooldown>
 			<MarketValue>2100</MarketValue>
 			<WorkToMake>79500</WorkToMake>
-			<ai_AvoidFriendlyFireRadius>1.5</ai_AvoidFriendlyFireRadius>
 		</statBases>
 		<costList>
 			<Steel>90</Steel>
@@ -486,10 +485,10 @@
 			<burstShotCount>1</burstShotCount>
 			<muzzleFlashScale>10</muzzleFlashScale>
 			<recoilAmount>2.52</recoilAmount>
-			
 			<defaultProjectile>Bullet_20x105mmCharged</defaultProjectile>
 			<soundCast>Shot_Autocannon</soundCast>
 			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<ai_AvoidFriendlyFireRadius>1.5</ai_AvoidFriendlyFireRadius>
 		</Properties>
 		<AmmoUser>
 			<magazineSize>8</magazineSize>
