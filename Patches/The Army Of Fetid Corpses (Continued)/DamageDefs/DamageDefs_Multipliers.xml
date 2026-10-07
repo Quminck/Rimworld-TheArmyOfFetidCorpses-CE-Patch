@@ -6,7 +6,7 @@
 			<damageMultipliers>
 				<li>
 					<damageDef>Flame</damageDef>
-					<multiplier>2.0</multiplier>
+					<multiplier>1.5</multiplier>
 				</li>	
 				<li>
 					<damageDef>PrometheumFlame</damageDef>
