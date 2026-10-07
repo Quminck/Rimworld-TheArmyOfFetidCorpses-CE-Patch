@@ -114,14 +114,12 @@
 					</capacities>
 					<power>15</power>
 					<cooldownTime>1.9</cooldownTime>
-					<surpriseAttack>
-						<extraMeleeDamages>
-							<li>
-								<def>NecronoidBiteDamage</def>
-								<amount>10</amount>
-							</li>
-						</extraMeleeDamages>
-					</surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>NecronoidBiteDamage</def>
+							<amount>10</amount>
+						</li>
+					</extraMeleeDamages>
 					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 					<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
 					<chanceFactor>0.35</chanceFactor>
@@ -154,13 +152,13 @@
 					<power>17</power>
 					<cooldownTime>1.7</cooldownTime>
 					<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-						<extraMeleeDamages>
-							<li>
-								<def>NecronoidBluntDamage</def>
-								<amount>10</amount>
-								<chance>0.10</chance>
-							</li>
-						</extraMeleeDamages>
+					<extraMeleeDamages>
+						<li>
+							<def>NecronoidBluntDamage</def>
+							<amount>10</amount>
+							<chance>0.10</chance>
+						</li>
+					</extraMeleeDamages>
 					<armorPenetrationSharp>0.0</armorPenetrationSharp>
 					<armorPenetrationBlunt>6.5</armorPenetrationBlunt>
 				</li>
@@ -464,15 +462,13 @@
 					<cooldownTime>1.2</cooldownTime>
 					<armorPenetration>0.15</armorPenetration>
 					<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-					<surpriseAttack>
-						<extraMeleeDamages>
-							<li>
-								<def>NecronoidCutDamage</def>
-								<amount>10</amount>
-								<chance>0.20</chance>
-							</li>
-						</extraMeleeDamages>
-					</surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>NecronoidCutDamage</def>
+							<amount>10</amount>
+							<chance>0.20</chance>
+						</li>
+					</extraMeleeDamages>
 					<armorPenetrationSharp>14.5</armorPenetrationSharp>
 					<armorPenetrationBlunt>8</armorPenetrationBlunt>
 				</li>
@@ -485,15 +481,13 @@
 					<cooldownTime>1.2</cooldownTime>
 					<armorPenetration>0.15</armorPenetration>
 					<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-					<surpriseAttack>
-						<extraMeleeDamages>
-							<li>
-								<def>NecronoidCutDamage</def>
-								<amount>10</amount>
-								<chance>0.20</chance>
-							</li>
-						</extraMeleeDamages>
-					</surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>NecronoidCutDamage</def>
+							<amount>10</amount>
+							<chance>0.20</chance>
+						</li>
+					</extraMeleeDamages>
 					<armorPenetrationSharp>14.5</armorPenetrationSharp>
 					<armorPenetrationBlunt>8</armorPenetrationBlunt>
 				</li>
@@ -513,7 +507,7 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Necronoid_BloatedOgre"]/race/baseHealthScale</xpath>
 		<value>
-			<baseHealthScale>10</baseHealthScale>
+			<baseHealthScale>7</baseHealthScale>
 		</value>
 	</Operation>		
 		
@@ -581,7 +575,7 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Necronoid_BloodLetterGhoul"]/race/baseHealthScale</xpath>
 		<value>
-			<baseHealthScale>15</baseHealthScale>
+			<baseHealthScale>14</baseHealthScale>
 		</value>
 	</Operation>
 	
@@ -680,7 +674,7 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Necronoid_FleshTyrant"]/race/baseHealthScale</xpath>
 		<value>
-			<baseHealthScale>15</baseHealthScale>
+			<baseHealthScale>14</baseHealthScale>
 		</value>
 	</Operation>	
 	
@@ -746,7 +740,7 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Necronoid_CrazedButcher"]/race/baseHealthScale</xpath>
 		<value>
-			<baseHealthScale>16</baseHealthScale>
+			<baseHealthScale>15</baseHealthScale>
 		</value>
 	</Operation>
 		
