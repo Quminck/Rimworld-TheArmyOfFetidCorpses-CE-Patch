@@ -298,7 +298,7 @@
 			<warmupTime>1.2</warmupTime>
 			<range>25</range>
 			<burstShotCount>4</burstShotCount>
-			<ticksBetweenBurstShots>25</ticksBetweenBurstShots>
+			<ticksBetweenBurstShots>16</ticksBetweenBurstShots>
 			<muzzleFlashScale>10</muzzleFlashScale>
 			<recoilAmount>1.56</recoilAmount>
 			<defaultProjectile>BulletANBbolt</defaultProjectile>
@@ -358,7 +358,7 @@
 			<warmupTime>1.4</warmupTime>
 			<range>50</range>
 			<burstShotCount>5</burstShotCount>
-			<ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
 			<muzzleFlashScale>7</muzzleFlashScale>
 			<recoilAmount>1.43</recoilAmount>
 			<defaultProjectile>BulletANBbolt</defaultProjectile>
@@ -420,7 +420,7 @@
 			<warmupTime>2.12</warmupTime>
 			<range>46</range>
 			<burstShotCount>10</burstShotCount>
-			<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+			<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
 			<muzzleFlashScale>8</muzzleFlashScale>
 			<recoilAmount>1.51</recoilAmount>
 			<defaultProjectile>BulletANBbolt</defaultProjectile>
