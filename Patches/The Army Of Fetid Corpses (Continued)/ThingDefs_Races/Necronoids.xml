@@ -206,12 +206,12 @@
 		</value>
 	</Operation>	
 	
-	<!--Operation Class="PatchOperationReplace">
+	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/PawnKindDef[defName="Necronoid_FetidGhoul"]/combatPower</xpath>
 		<value>
-			<combatPower>100</combatPower>
+			<combatPower>75</combatPower>
 		</value>
-	</Operation-->	
+	</Operation>	
 	
 	
 		<!-- ======================== Fetid soldier ======================== -->			
@@ -245,12 +245,12 @@
 		</value>
 	</Operation>
 	
-	<!--Operation Class="PatchOperationReplace">
+	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/PawnKindDef[defName="Necronoid_FetidSoldier"]/combatPower</xpath>
 		<value>
-			<combatPower>650</combatPower>
+			<combatPower>275</combatPower>
 		</value>
-	</Operation-->	
+	</Operation>	
 
 
 		<!-- ======================== Fetid brute ======================== -->
@@ -277,12 +277,12 @@
 		</value>
 	</Operation>
 	
-	<!--Operation Class="PatchOperationReplace">
+	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/PawnKindDef[defName="Necronoid_FetidBrute"]/combatPower</xpath>
 		<value>
-			<combatPower>700</combatPower>
+			<combatPower>225</combatPower>
 		</value>
-	</Operation-->		
+	</Operation>		
 	
 	
 		<!-- ======================== Fetid hulk ======================== -->			
@@ -319,7 +319,7 @@
 	<!--Operation Class="PatchOperationReplace">
 		<xpath>Defs/PawnKindDef[defName="Necronoid_FetidHulk"]/combatPower</xpath>
 		<value>
-			<combatPower>1000</combatPower>
+			<combatPower>450</combatPower>
 		</value>
 	</Operation-->		
 	
@@ -406,7 +406,7 @@
 	<!--Operation Class="PatchOperationReplace">
 		<xpath>Defs/PawnKindDef[defName="Necronoid_FetidMarine"]/combatPower</xpath>
 		<value>
-			<combatPower>1100</combatPower>
+			<combatPower>350</combatPower>
 		</value>
 	</Operation-->	
 
@@ -501,12 +501,12 @@
 		</value>
 	</Operation>
 	
-	<!--Operation Class="PatchOperationReplace">
+	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/PawnKindDef[defName="Necronoid_BladedGhoul"]/combatPower</xpath>
 		<value>
-			<combatPower>200</combatPower>
+			<combatPower>150</combatPower>
 		</value>
-	</Operation-->	
+	</Operation>	
 
 
 		<!-- ======================== Bloated ogre ======================== -->
@@ -569,12 +569,12 @@
 		</value>
 	</Operation>
 	
-	<!--Operation Class="PatchOperationReplace">
+	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/PawnKindDef[defName="Necronoid_BloatedOgre"]/combatPower</xpath>
 		<value>
-			<combatPower>1700</combatPower>
+			<combatPower>1350</combatPower>
 		</value>
-	</Operation-->		
+	</Operation>
 	
 	
 		<!-- ======================== Blood letter ghoul ======================== -->
@@ -630,7 +630,7 @@
 	<!--Operation Class="PatchOperationReplace">
 		<xpath>Defs/PawnKindDef[defName="Necronoid_BloodLetterGhoul"]/combatPower</xpath>
 		<value>
-			<combatPower>2250</combatPower>
+			<combatPower>3250</combatPower>
 		</value>
 	</Operation-->		
 	
@@ -671,7 +671,7 @@
 	<!--Operation Class="PatchOperationReplace">
 		<xpath>Defs/PawnKindDef[defName="Necronoid_ExecutionerGhoul"]/combatPower</xpath>
 		<value>
-			<combatPower>2000</combatPower>
+			<combatPower>2750</combatPower>
 		</value>
 	</Operation-->	
 	
@@ -737,7 +737,7 @@
 	<!--Operation Class="PatchOperationReplace">
 		<xpath>Defs/PawnKindDef[defName="Necronoid_FleshTyrant"]/combatPower</xpath>
 		<value>
-			<combatPower>1850</combatPower>
+			<combatPower>3000</combatPower>
 		</value>
 	</Operation-->	
 	
@@ -1017,12 +1017,12 @@
 		</value>
 	</Operation>
 	
-	<!--Operation Class="PatchOperationReplace">
+	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/PawnKindDef[defName="Necronoid_FetidWolf"]/combatPower</xpath>
 		<value>
-			<combatPower>650</combatPower>
+			<combatPower>200</combatPower>
 		</value>
-	</Operation-->	
+	</Operation>	
 	
 	
 		<!-- ======================== Chupacabra ======================== -->
@@ -1115,12 +1115,12 @@
 		</value>
 	</Operation>	
 	
-	<!--Operation Class="PatchOperationReplace">
+	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/PawnKindDef[defName="Necronoid_Chupacabra"]/combatPower</xpath>
 		<value>
-			<combatPower>3000</combatPower>
+			<combatPower>1500</combatPower>
 		</value>
-	</Operation-->			
+	</Operation>			
 
 
 		<!-- ======================== Hag spider ======================== -->	
@@ -1420,10 +1420,10 @@
 		</value>
 	</Operation>		
 	
-	<!--Operation Class="PatchOperationReplace">
+	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/PawnKindDef[defName="Necronoid_FetidParasite"]/combatPower</xpath>
 		<value>
 			<combatPower>50</combatPower>
 		</value>
-	</Operation-->	
+	</Operation>	
 </Patch>
