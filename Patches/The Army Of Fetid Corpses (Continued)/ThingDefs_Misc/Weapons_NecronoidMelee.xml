@@ -26,7 +26,6 @@
 						<li>
 							<def>BloodLetter_Stab</def>
 							<amount>25</amount>
-							<chance>1.0</chance>
 						</li>
 					</extraMeleeDamages>							
 					<cooldownTime>3.4</cooldownTime>
@@ -82,8 +81,8 @@
 					<extraMeleeDamages>
 						<li>
 							<def>NecronoidCutDamage</def>
-							<amount>3</amount>
-							<chance>0.35</chance>
+							<amount>10</amount>
+							<chance>0.45</chance>
 						</li>
 					</extraMeleeDamages>
 					<cooldownTime>3.1</cooldownTime>
@@ -156,13 +155,13 @@
 					<extraMeleeDamages>
 							<li>
 								<def>NecronoidMajorCutDamage</def>
-								<amount>6</amount>
+								<amount>10</amount>
 								<chance>0.50</chance>
 							</li>
 							<li>
 								<def>Stun</def>
-								<amount>1</amount>
-								<chance>0.20</chance>
+								<amount>6</amount>
+								<chance>0.60</chance>
 							</li>
 						</extraMeleeDamages>
 					<cooldownTime>0.95</cooldownTime>
@@ -179,7 +178,7 @@
 					<extraMeleeDamages>
 							<li>
 								<def>NecronoidMajorCutDamage</def>
-								<amount>2</amount>
+								<amount>10</amount>
 								<chance>0.25</chance>
 							</li>
 						</extraMeleeDamages>							
@@ -237,8 +236,8 @@
 					<extraMeleeDamages>
 						<li>
 							<def>NecronoidCutDamage</def>
-							<amount>1</amount>
-							<chance>0.05</chance>
+							<amount>10</amount>
+							<chance>0.15</chance>
 						</li>
 					</extraMeleeDamages>
 					<cooldownTime>0.1</cooldownTime>
