@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/FactionDef[defName="Necronoid"]/maxPawnCostPerTotalPointsCurve</xpath>
+		<value>
+			<maxPawnCostPerTotalPointsCurve>
+				<points>
+					<li>(400,200)</li>
+					<li>(1000,300)</li>
+					<li>(1300,1000)</li>
+					<li>(2000,2000)</li>
+					<li>(100000,10000)</li>
+				</points>
+			</maxPawnCostPerTotalPointsCurve>
+		</value>
+	</Operation>
+
+		<!-- ======================== Slaves combat power  ======================== -->
+		
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="LowTier_FleshSlave"]/combatPower</xpath>
+		<value>
+			<combatPower>175</combatPower>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="MidTier_FleshSlave"]/combatPower</xpath>
+		<value>
+			<combatPower>200</combatPower>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="FleshBoss"]/combatPower</xpath>
+		<value>
+			<combatPower>250</combatPower>
+		</value>
+	</Operation>
+	
+		<!-- ======================== pawn groups  ======================= -->
+	
+				<!-- Melee Common -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/FactionDef[defName="Necronoid"]/pawnGroupMakers/li[1]/options</xpath>
+		<value>
+			<options>
+				<LowTier_FleshSlave>1</LowTier_FleshSlave>
+				<Necronoid_FetidGhoul>40</Necronoid_FetidGhoul>
+			</options>
+		</value>
+	</Operation>
+	
+				<!-- Ranged Common -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/FactionDef[defName="Necronoid"]/pawnGroupMakers/li[2]/options</xpath>
+		<value>
+			<options>
+					<MidTier_FleshSlave>1</MidTier_FleshSlave>
+					<Necronoid_FetidBrute>25</Necronoid_FetidBrute>
+					<Necronoid_FetidSoldier>25</Necronoid_FetidSoldier>
+			</options>
+		</value>
+	</Operation>
+	
+				<!-- Boss 1 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/FactionDef[defName="Necronoid"]/pawnGroupMakers/li[10]/options</xpath>
+		<value>
+			<options>
+					<Necronoid_FleshTyrant>1</Necronoid_FleshTyrant>
+					<Necronoid_BladedGhoul>1000</Necronoid_BladedGhoul>
+			</options>
+		</value>
+	</Operation>
+	
+				<!-- Boss 2 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/FactionDef[defName="Necronoid"]/pawnGroupMakers/li[11]/options</xpath>
+		<value>
+			<options>
+					<Necronoid_ExecutionerGhoul>1</Necronoid_ExecutionerGhoul>
+					<Necronoid_BladedGhoul>1000</Necronoid_BladedGhoul>
+			</options>
+		</value>
+	</Operation>
+	
+				<!-- Boss 3 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/FactionDef[defName="Necronoid"]/pawnGroupMakers/li[12]/options</xpath>
+		<value>
+			<options>
+					<Necronoid_BloodLetterGhoul>1</Necronoid_BloodLetterGhoul>
+					<Necronoid_BladedGhoul>1000</Necronoid_BladedGhoul>
+			</options>
+		</value>
+	</Operation>
+	
+				<!-- Boss 4 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/FactionDef[defName="Necronoid"]/pawnGroupMakers/li[13]/options</xpath>
+		<value>
+			<options>
+					<Necronoid_CrazedButcher>1</Necronoid_CrazedButcher>
+					<Necronoid_BladedGhoul>1000</Necronoid_BladedGhoul>
+			</options>
+		</value>
+	</Operation>	
+	
+</Patch>
