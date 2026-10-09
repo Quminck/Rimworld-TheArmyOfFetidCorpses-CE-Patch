@@ -1,31 +1,27 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<!-- =================== Necronoids =================== -->
-	<DamageDef ParentName="Bite">
+	<DamageDef ParentName="NecronoidBase">
 		<defName>NecronoidBiteDamage</defName>
 		<label>infected bite</label>
-		<additionalHediffs>
-			<li>
-				<hediff>BloodLoss</hediff>
-				<severityPerDamageDealt>0.001</severityPerDamageDealt>
-			</li>
-			
-			<li>
-				<hediff>Necronoid_InfectionOne</hediff>
-				<severityPerDamageDealt>0.005</severityPerDamageDealt>
-			</li>		
-		</additionalHediffs>
+		<hediff>Bite</hediff>
 	</DamageDef>
 	
-		<!-- =================== Weapons =================== -->
-	<DamageDef ParentName="Flame">
-		<defName>HellfireFlame</defName>
-		<label>Hell fire</label>
-		<additionalHediffs>
-			<li>
-				<hediff>HellfireSoaked</hediff>
-				<severityPerDamageDealt>0.025</severityPerDamageDealt>
-			</li>
-		</additionalHediffs>
-	</DamageDef>
+	<ToolCapacityDef>
+		<defName>NecronoidBite</defName>
+		<label>necronoid bite</label>
+	</ToolCapacityDef>
+	<ManeuverDef>
+		<defName>Necronoid_Bite</defName>
+		<requiredCapacity>NecronoidBite</requiredCapacity>
+		<verb>
+			<verbClass>Verb_MeleeAttackDamage</verbClass>
+			<meleeDamageDef>NecronoidBiteDamage</meleeDamageDef>
+		</verb>
+		<logEntryDef>MeleeAttack</logEntryDef>
+		<combatLogRulesHit>Maneuver_Bite_MeleeHit</combatLogRulesHit>
+		<combatLogRulesDeflect>Maneuver_Bite_MeleeDeflect</combatLogRulesDeflect>
+		<combatLogRulesMiss>Maneuver_Bite_MeleeMiss</combatLogRulesMiss>
+		<combatLogRulesDodge>Maneuver_Bite_MeleeDodge</combatLogRulesDodge>
+	</ManeuverDef>	
 </Defs>
