@@ -249,7 +249,7 @@
 			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 			<hasStandardCommand>True</hasStandardCommand>
 			<warmupTime>3.75</warmupTime>
-			<range>60</range>
+			<range>68</range>
 			<burstShotCount>1</burstShotCount>
 			<muzzleFlashScale>16</muzzleFlashScale>
 			<recoilAmount>2.41</recoilAmount>
@@ -306,7 +306,7 @@
 			<soundCastTail>GunTail_Heavy</soundCastTail>
 		</Properties>
 		<AmmoUser>
-			<magazineSize>20</magazineSize>
+			<magazineSize>15</magazineSize>
 			<reloadTime>4.7</reloadTime>
 			<ammoSet>AmmoSetANBbolt</ammoSet>
 		</AmmoUser>
@@ -467,14 +467,14 @@
 			<NightVisionEfficiency_Weapon>0.65</NightVisionEfficiency_Weapon>
 			<SwayFactor>1.67</SwayFactor>
 			<ShotSpread>0.02</ShotSpread>
-			<RangedWeapon_Cooldown>0.55</RangedWeapon_Cooldown>
-			<MarketValue>2100</MarketValue>
-			<WorkToMake>79500</WorkToMake>
+			<RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+			<MarketValue>2600</MarketValue>
+			<WorkToMake>82500</WorkToMake>
 		</statBases>
 		<costList>
 			<Steel>90</Steel>
-			<ComponentSpacer>6</ComponentSpacer>
-			<Plasteel>40</Plasteel>
+			<ComponentSpacer>7</ComponentSpacer>
+			<Plasteel>60</Plasteel>
 			<Chemfuel>15</Chemfuel>
 		</costList>
 		<Properties>
@@ -482,7 +482,6 @@
 			<hasStandardCommand>True</hasStandardCommand>
 			<warmupTime>2.8</warmupTime>
 			<range>70</range>
-			<burstShotCount>1</burstShotCount>
 			<muzzleFlashScale>10</muzzleFlashScale>
 			<recoilAmount>2.52</recoilAmount>
 			<defaultProjectile>Bullet_20x105mmCharged</defaultProjectile>
@@ -540,7 +539,7 @@
 			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 			<hasStandardCommand>True</hasStandardCommand>
 			<warmupTime>1.4</warmupTime>
-			<range>16</range>
+			<range>13</range>
 			<burstShotCount>1</burstShotCount>
 			<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
 			<muzzleFlashScale>9</muzzleFlashScale>
@@ -740,9 +739,9 @@
 		</weaponTags>
 	</Operation>
 	
-		<!-- ====================== Heavy weapon ====================== -->	
+		<!-- ====================== (Cleansing) Imperial rocket launcher  ====================== -->
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer" or defName="Gun_CleansingRocketLauncher"]/tools</xpath>
+		<xpath>Defs/ThingDef[defName="Gun_CleansingRocketLauncher"]/tools</xpath>
 		<value>
 			<tools>
 				<li Class="CombatExtended.ToolCE">
@@ -760,75 +759,13 @@
 	</Operation>
 	
 	<Operation Class="PatchOperationRemove">
-		<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer" or defName="Gun_CleansingRocketLauncher"]/comps/li[@Class="Necro.CompProperties_ReloadableWeapon"]</xpath> 
+		<xpath>Defs/ThingDef[ defName="Gun_CleansingRocketLauncher"]/comps/li[@Class="Necro.CompProperties_ReloadableWeapon"]</xpath> 
 	</Operation>			
 
 	<Operation Class="PatchOperationRemove">
-		<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer" or defName="Gun_CleansingRocketLauncher"]/verbs</xpath>
+		<xpath>Defs/ThingDef[defName="Gun_CleansingRocketLauncher"]/verbs</xpath>
 	</Operation>					
 
-		<!-- ====================== Heavy Flamer ====================== -->
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer"]</xpath>
-		<value>
-			<weaponTags>
-				<li>HeavyFlamer</li>
-			</weaponTags>
-		</value>
-	</Operation>					
-			
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer"]/description</xpath>
-		<value>
-			<description>A heavy long-range flamethrower capable of spreading fire over a wide area. It highly effective against Necronoid structures and large swarms</description>
-		</value>
-	</Operation>		
-
-	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
-		<defName>Gun_HeavyFlamer</defName>
-		<statBases>
-			<Mass>21</Mass>
-			<Bulk>11.4</Bulk>
-			<SightsEfficiency>1</SightsEfficiency>
-			<NightVisionEfficiency_Weapon>0</NightVisionEfficiency_Weapon> 
-			<SwayFactor>5.00</SwayFactor>
-			<ShotSpread>1.5</ShotSpread>
-			<RangedWeapon_Cooldown>0.95</RangedWeapon_Cooldown>
-			<MarketValue>1100</MarketValue>
-			<WorkToMake>63000</WorkToMake>
-		</statBases>
-		<costList>
-			<Steel>110</Steel>
-			<ComponentIndustrial>8</ComponentIndustrial>
-		</costList>
-		<Properties>
-			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
-			<hasStandardCommand>True</hasStandardCommand>
-			<warmupTime>2.5</warmupTime>
-			<range>21</range>
-			<minRange>4.0</minRange>
-			<burstShotCount>15</burstShotCount>
-			<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
-			<muzzleFlashScale>12</muzzleFlashScale>
-			<recoilAmount>0.60</recoilAmount>
-			<defaultProjectile>BulletHVFuel</defaultProjectile>
-			<soundCast>Shot_MiniFlameblaster</soundCast>	
-		<targetParams>
-			<canTargetLocations>True</canTargetLocations>
-		</targetParams>
-		</Properties>
-		<AmmoUser>
-			<magazineSize>45</magazineSize>
-			<reloadTime>5</reloadTime>
-			<ammoSet>AmmoSetHVFuel</ammoSet>
-		</AmmoUser>
-		<FireModes>
-			<aiAimMode>Snapshot</aiAimMode>
-			<aimedBurstShotCount>5</aimedBurstShotCount>
-		</FireModes>
-	</Operation>
-
-		<!-- ====================== (Cleansing) Imperial rocket launcher  ====================== -->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Gun_CleansingRocketLauncher"]/label	</xpath>
 		<value>
@@ -866,7 +803,6 @@
 			<hasStandardCommand>True</hasStandardCommand>
 			<warmupTime>2.5</warmupTime>
 			<range>62</range>
-			<burstShotCount>1</burstShotCount>
 			<muzzleFlashScale>20</muzzleFlashScale>
 			<defaultProjectile>BulletANBrocket</defaultProjectile>
 			<soundCast>InfernoCannon_Fire</soundCast>
@@ -878,7 +814,7 @@
 		</Properties>
 		<AmmoUser>
 			<magazineSize>1</magazineSize>
-			<reloadTime>4.4</reloadTime>
+			<reloadTime>6.5</reloadTime>
 			<ammoSet>AmmoSetANBrocket</ammoSet>
 		</AmmoUser>
 		<FireModes> 
