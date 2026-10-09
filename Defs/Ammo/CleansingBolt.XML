@@ -31,6 +31,9 @@
 			<li>CE_AutoEnableTrade</li>
 			<li>CE_AutoEnableCrafting_FabricationBench</li>
 		</tradeTags>
+		<thingCategories>
+			<li>AmmoCategoryANBbolt</li>
+		</thingCategories>
 		<graphicData>
 			<texPath>Things/Ammo/Charged/MediumMech</texPath>
 			<graphicClass>Verse.Graphic_StackCount</graphicClass>
