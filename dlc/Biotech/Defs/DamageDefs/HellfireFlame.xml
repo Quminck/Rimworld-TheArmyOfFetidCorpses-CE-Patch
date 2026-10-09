@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<DamageDef ParentName="Flame">
+		<defName>HellfireFlame</defName>
+		<label>Hellfire</label>
+		<additionalHediffs>
+			<li>
+				<hediff>HellfireSoaked</hediff>
+				<severityPerDamageDealt>0.025</severityPerDamageDealt>
+			</li>
+		</additionalHediffs>
+	</DamageDef>
+</Defs>

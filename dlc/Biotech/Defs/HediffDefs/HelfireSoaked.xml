@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<HediffDef>
+		<defName>HellfireSoaked</defName>		
+		<label>Hellfire gel soaked</label>		
+		<description>Soaked in Hellfire gel</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<maxSeverity>1</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-15</severityPerDay>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath" />
+		</comps>		
+		<stages>
+			<li>
+				<minSeverity>0.20</minSeverity>
+				<label>minor</label>
+				<statFactors>
+					<MoveSpeed>0.90</MoveSpeed>
+					<Flammability>1.4</Flammability>					
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>0.40</minSeverity>
+				<label>dripping</label>
+				<statFactors>
+					<MoveSpeed>0.75</MoveSpeed>
+					<Flammability>1.8</Flammability>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>0.60</minSeverity>
+				<label>soaked</label>
+				<statFactors>
+					<MoveSpeed>0.60</MoveSpeed>
+					<Flammability>2.2</Flammability>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>0.80</minSeverity>
+				<label>drenched</label>
+				<statFactors>
+					<MoveSpeed>0.50</MoveSpeed>
+					<Flammability>2.5</Flammability>
+				</statFactors>
+			</li>
+		</stages>		
+	</HediffDef>		
+</Defs>

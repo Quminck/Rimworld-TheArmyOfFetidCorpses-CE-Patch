@@ -15,10 +15,18 @@
 				<li MayRequire="Ludeon.Rimworld.Anomaly">
 					<damageDef>BioferriteFlame</damageDef>
 					<multiplier>1.75</multiplier>
-				</li>	
-				<li MayRequire="Ludeon.Rimworld.Biotech">
-					<damageDef>HellfireFlame</damageDef>
-					<multiplier>3.5</multiplier>
+				</li>
+				<li>
+					<damageDef>Cleansing</damageDef>
+					<multiplier>4</multiplier>
+				</li>
+				<li>
+					<damageDef>CleansingGreater</damageDef>
+					<multiplier>7</multiplier>
+				</li>
+				<li>
+					<damageDef>CleansingBlast</damageDef>
+					<multiplier>20</multiplier>
 				</li>
 			</damageMultipliers>
 		</value>

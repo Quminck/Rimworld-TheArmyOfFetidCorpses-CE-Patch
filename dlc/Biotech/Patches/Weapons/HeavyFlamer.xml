@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+		<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>Blunt</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<armorPenetrationBlunt>3.455</armorPenetrationBlunt>
+					<power>10</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer"]/comps/li[@Class="Necro.CompProperties_ReloadableWeapon"]</xpath> 
+	</Operation>			
+
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer"]/verbs</xpath>
+	</Operation>	
+	
+	<!-- ====================== Heavy Flamer ====================== -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer"]</xpath>
+		<value>
+			<weaponTags>
+				<li>HeavyFlamer</li>
+			</weaponTags>
+		</value>
+	</Operation>					
+			
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Gun_HeavyFlamer"]/description</xpath>
+		<value>
+			<description>A heavy long-range flamethrower capable of spreading fire over a wide area. It highly effective against Necronoid structures and large swarms</description>
+		</value>
+	</Operation>		
+
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Gun_HeavyFlamer</defName>
+		<statBases>
+			<Mass>21</Mass>
+			<Bulk>11.4</Bulk>
+			<SightsEfficiency>1</SightsEfficiency>
+			<NightVisionEfficiency_Weapon>0</NightVisionEfficiency_Weapon> 
+			<SwayFactor>5.00</SwayFactor>
+			<ShotSpread>1.5</ShotSpread>
+			<RangedWeapon_Cooldown>0.95</RangedWeapon_Cooldown>
+			<MarketValue>1100</MarketValue>
+			<WorkToMake>63000</WorkToMake>
+		</statBases>
+		<costList>
+			<Steel>110</Steel>
+			<ComponentIndustrial>8</ComponentIndustrial>
+		</costList>
+		<Properties>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>True</hasStandardCommand>
+			<warmupTime>2.5</warmupTime>
+			<range>21</range>
+			<minRange>4.0</minRange>
+			<burstShotCount>15</burstShotCount>
+			<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+			<muzzleFlashScale>12</muzzleFlashScale>
+			<recoilAmount>0.60</recoilAmount>
+			<defaultProjectile>BulletHVFuel</defaultProjectile>
+			<soundCast>Shot_MiniFlameblaster</soundCast>	
+		<targetParams>
+			<canTargetLocations>True</canTargetLocations>
+		</targetParams>
+		</Properties>
+		<AmmoUser>
+			<magazineSize>45</magazineSize>
+			<reloadTime>5</reloadTime>
+			<ammoSet>AmmoSetHVFuel</ammoSet>
+		</AmmoUser>
+		<FireModes>
+			<aiAimMode>Snapshot</aiAimMode>
+			<aimedBurstShotCount>5</aimedBurstShotCount>
+		</FireModes>
+	</Operation>
+</Patch>
