@@ -298,7 +298,7 @@
 			<warmupTime>1.2</warmupTime>
 			<range>25</range>
 			<burstShotCount>4</burstShotCount>
-			<ticksBetweenBurstShots>16</ticksBetweenBurstShots>
+			<ticksBetweenBurstShots>25</ticksBetweenBurstShots>
 			<muzzleFlashScale>10</muzzleFlashScale>
 			<recoilAmount>1.56</recoilAmount>
 			<defaultProjectile>BulletANBbolt</defaultProjectile>
@@ -330,7 +330,7 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Gun_ImperialCleansingBolter"]/description</xpath>
 		<value>
-			<description>A deadly Imperial carbine manufactured to strict blueprints and designed to fire high-velocity cleansing bolts.</description>
+			<description>A special Imperial carbine manufactured to strict blueprints and designed to fire high-velocity cleansing bolts.</description>
 		</value>
 	</Operation>
 	
@@ -358,7 +358,7 @@
 			<warmupTime>1.4</warmupTime>
 			<range>50</range>
 			<burstShotCount>5</burstShotCount>
-			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+			<ticksBetweenBurstShots>15</ticksBetweenBurstShots>
 			<muzzleFlashScale>7</muzzleFlashScale>
 			<recoilAmount>1.43</recoilAmount>
 			<defaultProjectile>BulletANBbolt</defaultProjectile>
@@ -392,7 +392,7 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Gun_ImperialCleansingBolterMG"]/description</xpath>
 		<value>
-			<description>A heavy automatic variant of the Imperial carbine designed to sustain suppressive fire with cleansing bolts.</description>
+			<description>A special cleansing bolter machinegun designed for imperial use. Although slightly in-accurate, it can fire a barrage of cleansing bolter shells at long distances, perfect for providing suppressive fire.</description>
 		</value>
 	</Operation>
 	
@@ -420,7 +420,7 @@
 			<warmupTime>2.12</warmupTime>
 			<range>46</range>
 			<burstShotCount>10</burstShotCount>
-			<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+			<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
 			<muzzleFlashScale>8</muzzleFlashScale>
 			<recoilAmount>1.51</recoilAmount>
 			<defaultProjectile>BulletANBbolt</defaultProjectile>
