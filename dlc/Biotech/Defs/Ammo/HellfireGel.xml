@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>	
+	<CombatExtended.AmmoCategoryDef>
+		<defName>PrometheumSpecial</defName>
+		<label>Hellfire Gel</label>
+		<labelShort>HfG</labelShort>
+		<description>A highly concentrated incendiary gel designed to burn necronoids to ash.</description>
+		<advanced>true</advanced>
+	</CombatExtended.AmmoCategoryDef>
+		
+		<!-- ==================== AmmoSet ========================== -->
+	
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSetHVFuel</defName> 
+		<label>Hellfire gel</label>
+		<ammoTypes>
+			<AmmoHVFuel>BulletHVFuel</AmmoHVFuel>    
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+  
+		<!-- ==================== Ammo ========================== -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="FlamethrowerBase">
+		<defName>AmmoHVFuel</defName>                                 
+		<label>Hellfire gel</label>
+		<graphicData>
+			<texPath>Things/Ammo/FuelTank/Incendiary</texPath>
+			<graphicClass>Verse.Graphic_StackCount</graphicClass>
+		</graphicData>
+		<stackLimit>250</stackLimit>
+		<statBases>
+			<Mass>0.08</Mass>
+			<Bulk>0.1</Bulk>
+		</statBases>
+		<ammoClass>PrometheumSpecial</ammoClass>
+		<cookOffProjectile>BulletHVFuel</cookOffProjectile>              
+	</ThingDef>
+	
+		<!-- ================== Projectiles ================== -->
+					
+	<ThingDef ParentName="BaseFlamethrowerBullet">
+		<defName>BulletHVFuel</defName>
+		<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>		
+		<label>Hell fire</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>HellfireFlame</damageDef> 
+			<damageAmountBase>5</damageAmountBase>
+			<pelletCount>3</pelletCount>
+			<spreadMult>4.0</spreadMult>			
+			<explosionRadius>1.5</explosionRadius>
+			<explosionDamageFalloff>true</explosionDamageFalloff>
+			<preExplosionSpawnThingDef>FilthPrometheum</preExplosionSpawnThingDef>
+			<preExplosionSpawnChance>0.60</preExplosionSpawnChance>
+			<soundExplode>CE_FlamethrowerExplosion</soundExplode>
+			<ai_IsIncendiary>true</ai_IsIncendiary>
+			<screenShakeFactor>0</screenShakeFactor>
+		</projectile>
+	</ThingDef>
+	
+		<!-- ==================== Recipes ========================== -->
+	
+	<RecipeDef ParentName="LauncherAmmoRecipeBase">
+		<defName>MakeAmmoHVFuel</defName>
+		<label>make hellfire gel x100</label>
+		<description>Craft 100 units of hellfire gel.</description>
+		<jobString>Making hellfire gel</jobString>
+		<researchPrerequisite>IncendiaryWeapons</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Chemfuel</li>
+					</thingDefs>
+				</filter>
+				<count>15</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Prometheum</li>
+					</thingDefs>
+				</filter>
+				<count>12</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Chemfuel</li>
+				<li>Prometheum</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<AmmoHVFuel>100</AmmoHVFuel>
+		</products>
+		<workAmount>12000</workAmount>
+	</RecipeDef>
+</Defs>
