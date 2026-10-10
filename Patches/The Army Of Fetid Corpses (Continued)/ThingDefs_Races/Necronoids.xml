@@ -129,7 +129,7 @@
 					<cooldownTime>1.7</cooldownTime>
 					<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
 					<armorPenetrationSharp>0.0</armorPenetrationSharp>
-					<armorPenetrationBlunt>6.5</armorPenetrationBlunt>
+					<armorPenetrationBlunt>10.5</armorPenetrationBlunt>
 				</li>
 				<li Class="CombatExtended.ToolCE">
 					<label>right fist</label>
@@ -140,7 +140,7 @@
 					<cooldownTime>1.7</cooldownTime>
 					<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
 					<armorPenetrationSharp>0.0</armorPenetrationSharp>
-					<armorPenetrationBlunt>6.5</armorPenetrationBlunt>
+					<armorPenetrationBlunt>10.5</armorPenetrationBlunt>
 				</li>
 				<li Class="CombatExtended.ToolCE">
 					<label>left fist</label>
@@ -152,7 +152,7 @@
 					<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
 					<chanceFactor>0.15</chanceFactor>
 					<armorPenetrationSharp>0.0</armorPenetrationSharp>
-					<armorPenetrationBlunt>6.5</armorPenetrationBlunt>
+					<armorPenetrationBlunt>10.5</armorPenetrationBlunt>
 				</li>
 				<li Class="CombatExtended.ToolCE">
 					<label>right fist</label>
@@ -164,7 +164,7 @@
 					<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
 					<chanceFactor>0.15</chanceFactor>
 					<armorPenetrationSharp>0.0</armorPenetrationSharp>
-					<armorPenetrationBlunt>6.5</armorPenetrationBlunt>
+					<armorPenetrationBlunt>10.5</armorPenetrationBlunt>
 				</li>
 			</tools>
 		</value>
@@ -559,7 +559,7 @@
 			<li Class="CombatExtended.PartialArmorExt">
 				<stats>
 					<li>
-						<ArmorRating_Blunt>1.75</ArmorRating_Blunt>
+						<ArmorRating_Blunt>1.25</ArmorRating_Blunt>
 						<parts>
 							<li>Torso</li>  
 						</parts>
@@ -783,7 +783,7 @@
 			<li Class="CombatExtended.PartialArmorExt">
 				<stats>
 					<li>
-						<ArmorRating_Blunt>1.8</ArmorRating_Blunt>
+						<ArmorRating_Blunt>1.20</ArmorRating_Blunt>
 						<parts>
 							<li>Torso</li>   
 						</parts>
