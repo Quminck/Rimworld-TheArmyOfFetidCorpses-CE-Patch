@@ -316,12 +316,12 @@
 		</value>
 	</Operation>
 	
-	<!--Operation Class="PatchOperationReplace">
+	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/PawnKindDef[defName="Necronoid_FetidHulk"]/combatPower</xpath>
 		<value>
-			<combatPower>450</combatPower>
+			<combatPower>400</combatPower>
 		</value>
-	</Operation-->		
+	</Operation>		
 	
 	
 		<!-- ======================== Fetid marine ======================== -->			
@@ -403,12 +403,12 @@
 		</value>
 	</Operation>
 	
-	<!--Operation Class="PatchOperationReplace">
+	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/PawnKindDef[defName="Necronoid_FetidMarine"]/combatPower</xpath>
 		<value>
 			<combatPower>350</combatPower>
 		</value>
-	</Operation-->	
+	</Operation>	
 
 	
 		<!-- ======================== Bladed ghoul ======================== -->
