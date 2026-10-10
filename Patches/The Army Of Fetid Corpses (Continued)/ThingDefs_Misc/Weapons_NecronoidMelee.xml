@@ -10,10 +10,10 @@
 					<capacities>
 						<li>Poke</li>
 					</capacities>
-					<power>6</power>
+					<power>9</power>
 					<chanceFactor>0.05</chanceFactor>
 					<cooldownTime>1.5</cooldownTime>
-					<armorPenetrationBlunt>2.4</armorPenetrationBlunt>
+					<armorPenetrationBlunt>1.25</armorPenetrationBlunt>
 					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
 				</li>
 				<li Class="CombatExtended.ToolCE">
@@ -21,15 +21,15 @@
 					<capacities>
 						<li>Demolish</li>
 					</capacities>
-					<power>145</power>
+					<power>100</power>
 					<extraMeleeDamages>
 						<li>
 							<def>BloodLetter_Stab</def>
-							<amount>25</amount>
+							<amount>17</amount>
 						</li>
 					</extraMeleeDamages>							
-					<cooldownTime>3.4</cooldownTime>
-					<armorPenetrationSharp>18</armorPenetrationSharp>
+					<cooldownTime>3.0</cooldownTime>
+					<armorPenetrationSharp>16</armorPenetrationSharp>
 					<armorPenetrationBlunt>480</armorPenetrationBlunt>
 					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
 				</li>
@@ -66,10 +66,10 @@
 					<capacities>
 						<li>Poke</li>
 					</capacities>
-					<power>8</power>
+					<power>9</power>
 					<chanceFactor>0.05</chanceFactor>
 					<cooldownTime>1.5</cooldownTime>
-					<armorPenetrationBlunt>2.1</armorPenetrationBlunt>
+					<armorPenetrationBlunt>1.25</armorPenetrationBlunt>
 					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
 				</li>
 				<li Class="CombatExtended.ToolCE">
@@ -77,15 +77,15 @@
 					<capacities>
 						<li>Cut</li>
 					</capacities>
-					<power>91</power>
+					<power>51</power>
 					<extraMeleeDamages>
 						<li>
-							<def>NecronoidCutDamage</def>
-							<amount>10</amount>
-							<chance>0.45</chance>
+							<def>Stun</def>
+							<amount>9</amount>
+							<chance>0.5</chance>
 						</li>
 					</extraMeleeDamages>
-					<cooldownTime>3.1</cooldownTime>
+					<cooldownTime>2.5</cooldownTime>
 					<armorPenetrationSharp>45</armorPenetrationSharp>
 					<armorPenetrationBlunt>60</armorPenetrationBlunt>
 					<linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
@@ -95,15 +95,15 @@
 					<capacities>
 						<li>Blunt</li>
 					</capacities>
-					<power>89</power>
+					<power>60</power>
 					<extraMeleeDamages>
 						<li>
 							<def>Stun</def>
-							<amount>8</amount>
+							<amount>9</amount>
 							<chance>0.8</chance>
 						</li>
 					</extraMeleeDamages>
-					<cooldownTime>3.25</cooldownTime>
+					<cooldownTime>2.5</cooldownTime>
 					<armorPenetrationBlunt>120</armorPenetrationBlunt>
 					<linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
 				</li>
@@ -140,28 +140,23 @@
 					<capacities>
 						<li>Poke</li>
 					</capacities>
-					<power>6</power>
+					<power>9</power>
 					<chanceFactor>0.05</chanceFactor>
 					<cooldownTime>1.4</cooldownTime>
 					<armorPenetrationBlunt>1.25</armorPenetrationBlunt>
 					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
 				</li>
 				<li Class="CombatExtended.ToolCE">
-					<label>point</label>
+					<label>blade tip</label>
 					<capacities>
 						<li>Stab</li>
 					</capacities>
-					<power>62</power>
+					<power>70</power>
 					<extraMeleeDamages>
 							<li>
-								<def>NecronoidMajorCutDamage</def>
-								<amount>10</amount>
-								<chance>0.50</chance>
-							</li>
-							<li>
 								<def>Stun</def>
-								<amount>6</amount>
-								<chance>0.60</chance>
+								<amount>9</amount>
+								<chance>0.50</chance>
 							</li>
 						</extraMeleeDamages>
 					<cooldownTime>0.95</cooldownTime>
@@ -174,16 +169,15 @@
 					<capacities>
 						<li>Cut</li>
 					</capacities>
-					<power>57</power>
+					<power>48</power>
 					<extraMeleeDamages>
-							<li>
-								<def>NecronoidMajorCutDamage</def>
-								<amount>10</amount>
-								<chance>0.25</chance>
-							</li>
-						</extraMeleeDamages>							
-					<cooldownTime>1.1</cooldownTime>
-					<armorPenetrationSharp>34.0</armorPenetrationSharp>
+						<li>
+							<def>NecronoidMajorCutDamage</def>
+							<amount>10</amount>
+						</li>
+					</extraMeleeDamages>						
+					<cooldownTime>1.0</cooldownTime>
+					<armorPenetrationSharp>18.0</armorPenetrationSharp>
 					<armorPenetrationBlunt>60.0</armorPenetrationBlunt>
 					<linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
 				</li>
@@ -218,30 +212,30 @@
 				<li Class="CombatExtended.ToolCE">
 					<label>handle</label>
 					<capacities>
-						<li>Poke</li>
+						<li>Blunt</li>
 					</capacities>
-					<power>11</power>
+					<power>9</power>
 					<chanceFactor>0.11</chanceFactor>
 					<cooldownTime>1.5</cooldownTime>
-					<armorPenetrationBlunt>0.85</armorPenetrationBlunt>
+					<armorPenetrationBlunt>1.25</armorPenetrationBlunt>
 					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
 				</li>
 
 				<li Class="CombatExtended.ToolCE">
-					<label>edge</label>
+					<label>saw blade</label>
 					<capacities>
 						<li>Cut</li>
 					</capacities>
-					<power>14</power>
+					<power>12</power>
 					<extraMeleeDamages>
 						<li>
-							<def>NecronoidCutDamage</def>
-							<amount>10</amount>
-							<chance>0.15</chance>
+							<def>Stun</def>
+							<amount>4</amount>
+							<chance>0.02</chance>
 						</li>
 					</extraMeleeDamages>
 					<cooldownTime>0.1</cooldownTime>
-					<armorPenetrationSharp>12.0</armorPenetrationSharp>
+					<armorPenetrationSharp>14.0</armorPenetrationSharp>
 					<armorPenetrationBlunt>9.0</armorPenetrationBlunt>
 					<linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
 				</li>
