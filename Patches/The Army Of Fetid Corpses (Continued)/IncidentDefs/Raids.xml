@@ -66,6 +66,14 @@
 		</value>
 	</Operation>			
 
+	<!-- ======================== Necronoid Raid Center Drop ======================== -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/IncidentDef[defName="Necronoid_CenterDropRaid"]/baseChance</xpath>
+		<value>
+			<baseChance>2.5</baseChance>			
+		</value>
+	</Operation>
+
 	<!-- ======================== Necronoid Biomass ======================== -->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/IncidentDef[defName="NecronoidBiomass"]/minThreatPoints</xpath>
